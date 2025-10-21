@@ -30,10 +30,10 @@ export default function AboutPage() {
                 {t.navigation.contact}
               </Link>
               <button
-                onClick={() => setLanguage(language === 'en' ? 'es' : language === 'es' ? 'fr' : 'en')}
+                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
                 className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
               >
-                {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'FR'}
+                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
               </button>
               <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
                 {t.navigation.bookNow}
