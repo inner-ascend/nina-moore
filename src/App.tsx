@@ -9,6 +9,7 @@ import SupportPage from './components/SupportPage';
 import PrivacyPage from './components/PrivacyPage';
 import AboutPageNew from './components/pages/AboutPageNew';
 import ContactPage from './components/pages/ContactPage';
+import ProgramsPage from './components/pages/ProgramsPage';
 import ScrollToTop from './components/ScrollToTop';
 
 // Main Landing Page Component - Flodesk/Squarespace Style
@@ -33,6 +34,9 @@ function LandingPage() {
             <div className="hidden md:flex items-center gap-12">
               <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 {t.navigation.about}
+              </Link>
+              <Link to="/programs" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                Programs
               </Link>
               <Link to="/contact" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 {t.navigation.contact}
@@ -62,6 +66,9 @@ function LandingPage() {
             <div className="md:hidden py-6 space-y-6 border-t border-black/5">
               <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
                 {t.navigation.about}
+              </Link>
+              <Link to="/programs" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+                Programs
               </Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
                 {t.navigation.contact}
@@ -386,6 +393,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPageNew />} />
+        <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
