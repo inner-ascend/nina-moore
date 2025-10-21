@@ -1,3 +1,3 @@
-# Astral Integration - Tamagui
+# Nina Moore
 
-Beautiful Tamagui components and integration solutions for cross-platform applications.
+Website for Nina Moore's transformational healing practice, featuring mentorship, medicine work, and sacred ceremonies.

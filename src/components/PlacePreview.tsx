@@ -14,7 +14,7 @@ const PlacePreview: React.FC<PlacePreviewProps> = ({ language: initialLanguage }
   const [loading, setLoading] = useState(false);
   
   const t = language === 'es' ? {
-    title: "Descubre este servicio en Astral Integration",
+    title: "Descubre este servicio en Nina Moore",
     subtitle: "La app que te conecta con sanación y transformación",
     platform: {
       title: "Próximamente en iOS y Android",
@@ -47,7 +47,7 @@ const PlacePreview: React.FC<PlacePreviewProps> = ({ language: initialLanguage }
       }
     }
   } : {
-    title: "Discover this service in Astral Integration",
+    title: "Discover this service in Nina Moore",
     subtitle: "The app that connects you with healing and transformation",
     platform: {
       title: "Coming to iOS & Android",
@@ -112,7 +112,7 @@ const PlacePreview: React.FC<PlacePreviewProps> = ({ language: initialLanguage }
           body: JSON.stringify({
             api_key: convertKitApiKey,
             email: email,
-            tags: ['astral-integration-waitlist']
+            tags: ['nina-moore-waitlist']
           })
         });
 
@@ -189,7 +189,7 @@ const PlacePreview: React.FC<PlacePreviewProps> = ({ language: initialLanguage }
                 <div className="absolute inset-0 bg-orange-400 blur-xl opacity-50"></div>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Astral Integration
+                Nina Moore
               </h1>
             </div>
 

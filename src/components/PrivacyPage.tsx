@@ -24,7 +24,7 @@ export default function PrivacyPage() {
                 <section>
                   <h2 className="text-2xl font-serif text-indigo-deep mb-4">Our Commitment to Your Privacy</h2>
                   <p className="text-indigo-deep/80 leading-relaxed">
-                    At Astral Integration, we deeply respect your privacy and the sacred nature of the work we do together.
+                    At Nina Moore, we deeply respect your privacy and the sacred nature of the work we do together.
                     This policy outlines how we collect, use, and protect your personal information.
                   </p>
                 </section>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
                 <section>
                   <h2 className="text-2xl font-serif text-indigo-deep mb-4">Medical Disclaimer</h2>
                   <p className="text-indigo-deep/80 leading-relaxed">
-                    The services offered by Astral Integration are complementary practices and are not a substitute
+                    The services offered by Nina Moore are complementary practices and are not a substitute
                     for medical or psychological treatment. Any health information shared is kept confidential and
                     is used solely to ensure your safety during ceremonies and sessions.
                   </p>
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
                     please contact us:
                   </p>
                   <p className="text-indigo-deep/80">
-                    Email: <a href="mailto:hello@astral-integration.com" className="text-sacred-gold hover:underline">hello@astral-integration.com</a>
+                    Email: <a href="mailto:hello@nina-moore.com" className="text-sacred-gold hover:underline">hello@nina-moore.com</a>
                   </p>
                 </section>
 

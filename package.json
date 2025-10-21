@@ -1,9 +1,9 @@
 {
-  "name": "astral-integration-tamagui",
+  "name": "nina-moore",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://astral-integration.com",
+  "homepage": "https://nina-moore.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && node scripts/preserve-cname.js",

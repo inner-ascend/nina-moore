@@ -15,7 +15,7 @@ if (!fs.existsSync(distPath)) {
 }
 
 // Write CNAME file
-fs.writeFileSync(cnamePath, 'astral-integration.com\n');
+fs.writeFileSync(cnamePath, 'nina-moore.com\n');
 
 // Copy index.html as 404.html for GitHub Pages SPA routing
 const indexPath = path.join(distPath, 'index.html');

@@ -189,10 +189,10 @@ export default function ContactPage() {
                 <div>
                   <p className="text-sm text-sacred-moon/60 mb-1">Email</p>
                   <a
-                    href="mailto:hello@astral-integration.com"
+                    href="mailto:hello@nina-moore.com"
                     className="text-sacred-gold hover:text-sacred-glow transition-colors"
                   >
-                    hello@astral-integration.com
+                    hello@nina-moore.com
                   </a>
                 </div>
 
@@ -209,12 +209,12 @@ export default function ContactPage() {
 
                 <div className="pt-4">
                   <a
-                    href="https://instagram.com/astralintegration"
+                    href="https://instagram.com/nina__eterna"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sacred-moon/70 hover:text-sacred-gold transition-colors text-sm"
                   >
-                    @astralintegration
+                    @nina__eterna
                   </a>
                 </div>
 

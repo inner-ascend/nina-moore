@@ -1,1 +1,0 @@
-# Creating the Community Identity / Vision / Mission / Why / Who we are

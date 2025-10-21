@@ -29,7 +29,7 @@ const NewsletterSection = ({ language, translations }: NewsletterSectionProps) =
           body: JSON.stringify({
             api_key: convertKitApiKey,
             email: email,
-            tags: ['astral-integration-newsletter']
+            tags: ['nina-moore-newsletter']
           })
         });
 

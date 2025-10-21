@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             {/* Brand Column */}
             <div className="space-y-4">
-              <h3 className="text-xl font-serif text-sacred-gold">Astral Integration</h3>
+              <h3 className="text-xl font-serif text-sacred-gold">Nina Moore</h3>
               <p className="text-sacred-moon/60 text-sm leading-relaxed">
                 Guiding souls home to themselves through sacred medicine, energy healing, and transformational mentorship.
               </p>
@@ -62,18 +62,18 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-sacred-moon/80 uppercase tracking-wider">Connect</h4>
               <div className="space-y-3">
                 <a
-                  href="mailto:hello@astral-integration.com"
+                  href="mailto:hello@nina-moore.com"
                   className="block text-sacred-moon/60 hover:text-sacred-gold transition-colors text-sm"
                 >
-                  hello@astral-integration.com
+                  hello@nina-moore.com
                 </a>
                 <a
-                  href="https://instagram.com/astralintegration"
+                  href="https://instagram.com/nina__eterna"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-sacred-moon/60 hover:text-sacred-gold transition-colors text-sm"
                 >
-                  @astralintegration
+                  @nina__eterna
                 </a>
                 <div className="text-sacred-moon/60 text-sm">
                   <p>Barcelona, Spain</p>
@@ -90,7 +90,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-sacred-moon/50 text-sm text-center md:text-left">
               <p className="flex items-center gap-2 justify-center md:justify-start">
-                © {new Date().getFullYear()} Astral Integration
+                © {new Date().getFullYear()} Nina Moore
                 <span className="text-sacred-gold/40">⊹</span>
                 All rights reserved
               </p>
