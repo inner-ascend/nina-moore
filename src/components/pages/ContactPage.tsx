@@ -119,77 +119,110 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <section className="py-32 px-6">
         <div className="max-w-2xl mx-auto">
-          <div className="mb-16 space-y-6 text-center">
-            <p className="text-lg text-black/70 leading-relaxed">
-              I welcome you to reach out if you feel called to this work. Whether you're seeking guidance through a life transition, integration support after a psychedelic experience, or simply curious to learn more about working together.
-            </p>
-            <p className="text-lg text-black/70 leading-relaxed">
-              I typically respond within 24-48 hours.
-            </p>
-          </div>
+          {status === 'success' ? (
+            // Success Message
+            <div className="text-center space-y-8 py-16">
+              <div className="inline-block p-6 bg-gradient-to-br from-stone-100 to-slate-50 rounded-full">
+                <svg className="w-16 h-16 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <div>
-              <label htmlFor="name" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
-                Your Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
-                placeholder="Name"
-              />
+              <div className="space-y-4">
+                <h2 className="text-4xl md:text-5xl font-serif text-black">
+                  Thank you for reaching out
+                </h2>
+                <p className="text-xl text-black/70 font-light leading-relaxed max-w-xl mx-auto">
+                  Your message has been received. I'll respond personally within 24-48 hours.
+                </p>
+                <p className="text-lg text-black/50 italic pt-4">
+                  Check your inbox for a confirmation email
+                </p>
+              </div>
+
+              <div className="pt-8">
+                <button
+                  onClick={() => setStatus('idle')}
+                  className="px-8 py-3 border border-black/20 text-black text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-all"
+                >
+                  Send Another Message
+                </button>
+              </div>
             </div>
+          ) : (
+            // Contact Form
+            <>
+              <div className="mb-16 space-y-6 text-center">
+                <p className="text-lg text-black/70 leading-relaxed">
+                  I welcome you to reach out if you feel called to this work. Whether you're seeking guidance through a life transition, integration support after a psychedelic experience, or simply curious to learn more about working together.
+                </p>
+                <p className="text-lg text-black/70 leading-relaxed">
+                  I typically respond within 24-48 hours.
+                </p>
+              </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
-                placeholder="your@email.com"
-              />
-            </div>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div>
+                  <label htmlFor="name" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                    placeholder="Name"
+                  />
+                </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
-                Message
-              </label>
-              <textarea
-                id="message"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required
-                rows={8}
-                className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors resize-none"
-                placeholder="Tell me what brings you here..."
-              />
-            </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                    className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
 
-            <button
-              type="submit"
-              disabled={status === 'sending'}
-              className="w-full px-12 py-5 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {status === 'sending' ? (
-                <span>Sending...</span>
-              ) : status === 'success' ? (
-                <span>Message Sent ✓</span>
-              ) : status === 'error' ? (
-                <span>Error - Please Try Again</span>
-              ) : (
-                <span>Send Message</span>
-              )}
-            </button>
-          </form>
+                <div>
+                  <label htmlFor="message" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                    rows={8}
+                    className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors resize-none"
+                    placeholder="Tell me what brings you here..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="w-full px-12 py-5 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {status === 'sending' ? (
+                    <span>Sending...</span>
+                  ) : status === 'error' ? (
+                    <span>Error - Please Try Again</span>
+                  ) : (
+                    <span>Send Message</span>
+                  )}
+                </button>
+              </form>
+            </>
+          )}
         </div>
       </section>
 
