@@ -2,6 +2,9 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import enTranslations from '../../translations/en.json';
+import esTranslations from '../../translations/es.json';
+import frTranslations from '../../translations/fr.json';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -11,6 +14,9 @@ export default function ContactPage() {
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
+
+  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,6 +64,12 @@ export default function ContactPage() {
               <Link to="/contact" className="text-sm uppercase tracking-wider text-black transition-colors">
                 Contact
               </Link>
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'es' : language === 'es' ? 'fr' : 'en')}
+                className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
+              >
+                {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'FR'}
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -109,9 +121,9 @@ export default function ContactPage() {
           ></div>
         </div>
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-6xl md:text-8xl font-serif text-black mb-6">Get in Touch</h1>
+          <h1 className="text-6xl md:text-8xl font-serif text-black mb-6">{t.contact.hero.title}</h1>
           <p className="text-xl md:text-2xl text-black/60 font-light max-w-2xl mx-auto">
-            Let's begin the conversation
+            {t.contact.hero.subtitle}
           </p>
         </div>
       </section>

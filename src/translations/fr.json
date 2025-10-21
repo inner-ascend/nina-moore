@@ -23,10 +23,280 @@
       "description": "De votre pouvoir. De votre vérité. Du soi que vous savez être sous les couches du conditionnement."
     }
   },
+  "invitation": {
+    "title": "L'Invitation",
+    "p1": "Chaque voyage est différent — car chaque âme arrive avec sa propre histoire, ses propres blessures, sa propre préparation.",
+    "p2": "Il n'y a pas de script ici, seulement une présence attentive et une écoute profonde.",
+    "p3": "Lorsque vous entrez dans cet espace, vous ne venez pas pour \"vous réparer\".",
+    "p4": "Vous entrez dans un conteneur sacré pour vous souvenir de votre vérité, libérer ce qui ne vous sert plus et vous ouvrir au soi que vous n'avez pas encore osé incarner pleinement."
+  },
+  "transformation": {
+    "title": "Maintenant est le moment pour une transformation incarnée complète",
+    "subtitle": "Je suis là pour marcher avec vous pendant que vous construisez votre temple vivant.",
+    "description": "Mon travail est de vous permettre de créer des ponts entre votre éveil intérieur et votre vie extérieure — en vous aidant à intégrer vos expériences, activer votre vrai soi et incarner le but pour lequel vous êtes venue vivre.",
+    "line1": "C'est plus que du coaching.",
+    "line2": "Ce n'est pas seulement de la guérison.",
+    "line3": "C'est un souvenir à spectre complet.",
+    "closing": "C'est un voyage pour trouver le chemin du retour vers vous-même."
+  },
+  "offering": {
+    "title": "Cycle de 4 séances",
+    "price": "$444",
+    "cta": "Réserver maintenant"
+  },
+  "sessions": {
+    "title": "Que comprend une séance ?",
+    "items": [
+      {
+        "num": "01",
+        "title": "Exploration profonde et intégration",
+        "description": "Un espace sûr et personnalisé pour la découverte de soi"
+      },
+      {
+        "num": "02",
+        "title": "Nettoyage et activation énergétique",
+        "description": "Libération des énergies bloquées et des blocages émotionnels, activation de votre potentiel"
+      },
+      {
+        "num": "03",
+        "title": "Clarté et soutien",
+        "description": "Guidance intuitive et pratique remettant en question les croyances limitantes et offrant la vérité"
+      },
+      {
+        "num": "04",
+        "title": "Harmonie intérieure",
+        "description": "Rencontre avec différents aspects de vous-même pour guérir et créer un équilibre intérieur"
+      },
+      {
+        "num": "05",
+        "title": "Étapes pratiques",
+        "description": "Stratégies de coaching axées sur la croissance et l'autonomisation actionnables"
+      },
+      {
+        "num": "06",
+        "title": "Approche holistique",
+        "description": "Englobant toutes les couches du soi pour atteindre un sentiment de plénitude"
+      },
+      {
+        "num": "07",
+        "title": "Présence et honnêteté",
+        "description": "Répondre à vos besoins uniques pour que vous soyez pleinement vue et gagniez de nouvelles perspectives"
+      }
+    ]
+  },
+  "journey": {
+    "title": "Un voyage profond vers vous-même",
+    "themes": {
+      "transformation": {
+        "title": "Transformation",
+        "description": "Guérir les anciens schémas, entrer dans le leadership, transformer les relations et créer des vies et des communautés conscientes."
+      },
+      "opening": {
+        "title": "Ouverture",
+        "description": "Chaque séance est un portail : une ouverture, une invitation à devenir davantage qui vous êtes et à entrer dans votre rayonnement et votre but complets."
+      },
+      "integration": {
+        "title": "Intégration",
+        "description": "Transformez votre expression, identifiez vos schémas, apprenez à intégrer votre expérience de vie, transformez le trauma en sagesse."
+      }
+    }
+  },
+  "cta": {
+    "title": "Cycle de 4 séances et soutien continu",
+    "subtitle": "Notre appel de connexion de 30 minutes aidera à déterminer vos besoins et objectifs",
+    "button": "Réserver maintenant"
+  },
+  "testimonials": {
+    "title": "Témoignages de Clients",
+    "items": [
+      {
+        "name": "Cecile Gatto",
+        "text1": "Nina me guide avec amour et douceur à travers les passages clés de ma vie depuis quatre ans. Grâce à nos séances, j'ai gagné une autonomie et une sérénité croissantes face aux défis comme aux joies. Avec un cœur ouvert, j'ai appris à accueillir toutes les parties de moi-même — tant l'ombre que la lumière — et à rester centrée au milieu des turbulences de la vie.",
+        "text2": "Aujourd'hui, j'ai une vision claire pour mes projets, une relation paisible et aimante avec mon partenaire, un équilibre renouvelé avec ceux qui m'entourent et la confiance pour faire des choix autonomisés."
+      },
+      {
+        "name": "Benjamin Barda",
+        "text1": "Avec grâce et une intuition incroyable, Nina ouvre grand les portes de la conscience. À travers sa clairvoyance, son empathie profonde et son écoute raffinée, les barrières en moi se sont dissoutes, révélant de nouveaux espaces de courage, de joie et de poésie — reconnectant aux étincelles magiques de la vie, me sentant généreusement soutenu et inspiré quelle que soit la situation.",
+        "text2": "Il s'agit d'embrasser l'existence dans toutes ses dimensions, de prendre des décisions décisives, de trouver le courage et de devenir l'artiste de votre monde intérieur."
+      },
+      {
+        "name": "Will Ashurst",
+        "text1": "Je travaille avec Nina depuis un an, et la clarté, la perspective et la sagesse que j'ai acquises en travaillant avec elle ont été profondes. Elle me donne le sentiment qu'elle me comprend très bien et interprète ce que je dis avec précision, amour et compassion.",
+        "text2": "Ensemble, nous avons traversé de nombreux sujets et domaines de ma vie sur lesquels j'ai voulu faire la lumière. Je prévois de continuer à travailler avec elle, car la valeur et la guérison que j'ai obtenues en passant du temps à lui parler ont été profondément significatives."
+      }
+    ]
+  },
+  "workTypes": {
+    "title": "Quel type de travail faisons-nous ensemble ?",
+    "items": [
+      {
+        "num": "01",
+        "title": "Changements de Vie",
+        "description": "Ruptures, percées, pertes, éveils"
+      },
+      {
+        "num": "02",
+        "title": "Intégration Psychédélique",
+        "description": "Cérémonies de médecine, mauvais trips, voyages auto-guidés"
+      },
+      {
+        "num": "03",
+        "title": "Défis Relationnels",
+        "description": "Union sacrée, alchimie de couple, travail sur l'ombre"
+      },
+      {
+        "num": "04",
+        "title": "But et Chemin",
+        "description": "Se trouver, travail sur les rêves, vision, essence et dons"
+      },
+      {
+        "num": "05",
+        "title": "Trauma et Chagrins",
+        "description": "Réécrire l'histoire, trouver du sens, repatterning"
+      },
+      {
+        "num": "06",
+        "title": "Quête Spirituelle",
+        "description": "Connexion à la source, rituels, souvenir, âme et sacré"
+      },
+      {
+        "num": "07",
+        "title": "Flux Créatif",
+        "description": "Ramener l'étincelle, trouver la joie, l'expression de soi et la confiance"
+      }
+    ]
+  },
+  "finalCta": {
+    "price": "$444",
+    "subtitle": "4 séances + soutien continu",
+    "button": "Commencer Maintenant"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "bio": [
+      "Je suis au service de l'éveil collectif et de l'expansion de la conscience.",
+      "Je valorise la vivacité des émotions, la sagesse incarnée et les voies authentiques vers la liberté.",
+      "Mon champ d'expertise englobe un large éventail de méthodes et de compétences que j'ai nourries au fil des ans de pratique et d'auto-enquête.",
+      "En tant que praticienne et être humain, je rencontre les gens cœur à cœur et offre une présence profonde pour la croissance, la guérison et la réalisation de soi.",
+      "Je crois que chaque individu porte un don unique et inestimable dans le monde, attendant d'être dévoilé.",
+      "Je suis dévouée à vivre en intégrité avec ce qui veut s'exprimer à travers chacun de nous."
+    ],
+    "cta": {
+      "title": "Prête à commencer votre voyage ?",
+      "button": "Travaillez avec moi"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "hero": {
+      "title": "Entrez en Contact",
+      "subtitle": "Commençons la conversation"
+    },
+    "intro": {
+      "p1": "Je vous accueille pour me contacter si vous vous sentez appelée par ce travail. Que vous cherchiez un accompagnement à travers une transition de vie, un soutien d'intégration après une expérience psychédélique, ou simplement curieuse d'en savoir plus sur le travail ensemble.",
+      "p2": "Je réponds généralement dans les 24-48 heures."
+    },
+    "form": {
+      "name": "Votre Nom",
+      "namePlaceholder": "Nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Dites-moi ce qui vous amène ici...",
+      "send": "Envoyer le Message",
+      "sending": "Envoi...",
+      "error": "Erreur - Veuillez Réessayer"
+    },
+    "success": {
+      "title": "Merci de m'avoir contactée",
+      "message": "Votre message a été reçu. Je vous répondrai personnellement dans les 24-48 heures.",
+      "confirmation": "Vérifiez votre boîte de réception pour un email de confirmation",
+      "button": "Envoyer un Autre Message"
+    },
+    "info": {
+      "email": "Email",
+      "instagram": "Instagram",
+      "languages": "Séances disponibles en anglais, espagnol et français"
+    }
+  },
+  "support": {
+    "title": "Soutien",
+    "hero": {
+      "title": "Soutien",
+      "subtitle": "Comment puis-je vous aider ?"
+    },
+    "questions": {
+      "title": "Questions Fréquentes",
+      "q1": {
+        "question": "Comment puis-je réserver une séance ?",
+        "answer": "Cliquez sur n'importe quel bouton \"Réserver maintenant\" sur le site web ou allez directement à la page Contact. Remplissez le formulaire ou envoyez-moi un email à hello@nina-moore.com."
+      },
+      "q2": {
+        "question": "Combien coûtent les séances ?",
+        "answer": "Le Cycle de 4 séances est au prix de $444 et comprend un soutien continu entre les séances. C'est un investissement dans votre croissance personnelle et votre transformation."
+      },
+      "q3": {
+        "question": "Les séances sont-elles en ligne ou en personne ?",
+        "answer": "Je propose des séances en ligne et en personne. Les séances en ligne se font par appel vidéo, et les séances en personne sont disponibles à Barcelone, Espagne et Mazunte, Mexique."
+      },
+      "q4": {
+        "question": "Dans quelles langues travaillez-vous ?",
+        "answer": "Je propose des séances en anglais, espagnol et français. Choisissez la langue dans laquelle vous vous sentez le plus à l'aise pour exprimer votre vérité la plus profonde."
+      }
+    },
+    "contact": {
+      "title": "Vous avez encore des questions ?",
+      "message": "Je suis là pour vous aider. N'hésitez pas à me contacter directement.",
+      "email": "hello@nina-moore.com",
+      "button": "Envoyer un Message"
+    }
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "hero": {
+      "title": "Politique de Confidentialité"
+    },
+    "commitment": {
+      "title": "Notre Engagement envers Votre Confidentialité",
+      "text": "Chez Nina Moore, nous respectons profondément votre vie privée et la nature sacrée du travail que nous faisons ensemble. Cette politique décrit comment nous collectons, utilisons et protégeons vos informations personnelles."
+    },
+    "collection": {
+      "title": "Informations que Nous Collectons",
+      "text": "Lorsque vous me contactez ou réservez une séance, je peux collecter des informations telles que votre nom, adresse email et tous les détails que vous partagez sur votre voyage personnel. Ces informations sont utilisées uniquement pour fournir des services de coaching et de mentorat."
+    },
+    "protection": {
+      "title": "Protection des Données",
+      "text": "Toutes les informations personnelles sont maintenues strictement confidentielles. Je ne partage, ne vends ni ne divulgue vos informations à des tiers, sauf si la loi l'exige. Vos données sont stockées en toute sécurité et utilisées uniquement aux fins pour lesquelles elles ont été collectées."
+    },
+    "rights": {
+      "title": "Vos Droits",
+      "text": "Vous avez le droit d'accéder, de corriger ou de supprimer vos informations personnelles à tout moment. Si vous souhaitez exercer ces droits, contactez-moi à hello@nina-moore.com."
+    },
+    "cookies": {
+      "title": "Cookies et Suivi",
+      "text": "Ce site web utilise un suivi minimal uniquement pour les fonctions essentielles du site. Nous n'utilisons pas de cookies tiers ni de technologies de suivi à des fins marketing."
+    },
+    "disclaimer": {
+      "title": "Avertissement Médical",
+      "text": "Les services de coaching et de mentorat offerts ne remplacent pas les conseils, diagnostics ou traitements médicaux ou psychologiques professionnels. Consultez toujours des professionnels de la santé qualifiés pour toute question concernant des conditions médicales ou de santé mentale."
+    },
+    "contact": {
+      "title": "Contactez-moi",
+      "text": "Si vous avez des questions sur cette politique de confidentialité, contactez-moi à :",
+      "email": "hello@nina-moore.com"
+    }
+  },
   "footer": {
     "email": "hello@nina-moore.com",
     "social": {
       "instagram": "@nina__eterna"
-    }
+    },
+    "links": {
+      "email": "Email",
+      "instagram": "Instagram",
+      "support": "Soutien",
+      "privacy": "Confidentialité"
+    },
+    "copyright": "© 2025 Nina Moore. Tous droits réservés."
   }
 }

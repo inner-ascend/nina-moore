@@ -32,10 +32,10 @@ function LandingPage() {
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-12">
               <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                About
+                {t.navigation.about}
               </Link>
               <Link to="/contact" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                Contact
+                {t.navigation.contact}
               </Link>
               <button
                 onClick={() => setLanguage(language === 'en' ? 'es' : language === 'es' ? 'fr' : 'en')}
@@ -44,7 +44,7 @@ function LandingPage() {
                 {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'FR'}
               </button>
               <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                Book Now
+                {t.navigation.bookNow}
               </Link>
             </div>
 
@@ -61,13 +61,13 @@ function LandingPage() {
           {mobileMenuOpen && (
             <div className="md:hidden py-6 space-y-6 border-t border-black/5">
               <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
-                About
+                {t.navigation.about}
               </Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
-                Contact
+                {t.navigation.contact}
               </Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider font-semibold">
-                Book Now
+                {t.navigation.bookNow}
               </Link>
             </div>
           )}
@@ -86,13 +86,13 @@ function LandingPage() {
         {/* Hero Text */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-black mb-8 leading-tight tracking-tight">
-            Nina Moore
+            {t.hero.title}
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl text-black/70 font-light leading-relaxed max-w-4xl mx-auto mb-12">
-            Initiatory journeys, healing experiences, and transformative mentorship to awaken your deepest truth and power
+            {t.hero.subtitle}
           </p>
           <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-            Book Now
+            {t.navigation.bookNow}
           </Link>
         </div>
       </section>
@@ -105,10 +105,10 @@ function LandingPage() {
             <div className="space-y-6">
               <div className="text-4xl font-serif text-black/20">01</div>
               <h3 className="text-3xl font-serif text-black">
-                You can already feel it
+                {t.pillars.pillar1.title}
               </h3>
               <p className="text-lg text-black/60 leading-relaxed">
-                That quiet pull inside you, that whisper that you can rise above the loops and limitations.
+                {t.pillars.pillar1.description}
               </p>
             </div>
 
@@ -116,10 +116,10 @@ function LandingPage() {
             <div className="space-y-6">
               <div className="text-4xl font-serif text-black/20">02</div>
               <h3 className="text-3xl font-serif text-black">
-                You desire to transmute your story
+                {t.pillars.pillar2.title}
               </h3>
               <p className="text-lg text-black/60 leading-relaxed">
-                You are ready to find the gold in the hardship and develop self mastery as you discover your uniqueness.
+                {t.pillars.pillar2.description}
               </p>
             </div>
 
@@ -127,10 +127,10 @@ function LandingPage() {
             <div className="space-y-6">
               <div className="text-4xl font-serif text-black/20">03</div>
               <h3 className="text-3xl font-serif text-black">
-                You seek remembrance
+                {t.pillars.pillar3.title}
               </h3>
               <p className="text-lg text-black/60 leading-relaxed">
-                Of your power. Of your truth. Of the self you know you are underneath the layers of conditioning.
+                {t.pillars.pillar3.description}
               </p>
             </div>
           </div>
@@ -147,20 +147,20 @@ function LandingPage() {
             {/* Text */}
             <div className="space-y-8">
               <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-                The Invitation
+                {t.invitation.title}
               </h2>
               <div className="space-y-6 text-lg text-black/70 leading-relaxed">
                 <p>
-                  Every journey is different — because every soul arrives with its own story, its own wounds, its own readiness.
+                  {t.invitation.p1}
                 </p>
                 <p>
-                  There is no script here, only attuned presence and deep listening.
+                  {t.invitation.p2}
                 </p>
                 <p>
-                  When you step into this space, you are not coming to "fix yourself."
+                  {t.invitation.p3}
                 </p>
                 <p className="text-black font-medium text-xl">
-                  You are entering a sacred container for remembering your truth, clearing what no longer serves you, and opening to the self you have not yet dared to fully embody.
+                  {t.invitation.p4}
                 </p>
               </div>
             </div>
@@ -175,23 +175,23 @@ function LandingPage() {
       <section className="py-32 px-6">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
           <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-            Now is the time for full embodied transformation
+            {t.transformation.title}
           </h2>
           <p className="text-2xl text-black/70 leading-relaxed">
-            I am here to walk with you as you build your living temple.
+            {t.transformation.subtitle}
           </p>
           <div className="space-y-6 text-lg text-black/60 leading-relaxed">
             <p>
-              My work is to allow you to bridge your inner awakening and your outer life — helping you integrate your experiences, activate your true self, and embody the purpose you came here to live.
+              {t.transformation.description}
             </p>
           </div>
           <div className="text-2xl font-serif text-black space-y-3 pt-8">
-            <p>This is more than coaching.</p>
-            <p>This is not just healing.</p>
-            <p>This is full-spectrum remembrance.</p>
+            <p>{t.transformation.line1}</p>
+            <p>{t.transformation.line2}</p>
+            <p>{t.transformation.line3}</p>
           </div>
           <p className="text-3xl font-serif text-black/70 italic pt-6">
-            It's a journey to find the way home to yourself.
+            {t.transformation.closing}
           </p>
         </div>
       </section>
@@ -200,13 +200,13 @@ function LandingPage() {
       <section className="py-32 bg-black text-white">
         <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
           <h2 className="text-5xl md:text-6xl font-serif leading-tight">
-            Cycle of 4 sessions
+            {t.offering.title}
           </h2>
           <p className="text-4xl md:text-5xl font-serif tracking-tight">
-            $444
+            {t.offering.price}
           </p>
           <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            Book Now
+            {t.offering.cta}
           </Link>
         </div>
       </section>
@@ -215,23 +215,15 @@ function LandingPage() {
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            What does a session entail?
+            {t.sessions.title}
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
-            {[
-              { num: "01", title: "Deep exploration and integration", desc: "A safe, personalized space for self discovery" },
-              { num: "02", title: "Energetic clearing and activation", desc: "Release of stuck energies and emotional blockages, activating your potential" },
-              { num: "03", title: "Clarity and support", desc: "Intuitive, practical guidance challenging limiting beliefs and offering truth" },
-              { num: "04", title: "Internal Harmony", desc: "Meeting different aspects of yourself to heal and create internal balance" },
-              { num: "05", title: "Practical steps", desc: "Coaching focused strategies for actionable growth and empowerment" },
-              { num: "06", title: "Holistic approach", desc: "Encompassing all layers of the self to reach a feeling of wholeness" },
-              { num: "07", title: "Presence and honesty", desc: "Meeting your unique needs for you to be fully seen and gain new perspectives" },
-            ].map((item) => (
+            {t.sessions.items.map((item) => (
               <div key={item.num} className="space-y-4">
                 <div className="text-4xl font-serif text-black/20">{item.num}</div>
                 <h3 className="text-2xl font-serif text-black">{item.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">{item.desc}</p>
+                <p className="text-lg text-black/60 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -245,30 +237,30 @@ function LandingPage() {
             {/* Text */}
             <div className="space-y-16">
               <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-                A profound journey towards yourself
+                {t.journey.title}
               </h2>
 
               {/* Transformation */}
               <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-black">Transformation</h3>
+                <h3 className="text-3xl font-serif text-black">{t.journey.themes.transformation.title}</h3>
                 <p className="text-lg text-black/60 leading-relaxed">
-                  Healing old patterns, stepping into leadership, transforming relationships, and creating conscious lives and communities.
+                  {t.journey.themes.transformation.description}
                 </p>
               </div>
 
               {/* Opening */}
               <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-black">Opening</h3>
+                <h3 className="text-3xl font-serif text-black">{t.journey.themes.opening.title}</h3>
                 <p className="text-lg text-black/60 leading-relaxed">
-                  Every session is a portal: an opening, an invitation to become more of who you are and step into your full radiance and purpose.
+                  {t.journey.themes.opening.description}
                 </p>
               </div>
 
               {/* Integration */}
               <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-black">Integration</h3>
+                <h3 className="text-3xl font-serif text-black">{t.journey.themes.integration.title}</h3>
                 <p className="text-lg text-black/60 leading-relaxed">
-                  Transform your expression, identify your patterns, learn how to integrate your life experience, transform trauma into wisdom.
+                  {t.journey.themes.integration.description}
                 </p>
               </div>
             </div>
@@ -283,13 +275,13 @@ function LandingPage() {
       <section className="py-32 bg-stone-50">
         <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
           <h2 className="text-4xl md:text-5xl font-serif text-black leading-relaxed">
-            Cycle of 4 sessions & ongoing support
+            {t.cta.title}
           </h2>
           <p className="text-xl text-black/60">
-            Our 30 minutes connection call will help determine your needs and objectives
+            {t.cta.subtitle}
           </p>
           <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-            Book Now
+            {t.cta.button}
           </Link>
         </div>
       </section>
@@ -298,48 +290,23 @@ function LandingPage() {
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            Client Testimonials
+            {t.testimonials.title}
           </h2>
 
           <div className="space-y-32">
-            {/* Cecile Gatto */}
-            <div className="max-w-4xl mx-auto">
-              <blockquote className="space-y-8">
-                <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
-                  Nina has been guiding me with love and gentleness through the key passages of my life for the past four years. Through our sessions, I've gained growing autonomy and serenity in facing both challenges and joys. With an open heart, I've learned to welcome all parts of myself — both shadow and light — and to stay centered amidst life's turbulence.
-                </p>
-                <p className="text-xl md:text-2xl font-serif text-black leading-relaxed">
-                  Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices.
-                </p>
-                <footer className="text-sm uppercase tracking-wider text-black/60">— Cecile Gatto</footer>
-              </blockquote>
-            </div>
-
-            {/* Benjamin Barda */}
-            <div className="max-w-4xl mx-auto">
-              <blockquote className="space-y-8">
-                <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
-                  With grace and incredible intuition, Nina opens wide the doors of consciousness. Through her clairvoyance, deep empathy, and refined listening, barriers within me dissolved, revealing new spaces of courage, joy, and poetry — reconnecting to life's magical sparks, feeling generously supported and inspired no matter the situation.
-                </p>
-                <p className="text-xl md:text-2xl font-serif text-black leading-relaxed">
-                  It's about embracing existence in all its dimensions, making decisive choices, finding courage, and becoming the artist of your inner world.
-                </p>
-                <footer className="text-sm uppercase tracking-wider text-black/60">— Benjamin Barda</footer>
-              </blockquote>
-            </div>
-
-            {/* Will Ashurst */}
-            <div className="max-w-4xl mx-auto">
-              <blockquote className="space-y-8">
-                <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
-                  I have been working with Nina for the last year, and the clarity, perspective, and wisdom that I have gained through working with her has been profound. She gives me a great feeling that she understands me very well, and she interprets what I say with precision, love, and compassion.
-                </p>
-                <p className="text-xl md:text-2xl font-serif text-black leading-relaxed">
-                  Together, we have moved through a lot of topics and areas of my life which I have wanted to shine light on. I plan to continue working with her, as the value and healing that I've gotten from spending time speaking to her has been deeply meaningful.
-                </p>
-                <footer className="text-sm uppercase tracking-wider text-black/60">— Will Ashurst</footer>
-              </blockquote>
-            </div>
+            {t.testimonials.items.map((testimonial, index) => (
+              <div key={index} className="max-w-4xl mx-auto">
+                <blockquote className="space-y-8">
+                  <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
+                    {testimonial.text1}
+                  </p>
+                  <p className="text-xl md:text-2xl font-serif text-black leading-relaxed">
+                    {testimonial.text2}
+                  </p>
+                  <footer className="text-sm uppercase tracking-wider text-black/60">— {testimonial.name}</footer>
+                </blockquote>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -348,23 +315,15 @@ function LandingPage() {
       <section className="py-32 px-6 lg:px-12 bg-stone-50">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            What type of work are we doing together
+            {t.workTypes.title}
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
-            {[
-              { num: "01", title: "Life Changes", desc: "Break ups, breakthroughs, loss, awakenings" },
-              { num: "02", title: "Psychedelic Integration", desc: "Medicine ceremonies, bad trips, self led journeys" },
-              { num: "03", title: "Relationship Challenges", desc: "Sacred union, couples alchemy, shadow work" },
-              { num: "04", title: "Purpose and Path", desc: "Finding yourself, dream work, vision, essence & gifts" },
-              { num: "05", title: "Trauma and Heartbreaks", desc: "Rewriting the story, finding meaning, repatterning" },
-              { num: "06", title: "Spiritual Quest", desc: "Connection to source, rituals, remembrance, soul and sacred" },
-              { num: "07", title: "Creative Flow", desc: "Bringing back the spark, finding joy, self expression and trust" },
-            ].map((item) => (
+            {t.workTypes.items.map((item) => (
               <div key={item.num} className="space-y-4">
                 <div className="text-4xl font-serif text-black/20">{item.num}</div>
                 <h3 className="text-2xl font-serif text-black">{item.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">{item.desc}</p>
+                <p className="text-lg text-black/60 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -375,13 +334,13 @@ function LandingPage() {
       <section className="py-32 px-6">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
           <h2 className="text-6xl md:text-7xl font-serif text-black">
-            $444
+            {t.finalCta.price}
           </h2>
           <p className="text-2xl text-black/70">
-            4 sessions + ongoing support
+            {t.finalCta.subtitle}
           </p>
           <Link to="/contact" className="inline-block px-16 py-5 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-            Begin Now
+            {t.finalCta.button}
           </Link>
         </div>
       </section>
@@ -396,22 +355,22 @@ function LandingPage() {
 
             <div className="flex items-center gap-8 text-sm uppercase tracking-wider text-black/60">
               <a href={`mailto:${t.footer.email}`} className="hover:text-black transition-colors">
-                Email
+                {t.footer.links.email}
               </a>
               <a href={`https://instagram.com/${t.footer.social.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
-                Instagram
+                {t.footer.links.instagram}
               </a>
               <Link to="/support" className="hover:text-black transition-colors">
-                Support
+                {t.footer.links.support}
               </Link>
               <Link to="/privacy" className="hover:text-black transition-colors">
-                Privacy
+                {t.footer.links.privacy}
               </Link>
             </div>
           </div>
 
           <div className="text-center mt-12 text-xs text-black/40">
-            © 2025 Nina Moore. All rights reserved.
+            {t.footer.copyright}
           </div>
         </div>
       </footer>

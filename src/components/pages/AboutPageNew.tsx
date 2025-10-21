@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import enTranslations from '../../translations/en.json';
+import esTranslations from '../../translations/es.json';
+import frTranslations from '../../translations/fr.json';
 
 export default function AboutPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
+
+  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
 
   return (
     <div className="min-h-screen bg-white">
@@ -21,10 +27,16 @@ export default function AboutPage() {
                 Home
               </Link>
               <Link to="/contact" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                Contact
+                {t.navigation.contact}
               </Link>
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'es' : language === 'es' ? 'fr' : 'en')}
+                className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
+              >
+                {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'FR'}
+              </button>
               <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                Book Now
+                {t.navigation.bookNow}
               </Link>
             </div>
 
@@ -44,10 +56,10 @@ export default function AboutPage() {
                 Home
               </Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
-                Contact
+                {t.navigation.contact}
               </Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider font-semibold">
-                Book Now
+                {t.navigation.bookNow}
               </Link>
             </div>
           )}
@@ -64,7 +76,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 text-center px-6">
           <h1 className="text-6xl md:text-8xl font-serif text-black mb-8 leading-tight tracking-tight">
-            About me
+            {t.about.title}
           </h1>
         </div>
       </section>
@@ -78,24 +90,11 @@ export default function AboutPage() {
 
             {/* Bio Text */}
             <div className="space-y-8 text-lg text-black/70 leading-relaxed">
-              <p>
-                I am in service of the collective awakening and the expansion of consciousness.
-              </p>
-              <p>
-                I value the aliveness of emotions, embodied wisdom, and authentic pathways to freedom.
-              </p>
-              <p>
-                My field of expertise encompasses a wide array of methods and skills that I have nourished through years of practice and self-inquiry.
-              </p>
-              <p>
-                As a practitioner and human being, I meet people heart to heart and offer deep presence for growth, healing, and self-realization.
-              </p>
-              <p className="text-black font-medium text-2xl leading-relaxed pt-4">
-                I believe that each individual carries a unique and invaluable gift into the world, waiting to be unraveled.
-              </p>
-              <p>
-                I am devoted to living in integrity with what wants to be expressed through each of us.
-              </p>
+              {t.about.bio.map((paragraph, index) => (
+                <p key={index} className={index === 4 ? "text-black font-medium text-2xl leading-relaxed pt-4" : ""}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>
@@ -108,10 +107,10 @@ export default function AboutPage() {
       <section className="py-32 px-6">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
           <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-            Ready to begin your journey?
+            {t.about.cta.title}
           </h2>
           <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-            Work with me
+            {t.about.cta.button}
           </Link>
         </div>
       </section>

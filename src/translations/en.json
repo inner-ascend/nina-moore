@@ -186,6 +186,39 @@
       "button": "Work with me"
     }
   },
+  "contact": {
+    "title": "Contact",
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Let's begin the conversation"
+    },
+    "intro": {
+      "p1": "I welcome you to reach out if you feel called to this work. Whether you're seeking guidance through a life transition, integration support after a psychedelic experience, or simply curious to learn more about working together.",
+      "p2": "I typically respond within 24-48 hours."
+    },
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me what brings you here...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "error": "Error - Please Try Again"
+    },
+    "success": {
+      "title": "Thank you for reaching out",
+      "message": "Your message has been received. I'll respond personally within 24-48 hours.",
+      "confirmation": "Check your inbox for a confirmation email",
+      "button": "Send Another Message"
+    },
+    "info": {
+      "email": "Email",
+      "instagram": "Instagram",
+      "languages": "Sessions available in English, Spanish, and French"
+    }
+  },
   "footer": {
     "email": "hello@nina-moore.com",
     "social": {
