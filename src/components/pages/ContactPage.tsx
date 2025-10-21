@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Navigation from '../Navigation';
+import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,13 +23,13 @@ export default function ContactPage() {
         {
           from_name: formData.name,
           from_email: formData.email,
-          subject: formData.subject,
+          subject: 'Contact from nina-moore.com',
           message: formData.message,
         },
         'v57Ta98pwBDWpoe8o'
       );
       setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       setStatus('error');
@@ -37,225 +38,218 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      {/* Full-Screen Opening */}
-      <div className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-cosmic-900/90 via-indigo-deep/80 to-black/90">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-mystic-purple rounded-full mix-blend-screen filter blur-3xl animate-breathe" style={{animationDuration: '8s'}}></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sacred-green rounded-full mix-blend-screen filter blur-3xl animate-breathe" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
+    <div className="min-h-screen bg-white">
+      {/* Minimal Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="text-xl font-serif text-black">
+              Nina Moore
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-12">
+              <Link to="/" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-sm uppercase tracking-wider text-black transition-colors">
+                Contact
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-black"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden pt-6 pb-4 space-y-4">
+              <Link
+                to="/"
+                className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="block text-sm uppercase tracking-wider text-black transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
+          )}
         </div>
+      </nav>
 
-        <div className="relative z-10 container mx-auto px-4 py-32">
-          <div className="max-w-3xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <div className="text-5xl mb-8 text-sacred-gold animate-breathe opacity-60">⊹</div>
-              <h1 className="text-5xl md:text-7xl font-serif text-sacred-moon mb-8 font-light">
-                Let's Connect
-              </h1>
-              <p className="text-xl text-sacred-moon/80 font-light">
-                Tell me where you are. Tell me what you're looking for.
-              </p>
+      {/* Hero Section */}
+      <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-br from-stone-100 to-slate-50">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full"
+               style={{
+                 backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
+                 backgroundSize: '40px 40px'
+               }}
+          ></div>
+        </div>
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-6xl md:text-8xl font-serif text-black mb-6">Get in Touch</h1>
+          <p className="text-xl md:text-2xl text-black/60 font-light max-w-2xl mx-auto">
+            Let's begin the conversation
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-32 px-6">
+        <div className="max-w-2xl mx-auto">
+          <div className="mb-16 space-y-6 text-center">
+            <p className="text-lg text-black/70 leading-relaxed">
+              I welcome you to reach out if you feel called to this work. Whether you're seeking guidance through a life transition, integration support after a psychedelic experience, or simply curious to learn more about working together.
+            </p>
+            <p className="text-lg text-black/70 leading-relaxed">
+              I typically respond within 24-48 hours.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div>
+              <label htmlFor="name" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                required
+                className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                placeholder="Name"
+              />
             </div>
 
-            {/* Booking Options */}
-            <div className="grid md:grid-cols-2 gap-6 mb-16">
-              {/* Sacred Discovery Call */}
-              <div className="bg-cosmic-900/20 backdrop-blur-xl border border-sacred-moon/20 rounded-2xl p-6">
-                <div className="space-y-3">
-                  <div className="text-2xl text-sacred-gold">✦</div>
-                  <h3 className="text-xl font-serif text-sacred-moon">Sacred Discovery Call</h3>
-                  <p className="text-sm text-sacred-moon/70 leading-relaxed">
-                    A 30-minute soul connection to explore if we're meant to journey together
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-sacred-gold font-medium">Complimentary</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Quantum Leap Intensive */}
-              <div className="bg-cosmic-900/20 backdrop-blur-xl border border-sacred-gold/30 rounded-2xl p-6">
-                <div className="space-y-3">
-                  <div className="text-2xl text-sacred-gold">✧</div>
-                  <h3 className="text-xl font-serif text-sacred-moon">Quantum Leap Intensive</h3>
-                  <p className="text-sm text-sacred-moon/70 leading-relaxed">
-                    3-month deep dive transformation container for serious initiates
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-sacred-gold font-medium">Premium</span>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <label htmlFor="email" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
+                className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                placeholder="your@email.com"
+              />
             </div>
 
-            {/* Urgency Message */}
-            <div className="text-center mb-12">
-              <p className="text-sm text-sacred-moon/60 italic">
-                Only 4 soul work spots available this month
-              </p>
+            <div>
+              <label htmlFor="message" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                Message
+              </label>
+              <textarea
+                id="message"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                required
+                rows={8}
+                className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors resize-none"
+                placeholder="Tell me what brings you here..."
+              />
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-cosmic-900/30 backdrop-blur-xl border border-sacred-moon/10 rounded-2xl p-8 md:p-12">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-sacred-moon/80 mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="w-full px-4 py-3 bg-cosmic-900/50 border border-sacred-moon/20 rounded-lg text-sacred-moon placeholder-sacred-moon/40 focus:outline-none focus:border-sacred-gold/50 transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="w-full px-12 py-5 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {status === 'sending' ? (
+                <span>Sending...</span>
+              ) : status === 'success' ? (
+                <span>Message Sent ✓</span>
+              ) : status === 'error' ? (
+                <span>Error - Please Try Again</span>
+              ) : (
+                <span>Send Message</span>
+              )}
+            </button>
+          </form>
+        </div>
+      </section>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-sacred-moon/80 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="w-full px-4 py-3 bg-cosmic-900/50 border border-sacred-moon/20 rounded-lg text-sacred-moon placeholder-sacred-moon/40 focus:outline-none focus:border-sacred-gold/50 transition-colors"
-                    placeholder="your@email.com"
-                  />
-                </div>
+      {/* Direct Contact Info */}
+      <section className="py-32 px-6 bg-gradient-to-br from-slate-50 to-stone-100">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          <div>
+            <p className="text-sm uppercase tracking-wider text-black/50 mb-3">Email</p>
+            <a
+              href="mailto:hello@nina-moore.com"
+              className="text-2xl font-serif text-black hover:text-black/70 transition-colors"
+            >
+              hello@nina-moore.com
+            </a>
+          </div>
 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-sacred-moon/80 mb-2">
-                    What are you interested in?
-                  </label>
-                  <select
-                    id="subject"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    required
-                    className="w-full px-4 py-3 bg-cosmic-900/50 border border-sacred-moon/20 rounded-lg text-sacred-moon focus:outline-none focus:border-sacred-gold/50 transition-colors"
-                  >
-                    <option value="">Select...</option>
-                    <option value="1:1 Work">1:1 Deep Work</option>
-                    <option value="Sacred Circles">Sacred Circles</option>
-                    <option value="Medicine Work">Medicine Journeys</option>
-                    <option value="Retreats">Retreats</option>
-                    <option value="Inner Ascend">Inner Ascend Community</option>
-                    <option value="Trainings">Facilitator Training</option>
-                    <option value="General">Just saying hello</option>
-                  </select>
-                </div>
+          <div>
+            <p className="text-sm uppercase tracking-wider text-black/50 mb-3">Instagram</p>
+            <a
+              href="https://instagram.com/nina__eterna"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-serif text-black hover:text-black/70 transition-colors"
+            >
+              @nina__eterna
+            </a>
+          </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-sacred-moon/80 mb-2">
-                    Your Message
-                  </label>
-                  <textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-cosmic-900/50 border border-sacred-moon/20 rounded-lg text-sacred-moon placeholder-sacred-moon/40 focus:outline-none focus:border-sacred-gold/50 transition-colors resize-none"
-                    placeholder="Where are you on your journey? What are you seeking?"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className="w-full px-8 py-4 bg-sacred-gold text-cosmic-900 rounded-full font-medium hover:bg-sacred-glow transition-all disabled:opacity-50"
-                >
-                  {status === 'sending' ? (
-                    <span>Sending...</span>
-                  ) : status === 'success' ? (
-                    <span>Message sent ✓</span>
-                  ) : status === 'error' ? (
-                    <span>Error - Please try again</span>
-                  ) : (
-                    <span>Send message</span>
-                  )}
-                </button>
-              </form>
-
-              {/* Contact Details */}
-              <div className="mt-12 pt-12 border-t border-sacred-moon/10 space-y-6 text-center">
-                <div>
-                  <p className="text-sm text-sacred-moon/60 mb-1">Email</p>
-                  <a
-                    href="mailto:hello@nina-moore.com"
-                    className="text-sacred-gold hover:text-sacred-glow transition-colors"
-                  >
-                    hello@nina-moore.com
-                  </a>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6 text-sm">
-                  <div>
-                    <p className="text-sacred-gold mb-1">Mazunte, Mexico</p>
-                    <p className="text-sacred-moon/60">Retreats & ceremonies</p>
-                  </div>
-                  <div>
-                    <p className="text-sacred-gold mb-1">Barcelona, Spain</p>
-                    <p className="text-sacred-moon/60">1:1 sessions & European retreats</p>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                  <a
-                    href="https://instagram.com/nina__eterna"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sacred-moon/70 hover:text-sacred-gold transition-colors text-sm"
-                  >
-                    @nina__eterna
-                  </a>
-                </div>
-
-                <p className="text-xs text-sacred-moon/50 italic pt-4">
-                  I respond to every message personally. Typically within 24-48 hours.
-                </p>
-              </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="mt-20 bg-cosmic-900/20 backdrop-blur-xl border border-sacred-moon/10 rounded-2xl p-8 md:p-10 text-center">
-              <div className="text-3xl mb-6 text-sacred-gold animate-breathe opacity-60">⊹</div>
-              <h3 className="text-2xl md:text-3xl font-serif text-sacred-moon mb-4">
-                Join the Inner Circle
-              </h3>
-              <p className="text-sacred-moon/80 mb-3">
-                Receive transmissions, integration practices, and soul medicine
-              </p>
-              <p className="text-sm text-sacred-moon/60 mb-8 italic">
-                Sacred transmissions 2x monthly
-              </p>
-
-              {/* Newsletter Form */}
-              <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input
-                  type="email"
-                  placeholder="Your email portal"
-                  className="flex-1 px-6 py-3 bg-cosmic-900/50 border border-sacred-moon/20 rounded-full text-sacred-moon placeholder-sacred-moon/40 focus:outline-none focus:border-sacred-gold/50 transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="px-8 py-3 bg-sacred-gold text-cosmic-900 rounded-full font-medium hover:bg-sacred-glow transition-all"
-                >
-                  Enter the Mystery
-                </button>
-              </form>
-            </div>
+          <div className="pt-12">
+            <p className="text-lg text-black/60 font-light italic">
+              Sessions available in English, Spanish, and French
+            </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
+      {/* Footer */}
+      <footer className="py-16 px-6 border-t border-black/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-serif text-black mb-2">Nina Moore</h3>
+              <p className="text-sm text-black/50">Coaching & Integration</p>
+            </div>
+
+            <div className="flex space-x-8 text-sm text-black/60">
+              <Link to="/support" className="hover:text-black transition-colors">
+                Support
+              </Link>
+              <Link to="/privacy" className="hover:text-black transition-colors">
+                Privacy
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-black/5 text-center text-sm text-black/40">
+            © {new Date().getFullYear()} Nina Moore. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
