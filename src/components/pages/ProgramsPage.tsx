@@ -135,11 +135,8 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Full Width Image Break */}
-      <section className="h-[60vh] bg-gradient-to-r from-stone-100 to-slate-50"></section>
-
       {/* Kundalini Transmission Program */}
-      <section className="py-32">
+      <section className="py-32 bg-stone-50">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Program Description */}
@@ -171,8 +168,70 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Transmission Benefits */}
+      {/* Full Width Image Break */}
+      <section className="h-[60vh] bg-gradient-to-l from-stone-100 to-slate-50"></section>
+
+      {/* Immersive Retreats Program */}
+      <section className="py-32">
+        <div className="container mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            {/* Image Placeholder */}
+            <div className="aspect-[4/5] bg-gradient-to-tr from-stone-200 to-slate-100 rounded-sm"></div>
+
+            {/* Program Description */}
+            <div className="space-y-10">
+              <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
+                {t.programs.retreats.title}
+              </h2>
+
+              <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
+                {t.programs.retreats.subtitle}
+              </p>
+
+              <div className="space-y-6 text-lg text-black/60 leading-relaxed">
+                {t.programs.retreats.description.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+
+              <div className="pt-8">
+                <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+                  {t.programs.retreats.cta}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Retreat Offerings */}
       <section className="py-32 bg-stone-50">
+        <div className="container mx-auto max-w-6xl px-6 lg:px-12">
+          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
+            {t.programs.retreatOfferings.title}
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-16 lg:gap-24">
+            {t.programs.retreatOfferings.items.map((item) => (
+              <div key={item.num} className="space-y-6">
+                <div className="text-4xl font-serif text-black/20">{item.num}</div>
+                <h3 className="text-3xl font-serif text-black">
+                  {item.title}
+                </h3>
+                <p className="text-lg text-black/60 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Full Width Image Break */}
+      <section className="h-[60vh] bg-gradient-to-r from-slate-100 to-stone-50"></section>
+
+      {/* Transmission Benefits */}
+      <section className="py-32">
         <div className="container mx-auto max-w-6xl px-6 lg:px-12">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
             {t.programs.experience.title}

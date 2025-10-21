@@ -294,22 +294,55 @@
     },
     "sacredUnion": {
       "title": "Unión Sagrada",
-      "subtitle": "Un programa de transformación de 4 semanas para parejas listas para profundizar su relación y embarcarse en un viaje de sanación y crecimiento profundos.",
+      "subtitle": "Un viaje de transformación continuo para parejas listas para profundizar su relación y embarcarse en sanación y crecimiento profundos juntos.",
       "description": [
         "Has entrado en la dinámica relacional más transformadora de tu vida y te está pateando el trasero. Este programa está aquí para sostenerte a través del viaje salvaje, proporcionando anclas a las que regresar cuando surjan desafíos.",
-        "Juntos, exploraremos la confianza, el amor incondicional, la comunicación, el trabajo con la sombra y la sanación del trauma transgeneracional. Esto no es terapia de parejas tradicional — esto es trabajo a nivel del alma para parejas listas para transformarse."
+        "Juntos, exploraremos la confianza, el amor incondicional, la comunicación, el trabajo con la sombra y la sanación del trauma transgeneracional. Esto no es terapia de parejas tradicional — esto es trabajo a nivel del alma para parejas listas para transformarse.",
+        "Este es un trabajo continuo que evoluciona con tu relación. Comenzamos con una base de 4 semanas y continuamos a medida que se desarrolla tu viaje, reuniéndonos regularmente para navegar las profundidades de la asociación sagrada."
       ],
       "cta": "Saber Más"
     },
     "kundalini": {
       "title": "Transmisión Kundalini",
-      "subtitle": "Una transmisión energética profunda para la transformación de vida profunda y el despertar de tu poder interior.",
+      "subtitle": "Una secuencia de activación energética continua para la transformación de vida profunda y el despertar de tu poder interior.",
       "description": [
         "Esto no es solo activación kundalini — esto es una transmisión sagrada de energía de fuerza vital que se mueve a través de todo tu ser, despertando el potencial latente y limpiando bloqueos que te han retenido.",
         "A través de este trabajo, experimentarás cambios energéticos que se expanden a través de cada capa de tu existencia: física, emocional, mental y espiritual. Esta transmisión apoya tu viaje de estar completamente encarnada en tu verdad y poder.",
-        "Cada sesión está diseñada únicamente para lo que tu sistema está listo para recibir e integrar. Trabajamos con la inteligencia de tu cuerpo y campo energético para facilitar una transformación profunda en un contenedor seguro y sostenido."
+        "Cada sesión está diseñada únicamente para lo que tu sistema está listo para recibir e integrar. Trabajamos con la inteligencia de tu cuerpo y campo energético para facilitar una transformación profunda en un contenedor seguro y sostenido.",
+        "Esta es una secuencia de activación progresiva — no un evento único. Trabajamos juntas a lo largo del tiempo, construyendo capacidad energética y apoyando la integración en cada etapa de tu despertar."
       ],
       "cta": "Saber Más"
+    },
+    "retreats": {
+      "title": "Retiros Inmersivos",
+      "subtitle": "Retiros privados 1:1 o grupos pequeños íntimos para trabajo transformacional profundo en un contenedor sagrado y sostenido.",
+      "description": [
+        "A veces la transformación requiere alejarse de la vida diaria y sumergirse completamente en el trabajo. Estos retiros de varios días ofrecen un contenedor sagrado para sanación profunda, activación e integración.",
+        "Ya sea que vengas sola para trabajo privado 1:1, o traigas a tu pareja o un pequeño grupo de amigas, estos retiros están diseñados para sostenerte a través de procesos profundos que requieren tiempo, espacio y presencia completa.",
+        "Te quedarás durante la duración del retiro, permitiendo que el trabajo se desarrolle orgánicamente sin la interrupción de regresar a las responsabilidades diarias. Esto crea las condiciones para avances que simplemente no son posibles en sesiones más cortas.",
+        "El retiro incluye sesiones de sanación personalizadas, trabajo energético, prácticas somáticas, inmersión en la naturaleza y ceremonia sagrada adaptada a lo que quiere emerger para ti o tu grupo."
+      ],
+      "cta": "Saber Más"
+    },
+    "retreatOfferings": {
+      "title": "Ofertas de Retiro",
+      "items": [
+        {
+          "num": "01",
+          "title": "Retiros Privados 1:1",
+          "description": "Inmersiones de varios días completamente personalizadas diseñadas en torno a tu viaje único, ofreciendo trabajo profundo uno a uno en un contenedor seguro y sagrado."
+        },
+        {
+          "num": "02",
+          "title": "Retiros de Parejas",
+          "description": "Retiros íntimos para parejas que buscan profundizar su vínculo, navegar desafíos y desbloquear nuevos niveles de conexión e intimidad."
+        },
+        {
+          "num": "03",
+          "title": "Retiros de Grupos Pequeños",
+          "description": "Trae a tus amigas cercanas para un viaje transformacional compartido. Perfecto para grupos de 2-4 que quieren experimentar sanación y crecimiento juntas."
+        }
+      ]
     },
     "experience": {
       "title": "Lo Que Experimentarás",

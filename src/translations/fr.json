@@ -294,22 +294,55 @@
     },
     "sacredUnion": {
       "title": "Union Sacrée",
-      "subtitle": "Un programme de transformation de 4 semaines pour les couples prêts à approfondir leur relation et se lancer dans un voyage de guérison et de croissance profonds.",
+      "subtitle": "Un voyage de transformation continu pour les couples prêts à approfondir leur relation et s'engager dans une guérison et croissance profondes ensemble.",
       "description": [
         "Vous êtes entrés dans la dynamique relationnelle la plus transformatrice de votre vie et elle vous malmène. Ce programme est là pour vous soutenir à travers le voyage sauvage, fournissant des ancrages auxquels revenir lorsque des défis surgissent.",
-        "Ensemble, nous explorerons la confiance, l'amour inconditionnel, la communication, le travail sur l'ombre et la guérison du trauma transgénérationnel. Ce n'est pas une thérapie de couple traditionnelle — c'est un travail au niveau de l'âme pour des partenaires prêts à se transformer."
+        "Ensemble, nous explorerons la confiance, l'amour inconditionnel, la communication, le travail sur l'ombre et la guérison du trauma transgénérationnel. Ce n'est pas une thérapie de couple traditionnelle — c'est un travail au niveau de l'âme pour des partenaires prêts à se transformer.",
+        "C'est un travail continu qui évolue avec votre relation. Nous commençons avec une fondation de 4 semaines et continuons au fur et à mesure que votre voyage se déploie, nous rencontrant régulièrement pour naviguer les profondeurs du partenariat sacré."
       ],
       "cta": "En Savoir Plus"
     },
     "kundalini": {
       "title": "Transmission Kundalini",
-      "subtitle": "Une transmission énergétique profonde pour une transformation de vie profonde et l'éveil de votre pouvoir intérieur.",
+      "subtitle": "Une séquence d'activation énergétique continue pour une transformation de vie profonde et l'éveil de votre pouvoir intérieur.",
       "description": [
         "Ce n'est pas seulement une activation kundalini — c'est une transmission sacrée d'énergie de force vitale qui traverse tout votre être, éveillant le potentiel dormant et dégageant les blocages qui vous ont retenu.",
         "À travers ce travail, vous vivrez des changements énergétiques qui se répercutent à travers chaque couche de votre existence : physique, émotionnelle, mentale et spirituelle. Cette transmission soutient votre voyage pour être pleinement incarnée dans votre vérité et votre pouvoir.",
-        "Chaque session est adaptée de manière unique à ce que votre système est prêt à recevoir et intégrer. Nous travaillons avec l'intelligence de votre corps et de votre champ énergétique pour faciliter une transformation profonde dans un conteneur sûr et maintenu."
+        "Chaque session est adaptée de manière unique à ce que votre système est prêt à recevoir et intégrer. Nous travaillons avec l'intelligence de votre corps et de votre champ énergétique pour faciliter une transformation profonde dans un conteneur sûr et maintenu.",
+        "C'est une séquence d'activation progressive — pas un événement unique. Nous travaillons ensemble au fil du temps, développant la capacité énergétique et soutenant l'intégration à chaque étape de votre éveil."
       ],
       "cta": "En Savoir Plus"
+    },
+    "retreats": {
+      "title": "Retraites Immersives",
+      "subtitle": "Retraites privées 1:1 ou petits groupes intimes pour un travail transformationnel profond dans un conteneur sacré et maintenu.",
+      "description": [
+        "Parfois, la transformation nécessite de s'éloigner de la vie quotidienne et de s'immerger complètement dans le travail. Ces retraites de plusieurs jours offrent un conteneur sacré pour une guérison profonde, une activation et une intégration.",
+        "Que vous veniez seule pour un travail privé 1:1, ou que vous ameniez votre partenaire ou un petit groupe d'amies, ces retraites sont conçues pour vous soutenir à travers des processus profonds qui nécessitent du temps, de l'espace et une présence complète.",
+        "Vous resterez pendant toute la durée de la retraite, permettant au travail de se dérouler organiquement sans l'interruption de retourner aux responsabilités quotidiennes. Cela crée les conditions pour des percées qui ne sont tout simplement pas possibles lors de sessions plus courtes.",
+        "La retraite comprend des sessions de guérison personnalisées, du travail énergétique, des pratiques somatiques, une immersion dans la nature et une cérémonie sacrée adaptée à ce qui veut émerger pour vous ou votre groupe."
+      ],
+      "cta": "En Savoir Plus"
+    },
+    "retreatOfferings": {
+      "title": "Offres de Retraite",
+      "items": [
+        {
+          "num": "01",
+          "title": "Retraites Privées 1:1",
+          "description": "Immersions de plusieurs jours entièrement personnalisées conçues autour de votre voyage unique, offrant un travail profond en tête-à-tête dans un conteneur sûr et sacré."
+        },
+        {
+          "num": "02",
+          "title": "Retraites de Couples",
+          "description": "Retraites intimes pour les partenaires cherchant à approfondir leur lien, naviguer les défis et débloquer de nouveaux niveaux de connexion et d'intimité."
+        },
+        {
+          "num": "03",
+          "title": "Retraites de Petits Groupes",
+          "description": "Amenez vos amies proches pour un voyage transformationnel partagé. Parfait pour les groupes de 2-4 personnes qui veulent vivre la guérison et la croissance ensemble."
+        }
+      ]
     },
     "experience": {
       "title": "Ce Que Vous Vivrez",

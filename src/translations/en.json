@@ -227,22 +227,55 @@
     },
     "sacredUnion": {
       "title": "Sacred Union",
-      "subtitle": "A 4-week transformation program for couples ready to deepen their relationship and embark on a journey of profound healing and growth.",
+      "subtitle": "An ongoing transformation journey for couples ready to deepen their relationship and embark on profound healing and growth together.",
       "description": [
         "You've entered the most transformative relationship dynamic of your life and it's kicking your ass. This program is here to hold you through the wild ride, providing anchors to return to when challenges arise.",
-        "Together, we'll explore trust, unconditional love, communication, shadow work, and transgenerational trauma healing. This is not traditional couples therapy — this is soul-level work for partners ready to transform."
+        "Together, we'll explore trust, unconditional love, communication, shadow work, and transgenerational trauma healing. This is not traditional couples therapy — this is soul-level work for partners ready to transform.",
+        "This is ongoing work that evolves with your relationship. We begin with a 4-week foundation and continue as your journey unfolds, meeting regularly to navigate the depths of sacred partnership."
       ],
       "cta": "Learn More"
     },
     "kundalini": {
       "title": "Kundalini Transmission",
-      "subtitle": "A profound energetic transmission for deep life transformation and awakening your inner power.",
+      "subtitle": "An ongoing energetic activation sequence for deep life transformation and awakening your inner power.",
       "description": [
         "This is not just kundalini activation — this is a sacred transmission of life force energy that moves through your entire being, awakening dormant potential and clearing blockages that have held you back.",
         "Through this work, you'll experience energetic shifts that ripple through every layer of your existence: physical, emotional, mental, and spiritual. This transmission supports your journey of becoming fully embodied in your truth and power.",
-        "Each session is uniquely tailored to what your system is ready to receive and integrate. We work with the intelligence of your body and energy field to facilitate profound transformation in a safe, held container."
+        "Each session is uniquely tailored to what your system is ready to receive and integrate. We work with the intelligence of your body and energy field to facilitate profound transformation in a safe, held container.",
+        "This is a progressive activation sequence — not a one-time event. We work together over time, building energetic capacity and supporting integration at each stage of your awakening."
       ],
       "cta": "Learn More"
+    },
+    "retreats": {
+      "title": "Immersive Retreats",
+      "subtitle": "Private 1:1 or intimate small group retreats for deep transformational work in a held, sacred container.",
+      "description": [
+        "Sometimes transformation requires stepping away from daily life and immersing yourself fully in the work. These multi-day retreats offer a sacred container for profound healing, activation, and integration.",
+        "Whether you come alone for private 1:1 work, or bring your partner or a small group of friends, these retreats are designed to hold you through deep processes that require time, space, and complete presence.",
+        "You'll stay over for the duration of the retreat, allowing the work to unfold organically without the interruption of returning to daily responsibilities. This creates the conditions for breakthroughs that simply aren't possible in shorter sessions.",
+        "The retreat includes personalized healing sessions, energy work, somatic practices, nature immersion, and sacred ceremony tailored to what wants to emerge for you or your group."
+      ],
+      "cta": "Learn More"
+    },
+    "retreatOfferings": {
+      "title": "Retreat Offerings",
+      "items": [
+        {
+          "num": "01",
+          "title": "Private 1:1 Retreats",
+          "description": "Fully personalized multi-day immersions designed around your unique journey, offering deep one-on-one work in a safe, sacred container."
+        },
+        {
+          "num": "02",
+          "title": "Couples Retreats",
+          "description": "Intimate retreats for partners seeking to deepen their bond, navigate challenges, and unlock new levels of connection and intimacy."
+        },
+        {
+          "num": "03",
+          "title": "Small Group Retreats",
+          "description": "Bring your close friends for a shared transformational journey. Perfect for groups of 2-4 who want to experience healing and growth together."
+        }
+      ]
     },
     "experience": {
       "title": "What You'll Experience",
