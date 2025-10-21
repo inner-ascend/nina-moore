@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import enTranslations from './translations/en.json';
 import esTranslations from './translations/es.json';
-import caTranslations from './translations/ca.json';
+import frTranslations from './translations/fr.json';
 
 i18n
   .use(initReactI18next)
@@ -10,7 +10,7 @@ i18n
     resources: {
       en: { translation: enTranslations },
       es: { translation: esTranslations },
-      ca: { translation: caTranslations },
+      fr: { translation: frTranslations },
     },
     lng: 'en', // default language
     fallbackLng: 'en',
