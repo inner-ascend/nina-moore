@@ -1,134 +1,181 @@
 import { Link } from 'react-router-dom';
-import Navigation from './Navigation';
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 export default function SupportPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen">
-      <Navigation />
+    <div className="min-h-screen bg-white">
+      {/* Minimal Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-24">
+            <Link to="/" className="text-2xl font-serif text-black tracking-tight">
+              Nina Moore
+            </Link>
 
-      <div className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-cosmic-900/90 via-indigo-deep/80 to-black/90">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-mystic-purple rounded-full mix-blend-screen filter blur-3xl animate-breathe" style={{animationDuration: '8s'}}></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sacred-green rounded-full mix-blend-screen filter blur-3xl animate-breathe" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4 py-32">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-5xl md:text-6xl font-serif text-sacred-moon mb-6 font-light">
-                Support
-              </h1>
-              <p className="text-xl text-sacred-moon/80">
-                Questions about your journey? We're here to help.
-              </p>
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-12">
+              <Link to="/" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                Contact
+              </Link>
             </div>
 
-            <div className="bg-cosmic-900/30 backdrop-blur-xl border border-sacred-moon/10 rounded-2xl p-8 md:p-12 space-y-12">
-              {/* Email Support */}
-              <div className="text-center space-y-4">
-                <h2 className="text-2xl font-serif text-sacred-moon">Get in Touch</h2>
-                <p className="text-sacred-moon/70">
-                  For questions about services, bookings, or your journey with us:
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden py-6 space-y-6 border-t border-black/5">
+              <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+                Home
+              </Link>
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+                About
+              </Link>
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+                Contact
+              </Link>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative h-[60vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-stone-50 to-slate-100">
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+        </div>
+
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-6xl md:text-8xl font-serif text-black mb-4 leading-tight tracking-tight">
+            Support
+          </h1>
+          <p className="text-xl text-black/60">Questions about your journey? We're here to help.</p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="py-32 px-6">
+        <div className="container mx-auto max-w-4xl">
+          {/* Contact Section */}
+          <div className="text-center mb-24">
+            <h2 className="text-4xl font-serif text-black mb-8">Get in Touch</h2>
+            <p className="text-xl text-black/60 mb-8">
+              For questions about services, bookings, or your journey with us:
+            </p>
+            <a
+              href="mailto:hello@nina-moore.com"
+              className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all"
+            >
+              hello@nina-moore.com
+            </a>
+          </div>
+
+          {/* Instagram */}
+          <div className="text-center mb-24 pb-24 border-b border-black/10">
+            <p className="text-lg text-black/60 mb-4">Follow the journey:</p>
+            <a
+              href="https://instagram.com/nina__eterna"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-black hover:text-black/60 transition-colors text-lg"
+            >
+              @nina__eterna
+            </a>
+          </div>
+
+          {/* Common Questions */}
+          <div>
+            <h2 className="text-4xl font-serif text-black mb-16 text-center">
+              Common Questions
+            </h2>
+
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-2xl font-serif text-black mb-4">
+                  How do I book a session?
+                </h3>
+                <p className="text-lg text-black/60 leading-relaxed">
+                  Click any "Book now" button on the website to reach the contact page. We'll schedule a 30-minute connection call to determine your needs and see if we're a good fit.
                 </p>
-                <a
-                  href="mailto:hello@nina-moore.com"
-                  className="inline-block px-8 py-3 bg-sacred-gold text-cosmic-900 rounded-full font-medium hover:bg-sacred-glow transition-all"
-                >
-                  Email: hello@nina-moore.com
-                </a>
               </div>
 
-              {/* Common Questions */}
-              <div className="border-t border-sacred-moon/10 pt-12">
-                <h2 className="text-2xl font-serif text-sacred-moon mb-8 text-center">
-                  Common Questions
-                </h2>
-
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium text-sacred-gold mb-2">
-                      How do I book a session?
-                    </h3>
-                    <p className="text-sacred-moon/70">
-                      Visit our <Link to="/contact" className="text-sacred-gold hover:underline">Contact page</Link> to
-                      send us a message about what you're looking for. We'll respond within 24-48 hours to discuss
-                      availability and next steps.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium text-sacred-gold mb-2">
-                      What should I expect from a session?
-                    </h3>
-                    <p className="text-sacred-moon/70">
-                      Each session is unique and tailored to your needs. We'll discuss your intentions beforehand
-                      and create a safe container for deep transformational work. Sessions may include energy healing,
-                      somatic practices, family constellations, or integration support.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium text-sacred-gold mb-2">
-                      Is medicine work right for me?
-                    </h3>
-                    <p className="text-sacred-moon/70">
-                      Medicine work is a profound journey that's not for everyone. We require a discovery call
-                      and health screening before any ceremony. If you're called to this work, we'll help you
-                      determine if it's the right time and prepare you properly.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium text-sacred-gold mb-2">
-                      Where are you located?
-                    </h3>
-                    <p className="text-sacred-moon/70">
-                      We offer sessions and retreats in two locations: Mazunte, Mexico (for retreats and ceremonies)
-                      and Barcelona, Spain (for 1:1 sessions and European retreats). Remote sessions are also available.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium text-sacred-gold mb-2">
-                      What is Inner Ascend?
-                    </h3>
-                    <p className="text-sacred-moon/70">
-                      Inner Ascend is our community for conscious entrepreneurs, healers, and visionaries.
-                      Learn more on our <Link to="/inner-ascend" className="text-sacred-gold hover:underline">Community page</Link>.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Connect */}
-              <div className="border-t border-sacred-moon/10 pt-12 text-center space-y-4">
-                <h2 className="text-2xl font-serif text-sacred-moon mb-4">Stay Connected</h2>
-                <p className="text-sacred-moon/70 mb-6">
-                  Follow our journey and daily teachings on Instagram
+              <div>
+                <h3 className="text-2xl font-serif text-black mb-4">
+                  What is the investment?
+                </h3>
+                <p className="text-lg text-black/60 leading-relaxed">
+                  The cycle of 4 sessions is $444. This includes ongoing support between sessions.
                 </p>
-                <a
-                  href="https://instagram.com/nina__eterna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-sacred-gold hover:text-sacred-glow transition-colors"
-                >
-                  @nina__eterna
-                </a>
               </div>
 
-              {/* Back Home */}
-              <div className="text-center pt-8">
-                <Link
-                  to="/"
-                  className="text-sacred-moon/60 hover:text-sacred-gold transition-colors"
-                >
-                  ← Back to home
-                </Link>
+              <div>
+                <h3 className="text-2xl font-serif text-black mb-4">
+                  Are sessions online or in-person?
+                </h3>
+                <p className="text-lg text-black/60 leading-relaxed">
+                  Sessions are available both online and in-person. We'll discuss your preference during the connection call.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-serif text-black mb-4">
+                  What if I need to reschedule?
+                </h3>
+                <p className="text-lg text-black/60 leading-relaxed">
+                  Please provide at least 24 hours notice for rescheduling. Email hello@nina-moore.com with your request.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Footer - Minimal */}
+      <footer className="border-t border-black/10 py-16 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-2xl font-serif text-black">
+              Nina Moore
+            </div>
+
+            <div className="flex items-center gap-8 text-sm uppercase tracking-wider text-black/60">
+              <a href="mailto:hello@nina-moore.com" className="hover:text-black transition-colors">
+                Email
+              </a>
+              <a href="https://instagram.com/nina__eterna" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
+                Instagram
+              </a>
+              <Link to="/support" className="hover:text-black transition-colors">
+                Support
+              </Link>
+              <Link to="/privacy" className="hover:text-black transition-colors">
+                Privacy
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-12 text-xs text-black/40">
+            © 2025 Nina Moore. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
