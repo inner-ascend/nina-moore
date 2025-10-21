@@ -89,9 +89,9 @@ export default function AboutPage() {
             <div className="aspect-[3/4] bg-gradient-to-br from-stone-200 to-slate-100 rounded-sm"></div>
 
             {/* Bio Text */}
-            <div className="space-y-8 text-lg text-black/70 leading-relaxed">
+            <div className="space-y-10 text-xl md:text-2xl text-black/70 leading-relaxed">
               {t.about.bio.map((paragraph, index) => (
-                <p key={index} className={index === 4 ? "text-black font-medium text-2xl leading-relaxed pt-4" : ""}>
+                <p key={index} className={index === 4 ? "text-black font-medium text-3xl md:text-4xl leading-relaxed pt-6" : ""}>
                   {paragraph}
                 </p>
               ))}
