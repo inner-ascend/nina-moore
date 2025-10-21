@@ -286,6 +286,91 @@
       "email": "hello@nina-moore.com"
     }
   },
+  "programs": {
+    "title": "Programas",
+    "hero": {
+      "title": "Programas",
+      "subtitle": "Unión Sagrada y Transformación de Relaciones"
+    },
+    "sacredUnion": {
+      "title": "Unión Sagrada",
+      "subtitle": "Un programa de transformación de 4 semanas para parejas listas para profundizar su relación y embarcarse en un viaje de sanación y crecimiento profundos.",
+      "description": [
+        "Has entrado en la dinámica relacional más transformadora de tu vida y te está pateando el trasero. Este programa está aquí para sostenerte a través del viaje salvaje, proporcionando anclas a las que regresar cuando surjan desafíos.",
+        "Juntos, exploraremos la confianza, el amor incondicional, la comunicación, el trabajo con la sombra y la sanación del trauma transgeneracional. Esto no es terapia de parejas tradicional — esto es trabajo a nivel del alma para parejas listas para transformarse."
+      ],
+      "cta": "Saber Más"
+    },
+    "kundalini": {
+      "title": "Transmisión Kundalini",
+      "subtitle": "Una transmisión energética profunda para la transformación de vida profunda y el despertar de tu poder interior.",
+      "description": [
+        "Esto no es solo activación kundalini — esto es una transmisión sagrada de energía de fuerza vital que se mueve a través de todo tu ser, despertando el potencial latente y limpiando bloqueos que te han retenido.",
+        "A través de este trabajo, experimentarás cambios energéticos que se expanden a través de cada capa de tu existencia: física, emocional, mental y espiritual. Esta transmisión apoya tu viaje de estar completamente encarnada en tu verdad y poder.",
+        "Cada sesión está diseñada únicamente para lo que tu sistema está listo para recibir e integrar. Trabajamos con la inteligencia de tu cuerpo y campo energético para facilitar una transformación profunda en un contenedor seguro y sostenido."
+      ],
+      "cta": "Saber Más"
+    },
+    "experience": {
+      "title": "Lo Que Experimentarás",
+      "items": [
+        {
+          "num": "01",
+          "title": "Despertar Energético",
+          "description": "Activación de tu energía de fuerza vital, abriendo caminos para que la vitalidad, creatividad y conciencia expandida fluyan libremente a través de tu ser."
+        },
+        {
+          "num": "02",
+          "title": "Limpieza Profunda",
+          "description": "Liberación de emociones atascadas, creencias limitantes y bloqueos energéticos que han estado retenidos en tu cuerpo y campo, creando espacio para nuevas posibilidades."
+        },
+        {
+          "num": "03",
+          "title": "Transformación Encarnada",
+          "description": "Integración de estados superiores de conciencia en tu vida diaria, permitiéndote vivir desde un lugar de poder auténtico y presencia."
+        }
+      ]
+    },
+    "fourWeek": {
+      "title": "Viaje de 4 Semanas",
+      "weeks": [
+        {
+          "num": "Semana 1",
+          "title": "Construyendo Confianza y Amor Incondicional",
+          "description": "Estableciendo intenciones, explorando la confianza dentro de ti misma y tu pareja, comprendiendo y practicando el amor incondicional, e identificando barreras personales a la intimidad."
+        },
+        {
+          "num": "Semana 2",
+          "title": "Comunicación y Trabajo con la Sombra",
+          "description": "Practicando la vulnerabilidad, profundizando la intimidad emocional, identificando y reconociendo tus sombras, y aprendiendo a abrazar las partes de ti misma que has ocultado."
+        },
+        {
+          "num": "Semana 3",
+          "title": "Sanando el Trauma Transgeneracional",
+          "description": "Comprendiendo patrones heredados, desprogramando el trauma celular, y fomentando el crecimiento interno juntos mientras te liberas de creencias limitantes."
+        },
+        {
+          "num": "Semana 4",
+          "title": "Integración y Celebración",
+          "description": "Abrazando el cambio juntos, construyendo resiliencia, celebrando tu progreso, y anclando la transformación en tu vida diaria."
+        }
+      ]
+    },
+    "principles": {
+      "title": "Principios Fundamentales",
+      "items": [
+        "Confía en el proceso, sabiendo que hay un mundo de sutilezas más allá del dogma consciente de las relaciones.",
+        "No estás sanando solo a ti misma. El trabajo se expande muy lejos — estás desprogramando el trauma transgeneracional a nivel celular, de ADN.",
+        "Da la bienvenida a las tormentas. Usa la energía de los desafíos para traer transformación en lugar de evitarlos.",
+        "Son almas en una misión."
+      ]
+    },
+    "cta": {
+      "title": "¿Lista para transformar tu relación?",
+      "subtitle": "Este programa es para parejas que confían en su camino del alma y están listas para hacer el trabajo profundo.",
+      "button": "Reservar una Llamada de Descubrimiento"
+    }
+  },
   "footer": {
     "email": "hello@nina-moore.com",
     "social": {

@@ -286,6 +286,91 @@
       "email": "hello@nina-moore.com"
     }
   },
+  "programs": {
+    "title": "Programmes",
+    "hero": {
+      "title": "Programmes",
+      "subtitle": "Union Sacrée et Transformation Relationnelle"
+    },
+    "sacredUnion": {
+      "title": "Union Sacrée",
+      "subtitle": "Un programme de transformation de 4 semaines pour les couples prêts à approfondir leur relation et se lancer dans un voyage de guérison et de croissance profonds.",
+      "description": [
+        "Vous êtes entrés dans la dynamique relationnelle la plus transformatrice de votre vie et elle vous malmène. Ce programme est là pour vous soutenir à travers le voyage sauvage, fournissant des ancrages auxquels revenir lorsque des défis surgissent.",
+        "Ensemble, nous explorerons la confiance, l'amour inconditionnel, la communication, le travail sur l'ombre et la guérison du trauma transgénérationnel. Ce n'est pas une thérapie de couple traditionnelle — c'est un travail au niveau de l'âme pour des partenaires prêts à se transformer."
+      ],
+      "cta": "En Savoir Plus"
+    },
+    "kundalini": {
+      "title": "Transmission Kundalini",
+      "subtitle": "Une transmission énergétique profonde pour une transformation de vie profonde et l'éveil de votre pouvoir intérieur.",
+      "description": [
+        "Ce n'est pas seulement une activation kundalini — c'est une transmission sacrée d'énergie de force vitale qui traverse tout votre être, éveillant le potentiel dormant et dégageant les blocages qui vous ont retenu.",
+        "À travers ce travail, vous vivrez des changements énergétiques qui se répercutent à travers chaque couche de votre existence : physique, émotionnelle, mentale et spirituelle. Cette transmission soutient votre voyage pour être pleinement incarnée dans votre vérité et votre pouvoir.",
+        "Chaque session est adaptée de manière unique à ce que votre système est prêt à recevoir et intégrer. Nous travaillons avec l'intelligence de votre corps et de votre champ énergétique pour faciliter une transformation profonde dans un conteneur sûr et maintenu."
+      ],
+      "cta": "En Savoir Plus"
+    },
+    "experience": {
+      "title": "Ce Que Vous Vivrez",
+      "items": [
+        {
+          "num": "01",
+          "title": "Éveil Énergétique",
+          "description": "Activation de votre énergie de force vitale, ouvrant des voies pour que la vitalité, la créativité et la conscience élargie circulent librement à travers votre être."
+        },
+        {
+          "num": "02",
+          "title": "Nettoyage Profond",
+          "description": "Libération d'émotions bloquées, de croyances limitantes et de blocages énergétiques qui ont été maintenus dans votre corps et votre champ, créant de l'espace pour de nouvelles possibilités."
+        },
+        {
+          "num": "03",
+          "title": "Transformation Incarnée",
+          "description": "Intégration d'états de conscience supérieurs dans votre vie quotidienne, vous permettant de vivre depuis un lieu de pouvoir authentique et de présence."
+        }
+      ]
+    },
+    "fourWeek": {
+      "title": "Voyage de 4 Semaines",
+      "weeks": [
+        {
+          "num": "Semaine 1",
+          "title": "Construire la Confiance et l'Amour Inconditionnel",
+          "description": "Établir des intentions, explorer la confiance en vous-même et votre partenaire, comprendre et pratiquer l'amour inconditionnel, et identifier les barrières personnelles à l'intimité."
+        },
+        {
+          "num": "Semaine 2",
+          "title": "Communication et Travail sur l'Ombre",
+          "description": "Pratiquer la vulnérabilité, approfondir l'intimité émotionnelle, identifier et reconnaître vos ombres, et apprendre à embrasser les parties de vous-même que vous avez cachées."
+        },
+        {
+          "num": "Semaine 3",
+          "title": "Guérir le Trauma Transgénérationnel",
+          "description": "Comprendre les schémas hérités, déprogrammer le trauma cellulaire, et favoriser la croissance intérieure ensemble alors que vous vous libérez des croyances limitantes."
+        },
+        {
+          "num": "Semaine 4",
+          "title": "Intégration et Célébration",
+          "description": "Embrasser le changement ensemble, construire la résilience, célébrer vos progrès, et ancrer la transformation dans votre vie quotidienne."
+        }
+      ]
+    },
+    "principles": {
+      "title": "Principes Fondamentaux",
+      "items": [
+        "Faites confiance au processus, sachant qu'il existe un monde de subtilités au-delà du dogme conscient des relations.",
+        "Vous ne guérissez pas seulement vous-même. Le travail rayonne très loin — vous déprogrammez le trauma transgénérationnel au niveau cellulaire, de l'ADN.",
+        "Accueillez les tempêtes. Utilisez l'énergie des défis pour apporter la transformation au lieu de les éviter.",
+        "Vous êtes des âmes en mission."
+      ]
+    },
+    "cta": {
+      "title": "Prête à transformer votre relation ?",
+      "subtitle": "Ce programme est pour les couples qui font confiance à leur chemin d'âme et sont prêts à faire le travail profond.",
+      "button": "Réserver un Appel de Découverte"
+    }
+  },
   "footer": {
     "email": "hello@nina-moore.com",
     "social": {

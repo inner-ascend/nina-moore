@@ -59,10 +59,13 @@ export default function ContactPage() {
                 Home
               </Link>
               <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                About
+                {t.navigation.about}
+              </Link>
+              <Link to="/programs" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                Programs
               </Link>
               <Link to="/contact" className="text-sm uppercase tracking-wider text-black transition-colors">
-                Contact
+                {t.navigation.contact}
               </Link>
               <button
                 onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
@@ -70,6 +73,9 @@ export default function ContactPage() {
               >
                 {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
               </button>
+              <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+                {t.navigation.bookNow}
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -96,14 +102,34 @@ export default function ContactPage() {
                 className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About
+                {t.navigation.about}
+              </Link>
+              <Link
+                to="/programs"
+                className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Programs
               </Link>
               <Link
                 to="/contact"
                 className="block text-sm uppercase tracking-wider text-black transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                {t.navigation.contact}
+              </Link>
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
+                className="block text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
+              >
+                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
+              </button>
+              <Link
+                to="/contact"
+                className="block text-sm uppercase tracking-wider font-semibold"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.navigation.bookNow}
               </Link>
             </div>
           )}

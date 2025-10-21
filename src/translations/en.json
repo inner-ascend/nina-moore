@@ -219,6 +219,91 @@
       "languages": "Sessions available in English, Spanish, and French"
     }
   },
+  "programs": {
+    "title": "Programs",
+    "hero": {
+      "title": "Programs",
+      "subtitle": "Sacred Union & Relationship Transformation"
+    },
+    "sacredUnion": {
+      "title": "Sacred Union",
+      "subtitle": "A 4-week transformation program for couples ready to deepen their relationship and embark on a journey of profound healing and growth.",
+      "description": [
+        "You've entered the most transformative relationship dynamic of your life and it's kicking your ass. This program is here to hold you through the wild ride, providing anchors to return to when challenges arise.",
+        "Together, we'll explore trust, unconditional love, communication, shadow work, and transgenerational trauma healing. This is not traditional couples therapy — this is soul-level work for partners ready to transform."
+      ],
+      "cta": "Learn More"
+    },
+    "kundalini": {
+      "title": "Kundalini Transmission",
+      "subtitle": "A profound energetic transmission for deep life transformation and awakening your inner power.",
+      "description": [
+        "This is not just kundalini activation — this is a sacred transmission of life force energy that moves through your entire being, awakening dormant potential and clearing blockages that have held you back.",
+        "Through this work, you'll experience energetic shifts that ripple through every layer of your existence: physical, emotional, mental, and spiritual. This transmission supports your journey of becoming fully embodied in your truth and power.",
+        "Each session is uniquely tailored to what your system is ready to receive and integrate. We work with the intelligence of your body and energy field to facilitate profound transformation in a safe, held container."
+      ],
+      "cta": "Learn More"
+    },
+    "experience": {
+      "title": "What You'll Experience",
+      "items": [
+        {
+          "num": "01",
+          "title": "Energetic Awakening",
+          "description": "Activation of your life force energy, opening pathways for vitality, creativity, and expanded consciousness to flow freely through your being."
+        },
+        {
+          "num": "02",
+          "title": "Deep Clearing",
+          "description": "Release of stuck emotions, limiting beliefs, and energetic blockages that have been held in your body and field, creating space for new possibilities."
+        },
+        {
+          "num": "03",
+          "title": "Embodied Transformation",
+          "description": "Integration of higher states of consciousness into your daily life, allowing you to live from a place of authentic power and presence."
+        }
+      ]
+    },
+    "fourWeek": {
+      "title": "4-Week Journey",
+      "weeks": [
+        {
+          "num": "Week 1",
+          "title": "Building Trust & Unconditional Love",
+          "description": "Setting intentions, exploring trust within yourself and your partner, understanding and practicing unconditional love, and identifying personal barriers to intimacy."
+        },
+        {
+          "num": "Week 2",
+          "title": "Communication & Shadow Work",
+          "description": "Practicing vulnerability, deepening emotional intimacy, identifying and acknowledging your shadows, and learning to embrace the parts of yourself you've hidden."
+        },
+        {
+          "num": "Week 3",
+          "title": "Healing Transgenerational Trauma",
+          "description": "Understanding inherited patterns, de-programming cellular trauma, and fostering inner growth together as you break free from limiting beliefs."
+        },
+        {
+          "num": "Week 4",
+          "title": "Integration & Celebration",
+          "description": "Embracing change together, building resilience, celebrating your progress, and anchoring the transformation into your daily life."
+        }
+      ]
+    },
+    "principles": {
+      "title": "Core Principles",
+      "items": [
+        "Trust the process, knowing that there is a world of subtleties beyond the conscious relationship dogma.",
+        "You're not healing only yourself. The work ripples far out — you are de-programming transgenerational trauma at a cellular, DNA level.",
+        "Welcome the thunderstorms. Use the energy of challenges to bring transformation instead of avoiding them.",
+        "You are souls on a mission."
+      ]
+    },
+    "cta": {
+      "title": "Ready to transform your relationship?",
+      "subtitle": "This program is for couples who trust their soul path and are ready to do the deep work.",
+      "button": "Book a Discovery Call"
+    }
+  },
   "footer": {
     "email": "hello@nina-moore.com",
     "social": {

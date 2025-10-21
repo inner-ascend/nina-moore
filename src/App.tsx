@@ -73,6 +73,12 @@ function LandingPage() {
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
                 {t.navigation.contact}
               </Link>
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
+                className="block text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
+              >
+                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
+              </button>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider font-semibold">
                 {t.navigation.bookNow}
               </Link>
