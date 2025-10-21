@@ -1,23 +1,15 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useParams, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Sparkles, Globe, Menu, X } from 'lucide-react';
 import './i18n';
 import enTranslations from './translations/en.json';
 import esTranslations from './translations/es.json';
 import caTranslations from './translations/ca.json';
-import EventPreview from './components/EventPreview';
-import PlacePreview from './components/PlacePreview';
 import SupportPage from './components/SupportPage';
 import PrivacyPage from './components/PrivacyPage';
 import AboutPageNew from './components/pages/AboutPageNew';
-import ServicesPage from './components/pages/ServicesPage';
-import InnerAscendPage from './components/pages/InnerAscendPage';
-import RetreatsPage from './components/pages/RetreatsPage';
-import ResourcesPage from './components/pages/ResourcesPage';
 import ContactPage from './components/pages/ContactPage';
-import CollaborationsPage from './components/pages/CollaborationsPage';
 import ScrollToTop from './components/ScrollToTop';
-// Removed old section components - now using visual storytelling approach
 
 // Main Landing Page Component
 function LandingPage() {
@@ -28,13 +20,13 @@ function LandingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-cosmic-900 via-cosmic-800 to-black text-sacred-moon overflow-hidden relative">
-      {/* Cosmic aurora background - dialed down from opacity-20 to opacity-10 */}
+      {/* Cosmic aurora background */}
       <div className="fixed inset-0 opacity-10">
         <div className="absolute top-0 -left-4 w-[600px] h-[600px] bg-mystic-purple rounded-full mix-blend-screen filter blur-3xl animate-breathe" style={{animationDuration: '8s'}}></div>
         <div className="absolute top-1/4 -right-4 w-[500px] h-[500px] bg-sacred-green rounded-full mix-blend-screen filter blur-3xl animate-breathe" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
       </div>
 
-      {/* Sacred geometry overlay - reduced opacity */}
+      {/* Sacred geometry overlay */}
       <div className="fixed inset-0 opacity-[0.02]" style={{
         backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
         backgroundSize: '60px 60px'
@@ -49,7 +41,7 @@ function LandingPage() {
               <Link to="/" className="flex items-center gap-3">
                 <Sparkles className="w-8 h-8 text-mystic-violet animate-glow" />
                 <span className="text-xl font-serif bg-gradient-to-r from-mystic-lavender via-sacred-gold to-mystic-violet bg-clip-text text-transparent">
-                  Astral Integration
+                  Nina Moore
                 </span>
               </Link>
 
@@ -57,21 +49,6 @@ function LandingPage() {
               <div className="hidden lg:flex items-center gap-6">
                 <Link to="/about" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
                   About
-                </Link>
-                <Link to="/services" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-                  Services
-                </Link>
-                <Link to="/inner-ascend" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-                  Community
-                </Link>
-                <Link to="/retreats" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-                  Retreats
-                </Link>
-                <Link to="/collaborations" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-                  Collaborations
-                </Link>
-                <Link to="/resources" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-                  Resources
                 </Link>
                 <Link to="/contact" className="px-6 py-2 bg-gradient-to-r from-mystic-purple to-mystic-indigo rounded-full font-semibold hover:shadow-lg hover:shadow-mystic-purple/50 transition-all">
                   Contact
@@ -105,21 +82,6 @@ function LandingPage() {
                 <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
                   About
                 </Link>
-                <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-                  Services
-                </Link>
-                <Link to="/inner-ascend" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-                  Community
-                </Link>
-                <Link to="/retreats" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-                  Retreats
-                </Link>
-                <Link to="/collaborations" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-                  Collaborations
-                </Link>
-                <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-                  Resources
-                </Link>
                 <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sacred-gold font-semibold">
                   Contact
                 </Link>
@@ -130,7 +92,6 @@ function LandingPage() {
 
         {/* Full-Screen Hero */}
         <div className="h-screen relative flex items-center justify-center">
-          {/* Background Image Placeholder */}
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-deep/40 via-cosmic-900/60 to-sacred-green/30">
             <div className="absolute inset-0 opacity-5" style={{
               backgroundImage: `radial-gradient(circle at 2px 2px, rgb(255 255 255 / 0.15) 1px, transparent 0)`,
@@ -142,14 +103,14 @@ function LandingPage() {
           {/* Hero Content */}
           <div className="relative z-10 text-center px-4">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-light text-sacred-moon mb-6 animate-fadeIn">
-              Astral Integration
+              Nina Moore
             </h1>
-            <p className="text-xl md:text-2xl text-sacred-moon/80 font-light tracking-wide mb-8">
-              Guiding souls home to themselves
+            <p className="text-xl md:text-2xl text-sacred-moon/80 font-light tracking-wide mb-8 max-w-4xl mx-auto leading-relaxed">
+              Initiatory journeys, healing experiences, and transformative mentorship to awaken your deepest truth and power
             </p>
-            <p className="text-sm md:text-base text-sacred-moon/60 font-light italic max-w-2xl mx-auto">
-              For those who hear the call. For those ready to remember.
-            </p>
+            <Link to="/contact" className="inline-block px-8 py-4 bg-sacred-gold text-cosmic-900 rounded-full font-semibold hover:bg-sacred-glow transition-all">
+              Book now
+            </Link>
           </div>
 
           {/* Scroll Indicator */}
@@ -160,524 +121,434 @@ function LandingPage() {
           </div>
         </div>
 
-        {/* Who This Is For - Wisdom Section */}
+        {/* Three Pillars Section */}
         <div className="bg-gradient-to-b from-black via-cosmic-900/90 to-cosmic-900 py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-12">
-              <div className="text-3xl text-sacred-gold/40">⊛</div>
-              <h2 className="text-3xl md:text-4xl font-serif text-sacred-moon leading-relaxed">
-                This work is for the ones who can no longer pretend
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-12">
+                {/* Pillar 1 */}
+                <div className="text-center space-y-6">
+                  <div className="text-3xl text-sacred-gold/40">✧</div>
+                  <h3 className="text-2xl font-serif text-sacred-moon">
+                    You can already feel it
+                  </h3>
+                  <p className="text-sacred-moon/70 leading-relaxed">
+                    That quiet pull inside you, that whisper that you can rise above the loops and limitations.
+                  </p>
+                </div>
+
+                {/* Pillar 2 */}
+                <div className="text-center space-y-6">
+                  <div className="text-3xl text-sacred-gold/40">⊹</div>
+                  <h3 className="text-2xl font-serif text-sacred-moon">
+                    You desire to transmute your story
+                  </h3>
+                  <p className="text-sacred-moon/70 leading-relaxed">
+                    You are ready to find the gold in the hardship and develop self mastery as you discover your uniqueness.
+                  </p>
+                </div>
+
+                {/* Pillar 3 */}
+                <div className="text-center space-y-6">
+                  <div className="text-3xl text-sacred-gold/40">⊛</div>
+                  <h3 className="text-2xl font-serif text-sacred-moon">
+                    You seek remembrance
+                  </h3>
+                  <p className="text-sacred-moon/70 leading-relaxed">
+                    Of your power. Of your truth. Of the self you know you are underneath the layers of conditioning.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* THE INVITATION Section */}
+        <div className="bg-sacred-cream py-32">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <div className="text-4xl text-sacred-gold/40 mb-6">⊹</div>
+              <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep mb-8">
+                THE INVITATION
               </h2>
-              <div className="space-y-6 text-sacred-moon/70 leading-relaxed text-lg max-w-3xl mx-auto">
+              <div className="space-y-6 text-indigo-deep/70 leading-relaxed text-lg">
                 <p>
-                  For those who've tried everything else. For the seekers who are tired of seeking.
-                  For the ones who know there's something deeper calling.
-                </p>
-                <p className="text-sacred-moon/60 italic">
-                  You're not broken. You're not lost. You're initiating.
+                  Every journey is different — because every soul arrives with its own story, its own wounds, its own readiness.
                 </p>
                 <p>
-                  This is for the souls ready to stop performing, stop bypassing, and start remembering
-                  what they came here to do.
+                  There is no script here, only attuned presence and deep listening.
+                </p>
+                <p>
+                  When you step into this space, you are not coming to "fix yourself."
+                </p>
+                <p className="text-indigo-deep font-medium">
+                  You are entering a sacred container for remembering your truth, clearing what no longer serves you, and opening to the self you have not yet dared to fully embody.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Visual Story Section 1 - The Journey Begins */}
-        <div className="min-h-screen flex items-center bg-sacred-cream">
-          <div className="container mx-auto px-4 py-32">
-            <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-              {/* Large Image */}
-              <div className="aspect-[4/5] relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-sacred-green/20 via-indigo-deep/30 to-mystic-purple/20 rounded-2xl"></div>
+        {/* Now is the time Section */}
+        <div className="bg-white py-32">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl md:text-4xl font-serif text-indigo-deep mb-6">
+                Now is the time for full embodied transformation
+              </h2>
+              <p className="text-xl text-indigo-deep/70 leading-relaxed">
+                I am here to walk with you as you build your living temple.
+              </p>
+              <p className="text-lg text-indigo-deep/70 leading-relaxed">
+                My work is to allow you to bridge your inner awakening and your outer life — helping you integrate your experiences, activate your true self, and embody the purpose you came here to live.
+              </p>
+              <div className="text-lg text-indigo-deep/80 font-medium space-y-3 pt-8">
+                <p>This is more than coaching.</p>
+                <p>This is not just healing.</p>
+                <p>This is full-spectrum remembrance.</p>
+              </div>
+              <p className="text-xl text-indigo-deep/70 italic pt-6">
+                It's a journey to find the way home to yourself.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Offering Section - Cycle of 4 sessions */}
+        <div className="bg-gradient-to-b from-white via-sacred-cream to-white py-32">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep mb-4">
+                Cycle of 4 sessions
+              </h2>
+              <p className="text-2xl text-sacred-gold font-medium mb-12">$444</p>
+              <Link to="/contact" className="inline-block px-10 py-4 bg-sacred-gold text-cosmic-900 rounded-full font-semibold hover:bg-sacred-glow transition-all text-lg">
+                Book now
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* What does a session entail? */}
+        <div className="bg-white py-32">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep text-center mb-20">
+                What does a session entail?
+              </h2>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Session Component 1 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">01</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Deep exploration and integration
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    A safe, personalized space for self discovery
+                  </p>
+                </div>
+
+                {/* Session Component 2 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">02</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Energetic clearing and activation
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Release of stuck energies and emotional blockages, activating your potential
+                  </p>
+                </div>
+
+                {/* Session Component 3 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">03</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Clarity and support
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Intuitive, practical guidance challenging limiting beliefs and offering truth
+                  </p>
+                </div>
+
+                {/* Session Component 4 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">04</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Internal Harmony
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Meeting different aspects of yourself to heal and create internal balance
+                  </p>
+                </div>
+
+                {/* Session Component 5 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">05</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Practical steps
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Coaching focused strategies for actionable growth and empowerment
+                  </p>
+                </div>
+
+                {/* Session Component 6 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">06</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Holistic approach
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Encompassing all layers of the self to reach a feeling of wholeness
+                  </p>
+                </div>
+
+                {/* Session Component 7 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">07</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Presence and honesty
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Meeting your unique needs for you to be fully seen and gain new perspectives
+                  </p>
+                </div>
               </div>
 
-              {/* Minimal Text */}
-              <div className="space-y-8">
-                <p className="text-5xl md:text-6xl font-serif text-indigo-deep leading-tight">
-                  The journey begins with surrender.
-                </p>
-                <p className="text-lg text-indigo-deep/70 leading-relaxed">
-                  For over a decade, I've walked beside souls navigating the depths of transformation—through
-                  medicine work, energy healing, and the sacred art of letting go.
-                </p>
-                <Link to="/about" className="inline-block text-sacred-green hover:text-indigo-deep transition-colors font-medium">
-                  My story →
+              <div className="text-center mt-16">
+                <Link to="/contact" className="inline-block px-10 py-4 bg-indigo-deep text-sacred-cream rounded-full hover:bg-indigo-deep/90 transition-colors font-medium text-lg">
+                  Book now
                 </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Hero Stats Section - Elegant Social Proof */}
-        <div className="bg-gradient-to-b from-sacred-cream to-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-12 text-center">
-                <div className="space-y-3">
-                  <div className="text-5xl md:text-6xl font-serif text-sacred-gold">1,500+</div>
-                  <div className="text-indigo-deep/70 font-light text-lg">Souls awakened</div>
-                </div>
-                <div className="space-y-3">
-                  <div className="text-5xl md:text-6xl font-serif text-sacred-gold">10,000+</div>
-                  <div className="text-indigo-deep/70 font-light text-lg">Healing hours</div>
-                </div>
-                <div className="space-y-3">
-                  <div className="text-5xl md:text-6xl font-serif text-sacred-gold">∞</div>
-                  <div className="text-indigo-deep/70 font-light text-lg">Ancient wisdom lineages</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Visual Quote Section */}
-        <div className="relative h-[70vh]">
-          <div className="absolute inset-0 bg-gradient-to-br from-mystic-purple/30 via-indigo-deep/40 to-sacred-green/20"></div>
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="relative z-10 h-full flex items-center justify-center px-4">
-            <blockquote className="max-w-4xl text-center">
-              <p className="text-3xl md:text-5xl font-serif text-sacred-moon leading-relaxed mb-8">
-                "This work is not about becoming someone new.<br/>
-                It's about remembering who you've always been."
-              </p>
-            </blockquote>
-          </div>
-        </div>
-
-        {/* The Approach - Philosophy Section */}
-        <div className="bg-white py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep mb-8">
-                  How This Work Happens
-                </h2>
-                <p className="text-xl text-indigo-deep/70 max-w-3xl mx-auto leading-relaxed">
-                  This isn't therapy. It isn't coaching. It's something older. Something that can't be rushed.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-12 mt-20">
-                <div className="space-y-4">
-                  <div className="text-sacred-gold text-3xl">✧</div>
-                  <h3 className="text-xl font-serif text-indigo-deep">Presence Over Technique</h3>
-                  <p className="text-indigo-deep/70 leading-relaxed">
-                    I don't fix you. I hold space for you to remember your own wholeness.
-                    The transformation happens in the field between us.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="text-sacred-gold text-3xl">✧</div>
-                  <h3 className="text-xl font-serif text-indigo-deep">Body. Heart. Soul.</h3>
-                  <p className="text-indigo-deep/70 leading-relaxed">
-                    Real healing isn't just mental. We work through the body, honor the heart,
-                    and listen to what your soul has been trying to say.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="text-sacred-gold text-3xl">✧</div>
-                  <h3 className="text-xl font-serif text-indigo-deep">Integration Is Everything</h3>
-                  <p className="text-indigo-deep/70 leading-relaxed">
-                    Insight without integration is just spiritual entertainment.
-                    We anchor the work into your daily life, your relationships, your reality.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Ways to Work Together - Visual */}
+        {/* A profound journey Section */}
         <div className="bg-sacred-cream py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-serif text-indigo-deep text-center mb-20">
-                Ways to Walk Together
+              <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep text-center mb-20">
+                A profound journey towards yourself
               </h2>
 
-              <div className="space-y-32">
-                {/* Circle Work */}
-                <div className="grid lg:grid-cols-5 gap-12 items-center">
-                  <div className="lg:col-span-3 aspect-[16/10] relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-mystic-purple/20 to-indigo-deep/30 rounded-2xl"></div>
-                  </div>
-                  <div className="lg:col-span-2 space-y-6">
-                    <h3 className="text-3xl font-serif text-indigo-deep">Sacred Circles</h3>
-                    <p className="text-indigo-deep/70 leading-relaxed">
-                      Join a container of souls committed to growth. Men's circles, women's leadership,
-                      and creative masterminds for healers and visionaries.
-                    </p>
-                    <Link to="/services" className="inline-block text-sacred-green hover:text-indigo-deep transition-colors">
-                      Explore circles →
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Medicine Work */}
-                <div className="grid lg:grid-cols-5 gap-12 items-center">
-                  <div className="lg:col-span-2 space-y-6 order-2 lg:order-1">
-                    <h3 className="text-3xl font-serif text-indigo-deep">Medicine Journeys</h3>
-                    <p className="text-indigo-deep/70 leading-relaxed">
-                      Bufo Alvarius ceremonies held with reverence and deep preparation. A sacred passage
-                      to ego dissolution and divine remembrance.
-                    </p>
-                    <Link to="/services" className="inline-block text-sacred-green hover:text-indigo-deep transition-colors">
-                      Learn about medicine work →
-                    </Link>
-                  </div>
-                  <div className="lg:col-span-3 aspect-[16/10] relative order-1 lg:order-2">
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-deep/30 to-sacred-green/20 rounded-2xl"></div>
-                  </div>
-                </div>
-
-                {/* 1:1 Work */}
-                <div className="grid lg:grid-cols-5 gap-12 items-center">
-                  <div className="lg:col-span-3 aspect-[16/10] relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-sacred-green/20 to-mystic-purple/20 rounded-2xl"></div>
-                  </div>
-                  <div className="lg:col-span-2 space-y-6">
-                    <h3 className="text-3xl font-serif text-indigo-deep">One-to-One Journeys</h3>
-                    <p className="text-indigo-deep/70 leading-relaxed">
-                      Deep transformational work tailored to your unique path. Energy healing, family
-                      constellations, and bespoke mentorship.
-                    </p>
-                    <Link to="/services" className="inline-block text-sacred-green hover:text-indigo-deep transition-colors">
-                      Discover 1:1 work →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* The Initiation Process - 4 Stages */}
-        <div className="bg-white py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              {/* Title */}
-              <div className="text-center mb-20">
-                <div className="text-4xl text-sacred-gold/40 mb-6">⊹</div>
-                <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep mb-4">
-                  The Initiation Process
-                </h2>
-                <p className="text-lg text-indigo-deep/60 font-light">
-                  Every transformation follows the same sacred pattern
-                </p>
-              </div>
-
-              {/* 4 Stages - Horizontal Flow */}
-              <div className="grid md:grid-cols-4 gap-8 md:gap-6">
-                {/* Stage 1: Dissolution */}
-                <div className="relative">
-                  <div className="text-center space-y-4">
-                    <div className="text-4xl text-sacred-gold mb-4">⊹</div>
-                    <div className="text-2xl font-serif text-indigo-deep mb-2">1</div>
-                    <h3 className="text-xl font-serif text-indigo-deep">Dissolution</h3>
-                    <p className="text-sm text-indigo-deep/70 leading-relaxed">
-                      Release what no longer serves. Clear ancestral patterns, childhood wounds, and energetic debris.
-                    </p>
-                  </div>
-                  {/* Arrow - hidden on mobile */}
-                  <div className="hidden md:block absolute top-12 -right-4 text-sacred-gold/30 text-2xl">→</div>
-                </div>
-
-                {/* Stage 2: Activation */}
-                <div className="relative">
-                  <div className="text-center space-y-4">
-                    <div className="text-4xl text-sacred-gold mb-4">⊛</div>
-                    <div className="text-2xl font-serif text-indigo-deep mb-2">2</div>
-                    <h3 className="text-xl font-serif text-indigo-deep">Activation</h3>
-                    <p className="text-sm text-indigo-deep/70 leading-relaxed">
-                      Awaken dormant gifts. Open your channel, activate intuition, remember your cosmic blueprint.
-                    </p>
-                  </div>
-                  <div className="hidden md:block absolute top-12 -right-4 text-sacred-gold/30 text-2xl">→</div>
-                </div>
-
-                {/* Stage 3: Integration */}
-                <div className="relative">
-                  <div className="text-center space-y-4">
-                    <div className="text-4xl text-sacred-gold mb-4">⊝</div>
-                    <div className="text-2xl font-serif text-indigo-deep mb-2">3</div>
-                    <h3 className="text-xl font-serif text-indigo-deep">Integration</h3>
-                    <p className="text-sm text-indigo-deep/70 leading-relaxed">
-                      Embody your truth. Anchor new frequencies, align actions with soul purpose, manifest your vision.
-                    </p>
-                  </div>
-                  <div className="hidden md:block absolute top-12 -right-4 text-sacred-gold/30 text-2xl">→</div>
-                </div>
-
-                {/* Stage 4: Mastery */}
-                <div className="text-center space-y-4">
-                  <div className="text-4xl text-sacred-gold mb-4">✧</div>
-                  <div className="text-2xl font-serif text-indigo-deep mb-2">4</div>
-                  <h3 className="text-xl font-serif text-indigo-deep">Mastery</h3>
-                  <p className="text-sm text-indigo-deep/70 leading-relaxed">
-                    Become the medicine. Step into service, hold space for others, create ripples of transformation.
-                  </p>
-                </div>
-              </div>
-
-              {/* Closing Wisdom */}
-              <div className="text-center mt-20 max-w-3xl mx-auto">
-                <p className="text-lg text-indigo-deep/60 leading-relaxed italic">
-                  This isn't a quick fix. This isn't a weekend workshop. This is the work of a lifetime—
-                  compressed into the time your soul needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* What People Don't Tell You - Truth Section */}
-        <div className="bg-gradient-to-b from-white via-sacred-cream to-white py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-serif text-indigo-deep mb-8">
-                  What People Don't Tell You About Transformation
-                </h2>
-                <p className="text-xl text-indigo-deep/70 leading-relaxed mb-12">
-                  It's not all light. It's not all love. Sometimes it's messy. Sometimes it's uncomfortable.
-                  And that's exactly where the real work begins.
-                </p>
-              </div>
-
-              <div className="space-y-8 text-indigo-deep/70 leading-relaxed">
-                <div className="border-l-2 border-sacred-gold/40 pl-6">
-                  <p className="mb-2">
-                    <span className="font-serif text-indigo-deep text-lg">You might lose people.</span>
-                  </p>
-                  <p className="text-sm text-indigo-deep/60">
-                    Not everyone can hold space for who you're becoming. And that's okay.
+              <div className="grid md:grid-cols-3 gap-12">
+                {/* Transformation */}
+                <div className="text-center space-y-6">
+                  <div className="text-3xl text-sacred-gold">✧</div>
+                  <h3 className="text-2xl font-serif text-indigo-deep">
+                    Transformation
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Healing old patterns, stepping into leadership, transforming relationships, and creating conscious lives and communities.
                   </p>
                 </div>
 
-                <div className="border-l-2 border-sacred-gold/40 pl-6">
-                  <p className="mb-2">
-                    <span className="font-serif text-indigo-deep text-lg">You might question everything.</span>
-                  </p>
-                  <p className="text-sm text-indigo-deep/60">
-                    Including this work. Including me. That's part of reclaiming your sovereignty.
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-sacred-gold/40 pl-6">
-                  <p className="mb-2">
-                    <span className="font-serif text-indigo-deep text-lg">You might feel worse before you feel better.</span>
-                  </p>
-                  <p className="text-sm text-indigo-deep/60">
-                    Healing brings things to the surface. That's not a sign it's not working—it's a sign it is.
+                {/* Opening */}
+                <div className="text-center space-y-6">
+                  <div className="text-3xl text-sacred-gold">⊹</div>
+                  <h3 className="text-2xl font-serif text-indigo-deep">
+                    Opening
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Every session is a portal: an opening, an invitation to become more of who you are and step into your full radiance and purpose.
                   </p>
                 </div>
 
-                <div className="border-l-2 border-sacred-gold/40 pl-6">
-                  <p className="mb-2">
-                    <span className="font-serif text-indigo-deep text-lg">You will have to do the work.</span>
-                  </p>
-                  <p className="text-sm text-indigo-deep/60">
-                    I can guide. I can hold. I can witness. But I can't do it for you. No one can.
+                {/* Integration */}
+                <div className="text-center space-y-6">
+                  <div className="text-3xl text-sacred-gold">⊛</div>
+                  <h3 className="text-2xl font-serif text-indigo-deep">
+                    Integration
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Transform your expression, identify your patterns, learn how to integrate your life experience, transform trauma into wisdom.
                   </p>
                 </div>
               </div>
 
               <div className="text-center mt-16">
-                <p className="text-lg text-indigo-deep/70 italic">
-                  If you're still reading, if this resonates—you're ready.
-                </p>
+                <Link to="/contact" className="inline-block text-sacred-green hover:text-indigo-deep transition-colors font-medium text-lg">
+                  Start the journey →
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Testimonials - Multiple Voices */}
+        {/* CTA Section - Cycle of 4 sessions */}
+        <div className="bg-white py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep">
+                Cycle of 4 sessions & ongoing support
+              </h2>
+              <p className="text-xl text-indigo-deep/70">
+                Our 30 minutes connection call will help determine your needs and objectives
+              </p>
+              <Link to="/contact" className="inline-block px-10 py-4 bg-sacred-gold text-cosmic-900 rounded-full font-semibold hover:bg-sacred-glow transition-all text-lg">
+                Book now
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* CLIENT TESTIMONIALS */}
         <div className="relative py-32">
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-deep/50 via-cosmic-900/60 to-black/70"></div>
           <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-serif text-sacred-moon text-center mb-20">
-                Voices From The Journey
+                CLIENT TESTIMONIALS
               </h2>
 
               <div className="space-y-20">
-                {/* Testimonial 1 */}
+                {/* Cecile Gatto */}
                 <div className="max-w-4xl mx-auto">
-                  <p className="text-2xl md:text-3xl font-serif text-sacred-moon leading-relaxed mb-8 italic">
-                    "Working with Astral changed my life. Not in a cliché way—in a 'I can't go back to who I was'
-                    way. He sees you. Really sees you. And he holds space for whatever needs to emerge."
+                  <p className="text-xl md:text-2xl font-serif text-sacred-moon leading-relaxed mb-6">
+                    Nina has been guiding me with love and gentleness through the key passages of my life for the past four years. Through our sessions, I've gained growing autonomy and serenity in facing both challenges and joys. With an open heart, I've learned to welcome all parts of myself — both shadow and light — and to stay centered amidst life's turbulence.
                   </p>
-                  <p className="text-sacred-gold text-lg">— Maria, Barcelona</p>
+                  <p className="text-xl font-serif text-sacred-moon leading-relaxed mb-8">
+                    Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices.
+                  </p>
+                  <p className="text-sacred-gold text-lg">— Cecile Gatto</p>
                 </div>
 
-                {/* Testimonial 2 */}
+                {/* Benjamin Barda */}
                 <div className="max-w-4xl mx-auto">
-                  <p className="text-2xl md:text-3xl font-serif text-sacred-moon leading-relaxed mb-8 italic">
-                    "The Bufo ceremony was the most profound experience of my life. Astral's preparation, presence,
-                    and integration support made me feel completely safe to surrender. I finally understand what
-                    'coming home to myself' means."
+                  <p className="text-xl md:text-2xl font-serif text-sacred-moon leading-relaxed mb-6">
+                    With grace and incredible intuition, Nina opens wide the doors of consciousness. Through her clairvoyance, deep empathy, and refined listening, barriers within me dissolved, revealing new spaces of courage, joy, and poetry — reconnecting to life's magical sparks, feeling generously supported and inspired no matter the situation.
                   </p>
-                  <p className="text-sacred-gold text-lg">— David, USA</p>
+                  <p className="text-xl font-serif text-sacred-moon leading-relaxed mb-8">
+                    It's about embracing existence in all its dimensions, making decisive choices, finding courage, and becoming the artist of your inner world.
+                  </p>
+                  <p className="text-sacred-gold text-lg">— Benjamin Barda</p>
                 </div>
 
-                {/* Testimonial 3 */}
+                {/* Will Ashurst */}
                 <div className="max-w-4xl mx-auto">
-                  <p className="text-2xl md:text-3xl font-serif text-sacred-moon leading-relaxed mb-8 italic">
-                    "The men's circle gave me permission to feel everything I'd been holding back for decades.
-                    To cry. To rage. To laugh. To finally be myself without apology. This work saved my life."
+                  <p className="text-xl md:text-2xl font-serif text-sacred-moon leading-relaxed mb-6">
+                    I have been working with Nina for the last year, and the clarity, perspective, and wisdom that I have gained through working with her has been profound. She gives me a great feeling that she understands me very well, and she interprets what I say with precision, love, and compassion.
                   </p>
-                  <p className="text-sacred-gold text-lg">— Carlos, Mexico</p>
-                </div>
-
-                {/* Testimonial 4 */}
-                <div className="max-w-4xl mx-auto">
-                  <p className="text-2xl md:text-3xl font-serif text-sacred-moon leading-relaxed mb-8 italic">
-                    "After years of therapy and self-help, I finally found someone who could hold space for the
-                    darkness without trying to 'fix' me. Astral helped me integrate my shadow and step into my power."
+                  <p className="text-xl font-serif text-sacred-moon leading-relaxed mb-8">
+                    Together, we have moved through a lot of topics and areas of my life which I have wanted to shine light on. I plan to continue working with her, as the value and healing that I've gotten from spending time speaking to her has been deeply meaningful.
                   </p>
-                  <p className="text-sacred-gold text-lg">— Sofia, Spain</p>
+                  <p className="text-sacred-gold text-lg">— Will Ashurst</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* FAQ Section - Common Questions */}
+        {/* What type of work Section */}
         <div className="bg-sacred-cream py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep text-center mb-20">
-                Questions You Might Have
+                What type of work are we doing together
               </h2>
 
-              <div className="space-y-12">
-                <div className="border-b border-indigo-deep/10 pb-8">
-                  <h3 className="text-2xl font-serif text-indigo-deep mb-4">
-                    How is this different from therapy or coaching?
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Work Type 1 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">01</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Life Changes
                   </h3>
                   <p className="text-indigo-deep/70 leading-relaxed">
-                    Therapy focuses on healing trauma and managing symptoms. Coaching focuses on goals and performance.
-                    This work goes deeper—into the soul, the body, the energy field. We're not just healing wounds or
-                    achieving goals. We're remembering who you are beyond all the conditioning. It's more shamanic than
-                    clinical, more mystical than methodical.
+                    Break ups, breakthroughs, loss, awakenings
                   </p>
                 </div>
 
-                <div className="border-b border-indigo-deep/10 pb-8">
-                  <h3 className="text-2xl font-serif text-indigo-deep mb-4">
-                    Do I need experience with plant medicine to work with you?
+                {/* Work Type 2 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">02</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Psychedelic Integration
                   </h3>
                   <p className="text-indigo-deep/70 leading-relaxed">
-                    No. While I offer Bufo ceremonies and integration support for those working with plant medicines,
-                    many people come to me for energy healing, family constellations, or mentorship without ever touching
-                    medicine. The medicine is just one tool. What matters is your readiness to do deep work.
+                    Medicine ceremonies, bad trips, self led journeys
                   </p>
                 </div>
 
-                <div className="border-b border-indigo-deep/10 pb-8">
-                  <h3 className="text-2xl font-serif text-indigo-deep mb-4">
-                    How long does this work take?
+                {/* Work Type 3 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">03</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Relationship Challenges
                   </h3>
                   <p className="text-indigo-deep/70 leading-relaxed">
-                    There's no fixed timeline. Some people have breakthrough moments in a single session. Others work with
-                    me for months or years. Transformation isn't linear. It's not about "fixing" you in 6 sessions—it's
-                    about supporting your unique unfolding for however long it takes. I offer single sessions, 3-month
-                    containers, and 6-month deep dives.
+                    Sacred union, couples alchemy, shadow work
                   </p>
                 </div>
 
-                <div className="border-b border-indigo-deep/10 pb-8">
-                  <h3 className="text-2xl font-serif text-indigo-deep mb-4">
-                    Is this work safe? How do you hold space?
+                {/* Work Type 4 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">04</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Purpose and Path
                   </h3>
                   <p className="text-indigo-deep/70 leading-relaxed">
-                    Safety is paramount. For medicine work, I do thorough preparation, medical screening, and create a
-                    trauma-informed container. For all work, I hold space with presence, not technique. I've trained in
-                    energy healing, family constellations, and shamanic practices for over a decade. I work with your
-                    nervous system, not against it. And I never push you beyond what you're ready for.
+                    Finding yourself, dream work, vision, essence & gifts
                   </p>
                 </div>
 
-                <div className="border-b border-indigo-deep/10 pb-8">
-                  <h3 className="text-2xl font-serif text-indigo-deep mb-4">
-                    Where are you based? Do you work online or in-person?
+                {/* Work Type 5 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">05</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Trauma and Heartbreaks
                   </h3>
                   <p className="text-indigo-deep/70 leading-relaxed">
-                    I split my time between Barcelona (Spain) and Mazunte (Mexico). I offer both in-person sessions
-                    (when I'm in your area or you travel to me) and online sessions via video call. Medicine ceremonies
-                    and retreats are always in-person. Energy healing and mentorship work beautifully online.
+                    Rewriting the story, finding meaning, repatterning
                   </p>
                 </div>
 
-                <div className="pb-8">
-                  <h3 className="text-2xl font-serif text-indigo-deep mb-4">
-                    How do I know if this is right for me?
+                {/* Work Type 6 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">06</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Spiritual Quest
                   </h3>
                   <p className="text-indigo-deep/70 leading-relaxed">
-                    You'll know. If you've read this far and something inside you says "yes"—that's your signal.
-                    Book a discovery call. We'll talk. There's no pressure, no pitch. Just an honest conversation about
-                    where you are and whether I'm the right guide for your journey. Trust your intuition.
+                    Connection to source, rituals, remembrance, soul and sacred
                   </p>
                 </div>
+
+                {/* Work Type 7 */}
+                <div className="space-y-4">
+                  <div className="text-4xl text-sacred-gold">07</div>
+                  <h3 className="text-xl font-serif text-indigo-deep">
+                    Creative Flow
+                  </h3>
+                  <p className="text-indigo-deep/70 leading-relaxed">
+                    Bringing back the spark, finding joy, self expression and trust
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center mt-16">
+                <Link to="/contact" className="inline-block px-10 py-4 bg-indigo-deep text-sacred-cream rounded-full hover:bg-indigo-deep/90 transition-colors font-medium text-lg">
+                  Book now
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Newsletter Section - Inner Circle */}
-        <div className="relative py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-deep/60 via-cosmic-900/70 to-black/80"></div>
-          <div className="relative z-10 container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="text-4xl mb-8 text-sacred-gold animate-breathe opacity-60">⊹</div>
-              <h2 className="text-4xl md:text-5xl font-serif text-sacred-moon mb-6">
-                Join the Inner Circle
-              </h2>
-              <p className="text-lg text-sacred-moon/80 mb-4 font-light">
-                Receive transmissions, integration practices, and soul medicine
-              </p>
-              <p className="text-sm text-sacred-moon/60 mb-12 italic">
-                Sacred transmissions 2x monthly
-              </p>
-
-              {/* Newsletter Form */}
-              <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input
-                  type="email"
-                  placeholder="Your email portal"
-                  className="flex-1 px-6 py-4 bg-cosmic-900/50 border border-sacred-moon/20 rounded-full text-sacred-moon placeholder-sacred-moon/40 focus:outline-none focus:border-sacred-gold/50 transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="px-8 py-4 bg-sacred-gold text-cosmic-900 rounded-full font-medium hover:bg-sacred-glow transition-all"
-                >
-                  Enter the Mystery
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        {/* Gentle Invitation */}
-        <div className="bg-sacred-cream py-32">
+        {/* Final CTA */}
+        <div className="bg-white py-24">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h2 className="text-4xl md:text-5xl font-serif text-indigo-deep">
-                Ready to begin?
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-5xl md:text-6xl font-serif text-indigo-deep">
+                €340
               </h2>
               <p className="text-xl text-indigo-deep/70">
-                Let's have a conversation about where you are and where you want to go.
+                4 sessions + ONGOING SUPPORT
               </p>
-              <Link
-                to="/contact"
-                className="inline-block px-12 py-4 bg-indigo-deep text-sacred-cream rounded-full hover:bg-indigo-deep/90 transition-colors font-medium text-lg"
-              >
-                Get in touch
+              <Link to="/contact" className="inline-block px-12 py-5 bg-sacred-gold text-cosmic-900 rounded-full font-semibold hover:bg-sacred-glow transition-all text-xl">
+                Begin now
               </Link>
             </div>
           </div>
@@ -686,57 +557,31 @@ function LandingPage() {
         {/* Footer */}
         <footer className="container mx-auto px-4 py-20 border-t border-mystic-purple/20">
           <div className="max-w-6xl mx-auto">
-            {/* Sacred Symbol */}
             <div className="text-center mb-12">
               <div className="text-4xl text-sacred-gold/40 animate-breathe mb-8">⊹</div>
             </div>
 
             <div className="text-center space-y-6 mb-12">
-              {/* Logo */}
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Sparkles className="w-8 h-8 text-mystic-violet animate-glow" />
                 <span className="text-xl font-serif bg-gradient-to-r from-mystic-lavender via-sacred-gold to-mystic-violet bg-clip-text text-transparent">
-                  Astral Integration
+                  Nina Moore
                 </span>
               </div>
 
-              {/* Sacred Blessing */}
-              <div className="space-y-3 mb-8">
-                <p className="text-lg text-mystic-lavender/80 font-serif italic">
-                  The Mirror Path
-                </p>
-                <p className="text-base text-mystic-lavender/60 font-serif">
-                  Reflect. Remember. Return.
-                </p>
-              </div>
-
-              {/* Sacred Divider */}
-              <div className="flex justify-center items-center gap-4 my-8">
-                <div className="h-px w-20 bg-gradient-to-r from-transparent via-mystic-purple/50 to-transparent"></div>
-                <div className="text-xl text-sacred-gold/40">✧</div>
-                <div className="h-px w-20 bg-gradient-to-r from-transparent via-mystic-purple/50 to-transparent"></div>
-              </div>
-
-              {/* Email */}
               <p className="text-sm">
                 <a href={`mailto:${t.footer.email}`} className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors font-serif">
                   {t.footer.email}
                 </a>
               </p>
 
-              {/* Social */}
               <div className="flex items-center justify-center gap-6 text-sm">
                 <a href={`https://instagram.com/${t.footer.social.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="text-mystic-lavender/60 hover:text-mystic-violet transition-colors font-serif">
                   Instagram
                 </a>
-                <span className="text-mystic-purple/40">•</span>
-                <a href={`https://${t.footer.social.bio}`} target="_blank" rel="noopener noreferrer" className="text-mystic-lavender/60 hover:text-mystic-violet transition-colors font-serif">
-                  Bio Link
-                </a>
               </div>
             </div>
 
-            {/* Links */}
             <div className="flex items-center justify-center gap-6 text-sm mb-8">
               <Link to="/support" className="text-mystic-lavender/50 hover:text-sacred-gold transition-colors font-serif">
                 Support
@@ -747,51 +592,16 @@ function LandingPage() {
               </Link>
             </div>
 
-            {/* Sacred Closing Blessing */}
-            <div className="text-center space-y-4 mb-8">
-              <p className="text-base text-mystic-lavender/70 font-serif italic">
-                May your return be soft, your voice be heard, and your path be lit from within.
-              </p>
-              <p className="text-sm text-mystic-lavender/50 font-serif">
-                May your path be lit with remembrance.
-              </p>
-            </div>
-
-            {/* Final Blessing */}
             <div className="text-center space-y-2">
-              <p className="text-sm text-mystic-lavender/60 font-serif">
-                Awaken. Remember. Embody. You are already home.
-              </p>
               <p className="text-xs text-mystic-lavender/40 mt-4">
-                © 2025 Astral Integration. All rights reserved.
+                © 2025 Nina Moore. All rights reserved.
               </p>
-            </div>
-
-            {/* Bottom Symbol */}
-            <div className="text-center mt-12">
-              <div className="text-2xl text-mystic-violet/30 animate-breathe">☉</div>
             </div>
           </div>
         </footer>
       </div>
     </div>
   );
-}
-
-// Event Route Component
-function EventRoute() {
-  const { id } = useParams<{ id: string }>();
-  const [language] = useState<'en' | 'es'>('en');
-
-  return <EventPreview eventId={id || ''} language={language} />;
-}
-
-// Place Route Component
-function PlaceRoute() {
-  const { id } = useParams<{ id: string }>();
-  const [language] = useState<'en' | 'es'>('en');
-
-  return <PlacePreview placeId={id || ''} language={language} />;
 }
 
 // Main App with Routing
@@ -802,17 +612,9 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPageNew />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/inner-ascend" element={<InnerAscendPage />} />
-        <Route path="/retreats" element={<RetreatsPage />} />
-        <Route path="/collaborations" element={<CollaborationsPage />} />
-        <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/event/:id" element={<EventRoute />} />
-        <Route path="/place/:id" element={<PlaceRoute />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
-        {/* Catch all other routes and redirect to home */}
         <Route path="*" element={<LandingPage />} />
       </Routes>
     </Router>

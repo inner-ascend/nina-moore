@@ -1,4 +1,4 @@
-# Image Requirements for Astral Integration Website
+# Image Requirements for Nina Moore Website
 
 This document lists all the image placeholders currently in your website that need to be replaced with actual photos. Images are organized by page and section.
 
@@ -13,7 +13,7 @@ This document lists all the image placeholders currently in your website that ne
   - Wide landscape shot (nature, ocean, mountains, or mystical setting)
   - Should evoke: Sacred, expansive, transformative
   - Suggested dimensions: 1920x1080px minimum (landscape)
-  - **Text overlay:** "Astral Integration" + "Guiding souls home to themselves"
+  - **Text overlay:** "Nina Moore" + "Guiding souls home to themselves"
   - **Note:** Image should work with text overlay - darker areas or can add gradient overlay
 
 ---

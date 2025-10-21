@@ -14,7 +14,7 @@ export default function Navigation() {
           <Link to="/" className="flex items-center gap-3">
             <Sparkles className="w-8 h-8 text-mystic-violet animate-glow" />
             <span className="text-xl font-serif bg-gradient-to-r from-mystic-lavender via-sacred-gold to-mystic-violet bg-clip-text text-transparent">
-              Astral Integration
+              Nina Moore
             </span>
           </Link>
 
