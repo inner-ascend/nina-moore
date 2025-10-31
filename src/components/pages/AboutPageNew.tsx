@@ -86,14 +86,17 @@ export default function AboutPage() {
 
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-stone-50 to-slate-100">
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+        <div className="absolute inset-0">
+          <img
+            src="/images/about-hero.jpg"
+            alt="About Nina Moore"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
 
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-6xl md:text-8xl font-serif text-black mb-8 leading-tight tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-serif text-white mb-8 leading-tight tracking-tight drop-shadow-lg">
             {t.about.title}
           </h1>
         </div>
@@ -103,8 +106,14 @@ export default function AboutPage() {
       <section className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* Image Placeholder */}
-            <div className="aspect-[3/4] bg-gradient-to-br from-stone-200 to-slate-100 rounded-sm"></div>
+            {/* Bio Portrait */}
+            <div className="aspect-[3/4] rounded-sm overflow-hidden">
+              <img
+                src="/images/about-bio.JPG"
+                alt="Nina Moore"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             {/* Bio Text */}
             <div className="space-y-10 text-xl md:text-2xl text-black/70 leading-relaxed">
@@ -118,16 +127,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Full Width Image Break */}
-      <section className="h-[60vh] bg-gradient-to-r from-stone-100 to-slate-50"></section>
-
       {/* CTA Section */}
-      <section className="py-32 px-6">
-        <div className="container mx-auto max-w-4xl text-center space-y-12">
-          <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
+      <section className="relative py-32 px-6">
+        <div className="absolute inset-0">
+          <img
+            src="/images/about-break.JPG"
+            alt="Ready to begin"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative z-10 container mx-auto max-w-4xl text-center space-y-12">
+          <h2 className="text-5xl md:text-6xl font-serif text-white leading-tight drop-shadow-lg">
             {t.about.cta.title}
           </h2>
-          <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+          <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
             {t.about.cta.button}
           </Link>
         </div>

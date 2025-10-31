@@ -89,22 +89,25 @@ function LandingPage() {
 
       {/* Hero Section - Full Height with Image */}
       <section className="relative h-screen flex items-center justify-center">
-        {/* Background Image Placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-stone-50 to-slate-100">
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/DSC01844.JPG"
+            alt="Sacred nature landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
 
         {/* Hero Text */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-black mb-8 leading-tight tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight tracking-tight drop-shadow-lg">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-black/70 font-light leading-relaxed max-w-4xl mx-auto mb-12">
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light leading-relaxed max-w-4xl mx-auto mb-12 drop-shadow-lg">
             {t.hero.subtitle}
           </p>
-          <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+          <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
             {t.navigation.bookNow}
           </Link>
         </div>
@@ -154,8 +157,14 @@ function LandingPage() {
       <section className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* Image Placeholder */}
-            <div className="aspect-[3/4] bg-gradient-to-br from-stone-200 to-slate-100 rounded-sm"></div>
+            {/* Image */}
+            <div className="aspect-[3/4] rounded-sm overflow-hidden">
+              <img
+                src="/images/invitation.JPG"
+                alt="The Invitation"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             {/* Text */}
             <div className="space-y-8">
@@ -182,7 +191,13 @@ function LandingPage() {
       </section>
 
       {/* Full Width Image Break */}
-      <section className="h-[70vh] bg-gradient-to-r from-stone-100 to-slate-50"></section>
+      <section className="h-[70vh] relative overflow-hidden">
+        <img
+          src="/images/break.JPG"
+          alt="Sacred moment"
+          className="w-full h-full object-cover"
+        />
+      </section>
 
       {/* Now is the time - Centered Text Block */}
       <section className="py-32 px-6">
@@ -210,7 +225,7 @@ function LandingPage() {
       </section>
 
       {/* Offering - Large Centered */}
-      <section className="py-32 bg-black text-white">
+      <section className="py-32 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
           <h2 className="text-5xl md:text-6xl font-serif leading-tight">
             {t.offering.title}
@@ -278,22 +293,28 @@ function LandingPage() {
               </div>
             </div>
 
-            {/* Image Placeholder */}
-            <div className="aspect-[3/4] bg-gradient-to-bl from-slate-100 to-stone-200 rounded-sm"></div>
+            {/* Journey Image */}
+            <div className="aspect-[3/4] rounded-sm overflow-hidden">
+              <img
+                src="/images/journey.JPG"
+                alt="Journey"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Full Width Quote/CTA */}
-      <section className="py-32 bg-stone-50">
+      <section className="py-32 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
-          <h2 className="text-4xl md:text-5xl font-serif text-black leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-serif leading-relaxed">
             {t.cta.title}
           </h2>
-          <p className="text-xl text-black/60">
+          <p className="text-xl text-white/60">
             {t.cta.subtitle}
           </p>
-          <Link to="/contact" className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+          <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
             {t.cta.button}
           </Link>
         </div>
@@ -324,6 +345,15 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Full Width Image Break 2 */}
+      <section className="h-[70vh] relative overflow-hidden">
+        <img
+          src="/images/break2.JPG"
+          alt="Sacred journey"
+          className="w-full h-full object-cover"
+        />
+      </section>
+
       {/* What type of work - Grid */}
       <section className="py-32 px-6 lg:px-12 bg-stone-50">
         <div className="container mx-auto max-w-7xl">
@@ -344,15 +374,15 @@ function LandingPage() {
       </section>
 
       {/* Final CTA - Centered Large */}
-      <section className="py-32 px-6">
+      <section className="py-32 px-6 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
-          <h2 className="text-6xl md:text-7xl font-serif text-black">
+          <h2 className="text-6xl md:text-7xl font-serif">
             {t.finalCta.price}
           </h2>
-          <p className="text-2xl text-black/70">
+          <p className="text-2xl text-white/70">
             {t.finalCta.subtitle}
           </p>
-          <Link to="/contact" className="inline-block px-16 py-5 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+          <Link to="/contact" className="inline-block px-16 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
             {t.finalCta.button}
           </Link>
         </div>
