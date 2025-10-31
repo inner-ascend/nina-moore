@@ -137,18 +137,18 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-br from-stone-100 to-slate-50">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full"
-               style={{
-                 backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
-                 backgroundSize: '40px 40px'
-               }}
-          ></div>
+      <section className="relative h-[60vh] flex items-center justify-center">
+        <div className="absolute inset-0">
+          <img
+            src="/images/IMG_0136.jpg"
+            alt="Contact"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-6xl md:text-8xl font-serif text-black mb-6">{t.contact.hero.title}</h1>
-          <p className="text-xl md:text-2xl text-black/60 font-light max-w-2xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-serif text-white mb-6 drop-shadow-lg">{t.contact.hero.title}</h1>
+          <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-lg">
             {t.contact.hero.subtitle}
           </p>
         </div>

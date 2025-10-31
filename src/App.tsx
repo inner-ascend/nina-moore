@@ -345,15 +345,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Full Width Image Break 2 */}
-      <section className="h-[70vh] relative overflow-hidden">
-        <img
-          src="/images/break2.JPG"
-          alt="Sacred journey"
-          className="w-full h-full object-cover"
-        />
-      </section>
-
       {/* What type of work - Grid */}
       <section className="py-32 px-6 lg:px-12 bg-stone-50">
         <div className="container mx-auto max-w-7xl">

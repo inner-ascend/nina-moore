@@ -245,15 +245,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Full Width Image Break */}
-      <section className="h-[60vh] relative overflow-hidden">
-        <img
-          src="/images/programs-break.jpg"
-          alt="Sacred experience"
-          className="w-full h-full object-cover"
-        />
-      </section>
-
       {/* Transmission Benefits */}
       <section className="py-32">
         <div className="container mx-auto max-w-6xl px-6 lg:px-12">
@@ -275,6 +266,15 @@ export default function ProgramsPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Full Width Image Break */}
+      <section className="h-[60vh] relative overflow-hidden">
+        <img
+          src="/images/programs-break.jpg"
+          alt="Sacred experience"
+          className="w-full h-full object-cover"
+        />
       </section>
 
       {/* Sacred Union Program Structure */}
