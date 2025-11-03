@@ -398,10 +398,213 @@
         "Vous êtes des âmes en mission."
       ]
     },
+    "payment": {
+      "title": "Investissement et Paiement",
+      "howToBook": {
+        "title": "Comment Réserver",
+        "description": "Tous les programmes commencent par un appel de découverte pour assurer l'alignement et la préparation. Nous discuterons de vos intentions, répondrons aux questions et déterminerons ensemble le meilleur chemin à suivre.",
+        "cta": "Voir le Guide Complet de Réservation"
+      },
+      "options": {
+        "title": "Options de Paiement",
+        "description": "J'accepte Venmo, Zelle, virement bancaire et carte de crédit. Pour les programmes de plusieurs mois, des plans de paiement sont disponibles pour rendre votre investissement plus gérable."
+      },
+      "plans": {
+        "title": "Plans de Paiement",
+        "description": "Des plans de paiement flexibles sont disponibles pour tous les programmes :",
+        "items": [
+          "Plan en 2 paiements : 50% d'acompte, 50% avant la semaine 3",
+          "Plan en 3 paiements : Divisez l'investissement total en 3 paiements égaux",
+          "Acompte pour retraite : 1 111 $ sécurise votre place, solde dû 30 jours avant l'arrivée"
+        ]
+      },
+      "cancellation": {
+        "title": "Politique d'Annulation et de Remboursement",
+        "description": "Programmes : Non remboursable après 7 jours à compter de l'achat. Si vous devez arrêter pendant le programme, nous travaillerons avec vous sur un remboursement au prorata pour les séances restantes. Retraites : Les acomptes ne sont pas remboursables. Les annulations plus de 60 jours avant la retraite reçoivent un remboursement de 50% ; moins de 60 jours ne sont pas remboursables. Consultez nos",
+        "link": "Conditions de Service",
+        "suffix": "pour les politiques complètes."
+      }
+    },
+    "testimonials": {
+      "title": "Histoires de Transformation",
+      "items": [
+        {
+          "quote": "Le programme Sacred Union a sauvé ma relation. Nina nous a aidés à surmonter des années de schémas défensifs et à nous reconnecter à l'amour qui nous a réunis. Nous communiquons maintenant avec beaucoup plus d'honnêteté et de tendresse.",
+          "name": "Rachel & David",
+          "program": "Programme Sacred Union"
+        },
+        {
+          "quote": "Après des années de blocages créatifs, le programme de Transmission Kundalini a débloqué quelque chose de profond en moi. J'ai écrit un album entier, lancé mon entreprise et je me sens plus vivant que jamais depuis dix ans. Nina est un véritable guide.",
+          "name": "Marcus L.",
+          "program": "Programme Reignite Creativity"
+        },
+        {
+          "quote": "La retraite à Bali a changé ma vie. Être tenue dans un espace sacré avec Nina et un petit groupe de chercheurs m'a permis de libérer un traumatisme que je ne savais même pas que je portais. Je suis rentrée chez moi comme une personne différente - plus légère, plus claire, plus complète.",
+          "name": "Jennifer K.",
+          "program": "Retraite en Petit Groupe, Bali 2024"
+        }
+      ]
+    },
     "cta": {
       "title": "Prête à transformer votre relation ?",
       "subtitle": "Ce programme est pour les couples qui font confiance à leur chemin d'âme et sont prêts à faire le travail profond.",
       "button": "Réserver un Appel de Découverte"
+    }
+  },
+  "services": {
+    "title": "Séances Individuelles",
+    "hero": {
+      "title": "Séances Individuelles",
+      "subtitle": "Séances individuelles et consultations pour soutenir votre voyage"
+    },
+    "intro": "Que vous soyez curieuse de travailler ensemble, ayez besoin de soutien pendant une transition spécifique, ou souhaitiez des conseils d'intégration après une expérience transformatrice—ces séances individuelles offrent une attention ciblée et personnalisée.",
+    "offerings": {
+      "discoveryCall": {
+        "title": "Appel de Découverte",
+        "duration": "20 min",
+        "price": "Gratuit",
+        "description": "Une conversation gratuite pour explorer si nous sommes alignées. Nous discuterons de ce que vous recherchez, de ce que j'offre, et si ce travail vous convient.",
+        "coverTitle": "Ce Que Nous Couvrirons",
+        "cover": [
+          "Votre situation actuelle et ce que vous recherchez",
+          "Comment je travaille et à quoi s'attendre",
+          "Si nous sommes un bon match énergétiquement",
+          "Prochaines étapes si vous choisissez d'aller de l'avant"
+        ],
+        "cta": "Planifier Appel de Découverte"
+      },
+      "singleSession": {
+        "title": "Séance Individuelle",
+        "duration": "90 min",
+        "price": "$222",
+        "description": "Une séance approfondie pour ceux qui recherchent un soutien avec un défi spécifique, une transition ou un besoin d'intégration. Il s'agit d'un travail transformationnel dans un conteneur ciblé.",
+        "bestForTitle": "Idéal Pour",
+        "bestFor": [
+          "Intégration après une expérience psychédélique ou de médecine végétale",
+          "Naviguer une transition ou un défi de vie spécifique",
+          "Traitement somatique et travail énergétique",
+          "Explorer à quoi pourrait ressembler un travail à plus long terme"
+        ],
+        "cta": "Réserver Séance Individuelle"
+      },
+      "couplesSession": {
+        "title": "Séance de Couple",
+        "duration": "2 heures",
+        "price": "$333",
+        "description": "Une séance transformationnelle pour les couples recherchant une intimité plus profonde, guérir les blessures relationnelles ou naviguer une transition ensemble. Il s'agit d'un travail d'union sacrée.",
+        "bestForTitle": "Idéal Pour",
+        "bestFor": [
+          "Couples confrontés à des défis de communication ou d'intimité",
+          "Naviguer une transition majeure ensemble",
+          "Guérir d'une trahison ou d'une rupture de confiance",
+          "Essayer notre travail avant de s'engager dans un voyage"
+        ],
+        "cta": "Réserver Séance de Couple"
+      },
+      "integrationPackage": {
+        "title": "Forfait d'Intégration",
+        "duration": "3 séances",
+        "price": "$555",
+        "description": "Trois séances de 90 minutes espacées sur 6 semaines pour soutenir l'intégration d'une expérience profonde—médecine végétale, éveil, transition de vie ou percée.",
+        "includedTitle": "Ce Qui Est Inclus",
+        "included": [
+          "Préparation pré-séance et établissement d'intentions",
+          "Trois séances profondes d'intégration de 90 minutes",
+          "Pratiques somatiques adaptées à votre expérience",
+          "Soutien par email entre les séances"
+        ],
+        "cta": "Réserver Forfait d'Intégration"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment Fonctionnent les Séances",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Avant de Nous Rencontrer",
+          "description": "Après la réservation, vous recevrez un bref formulaire d'admission pour m'aider à comprendre ce que vous recherchez. Cela garantit que nous tirons le meilleur parti de notre temps ensemble."
+        },
+        {
+          "num": "02",
+          "title": "Pendant Notre Séance",
+          "description": "Les séances sont menées par appel vidéo. Nous travaillons avec un mélange de conversation, de pratiques somatiques, de travail respiratoire et de transmission d'énergie—adapté à ce dont vous avez besoin sur le moment."
+        },
+        {
+          "num": "03",
+          "title": "Après Avoir Travaillé Ensemble",
+          "description": "Vous recevrez des pratiques et un soutien d'intégration pour vous aider à incarner ce qui a émergé. Si vous souhaitez continuer à travailler ensemble, nous explorerons à quoi cela pourrait ressembler."
+        }
+      ]
+    },
+    "whatToExpect": {
+      "title": "À Quoi S'Attendre",
+      "paragraphs": [
+        {
+          "bold": "Ce travail est incarné.",
+          "text": "Nous ne parlons pas seulement de vos défis—nous travaillons avec eux de manière somatique à travers la respiration, la sensation, le mouvement et l'énergie. La compréhension se produit, mais c'est une compréhension qui atterrit dans votre corps."
+        },
+        {
+          "bold": "Ce travail est maintenu avec révérence.",
+          "text": "J'aborde chaque séance comme un espace sacré. Ce que vous partagez est maintenu en complète confidentialité et avec un profond respect pour votre voyage."
+        },
+        {
+          "bold": "Ce travail vous rencontre là où vous êtes.",
+          "text": "Je n'ai pas de formule. Chaque séance répond à ce qui est vivant en vous, ce qui est prêt à être vu, ressenti et intégré."
+        }
+      ],
+      "closing": "Vous n'avez pas besoin de savoir exactement ce dont vous avez besoin. Vous devez juste vous présenter avec présence et volonté."
+    },
+    "deeperWork": {
+      "title": "Prête pour un Travail Plus Profond ?",
+      "description": "Si vous recherchez un soutien plus soutenu, explorez mes programmes de plusieurs semaines et retraites immersives conçus pour une transformation profonde.",
+      "cta": "Voir Programmes et Retraites"
+    },
+    "payment": {
+      "title": "Paiement et Réservation",
+      "howToBook": {
+        "title": "Comment Réserver",
+        "description": "Toutes les séances commencent par un appel de découverte pour s'assurer que nous sommes bien assortis. De là, nous planifierons votre séance et vous recevrez une confirmation de réservation avec les détails de paiement.",
+        "cta": "Voir Guide de Réservation"
+      },
+      "methods": {
+        "title": "Méthodes de Paiement",
+        "description": "J'accepte Venmo, Zelle, virement bancaire et carte de crédit. Le paiement est requis avant votre séance pour sécuriser votre place."
+      },
+      "plans": {
+        "title": "Plans de Paiement",
+        "description": "Des plans de paiement sont disponibles pour le Forfait d'Intégration. Nous pouvons organiser 2 ou 3 paiements pour rendre votre investissement plus gérable."
+      },
+      "cancellation": {
+        "title": "Politique d'Annulation",
+        "description": "Veuillez fournir un préavis d'au moins 48 heures pour les annulations. Les annulations tardives ou les absences seront facturées au tarif complet de la séance. Consultez nos",
+        "link": "Conditions de Service",
+        "suffix": "pour les politiques complètes."
+      }
+    },
+    "testimonials": {
+      "title": "Ce Que Disent les Clients",
+      "items": [
+        {
+          "quote": "Travailler avec Nina a été transformateur. Sa capacité à tenir l'espace pour un travail émotionnel profond tout en me gardant ancrée dans mon corps a été incroyable. J'ai fait plus de progrès en quelques séances qu'en années de thérapie traditionnelle.",
+          "name": "Sarah M.",
+          "program": "Cliente du Forfait d'Intégration"
+        },
+        {
+          "quote": "L'approche somatique de Nina m'a aidée à me reconnecter avec des parties de moi-même que j'avais fermées pendant des années. Elle crée un espace si sûr et compatissant pour l'exploration et la guérison. Hautement recommandé pour toute personne faisant un travail intérieur profond.",
+          "name": "James T.",
+          "program": "Client de Séance Individuelle"
+        },
+        {
+          "quote": "La séance de couple avec Nina a complètement changé la façon dont mon partenaire et moi communiquons. Elle nous a aidés à voir des schémas que nous ne pouvions pas voir par nous-mêmes et nous a donné des outils pratiques pour approfondir notre connexion. Ça vaut chaque centime.",
+          "name": "Maya & Alex",
+          "program": "Clients de Séance de Couple"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Explorons si ce travail vous convient",
+      "subtitle": "Commencez par un appel de découverte gratuit—aucun engagement, juste de la connexion.",
+      "button": "Planifier Appel de Découverte"
     }
   },
   "footer": {

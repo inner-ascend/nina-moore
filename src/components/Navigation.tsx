@@ -1,92 +1,155 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Globe, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
-export default function Navigation() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'ca'>('en');
+interface NavigationProps {
+  currentPage?: 'home' | 'about' | 'services' | 'programs' | 'contact';
+  translations: {
+    navigation: {
+      about: string;
+      contact: string;
+      bookNow: string;
+    };
+  };
+  language: 'en' | 'es' | 'fr';
+  onLanguageChange: (lang: 'en' | 'es' | 'fr') => void;
+}
+
+export default function Navigation({ currentPage, translations, language, onLanguageChange }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const isActive = (page: string) => currentPage === page;
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-cosmic-900/50 border-b border-mystic-purple/20">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <Sparkles className="w-8 h-8 text-mystic-violet animate-glow" />
-            <span className="text-xl font-serif bg-gradient-to-r from-mystic-lavender via-sacred-gold to-mystic-violet bg-clip-text text-transparent">
-              Nina Moore
-            </span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-24">
+          <Link to="/" className="text-2xl font-serif text-black tracking-tight">
+            Nina Moore
           </Link>
 
-          {/* Nav Links - Hidden on mobile */}
-          <div className="hidden lg:flex items-center gap-6">
-            <Link to="/about" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-              About
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-12">
+            <Link
+              to="/"
+              className={`text-sm uppercase tracking-wider transition-colors ${
+                isActive('home') ? 'text-black' : 'text-black/60 hover:text-black'
+              }`}
+            >
+              Home
             </Link>
-            <Link to="/services" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
+            <Link
+              to="/about"
+              className={`text-sm uppercase tracking-wider transition-colors ${
+                isActive('about') ? 'text-black' : 'text-black/60 hover:text-black'
+              }`}
+            >
+              {translations.navigation.about}
+            </Link>
+            <Link
+              to="/services"
+              className={`text-sm uppercase tracking-wider transition-colors ${
+                isActive('services') ? 'text-black' : 'text-black/60 hover:text-black'
+              }`}
+            >
               Services
             </Link>
-            <Link to="/inner-ascend" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-              Community
+            <Link
+              to="/programs"
+              className={`text-sm uppercase tracking-wider transition-colors ${
+                isActive('programs') ? 'text-black' : 'text-black/60 hover:text-black'
+              }`}
+            >
+              Programs
             </Link>
-            <Link to="/retreats" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-              Retreats
+            <Link
+              to="/contact"
+              className={`text-sm uppercase tracking-wider transition-colors ${
+                isActive('contact') ? 'text-black' : 'text-black/60 hover:text-black'
+              }`}
+            >
+              {translations.navigation.contact}
             </Link>
-            <Link to="/collaborations" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-              Collaborations
-            </Link>
-            <Link to="/resources" className="text-mystic-lavender/70 hover:text-sacred-gold transition-colors">
-              Resources
-            </Link>
-            <Link to="/contact" className="px-6 py-2 bg-gradient-to-r from-mystic-purple to-mystic-indigo rounded-full font-semibold hover:shadow-lg hover:shadow-mystic-purple/50 transition-all">
-              Contact
+            <button
+              onClick={() => onLanguageChange(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
+              className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
+            >
+              {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
+            </button>
+            <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+              {translations.navigation.bookNow}
             </Link>
           </div>
 
-          {/* Right Side: Language + Mobile Menu */}
-          <div className="flex items-center gap-4">
-            {/* Language Toggle */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'es' : language === 'es' ? 'ca' : 'en')}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-mystic-purple/20 backdrop-blur-xl border border-mystic-lavender/30 hover:bg-mystic-purple/30 transition-all"
-            >
-              <Globe className="w-4 h-4 text-sacred-gold" />
-              <span className="text-sm font-medium text-sacred-moon">{language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'CA'}</span>
-            </button>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-mystic-lavender hover:text-sacred-gold transition-colors"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-3 border-t border-mystic-purple/20">
-            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-              About
+          <div className="md:hidden py-6 space-y-6 border-t border-black/5">
+            <Link
+              to="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block text-sm uppercase tracking-wider ${
+                isActive('home') ? 'text-black' : 'text-black/60'
+              }`}
+            >
+              Home
             </Link>
-            <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
+            <Link
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block text-sm uppercase tracking-wider ${
+                isActive('about') ? 'text-black' : 'text-black/60'
+              }`}
+            >
+              {translations.navigation.about}
+            </Link>
+            <Link
+              to="/services"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block text-sm uppercase tracking-wider ${
+                isActive('services') ? 'text-black' : 'text-black/60'
+              }`}
+            >
               Services
             </Link>
-            <Link to="/inner-ascend" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-              Community
+            <Link
+              to="/programs"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block text-sm uppercase tracking-wider ${
+                isActive('programs') ? 'text-black' : 'text-black/60'
+              }`}
+            >
+              Programs
             </Link>
-            <Link to="/retreats" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-              Retreats
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block text-sm uppercase tracking-wider ${
+                isActive('contact') ? 'text-black' : 'text-black/60'
+              }`}
+            >
+              {translations.navigation.contact}
             </Link>
-            <Link to="/collaborations" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-              Collaborations
-            </Link>
-            <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-mystic-lavender/80 hover:text-sacred-gold transition-colors">
-              Resources
-            </Link>
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sacred-gold font-semibold">
-              Contact
+            <button
+              onClick={() => onLanguageChange(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
+              className="block text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
+            >
+              {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
+            </button>
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-sm uppercase tracking-wider font-semibold"
+            >
+              {translations.navigation.bookNow}
             </Link>
           </div>
         )}

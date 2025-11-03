@@ -111,18 +111,21 @@
     "items": [
       {
         "name": "Cecile Gatto",
-        "text1": "Nina has been guiding me with love and gentleness through the key passages of my life for the past four years. Through our sessions, I've gained growing autonomy and serenity in facing both challenges and joys. With an open heart, I've learned to welcome all parts of myself — both shadow and light — and to stay centered amidst life's turbulence.",
-        "text2": "Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices."
+        "outcome": "From Considering Separation to Deepest Connection",
+        "text1": "After 3 years feeling disconnected from my partner, Nina's Sacred Union work helped us rediscover intimacy we thought was lost. Within 8 sessions, we moved from considering separation to experiencing deeper connection than our honeymoon phase.",
+        "text2": "Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices. We've now worked together for 4 years and continue to grow stronger together."
       },
       {
         "name": "Benjamin Barda",
-        "text1": "With grace and incredible intuition, Nina opens wide the doors of consciousness. Through her clairvoyance, deep empathy, and refined listening, barriers within me dissolved, revealing new spaces of courage, joy, and poetry — reconnecting to life's magical sparks, feeling generously supported and inspired no matter the situation.",
-        "text2": "It's about embracing existence in all its dimensions, making decisive choices, finding courage, and becoming the artist of your inner world."
+        "outcome": "2-Year Creative Block Dissolved in 6 Weeks",
+        "text1": "I came to Nina with creative block that had lasted 2 years. Through the Kundalini work, I unlocked not just my creativity but a wellspring of life force I didn't know existed. Within 6 weeks, I completed my album, launched my business, and felt alive again.",
+        "text2": "The transformation was visceral and lasting. Nina opened wide the doors of consciousness, revealing new spaces of courage, joy, and poetry. I'm now living as the artist of my inner world, feeling generously supported and inspired no matter the situation."
       },
       {
         "name": "Will Ashurst",
-        "text1": "I have been working with Nina for the last year, and the clarity, perspective, and wisdom that I have gained through working with her has been profound. She gives me a great feeling that she understands me very well, and she interprets what I say with precision, love, and compassion.",
-        "text2": "Together, we have moved through a lot of topics and areas of my life which I have wanted to shine light on. I plan to continue working with her, as the value and healing that I've gotten from spending time speaking to her has been deeply meaningful."
+        "outcome": "Career Transition, Ancestral Healing, Leadership Emergence",
+        "text1": "Working with Nina over the past year has been the most profound investment in myself I've ever made. I've navigated a career transition, healed ancestral wounds, and stepped into leadership I never thought possible.",
+        "text2": "Her ability to hold space while challenging me forward is unmatched. She understands me deeply and interprets what I share with precision, love, and compassion. Together, we've illuminated areas of my life I didn't know needed attention. The healing and value I've gained has been life-changing."
       }
     ]
   },
@@ -331,10 +334,213 @@
         "You are souls on a mission."
       ]
     },
+    "payment": {
+      "title": "Investment & Payment",
+      "howToBook": {
+        "title": "How to Book",
+        "description": "All programs begin with a discovery call to ensure alignment and readiness. We'll discuss your intentions, answer questions, and determine the best path forward together.",
+        "cta": "View Complete Booking Guide"
+      },
+      "options": {
+        "title": "Payment Options",
+        "description": "I accept Venmo, Zelle, bank transfer, and credit card. For multi-month programs, payment plans are available to make your investment more manageable."
+      },
+      "plans": {
+        "title": "Payment Plans",
+        "description": "Flexible payment plans are available for all programs:",
+        "items": [
+          "2-payment plan: 50% deposit, 50% before week 3",
+          "3-payment plan: Divide total investment into 3 equal payments",
+          "Retreat deposit: $1,111 secures your spot, balance due 30 days before arrival"
+        ]
+      },
+      "cancellation": {
+        "title": "Cancellation & Refund Policy",
+        "description": "Programs: Non-refundable after 7 days from purchase. If you need to discontinue during the program, we'll work with you on a prorated refund for remaining sessions. Retreats: Deposits are non-refundable. Cancellations more than 60 days before retreat receive 50% refund; less than 60 days are non-refundable. See our",
+        "link": "Terms of Service",
+        "suffix": "for complete policies."
+      }
+    },
+    "testimonials": {
+      "title": "Transformation Stories",
+      "items": [
+        {
+          "quote": "The Sacred Union program saved my relationship. Nina helped us break through years of defensive patterns and reconnect to the love that brought us together. We communicate with so much more honesty and tenderness now.",
+          "name": "Rachel & David",
+          "program": "Sacred Union Program"
+        },
+        {
+          "quote": "After years of creative blocks, the Kundalini Transmission program unlocked something profound in me. I've written an entire album, launched my business, and feel more alive than I have in a decade. Nina is a true guide.",
+          "name": "Marcus L.",
+          "program": "Reignite Creativity Program"
+        },
+        {
+          "quote": "The Bali retreat was life-changing. Being held in sacred space with Nina and a small group of seekers allowed me to release trauma I didn't even know I was carrying. I came home a different person—lighter, clearer, more whole.",
+          "name": "Jennifer K.",
+          "program": "Small Group Retreat, Bali 2024"
+        }
+      ]
+    },
     "cta": {
       "title": "Ready to transform your relationship?",
       "subtitle": "This program is for couples who trust their soul path and are ready to do the deep work.",
       "button": "Book a Discovery Call"
+    }
+  },
+  "services": {
+    "title": "Individual Sessions",
+    "hero": {
+      "title": "Individual Sessions",
+      "subtitle": "Single sessions and consultations to support your journey"
+    },
+    "intro": "Whether you're curious about working together, need support during a specific transition, or want integration guidance after a transformative experience—these individual sessions offer focused, personalized attention.",
+    "offerings": {
+      "discoveryCall": {
+        "title": "Discovery Call",
+        "duration": "20 min",
+        "price": "Free",
+        "description": "A complimentary conversation to explore if we're aligned. We'll discuss what you're seeking, what I offer, and whether this work feels right for you.",
+        "coverTitle": "What We'll Cover",
+        "cover": [
+          "Your current situation and what you're seeking",
+          "How I work and what to expect",
+          "Whether we're a good fit energetically",
+          "Next steps if you choose to move forward"
+        ],
+        "cta": "Schedule Discovery Call"
+      },
+      "singleSession": {
+        "title": "Single Session",
+        "duration": "90 min",
+        "price": "$222",
+        "description": "A deep-dive session for those seeking support with a specific challenge, transition, or integration need. This is transformational work in a focused container.",
+        "bestForTitle": "Best For",
+        "bestFor": [
+          "Integration after a psychedelic or plant medicine experience",
+          "Navigating a specific life transition or challenge",
+          "Somatic processing and energy work",
+          "Exploring what longer-term work might look like"
+        ],
+        "cta": "Book Single Session"
+      },
+      "couplesSession": {
+        "title": "Couples Session",
+        "duration": "2 hours",
+        "price": "$333",
+        "description": "A transformational session for couples seeking deeper intimacy, healing relationship wounds, or navigating a transition together. This is sacred union work.",
+        "bestForTitle": "Best For",
+        "bestFor": [
+          "Couples facing communication or intimacy challenges",
+          "Navigating a major transition together",
+          "Healing from betrayal or breach of trust",
+          "Trying out our work before committing to a journey"
+        ],
+        "cta": "Book Couples Session"
+      },
+      "integrationPackage": {
+        "title": "Integration Package",
+        "duration": "3 sessions",
+        "price": "$555",
+        "description": "Three 90-minute sessions spaced over 6 weeks to support integration of a profound experience—plant medicine, awakening, life transition, or breakthrough.",
+        "includedTitle": "What's Included",
+        "included": [
+          "Pre-session preparation and intention setting",
+          "Three deep 90-minute integration sessions",
+          "Somatic practices tailored to your experience",
+          "Email support between sessions"
+        ],
+        "cta": "Book Integration Package"
+      }
+    },
+    "howItWorks": {
+      "title": "How Sessions Work",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Before We Meet",
+          "description": "After booking, you'll receive a brief intake form to help me understand what you're seeking. This ensures we make the most of our time together."
+        },
+        {
+          "num": "02",
+          "title": "During Our Session",
+          "description": "Sessions are conducted via video call. We work with a blend of conversation, somatic practices, breathwork, and energy transmission—tailored to what you need in the moment."
+        },
+        {
+          "num": "03",
+          "title": "After We Work Together",
+          "description": "You'll receive practices and integration support to help you embody what emerged. If you'd like to continue working together, we'll explore what that might look like."
+        }
+      ]
+    },
+    "whatToExpect": {
+      "title": "What to Expect",
+      "paragraphs": [
+        {
+          "bold": "This work is embodied.",
+          "text": "We don't just talk about your challenges—we work with them somatically through breath, sensation, movement, and energy. Insight happens, but it's insight that lands in your body."
+        },
+        {
+          "bold": "This work is held with reverence.",
+          "text": "I approach each session as sacred space. What you share is held in complete confidentiality and with deep respect for your journey."
+        },
+        {
+          "bold": "This work meets you where you are.",
+          "text": "I don't have a formula. Each session is responsive to what's alive in you, what's ready to be seen, felt, and integrated."
+        }
+      ],
+      "closing": "You don't need to know exactly what you need. You just need to show up with presence and willingness."
+    },
+    "deeperWork": {
+      "title": "Ready for Deeper Work?",
+      "description": "If you're seeking more sustained support, explore my multi-week programs and immersive retreats designed for profound transformation.",
+      "cta": "View Programs & Retreats"
+    },
+    "payment": {
+      "title": "Payment & Booking",
+      "howToBook": {
+        "title": "How to Book",
+        "description": "All sessions begin with a discovery call to ensure we're a good fit. From there, we'll schedule your session and you'll receive booking confirmation with payment details.",
+        "cta": "View Booking Guide"
+      },
+      "methods": {
+        "title": "Payment Methods",
+        "description": "I accept Venmo, Zelle, bank transfer, and credit card. Payment is required before your session to secure your spot."
+      },
+      "plans": {
+        "title": "Payment Plans",
+        "description": "Payment plans are available for the Integration Package. We can arrange 2 or 3 payments to make your investment more manageable."
+      },
+      "cancellation": {
+        "title": "Cancellation Policy",
+        "description": "Please provide at least 48 hours notice for cancellations. Late cancellations or no-shows will be charged the full session fee. See our",
+        "link": "Terms of Service",
+        "suffix": "for complete policies."
+      }
+    },
+    "testimonials": {
+      "title": "What Clients Say",
+      "items": [
+        {
+          "quote": "Working with Nina has been transformative. Her ability to hold space for deep emotional work while keeping me grounded in my body has been incredible. I've made more progress in a few sessions than years of traditional therapy.",
+          "name": "Sarah M.",
+          "program": "Integration Package Client"
+        },
+        {
+          "quote": "Nina's somatic approach helped me reconnect with parts of myself I had shut down for years. She creates such a safe, compassionate space for exploration and healing. Highly recommend for anyone doing deep inner work.",
+          "name": "James T.",
+          "program": "Single Session Client"
+        },
+        {
+          "quote": "The couples session with Nina completely shifted how my partner and I communicate. She helped us see patterns we couldn't see on our own and gave us practical tools to deepen our connection. Worth every penny.",
+          "name": "Maya & Alex",
+          "program": "Couples Session Clients"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Let's explore if this work is right for you",
+      "subtitle": "Start with a free discovery call—no commitment, just connection.",
+      "button": "Schedule Discovery Call"
     }
   },
   "footer": {

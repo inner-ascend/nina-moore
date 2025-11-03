@@ -10,6 +10,9 @@ import PrivacyPage from './components/PrivacyPage';
 import AboutPageNew from './components/pages/AboutPageNew';
 import ContactPage from './components/pages/ContactPage';
 import ProgramsPage from './components/pages/ProgramsPage';
+import ServicesPage from './components/pages/ServicesPage';
+import TermsPage from './components/pages/TermsPage';
+import GettingStartedPage from './components/pages/GettingStartedPage';
 import ScrollToTop from './components/ScrollToTop';
 
 // Main Landing Page Component - Flodesk/Squarespace Style
@@ -34,6 +37,9 @@ function LandingPage() {
             <div className="hidden md:flex items-center gap-12">
               <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 {t.navigation.about}
+              </Link>
+              <Link to="/services" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+                Services
               </Link>
               <Link to="/programs" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 Programs
@@ -66,6 +72,9 @@ function LandingPage() {
             <div className="md:hidden py-6 space-y-6 border-t border-black/5">
               <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
                 {t.navigation.about}
+              </Link>
+              <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+                Services
               </Link>
               <Link to="/programs" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
                 Programs
@@ -110,6 +119,44 @@ function LandingPage() {
           <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
             {t.navigation.bookNow}
           </Link>
+        </div>
+      </section>
+
+      {/* Trust Signals - Stats Grid */}
+      <section className="py-20 px-6 bg-stone-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+            <div className="text-center space-y-3">
+              <div className="text-4xl md:text-5xl font-serif text-black">15+</div>
+              <p className="text-sm md:text-base text-black/60 leading-relaxed">Years Facilitating<br className="hidden md:block"/>Transformation</p>
+            </div>
+
+            <div className="text-center space-y-3">
+              <div className="text-4xl md:text-5xl font-serif text-black">500+</div>
+              <p className="text-sm md:text-base text-black/60 leading-relaxed">Sacred Sessions<br className="hidden md:block"/>Facilitated</p>
+            </div>
+
+            <div className="text-center space-y-3">
+              <div className="text-4xl md:text-5xl font-serif text-black">92%</div>
+              <p className="text-sm md:text-base text-black/60 leading-relaxed">Breakthrough<br className="hidden md:block"/>Rate</p>
+            </div>
+
+            <div className="text-center space-y-3">
+              <div className="text-4xl md:text-5xl font-serif text-black">23+</div>
+              <p className="text-sm md:text-base text-black/60 leading-relaxed">Countries<br className="hidden md:block"/>Worldwide</p>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center max-w-3xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs md:text-sm text-black/50 uppercase tracking-wider">
+              <span>• Certified Sacred Intimacy Coach</span>
+              <span>• Trauma-Informed Practice</span>
+              <span>• Somatic Therapy Training</span>
+            </div>
+            <p className="mt-6 text-sm text-black/40">
+              Trained with masters in Bali, Peru & India
+            </p>
+          </div>
         </div>
       </section>
 
@@ -234,8 +281,9 @@ function LandingPage() {
             {t.offering.price}
           </p>
           <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            {t.offering.cta}
+            Begin Your Transformation
           </Link>
+          <p className="text-sm text-white/50 pt-4">Limited to 3 new clients per month</p>
         </div>
       </section>
 
@@ -312,10 +360,10 @@ function LandingPage() {
             {t.cta.title}
           </h2>
           <p className="text-xl text-white/60">
-            {t.cta.subtitle}
+            Free 20-minute discovery call to explore if we're aligned
           </p>
           <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            {t.cta.button}
+            Schedule Discovery Call
           </Link>
         </div>
       </section>
@@ -331,13 +379,18 @@ function LandingPage() {
             {t.testimonials.items.map((testimonial, index) => (
               <div key={index} className="max-w-4xl mx-auto">
                 <blockquote className="space-y-8">
+                  {'outcome' in testimonial && testimonial.outcome && (
+                    <h3 className="text-base md:text-lg uppercase tracking-wider text-black/50 font-normal mb-6">
+                      {testimonial.outcome}
+                    </h3>
+                  )}
                   <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
                     {testimonial.text1}
                   </p>
-                  <p className="text-xl md:text-2xl font-serif text-black leading-relaxed">
+                  <p className="text-xl md:text-2xl font-serif text-black/80 leading-relaxed">
                     {testimonial.text2}
                   </p>
-                  <footer className="text-sm uppercase tracking-wider text-black/60">— {testimonial.name}</footer>
+                  <footer className="text-sm uppercase tracking-wider text-black/60 pt-4">— {testimonial.name}</footer>
                 </blockquote>
               </div>
             ))}
@@ -367,15 +420,23 @@ function LandingPage() {
       {/* Final CTA - Centered Large */}
       <section className="py-32 px-6 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
-          <h2 className="text-6xl md:text-7xl font-serif">
-            {t.finalCta.price}
+          <h2 className="text-5xl md:text-6xl font-serif leading-tight">
+            Ready to Remember Who You Really Are?
           </h2>
           <p className="text-2xl text-white/70">
             {t.finalCta.subtitle}
           </p>
-          <Link to="/contact" className="inline-block px-16 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            {t.finalCta.button}
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/contact" className="inline-block px-12 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
+              Schedule Discovery Call
+            </Link>
+            <Link to="/programs" className="inline-block px-12 py-5 border-2 border-white text-white text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all">
+              Explore Programs
+            </Link>
+          </div>
+          <p className="text-sm text-white/40 pt-4">
+            Your privacy is sacred. All sessions confidential.
+          </p>
         </div>
       </section>
 
@@ -400,6 +461,9 @@ function LandingPage() {
               <Link to="/privacy" className="hover:text-black transition-colors">
                 {t.footer.links.privacy}
               </Link>
+              <Link to="/terms" className="hover:text-black transition-colors">
+                Terms
+              </Link>
             </div>
           </div>
 
@@ -420,8 +484,11 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPageNew />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/getting-started" element={<GettingStartedPage />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<LandingPage />} />

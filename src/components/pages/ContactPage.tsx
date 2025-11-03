@@ -1,20 +1,25 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import enTranslations from '../../translations/en.json';
 import esTranslations from '../../translations/es.json';
 import frTranslations from '../../translations/fr.json';
+import OptimizedImage from '../ui/OptimizedImage';
+import Navigation from '../Navigation';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
+    service: '',
+    preferredContact: 'email' as 'email' | 'phone' | 'whatsapp',
+    timezone: '',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
+  const [showCalendar, setShowCalendar] = useState(false);
 
   const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
 
@@ -29,13 +34,17 @@ export default function ContactPage() {
         {
           from_name: formData.name,
           from_email: formData.email,
-          subject: 'Contact from nina-moore.com',
+          phone: formData.phone,
+          service: formData.service,
+          preferred_contact: formData.preferredContact,
+          timezone: formData.timezone,
+          subject: `New ${formData.service || 'General'} Inquiry from nina-moore.com`,
           message: formData.message,
         },
         'v57Ta98pwBDWpoe8o'
       );
       setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', service: '', preferredContact: 'email', timezone: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       setStatus('error');
@@ -45,104 +54,22 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Minimal Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="text-xl font-serif text-black">
-              Nina Moore
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-12">
-              <Link to="/" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                Home
-              </Link>
-              <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                {t.navigation.about}
-              </Link>
-              <Link to="/programs" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                Programs
-              </Link>
-              <Link to="/contact" className="text-sm uppercase tracking-wider text-black transition-colors">
-                {t.navigation.contact}
-              </Link>
-              <button
-                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
-                className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
-              >
-                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
-              </button>
-              <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                {t.navigation.bookNow}
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-black"
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden pt-6 pb-4 space-y-4">
-              <Link
-                to="/"
-                className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {t.navigation.about}
-              </Link>
-              <Link
-                to="/programs"
-                className="block text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Programs
-              </Link>
-              <Link
-                to="/contact"
-                className="block text-sm uppercase tracking-wider text-black transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {t.navigation.contact}
-              </Link>
-              <button
-                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
-                className="block text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
-              >
-                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
-              </button>
-              <Link
-                to="/contact"
-                className="block text-sm uppercase tracking-wider font-semibold"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {t.navigation.bookNow}
-              </Link>
-            </div>
-          )}
-        </div>
-      </nav>
+      <Navigation
+        currentPage="contact"
+        translations={t}
+        language={language}
+        onLanguageChange={setLanguage}
+      />
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src="/images/IMG_0136.jpg"
             alt="Contact"
             className="w-full h-full object-cover"
+            priority={true}
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
@@ -200,39 +127,140 @@ export default function ContactPage() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-8">
-                <div>
-                  <label htmlFor="name" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
-                    placeholder="Name"
-                  />
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <label htmlFor="name" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                      className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                      placeholder="Name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                      className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                      Phone (Optional)
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="timezone" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                      Your Timezone (Optional)
+                    </label>
+                    <input
+                      type="text"
+                      id="timezone"
+                      value={formData.timezone}
+                      onChange={(e) => setFormData({ ...formData, timezone: e.target.value })}
+                      className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
+                      placeholder="e.g., PST, EST, CET"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
-                    Email
+                  <label htmlFor="service" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                    I'm Interested In *
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  <select
+                    id="service"
+                    value={formData.service}
+                    onChange={(e) => {
+                      setFormData({ ...formData, service: e.target.value });
+                      if (e.target.value === 'Discovery Call (Free 20-min)') {
+                        setShowCalendar(true);
+                      }
+                    }}
                     required
-                    className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors"
-                    placeholder="your@email.com"
-                  />
+                    className="w-full px-6 py-4 bg-white border border-black/10 text-black focus:outline-none focus:border-black/30 transition-colors appearance-none cursor-pointer"
+                    style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.5rem center', backgroundSize: '12px' }}
+                  >
+                    <option value="">Select a service...</option>
+                    <option value="Sacred Union (Couples Journey)">Sacred Union (Couples Journey)</option>
+                    <option value="Reignite Your Creativity (Individual)">Reignite Your Creativity (Individual Journey)</option>
+                    <option value="Private 1:1 Retreat">Private 1:1 Retreat</option>
+                    <option value="Couples Retreat">Couples Retreat</option>
+                    <option value="Small Group Retreat">Small Group Retreat</option>
+                    <option value="Discovery Call (Free 20-min)">Discovery Call (Free 20-min consultation)</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm uppercase tracking-wider text-black/60 mb-3">
+                    Preferred Contact Method
+                  </label>
+                  <div className="flex flex-wrap gap-4">
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="preferredContact"
+                        value="email"
+                        checked={formData.preferredContact === 'email'}
+                        onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value as 'email' | 'phone' | 'whatsapp' })}
+                        className="w-4 h-4 text-black border-black/30 focus:ring-black"
+                      />
+                      <span className="text-black/70">Email</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="preferredContact"
+                        value="phone"
+                        checked={formData.preferredContact === 'phone'}
+                        onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value as 'email' | 'phone' | 'whatsapp' })}
+                        className="w-4 h-4 text-black border-black/30 focus:ring-black"
+                      />
+                      <span className="text-black/70">Phone</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="preferredContact"
+                        value="whatsapp"
+                        checked={formData.preferredContact === 'whatsapp'}
+                        onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value as 'email' | 'phone' | 'whatsapp' })}
+                        className="w-4 h-4 text-black border-black/30 focus:ring-black"
+                      />
+                      <span className="text-black/70">WhatsApp</span>
+                    </label>
+                  </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm uppercase tracking-wider text-black/60 mb-3">
-                    Message
+                    Tell Us About What You're Seeking *
                   </label>
                   <textarea
                     id="message"
@@ -241,7 +269,7 @@ export default function ContactPage() {
                     required
                     rows={8}
                     className="w-full px-6 py-4 bg-white border border-black/10 text-black placeholder-black/30 focus:outline-none focus:border-black/30 transition-colors resize-none"
-                    placeholder="Tell me what brings you here..."
+                    placeholder="Share what brings you here, what you're hoping to explore, or any questions you have..."
                   />
                 </div>
 
@@ -263,6 +291,64 @@ export default function ContactPage() {
           )}
         </div>
       </section>
+
+      {/* Calendly Booking Section */}
+      {showCalendar && (
+        <section className="py-32 px-6 bg-stone-50">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="text-4xl md:text-5xl font-serif text-black">
+                Book Your Discovery Call
+              </h2>
+              <p className="text-lg text-black/70">
+                Choose a time that works best for you. This is a complimentary 20-minute conversation to explore if we're a good fit to work together.
+              </p>
+              <button
+                onClick={() => setShowCalendar(false)}
+                className="text-sm uppercase tracking-wider text-black/50 hover:text-black underline"
+              >
+                Hide Calendar
+              </button>
+            </div>
+
+            {/* Calendly Inline Widget */}
+            <div className="bg-white rounded-sm border border-black/10 overflow-hidden" style={{ minHeight: '630px' }}>
+              <iframe
+                src="https://calendly.com/nina-moore/discovery-call"
+                width="100%"
+                height="700"
+                frameBorder="0"
+                title="Schedule Discovery Call"
+                className="w-full"
+              ></iframe>
+            </div>
+
+            <p className="text-center mt-8 text-sm text-black/50">
+              Don't see a time that works? <a href="mailto:hello@nina-moore.com" className="underline hover:text-black">Email me</a> and we'll find something that fits.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Alternative: Quick Calendar CTA */}
+      {!showCalendar && (
+        <section className="py-20 px-6 bg-stone-50">
+          <div className="max-w-2xl mx-auto text-center space-y-6">
+            <h3 className="text-2xl font-serif text-black">
+              Want to schedule a discovery call?
+            </h3>
+            <p className="text-black/70">
+              Free 20-minute consultation to see if we're aligned
+            </p>
+            <button
+              onClick={() => setShowCalendar(true)}
+              className="inline-block px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all"
+            >
+              View Available Times
+            </button>
+          </div>
+        </section>
+      )}
 
       {/* Direct Contact Info */}
       <section className="py-32 px-6 bg-gradient-to-br from-slate-50 to-stone-100">
@@ -312,6 +398,9 @@ export default function ContactPage() {
               </Link>
               <Link to="/privacy" className="hover:text-black transition-colors">
                 Privacy
+              </Link>
+              <Link to="/terms" className="hover:text-black transition-colors">
+                Terms
               </Link>
             </div>
           </div>
