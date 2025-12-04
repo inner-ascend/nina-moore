@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Nina Moore",
-    "subtitle": "Transformative mentorship for women and couples ready to break through patterns, heal old wounds, and step into who they're becoming",
+    "subtitle": "Initiatory journeys, healing experiences, and transformative mentorship to awaken your deepest truth and power",
     "cta": "Schedule Free Discovery Call"
   },
   "navigation": {
@@ -41,7 +41,7 @@
   },
   "offering": {
     "title": "Cycle of 4 Sessions",
-    "price": "$444",
+    "price": "€420",
     "cta": "Schedule Free Discovery Call"
   },
   "sessions": {
@@ -197,30 +197,28 @@
     ]
   },
   "finalCta": {
-    "price": "$444",
+    "price": "€420",
     "subtitle": "4 sessions + ongoing support",
     "button": "Schedule Free Discovery Call"
   },
   "about": {
-    "title": "About Nina",
+    "title": "About me",
     "bio": [
-      "I came to this work through my own breaking open.",
-      "For years I was a dance artist and cinematographer—creating, performing, moving through the world. But something underneath was calling me deeper.",
-      "Travel became my teacher. Years in Tibet, India, learning from traditions that understood the body as a doorway. I studied movement, energy, the ways we hold and release.",
-      "Martial arts. Qi gong. Tai chi. Kundalini and Himalayan yoga.",
-      "Practices that were ancient because they worked.",
-      "I trained in energy healing—theta, reiki, sound—not to collect certifications, but because I needed tools to support what was happening in my own system and in the people showing up for transformation.",
-      "The creative and the somatic were never separate for me.",
-      "Now I guide others through similar territories. Creative blocks. Relationship patterns. The space between who you were and who you're becoming."
+      "I am in service of the collective awakening and the expansion of consciousness.",
+      "I value the aliveness of emotions, embodied wisdom, and authentic pathways to freedom.",
+      "My field of expertise encompasses a wide array of methods and skills that I have nourished through years of practice and self-inquiry.",
+      "As a practitioner and human being, I meet people heart to heart and offer deep presence for growth, healing, and self-realization.",
+      "I believe that each individual carries a unique and invaluable gift into the world, waiting to be unraveled.",
+      "I am devoted to living in integrity with what wants to be expressed through each of us."
     ],
     "background": {
       "title": "Background",
-      "text": "I've been guiding this work for 8+ years. My training includes kundalini and Himalayan yoga teacher certifications, energy healing modalities, and years of study in martial arts and body-based practices. My creative background means I understand blocks from the inside. The movement practices taught me how to work with what's held in the body. The energy work gave me tools to support what wants to move through.",
+      "text": "I've been guiding this work for 8+ years.",
       "languages": "Sessions available in English, Spanish, and French."
     },
     "cta": {
-      "title": "Ready to explore working together?",
-      "button": "Schedule Free Discovery Call"
+      "title": "Ready to begin your journey?",
+      "button": "Work with me"
     }
   },
   "faq": {
@@ -334,7 +332,7 @@
       "investment": {
         "title": "Investment",
         "foundation": "4-session foundation: $1,200 ($300/session)",
-        "ongoing": "Ongoing sessions: $333 per 2-hour session"
+        "ongoing": "Ongoing sessions: €250 per 2-hour session"
       },
       "whoFor": {
         "title": "Who This Is For",
@@ -459,7 +457,7 @@
       "singleSession": {
         "title": "Single Session",
         "duration": "90 min",
-        "price": "$222",
+        "price": "€150",
         "whoFor": "You're going through a transition, processing a breakthrough (or breakdown), or need support integrating a recent experience.",
         "description": "A deep-dive session for specific challenges, transitions, or integration needs.",
         "whatWeDo": {
@@ -484,7 +482,7 @@
       "couplesSession": {
         "title": "Couples Session",
         "duration": "2 hours",
-        "price": "$333",
+        "price": "€250",
         "whoFor": "You're in a partnership that matters, but something's stuck. You want to break through patterns and reconnect.",
         "description": "A transformational session for couples seeking deeper intimacy, healing relationship wounds, or navigating a transition together.",
         "whatWeDo": {
@@ -509,7 +507,7 @@
       "integrationPackage": {
         "title": "Integration Package",
         "duration": "3 sessions over 6 weeks",
-        "price": "$555",
+        "price": "€400",
         "whoFor": "You've had a profound experience—plant medicine, awakening, breakdown, breakthrough—and need support integrating it into your life.",
         "description": "Three 90-minute sessions spaced over 6 weeks to help you ground and integrate transformative experiences.",
         "whatWeDo": {
