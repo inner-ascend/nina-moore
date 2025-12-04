@@ -428,55 +428,6 @@ export default function ProgramsPage() {
       </section>
 
 
-      {/* Investment & Payment */}
-      <section className="py-32">
-        <div className="container mx-auto max-w-4xl px-6 lg:px-12">
-          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-16">
-            {t.programs.payment.title}
-          </h2>
-
-          <div className="space-y-12">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-serif text-black">{t.programs.payment.howToBook.title}</h3>
-              <p className="text-lg text-black/70 leading-relaxed">
-                {t.programs.payment.howToBook.description}
-              </p>
-              <Link to="/getting-started" className="inline-block px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                {t.programs.payment.howToBook.cta}
-              </Link>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-3xl font-serif text-black">{t.programs.payment.options.title}</h3>
-              <p className="text-lg text-black/70 leading-relaxed">
-                {t.programs.payment.options.description}
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-3xl font-serif text-black">{t.programs.payment.plans.title}</h3>
-              <div className="text-lg text-black/70 leading-relaxed space-y-3">
-                <p>{t.programs.payment.plans.description}</p>
-                <ul className="space-y-2 ml-6">
-                  {t.programs.payment.plans.items.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="mr-3 mt-2 w-1.5 h-1.5 bg-black/30 rounded-full flex-shrink-0"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-3xl font-serif text-black">{t.programs.payment.cancellation.title}</h3>
-              <p className="text-lg text-black/70 leading-relaxed">
-                {t.programs.payment.cancellation.description} <Link to="/terms" className="underline hover:text-black/60">{t.programs.payment.cancellation.link}</Link> {t.programs.payment.cancellation.suffix}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials */}
       <section className="py-32 bg-stone-50">
