@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import enTranslations from '../../translations/en.json';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
+import Footer from '../Footer';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -378,33 +379,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-black/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-serif text-black mb-2">Nina Moore</h3>
-              <p className="text-sm text-black/50">Coaching & Integration</p>
-            </div>
-
-            <div className="flex space-x-8 text-sm text-black/60">
-              <Link to="/support" className="hover:text-black transition-colors">
-                Support
-              </Link>
-              <Link to="/privacy" className="hover:text-black transition-colors">
-                Privacy
-              </Link>
-              <Link to="/terms" className="hover:text-black transition-colors">
-                Terms
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-black/5 text-center text-sm text-black/40">
-            © {new Date().getFullYear()} Nina Moore. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

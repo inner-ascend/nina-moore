@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import enTranslations from '../../translations/en.json';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
+import Footer from '../Footer';
 
 export default function ProgramsPage() {
   const t = enTranslations;
@@ -205,32 +206,6 @@ export default function ProgramsPage() {
                 {t.programs.retreats.description.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
-              </div>
-
-              {/* Pricing */}
-              <div className="pt-8 pb-6 border-t border-b border-black/10 space-y-4">
-                <div>
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-3xl font-serif text-black">$3,333</span>
-                    <span className="text-base text-black/60">Private 1:1 Retreat</span>
-                  </div>
-                  <p className="mt-1 text-sm text-black/50">3-day immersive experience</p>
-                </div>
-                <div>
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-3xl font-serif text-black">$5,555</span>
-                    <span className="text-base text-black/60">Couples Retreat</span>
-                  </div>
-                  <p className="mt-1 text-sm text-black/50">3-day journey for 2 people</p>
-                </div>
-                <div>
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-3xl font-serif text-black">$2,222</span>
-                    <span className="text-base text-black/60">Small Group Retreat</span>
-                  </div>
-                  <p className="mt-1 text-sm text-black/50">5-day experience, per person (max 6 people)</p>
-                </div>
-                <p className="text-xs text-black/40 pt-2">All retreats include accommodation, meals, sessions, and integration support</p>
               </div>
 
               {/* Who This Is For */}
@@ -541,38 +516,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-black/10 py-16 px-6">
-        <div className="container mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="text-2xl font-serif text-black">
-              Nina Moore
-            </div>
-
-            <div className="flex items-center gap-8 text-sm uppercase tracking-wider text-black/60">
-              <a href={`mailto:${t.footer.email}`} className="hover:text-black transition-colors">
-                {t.footer.links.email}
-              </a>
-              <a href={`https://instagram.com/${t.footer.social.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
-                {t.footer.links.instagram}
-              </a>
-              <Link to="/support" className="hover:text-black transition-colors">
-                {t.footer.links.support}
-              </Link>
-              <Link to="/privacy" className="hover:text-black transition-colors">
-                {t.footer.links.privacy}
-              </Link>
-              <Link to="/terms" className="hover:text-black transition-colors">
-                Terms
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center mt-12 text-xs text-black/40">
-            {t.footer.copyright}
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

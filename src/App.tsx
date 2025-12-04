@@ -12,6 +12,7 @@ import ServicesPage from './components/pages/ServicesPage';
 import TermsPage from './components/pages/TermsPage';
 import GettingStartedPage from './components/pages/GettingStartedPage';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 // Main Landing Page Component - Flodesk/Squarespace Style
 function LandingPage() {
@@ -388,38 +389,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Footer - Minimal */}
-      <footer className="border-t border-black/10 py-16 px-6">
-        <div className="container mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="text-2xl font-serif text-black">
-              Nina Moore
-            </div>
-
-            <div className="flex items-center gap-8 text-sm uppercase tracking-wider text-black/60">
-              <a href={`mailto:${t.footer.email}`} className="hover:text-black transition-colors">
-                {t.footer.links.email}
-              </a>
-              <a href={`https://instagram.com/${t.footer.social.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
-                {t.footer.links.instagram}
-              </a>
-              <Link to="/support" className="hover:text-black transition-colors">
-                {t.footer.links.support}
-              </Link>
-              <Link to="/privacy" className="hover:text-black transition-colors">
-                {t.footer.links.privacy}
-              </Link>
-              <Link to="/terms" className="hover:text-black transition-colors">
-                Terms
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center mt-12 text-xs text-black/40">
-            {t.footer.copyright}
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
