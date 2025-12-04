@@ -429,28 +429,6 @@ export default function ProgramsPage() {
 
 
 
-      {/* Testimonials */}
-      <section className="py-32 bg-stone-50">
-        <div className="container mx-auto max-w-6xl px-6 lg:px-12">
-          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            {t.programs.testimonials.title}
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            {t.programs.testimonials.items.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 space-y-6">
-                <p className="text-lg text-black/70 leading-relaxed italic">
-                  "{testimonial.quote}"
-                </p>
-                <div className="space-y-1">
-                  <div className="font-medium text-black">{testimonial.name}</div>
-                  <div className="text-sm text-black/50">{testimonial.program}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-32 bg-zinc-800 text-white">
