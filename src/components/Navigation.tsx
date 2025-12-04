@@ -11,11 +11,9 @@ interface NavigationProps {
       bookNow: string;
     };
   };
-  language: 'en' | 'es' | 'fr';
-  onLanguageChange: (lang: 'en' | 'es' | 'fr') => void;
 }
 
-export default function Navigation({ currentPage, translations, language, onLanguageChange }: NavigationProps) {
+export default function Navigation({ currentPage, translations }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isActive = (page: string) => currentPage === page;
@@ -70,12 +68,6 @@ export default function Navigation({ currentPage, translations, language, onLang
             >
               {translations.navigation.contact}
             </Link>
-            <button
-              onClick={() => onLanguageChange(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
-              className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
-            >
-              {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
-            </button>
             <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
               {translations.navigation.bookNow}
             </Link>
@@ -138,12 +130,6 @@ export default function Navigation({ currentPage, translations, language, onLang
             >
               {translations.navigation.contact}
             </Link>
-            <button
-              onClick={() => onLanguageChange(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
-              className="block text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
-            >
-              {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
-            </button>
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}

@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './i18n';
 import enTranslations from './translations/en.json';
-import esTranslations from './translations/es.json';
-import frTranslations from './translations/fr.json';
 import SupportPage from './components/SupportPage';
 import PrivacyPage from './components/PrivacyPage';
 import AboutPageNew from './components/pages/AboutPageNew';
@@ -17,10 +15,9 @@ import ScrollToTop from './components/ScrollToTop';
 
 // Main Landing Page Component - Flodesk/Squarespace Style
 function LandingPage() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   return (
     <div className="min-h-screen bg-white">
@@ -47,12 +44,6 @@ function LandingPage() {
               <Link to="/contact" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 {t.navigation.contact}
               </Link>
-              <button
-                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
-                className="text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
-              >
-                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
-              </button>
               <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
                 {t.navigation.bookNow}
               </Link>
@@ -82,12 +73,6 @@ function LandingPage() {
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
                 {t.navigation.contact}
               </Link>
-              <button
-                onClick={() => setLanguage(language === 'en' ? 'fr' : language === 'fr' ? 'es' : 'en')}
-                className="block text-xs uppercase tracking-wider text-black/40 hover:text-black transition-colors"
-              >
-                {language === 'en' ? 'EN' : language === 'fr' ? 'FR' : 'ES'}
-              </button>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider font-semibold">
                 {t.navigation.bookNow}
               </Link>
@@ -122,43 +107,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Trust Signals - Stats Grid */}
-      <section className="py-20 px-6 bg-stone-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-            <div className="text-center space-y-3">
-              <div className="text-4xl md:text-5xl font-serif text-black">15+</div>
-              <p className="text-sm md:text-base text-black/60 leading-relaxed">Years Facilitating<br className="hidden md:block"/>Transformation</p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="text-4xl md:text-5xl font-serif text-black">500+</div>
-              <p className="text-sm md:text-base text-black/60 leading-relaxed">Sacred Sessions<br className="hidden md:block"/>Facilitated</p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="text-4xl md:text-5xl font-serif text-black">92%</div>
-              <p className="text-sm md:text-base text-black/60 leading-relaxed">Breakthrough<br className="hidden md:block"/>Rate</p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="text-4xl md:text-5xl font-serif text-black">23+</div>
-              <p className="text-sm md:text-base text-black/60 leading-relaxed">Countries<br className="hidden md:block"/>Worldwide</p>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center max-w-3xl mx-auto">
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs md:text-sm text-black/50 uppercase tracking-wider">
-              <span>• Certified Sacred Intimacy Coach</span>
-              <span>• Trauma-Informed Practice</span>
-              <span>• Somatic Therapy Training</span>
-            </div>
-            <p className="mt-6 text-sm text-black/40">
-              Trained with masters in Bali, Peru & India
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Three Pillars - Spacious Grid */}
       <section className="py-32 px-6 lg:px-12">

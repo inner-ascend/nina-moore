@@ -1,23 +1,16 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import enTranslations from '../../translations/en.json';
-import esTranslations from '../../translations/es.json';
-import frTranslations from '../../translations/fr.json';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
 
 export default function AboutPage() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
-
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation
         currentPage="about"
         translations={t}
-        language={language}
-        onLanguageChange={setLanguage}
       />
 
       {/* Hero */}
@@ -65,68 +58,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Credentials Section */}
-      <section className="py-32 bg-stone-50">
-        <div className="container mx-auto max-w-6xl px-6 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-serif text-black text-center mb-16">
-            Experience & Training
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-            {/* Years of Practice */}
-            <div className="text-center space-y-4">
-              <div className="text-6xl font-serif text-black">15+</div>
-              <p className="text-lg text-black/70">Years facilitating<br/>transformational experiences</p>
-            </div>
-
-            {/* Sessions */}
-            <div className="text-center space-y-4">
-              <div className="text-6xl font-serif text-black">500+</div>
-              <p className="text-lg text-black/70">Sacred sessions with<br/>individuals & couples</p>
-            </div>
-
-            {/* Countries */}
-            <div className="text-center space-y-4">
-              <div className="text-6xl font-serif text-black">23+</div>
-              <p className="text-lg text-black/70">Countries where<br/>clients call home</p>
-            </div>
-          </div>
-
-          <div className="mt-20 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-serif text-black mb-8 text-center">Certifications & Training</h3>
-            <div className="grid md:grid-cols-2 gap-8 text-black/70 leading-relaxed">
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2 w-2 h-2 bg-black/30 rounded-full flex-shrink-0"></span>
-                  <span><strong>Certified Sacred Intimacy Coach</strong> — Somatic & Tantric Practices</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2 w-2 h-2 bg-black/30 rounded-full flex-shrink-0"></span>
-                  <span><strong>Trauma-Informed Practice Certification</strong> — Embodied Healing Arts</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2 w-2 h-2 bg-black/30 rounded-full flex-shrink-0"></span>
-                  <span><strong>Somatic Therapy Training</strong> — Body-Centered Psychotherapy</span>
-                </li>
-              </ul>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2 w-2 h-2 bg-black/30 rounded-full flex-shrink-0"></span>
-                  <span><strong>Kundalini Activation Facilitator</strong> — Energy & Breathwork</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2 w-2 h-2 bg-black/30 rounded-full flex-shrink-0"></span>
-                  <span><strong>Holistic Life Coaching</strong> — Transformational Coaching Institute</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-2 w-2 h-2 bg-black/30 rounded-full flex-shrink-0"></span>
-                  <span><strong>Studied with masters</strong> in Bali, Peru, and India</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* My Background Story */}
       <section className="py-32">

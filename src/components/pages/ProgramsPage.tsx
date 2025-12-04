@@ -1,23 +1,16 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import enTranslations from '../../translations/en.json';
-import esTranslations from '../../translations/es.json';
-import frTranslations from '../../translations/fr.json';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
 
 export default function ProgramsPage() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
-
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation
         currentPage="programs"
         translations={t}
-        language={language}
-        onLanguageChange={setLanguage}
       />
 
       {/* Hero */}
@@ -304,30 +297,9 @@ export default function ProgramsPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
-            {/* Locations & Dates */}
+            {/* What's Included */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-3xl font-serif text-black mb-6">2025 Retreat Locations</h3>
-                <div className="space-y-6">
-                  <div className="border-l-2 border-black/20 pl-6">
-                    <p className="text-sm uppercase tracking-wider text-black/50 mb-2">May 15-20</p>
-                    <p className="text-xl font-serif text-black">Bali, Indonesia</p>
-                    <p className="text-sm text-black/60 mt-1">Small Group Retreat (4 spots remaining)</p>
-                  </div>
-                  <div className="border-l-2 border-black/20 pl-6">
-                    <p className="text-sm uppercase tracking-wider text-black/50 mb-2">August 10-13</p>
-                    <p className="text-xl font-serif text-black">Algarve, Portugal</p>
-                    <p className="text-sm text-black/60 mt-1">Couples Retreat (Private bookings available)</p>
-                  </div>
-                  <div className="border-l-2 border-black/20 pl-6">
-                    <p className="text-sm uppercase tracking-wider text-black/50 mb-2">November 1-6</p>
-                    <p className="text-xl font-serif text-black">Costa Rica</p>
-                    <p className="text-sm text-black/60 mt-1">Small Group Retreat (6 spots available)</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-8">
                 <h3 className="text-2xl font-serif text-black mb-4">What's Included</h3>
                 <ul className="space-y-3 text-base text-black/60">
                   <li className="flex items-start">
@@ -480,227 +452,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Program Comparison Table */}
-      <section className="py-32 bg-stone-50">
-        <div className="container mx-auto max-w-7xl px-6 lg:px-12">
-          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-16">
-            Compare Programs
-          </h2>
-
-          {/* Mobile: Stacked Cards */}
-          <div className="md:hidden space-y-8">
-            {/* Sacred Union Card */}
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <h3 className="text-2xl font-serif text-black mb-6">Sacred Union</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Duration</span>
-                  <span className="text-black font-medium">4 weeks</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Format</span>
-                  <span className="text-black font-medium">Couples</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Sessions</span>
-                  <span className="text-black font-medium">4 sessions</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Investment</span>
-                  <span className="text-black font-medium">$888</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Best For</span>
-                  <span className="text-black font-medium text-right">Relationship depth</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-black/50">Includes</span>
-                  <span className="text-black font-medium text-right">Materials + Integration</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Kundalini Card */}
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <h3 className="text-2xl font-serif text-black mb-6">Reignite Your Creativity</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Duration</span>
-                  <span className="text-black font-medium">4 weeks</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Format</span>
-                  <span className="text-black font-medium">Individual</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Sessions</span>
-                  <span className="text-black font-medium">4 sessions</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Investment</span>
-                  <span className="text-black font-medium">$666</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Best For</span>
-                  <span className="text-black font-medium text-right">Creative awakening</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-black/50">Includes</span>
-                  <span className="text-black font-medium text-right">Practices + Integration</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Private Retreat Card */}
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <h3 className="text-2xl font-serif text-black mb-6">Private 1:1 Retreat</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Duration</span>
-                  <span className="text-black font-medium">3 days</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Format</span>
-                  <span className="text-black font-medium">Individual</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Sessions</span>
-                  <span className="text-black font-medium">Immersive</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Investment</span>
-                  <span className="text-black font-medium">$3,333</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Best For</span>
-                  <span className="text-black font-medium text-right">Deep reset</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-black/50">Includes</span>
-                  <span className="text-black font-medium text-right">All-inclusive</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Group Retreat Card */}
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <h3 className="text-2xl font-serif text-black mb-6">Small Group Retreat</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Duration</span>
-                  <span className="text-black font-medium">5 days</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Format</span>
-                  <span className="text-black font-medium">Small Group</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Sessions</span>
-                  <span className="text-black font-medium">Immersive</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Investment</span>
-                  <span className="text-black font-medium">$2,222</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-black/5">
-                  <span className="text-black/50">Best For</span>
-                  <span className="text-black font-medium text-right">Community healing</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-black/50">Includes</span>
-                  <span className="text-black font-medium text-right">All-inclusive</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop: Table */}
-          <div className="hidden md:block overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-black">
-                  <th className="text-left py-6 px-4 text-sm uppercase tracking-wider text-black/50 font-normal">Feature</th>
-                  <th className="text-center py-6 px-4">
-                    <span className="text-2xl font-serif text-black block mb-2">Sacred Union</span>
-                    <span className="text-sm text-black/50">Couples</span>
-                  </th>
-                  <th className="text-center py-6 px-4">
-                    <span className="text-2xl font-serif text-black block mb-2">Reignite Creativity</span>
-                    <span className="text-sm text-black/50">Individual</span>
-                  </th>
-                  <th className="text-center py-6 px-4">
-                    <span className="text-2xl font-serif text-black block mb-2">1:1 Retreat</span>
-                    <span className="text-sm text-black/50">Individual</span>
-                  </th>
-                  <th className="text-center py-6 px-4">
-                    <span className="text-2xl font-serif text-black block mb-2">Group Retreat</span>
-                    <span className="text-sm text-black/50">Small Group</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-center">
-                <tr className="border-b border-black/10">
-                  <td className="text-left py-6 px-4 text-black/70">Duration</td>
-                  <td className="py-6 px-4 text-black font-medium">4 weeks</td>
-                  <td className="py-6 px-4 text-black font-medium">4 weeks</td>
-                  <td className="py-6 px-4 text-black font-medium">3 days</td>
-                  <td className="py-6 px-4 text-black font-medium">5 days</td>
-                </tr>
-                <tr className="border-b border-black/10 bg-stone-50">
-                  <td className="text-left py-6 px-4 text-black/70">Sessions</td>
-                  <td className="py-6 px-4 text-black font-medium">4 sessions</td>
-                  <td className="py-6 px-4 text-black font-medium">4 sessions</td>
-                  <td className="py-6 px-4 text-black font-medium">Immersive</td>
-                  <td className="py-6 px-4 text-black font-medium">Immersive</td>
-                </tr>
-                <tr className="border-b border-black/10">
-                  <td className="text-left py-6 px-4 text-black/70">Investment</td>
-                  <td className="py-6 px-4">
-                    <span className="text-3xl font-serif text-black">$888</span>
-                  </td>
-                  <td className="py-6 px-4">
-                    <span className="text-3xl font-serif text-black">$666</span>
-                  </td>
-                  <td className="py-6 px-4">
-                    <span className="text-3xl font-serif text-black">$3,333</span>
-                  </td>
-                  <td className="py-6 px-4">
-                    <span className="text-3xl font-serif text-black">$2,222</span>
-                  </td>
-                </tr>
-                <tr className="border-b border-black/10 bg-stone-50">
-                  <td className="text-left py-6 px-4 text-black/70">Best For</td>
-                  <td className="py-6 px-4 text-black text-sm">Deepening<br/>intimacy</td>
-                  <td className="py-6 px-4 text-black text-sm">Creative<br/>awakening</td>
-                  <td className="py-6 px-4 text-black text-sm">Intensive<br/>reset</td>
-                  <td className="py-6 px-4 text-black text-sm">Community<br/>healing</td>
-                </tr>
-                <tr className="border-b border-black/10">
-                  <td className="text-left py-6 px-4 text-black/70">What's Included</td>
-                  <td className="py-6 px-4 text-black text-sm">Materials +<br/>Integration</td>
-                  <td className="py-6 px-4 text-black text-sm">Practices +<br/>Integration</td>
-                  <td className="py-6 px-4 text-black text-sm">Accommodation +<br/>Meals + Sessions</td>
-                  <td className="py-6 px-4 text-black text-sm">Accommodation +<br/>Meals + Sessions</td>
-                </tr>
-                <tr>
-                  <td className="text-left py-6 px-4 text-black/70">Integration Support</td>
-                  <td className="py-6 px-4 text-black">✓</td>
-                  <td className="py-6 px-4 text-black">✓</td>
-                  <td className="py-6 px-4 text-black">✓</td>
-                  <td className="py-6 px-4 text-black">✓</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-black/60 text-sm">Not sure which program is right for you?</p>
-            <Link to="/contact" className="inline-block mt-4 px-8 py-3 border border-black text-black text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-all">
-              Schedule Discovery Call
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Investment & Payment */}
       <section className="py-32">

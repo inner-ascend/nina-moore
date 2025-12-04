@@ -1,22 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import enTranslations from '../../translations/en.json';
-import esTranslations from '../../translations/es.json';
-import frTranslations from '../../translations/fr.json';
 import Navigation from '../Navigation';
 
 export default function TermsPage() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
-
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation
-        currentPage={undefined}
         translations={t}
-        language={language}
-        onLanguageChange={setLanguage}
       />
 
       {/* Hero */}

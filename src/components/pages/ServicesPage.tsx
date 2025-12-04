@@ -1,23 +1,16 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
 import enTranslations from '../../translations/en.json';
-import esTranslations from '../../translations/es.json';
-import frTranslations from '../../translations/fr.json';
 
 export default function ServicesPage() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
-
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation
         currentPage="services"
         translations={t}
-        language={language}
-        onLanguageChange={setLanguage}
       />
 
       {/* Hero */}

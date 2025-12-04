@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import Navigation from '../Navigation';
 import enTranslations from '../../translations/en.json';
-import esTranslations from '../../translations/es.json';
-import frTranslations from '../../translations/fr.json';
 
 export default function ResourcesPage() {
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -17,8 +13,6 @@ export default function ResourcesPage() {
     <div className="min-h-screen">
       <Navigation
         translations={t}
-        language={language}
-        onLanguageChange={setLanguage}
       />
       {/* Full-Screen Opening */}
       <div className="h-screen relative flex items-center justify-center bg-gradient-to-br from-cosmic-900/90 via-indigo-deep/80 to-black/90">

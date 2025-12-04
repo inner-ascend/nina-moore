@@ -2,8 +2,6 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import enTranslations from '../../translations/en.json';
-import esTranslations from '../../translations/es.json';
-import frTranslations from '../../translations/fr.json';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
 
@@ -18,10 +16,9 @@ export default function ContactPage() {
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-  const [language, setLanguage] = useState<'en' | 'es' | 'fr'>('en');
   const [showCalendar, setShowCalendar] = useState(false);
 
-  const t = language === 'es' ? esTranslations : language === 'fr' ? frTranslations : enTranslations;
+  const t = enTranslations;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,8 +54,6 @@ export default function ContactPage() {
       <Navigation
         currentPage="contact"
         translations={t}
-        language={language}
-        onLanguageChange={setLanguage}
       />
 
       {/* Hero Section */}
