@@ -1,202 +1,231 @@
 {
   "hero": {
     "title": "Nina Moore",
-    "subtitle": "Initiatory journeys, healing experiences, and transformative mentorship to awaken your deepest truth and power",
-    "cta": "Book now"
+    "subtitle": "I help women and couples break free from emotional patterns, creative blocks, and relationship cycles through somatic healing and personalized mentorship",
+    "cta": "Schedule Free Discovery Call"
   },
   "navigation": {
     "about": "About",
     "contact": "Contact",
-    "bookNow": "Book Now"
+    "bookNow": "Free Discovery Call"
   },
   "pillars": {
     "pillar1": {
-      "title": "You can already feel it",
-      "description": "That quiet pull inside you, that whisper that you can rise above the loops and limitations."
+      "title": "You're ready for change",
+      "description": "You've done the self-help books, maybe therapy, but something still feels stuck. You sense there's more available to you."
     },
     "pillar2": {
-      "title": "You desire to transmute your story",
-      "description": "You are ready to find the gold in the hardship and develop self mastery as you discover your uniqueness."
+      "title": "You want lasting transformation",
+      "description": "Not just understanding your patterns intellectually—you want to feel different in your body and see real changes in your life."
     },
     "pillar3": {
-      "title": "You seek remembrance",
-      "description": "Of your power. Of your truth. Of the self you know you are underneath the layers of conditioning."
+      "title": "You're seeking a different approach",
+      "description": "Something that works with your body, not just your mind. That honors your experiences and helps you move through them."
     }
   },
   "invitation": {
-    "title": "The Invitation",
-    "p1": "Every journey is different — because every soul arrives with its own story, its own wounds, its own readiness.",
-    "p2": "There is no script here, only attuned presence and deep listening.",
-    "p3": "When you step into this space, you are not coming to \"fix yourself.\"",
-    "p4": "You are entering a sacred container for remembering your truth, clearing what no longer serves you, and opening to the self you have not yet dared to fully embody."
+    "title": "How I Work",
+    "p1": "Every person I work with arrives with their own story, their own challenges, their own readiness for change.",
+    "p2": "There's no script here—just deep presence and practical guidance tailored to what you need.",
+    "p3": "When you step into this space, you're not coming to \"fix yourself.\"",
+    "p4": "You're coming to reconnect with parts of yourself you've lost touch with, clear what's no longer serving you, and step into who you're becoming."
   },
   "transformation": {
-    "title": "Now is the time for full embodied transformation",
-    "subtitle": "I am here to walk with you as you build your living temple.",
-    "description": "My work is to allow you to bridge your inner awakening and your outer life — helping you integrate your experiences, activate your true self, and embody the purpose you came here to live.",
-    "line1": "This is more than coaching.",
-    "line2": "This is not just healing.",
-    "line3": "This is full-spectrum remembrance.",
-    "closing": "It's a journey to find the way home to yourself."
+    "title": "Real change happens in the body",
+    "subtitle": "I help you bridge insight with embodied transformation.",
+    "description": "My work helps you integrate your experiences, activate your potential, and live aligned with what matters to you. We work with breath, sensation, and energy—not just talking about your problems, but actually moving through them.",
+    "line1": "This isn't traditional coaching.",
+    "line2": "This isn't talk therapy.",
+    "line3": "This is embodied transformation work.",
+    "closing": "It's finding your way back to yourself."
   },
   "offering": {
-    "title": "Cycle of 4 sessions",
+    "title": "Cycle of 4 Sessions",
     "price": "$444",
-    "cta": "Book now"
+    "cta": "Schedule Free Discovery Call"
   },
   "sessions": {
-    "title": "What does a session entail?",
+    "title": "What happens in a session?",
     "items": [
       {
         "num": "01",
-        "title": "Deep exploration and integration",
-        "description": "A safe, personalized space for self discovery"
+        "title": "Deep exploration",
+        "description": "A safe, personalized space where you can share what's really going on without judgment"
       },
       {
         "num": "02",
-        "title": "Energetic clearing and activation",
-        "description": "Release of stuck energies and emotional blockages, activating your potential"
+        "title": "Somatic release",
+        "description": "Using breath and body awareness to release tension and emotional patterns held in your system"
       },
       {
         "num": "03",
-        "title": "Clarity and support",
-        "description": "Intuitive, practical guidance challenging limiting beliefs and offering truth"
+        "title": "Clarity and direction",
+        "description": "Practical guidance that challenges limiting beliefs and offers honest reflection"
       },
       {
         "num": "04",
-        "title": "Internal Harmony",
-        "description": "Meeting different aspects of yourself to heal and create internal balance"
+        "title": "Parts work",
+        "description": "Meeting different aspects of yourself to create internal balance and self-understanding"
       },
       {
         "num": "05",
-        "title": "Practical steps",
-        "description": "Coaching focused strategies for actionable growth and empowerment"
-      },
-      {
-        "num": "06",
-        "title": "Holistic approach",
-        "description": "Encompassing all layers of the self to reach a feeling of wholeness"
-      },
-      {
-        "num": "07",
-        "title": "Presence and honesty",
-        "description": "Meeting your unique needs for you to be fully seen and gain new perspectives"
+        "title": "Actionable steps",
+        "description": "You leave with specific practices and next steps—not just insights, but tools you can use"
       }
     ]
   },
   "journey": {
-    "title": "A profound journey towards yourself",
+    "title": "What clients work on",
     "themes": {
       "transformation": {
-        "title": "Transformation",
-        "description": "Healing old patterns, stepping into leadership, transforming relationships, and creating conscious lives and communities."
+        "title": "Life Transitions",
+        "description": "Career changes, relationship endings, loss, awakening experiences—any major shift that requires support and integration."
       },
       "opening": {
-        "title": "Opening",
-        "description": "Every session is a portal: an opening, an invitation to become more of who you are and step into your full radiance and purpose."
+        "title": "Relationship Patterns",
+        "description": "Whether you're single and repeating the same dynamics, or in a partnership that's struggling—we work with what's underneath."
       },
       "integration": {
-        "title": "Integration",
-        "description": "Transform your expression, identify your patterns, learn how to integrate your life experience, transform trauma into wisdom."
+        "title": "Integration Work",
+        "description": "Processing psychedelic experiences, spiritual openings, or any breakthrough that needs grounding into daily life."
       }
     }
   },
   "cta": {
-    "title": "Cycle of 4 sessions & ongoing support",
-    "subtitle": "Our 30 minutes connection call will help determine your needs and objectives",
-    "button": "Book now"
+    "title": "4 sessions + ongoing support",
+    "subtitle": "Start with a free 20-minute call to see if we're a good fit",
+    "button": "Schedule Free Discovery Call"
   },
   "testimonials": {
-    "title": "Client Testimonials",
+    "title": "Client Results",
     "items": [
       {
         "name": "Cecile Gatto",
         "outcome": "From Considering Separation to Deepest Connection",
-        "text1": "After 3 years feeling disconnected from my partner, Nina's Sacred Union work helped us rediscover intimacy we thought was lost. Within 8 sessions, we moved from considering separation to experiencing deeper connection than our honeymoon phase.",
-        "text2": "Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices. We've now worked together for 4 years and continue to grow stronger together."
+        "text1": "After 3 years feeling disconnected from my partner, Nina's work helped us rediscover intimacy we thought was lost. Within 8 sessions, we moved from considering separation to experiencing deeper connection than our honeymoon phase.",
+        "text2": "Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices. We've now worked together for 4 years."
       },
       {
         "name": "Benjamin Barda",
         "outcome": "2-Year Creative Block Dissolved in 6 Weeks",
-        "text1": "I came to Nina with creative block that had lasted 2 years. Through the Kundalini work, I unlocked not just my creativity but a wellspring of life force I didn't know existed. Within 6 weeks, I completed my album, launched my business, and felt alive again.",
-        "text2": "The transformation was visceral and lasting. Nina opened wide the doors of consciousness, revealing new spaces of courage, joy, and poetry. I'm now living as the artist of my inner world, feeling generously supported and inspired no matter the situation."
+        "text1": "I came to Nina with creative block that had lasted 2 years. Through the work, I unlocked not just my creativity but energy I didn't know existed. Within 6 weeks, I completed my album, launched my business, and felt alive again.",
+        "text2": "The transformation was real and lasting. Nina opened doors of awareness, revealing new spaces of courage, joy, and creative expression. I'm now living as the artist of my inner world."
       },
       {
         "name": "Will Ashurst",
-        "outcome": "Career Transition, Ancestral Healing, Leadership Emergence",
+        "outcome": "Career Transition + Leadership Emergence",
         "text1": "Working with Nina over the past year has been the most profound investment in myself I've ever made. I've navigated a career transition, healed ancestral wounds, and stepped into leadership I never thought possible.",
-        "text2": "Her ability to hold space while challenging me forward is unmatched. She understands me deeply and interprets what I share with precision, love, and compassion. Together, we've illuminated areas of my life I didn't know needed attention. The healing and value I've gained has been life-changing."
+        "text2": "Her ability to hold space while challenging me forward is unmatched. She understands me deeply and interprets what I share with precision, love, and compassion. The healing and value I've gained has been life-changing."
       }
     ]
   },
   "workTypes": {
-    "title": "What type of work are we doing together",
+    "title": "What we work on together",
     "items": [
       {
         "num": "01",
         "title": "Life Changes",
-        "description": "Break ups, breakthroughs, loss, awakenings"
+        "description": "Breakups, breakthroughs, loss, career shifts, awakenings—times when you need grounded support"
       },
       {
         "num": "02",
         "title": "Psychedelic Integration",
-        "description": "Medicine ceremonies, bad trips, self led journeys"
+        "description": "Processing plant medicine ceremonies, challenging trips, or self-led journeys that need integration"
       },
       {
         "num": "03",
         "title": "Relationship Challenges",
-        "description": "Sacred union, couples alchemy, shadow work"
+        "description": "Couples work, healing attachment patterns, navigating conflict, deepening intimacy"
       },
       {
         "num": "04",
-        "title": "Purpose and Path",
-        "description": "Finding yourself, dream work, vision, essence & gifts"
+        "title": "Purpose and Direction",
+        "description": "Finding clarity on your path, connecting with your gifts, making aligned decisions"
       },
       {
         "num": "05",
-        "title": "Trauma and Heartbreaks",
-        "description": "Rewriting the story, finding meaning, repatterning"
+        "title": "Trauma and Healing",
+        "description": "Processing difficult experiences, releasing stored tension, developing new patterns"
       },
       {
         "num": "06",
-        "title": "Spiritual Quest",
-        "description": "Connection to source, rituals, remembrance, soul and sacred"
+        "title": "Spiritual Integration",
+        "description": "Grounding awakening experiences, developing practices, finding your spiritual path"
       },
       {
         "num": "07",
-        "title": "Creative Flow",
-        "description": "Bringing back the spark, finding joy, self expression and trust"
+        "title": "Creative Blocks",
+        "description": "Unblocking creative energy, reconnecting with self-expression, finding your authentic voice"
       }
     ]
   },
   "finalCta": {
     "price": "$444",
     "subtitle": "4 sessions + ongoing support",
-    "button": "Begin Now"
+    "button": "Schedule Free Discovery Call"
   },
   "about": {
-    "title": "About me",
+    "title": "About Nina",
     "bio": [
-      "I am in service of the collective awakening and the expansion of consciousness.",
-      "I value the aliveness of emotions, embodied wisdom, and authentic pathways to freedom.",
-      "My field of expertise encompasses a wide array of methods and skills that I have nourished through years of practice and self-inquiry.",
-      "As a practitioner and human being, I meet people heart to heart and offer deep presence for growth, healing, and self-realization.",
-      "I believe that each individual carries a unique and invaluable gift into the world, waiting to be unraveled.",
-      "I am devoted to living in integrity with what wants to be expressed through each of us."
+      "I've spent the past 8+ years guiding individuals and couples through transformation—from creative blocks and relationship struggles to psychedelic integration and major life transitions.",
+      "My approach combines somatic therapy techniques, breathwork, energy work, and practical coaching. I'm trained in trauma-informed practices and work with the body, not just the mind.",
+      "Before this work, I walked my own path through burnout, relationship patterns, and finding my authentic expression. I understand the journey because I've lived it.",
+      "I work with clients worldwide via video call, and offer in-person intensives for those seeking deeper immersion.",
+      "I believe everyone carries unique gifts waiting to emerge. My role is to help you access what's already within you."
     ],
+    "credentials": {
+      "title": "Background & Training",
+      "items": [
+        "8+ years guiding individuals and couples",
+        "Trained in somatic therapy and breathwork",
+        "Trauma-informed practice",
+        "Specialized in psychedelic integration",
+        "100+ clients served worldwide",
+        "Fluent in English, Spanish, and French"
+      ]
+    },
     "cta": {
-      "title": "Ready to begin your journey?",
-      "button": "Work with me"
+      "title": "Ready to explore working together?",
+      "button": "Schedule Free Discovery Call"
     }
+  },
+  "faq": {
+    "title": "Common Questions",
+    "items": [
+      {
+        "question": "Is this therapy?",
+        "answer": "No. I'm not a licensed therapist. This is transformational coaching and somatic work. If you're dealing with severe trauma or mental health crises, I'll help you find appropriate clinical support and we can work together alongside that."
+      },
+      {
+        "question": "What if I'm skeptical about 'energy work'?",
+        "answer": "That's fine. You don't need to believe anything. We work with what you can feel in your body—breath, sensation, emotion. The rest is just language for describing the experience. Skeptics often become the biggest advocates."
+      },
+      {
+        "question": "Do I need to have done psychedelics?",
+        "answer": "Not at all. About 60% of my clients have never touched plant medicine. This work stands completely on its own. Integration support is one specialization, not a requirement."
+      },
+      {
+        "question": "How is this different from traditional therapy?",
+        "answer": "We work with the body, not just the mind. Rather than analyzing your problems, we move through them using breath, somatic awareness, and energy work. Many clients say they've made more progress in a few sessions than years of talk therapy."
+      },
+      {
+        "question": "What happens if we're not a good fit?",
+        "answer": "That's exactly what the discovery call is for. If I don't think I can help you, I'll tell you honestly and point you toward someone who can. No pressure, no sales pitch."
+      },
+      {
+        "question": "What technology do I need?",
+        "answer": "Just a computer or phone with video capability (Zoom), a quiet private space, and a stable internet connection. Sessions work beautifully online—most of my clients are remote."
+      }
+    ]
   },
   "contact": {
     "title": "Contact",
     "hero": {
-      "title": "Get in Touch",
-      "subtitle": "Let's begin the conversation"
+      "title": "Let's Talk",
+      "subtitle": "Start with a free 20-minute discovery call"
     },
     "intro": {
-      "p1": "I welcome you to reach out if you feel called to this work. Whether you're seeking guidance through a life transition, integration support after a psychedelic experience, or simply curious to learn more about working together.",
+      "p1": "Whether you're navigating a life transition, seeking integration support, or curious about working together—reach out.",
       "p2": "I typically respond within 24-48 hours."
     },
     "form": {
@@ -225,201 +254,115 @@
   "programs": {
     "title": "Programs",
     "hero": {
-      "title": "Programs",
-      "subtitle": "Sacred Union & Relationship Transformation"
+      "title": "Ongoing Programs",
+      "subtitle": "For deeper, sustained transformation"
     },
     "sacredUnion": {
-      "title": "Sacred Union",
-      "subtitle": "An ongoing transformation journey for couples ready to deepen their relationship and embark on profound healing and growth together.",
+      "title": "Couples Work",
+      "subtitle": "For partners ready to break through patterns and build genuine intimacy.",
       "description": [
-        "You've entered the most transformative relationship dynamic of your life and it's kicking your ass. This program is here to hold you through the wild ride, providing anchors to return to when challenges arise.",
-        "Together, we'll explore trust, unconditional love, communication, shadow work, and transgenerational trauma healing. This is not traditional couples therapy — this is soul-level work for partners ready to transform.",
-        "This is ongoing work that evolves with your relationship. We begin with a 4-week foundation and continue as your journey unfolds, meeting regularly to navigate the depths of sacred partnership."
+        "You're in a relationship that matters—but something's not working. Maybe you're stuck in the same arguments, feeling disconnected, or considering whether to stay or go.",
+        "This program provides ongoing support as you navigate the real challenges of partnership: trust, communication, intimacy, and the patterns you each bring from your past.",
+        "We work together over time, starting with a 4-week foundation and continuing as your relationship evolves. This isn't couples therapy—it's transformational work for partners ready to do the deep work."
       ],
-      "cta": "Learn More"
-    },
-    "kundalini": {
-      "title": "Reignite Your Creativity",
-      "subtitle": "An ongoing transformational journey to awaken your creative essence and evolve into your most expressive self.",
-      "description": [
-        "This is a sacred journey of creative awakening — a process of remembering and reclaiming the creative force that lives at your core. We work with the energy that wants to move through you and find its unique expression in the world.",
-        "Through this work, you'll experience a profound shift from constraint to flow, from doubt to trust, from silence to authentic self-expression. This journey supports your evolution into a life where creativity becomes your natural state of being.",
-        "Each session is uniquely tailored to unlock what's ready to emerge. We work with your creative blocks, limiting beliefs, and untapped potential to facilitate a transformation in how you create, express, and bring your gifts into the world.",
-        "This is a progressive evolution — not a one-time shift. We work together over time, nurturing your creative capacity and supporting the integration of your creative self into every aspect of your life."
-      ],
-      "cta": "Learn More"
-    },
-    "retreats": {
-      "title": "Immersive Retreats",
-      "subtitle": "Private 1:1 or intimate small group retreats for deep transformational work in a held, sacred container.",
-      "description": [
-        "Sometimes transformation requires stepping away from daily life and immersing yourself fully in the work. These multi-day retreats offer a sacred container for profound healing, activation, and integration.",
-        "Whether you come alone for private 1:1 work, or bring your partner or a small group of friends, these retreats are designed to hold you through deep processes that require time, space, and complete presence.",
-        "You'll stay over for the duration of the retreat, allowing the work to unfold organically without the interruption of returning to daily responsibilities. This creates the conditions for breakthroughs that simply aren't possible in shorter sessions.",
-        "The retreat includes personalized healing sessions, energy work, somatic practices, nature immersion, and sacred ceremony tailored to what wants to emerge for you or your group."
-      ],
-      "cta": "Learn More"
-    },
-    "retreatOfferings": {
-      "title": "Retreat Offerings",
-      "items": [
-        {
-          "num": "01",
-          "title": "Private 1:1 Retreats",
-          "description": "Fully personalized multi-day immersions designed around your unique journey, offering deep one-on-one work in a safe, sacred container."
-        },
-        {
-          "num": "02",
-          "title": "Couples Retreats",
-          "description": "Intimate retreats for partners seeking to deepen their bond, navigate challenges, and unlock new levels of connection and intimacy."
-        },
-        {
-          "num": "03",
-          "title": "Small Group Retreats",
-          "description": "Bring your close friends for a shared transformational journey. Perfect for groups of 2-4 who want to experience healing and growth together."
-        }
-      ]
-    },
-    "experience": {
-      "title": "What You'll Experience",
-      "items": [
-        {
-          "num": "01",
-          "title": "Energetic Awakening",
-          "description": "Activation of your life force energy, opening pathways for vitality, creativity, and expanded consciousness to flow freely through your being."
-        },
-        {
-          "num": "02",
-          "title": "Deep Clearing",
-          "description": "Release of stuck emotions, limiting beliefs, and energetic blockages that have been held in your body and field, creating space for new possibilities."
-        },
-        {
-          "num": "03",
-          "title": "Embodied Transformation",
-          "description": "Integration of higher states of consciousness into your daily life, allowing you to live from a place of authentic power and presence."
-        }
-      ]
-    },
-    "fourWeek": {
-      "title": "4-Week Journey",
-      "weeks": [
-        {
-          "num": "Week 1",
-          "title": "Building Trust & Unconditional Love",
-          "description": "Setting intentions, exploring trust within yourself and your partner, understanding and practicing unconditional love, and identifying personal barriers to intimacy."
-        },
-        {
-          "num": "Week 2",
-          "title": "Communication & Shadow Work",
-          "description": "Practicing vulnerability, deepening emotional intimacy, identifying and acknowledging your shadows, and learning to embrace the parts of yourself you've hidden."
-        },
-        {
-          "num": "Week 3",
-          "title": "Healing Transgenerational Trauma",
-          "description": "Understanding inherited patterns, de-programming cellular trauma, and fostering inner growth together as you break free from limiting beliefs."
-        },
-        {
-          "num": "Week 4",
-          "title": "Integration & Celebration",
-          "description": "Embracing change together, building resilience, celebrating your progress, and anchoring the transformation into your daily life."
-        }
-      ]
-    },
-    "principles": {
-      "title": "Core Principles",
-      "items": [
-        "Trust the process, knowing that there is a world of subtleties beyond the conscious relationship dogma.",
-        "You're not healing only yourself. The work ripples far out — you are de-programming transgenerational trauma at a cellular, DNA level.",
-        "Welcome the thunderstorms. Use the energy of challenges to bring transformation instead of avoiding them.",
-        "You are souls on a mission."
-      ]
-    },
-    "payment": {
-      "title": "Investment & Payment",
-      "howToBook": {
-        "title": "How to Book",
-        "description": "All programs begin with a discovery call to ensure alignment and readiness. We'll discuss your intentions, answer questions, and determine the best path forward together.",
-        "cta": "View Complete Booking Guide"
-      },
-      "options": {
-        "title": "Payment Options",
-        "description": "I accept Venmo, Zelle, bank transfer, and credit card. For multi-month programs, payment plans are available to make your investment more manageable."
-      },
-      "plans": {
-        "title": "Payment Plans",
-        "description": "Flexible payment plans are available for all programs:",
+      "whoFor": {
+        "title": "Who This Is For",
         "items": [
-          "2-payment plan: 50% deposit, 50% before week 3",
-          "3-payment plan: Divide total investment into 3 equal payments",
-          "Retreat deposit: $1,111 secures your spot, balance due 30 days before arrival"
+          "Committed couples seeking deeper intimacy and authentic connection",
+          "Partners ready to heal relationship wounds and recurring patterns",
+          "Couples navigating transitions and wanting to grow together"
         ]
       },
-      "cancellation": {
-        "title": "Cancellation & Refund Policy",
-        "description": "Programs: Non-refundable after 7 days from purchase. If you need to discontinue during the program, we'll work with you on a prorated refund for remaining sessions. Retreats: Deposits are non-refundable. Cancellations more than 60 days before retreat receive 50% refund; less than 60 days are non-refundable. See our",
-        "link": "Terms of Service",
-        "suffix": "for complete policies."
-      }
+      "cta": "Start Couples Work"
     },
-    "testimonials": {
-      "title": "Transformation Stories",
-      "items": [
-        {
-          "quote": "The Sacred Union program saved my relationship. Nina helped us break through years of defensive patterns and reconnect to the love that brought us together. We communicate with so much more honesty and tenderness now.",
-          "name": "Rachel & David",
-          "program": "Sacred Union Program"
-        },
-        {
-          "quote": "After years of creative blocks, the Kundalini Transmission program unlocked something profound in me. I've written an entire album, launched my business, and feel more alive than I have in a decade. Nina is a true guide.",
-          "name": "Marcus L.",
-          "program": "Reignite Creativity Program"
-        },
-        {
-          "quote": "The Bali retreat was life-changing. Being held in sacred space with Nina and a small group of seekers allowed me to release trauma I didn't even know I was carrying. I came home a different person—lighter, clearer, more whole.",
-          "name": "Jennifer K.",
-          "program": "Small Group Retreat, Bali 2024"
-        }
-      ]
+    "kundalini": {
+      "title": "Creative Unblocking",
+      "subtitle": "For artists, entrepreneurs, and creators who've lost their spark.",
+      "description": [
+        "You used to create freely. Now something's stuck. Maybe it's perfectionism, fear of judgment, burnout, or disconnection from what used to inspire you.",
+        "This program helps you reconnect with your creative source—not by forcing output, but by clearing what's blocking the natural flow.",
+        "We work with energy, breath, and embodiment to unlock what's ready to emerge. Many clients complete projects they'd abandoned for years within weeks of starting.",
+        "This is progressive work over time—building your creative capacity and integrating it into every aspect of your life."
+      ],
+      "whoFor": {
+        "title": "Who This Is For",
+        "items": [
+          "Creative professionals feeling blocked or disconnected",
+          "Entrepreneurs who've lost their vision or drive",
+          "Artists ready for a breakthrough in their expression"
+        ]
+      },
+      "cta": "Unlock Your Creativity"
+    },
+    "retreats": {
+      "title": "Private Retreats",
+      "subtitle": "Multi-day immersions for intensive transformation.",
+      "description": [
+        "Sometimes you need to step away from daily life to do deep work. These private retreats offer focused time for profound healing, activation, and integration.",
+        "Whether you come alone for 1:1 work, with your partner, or with a small group of friends—retreats create conditions for breakthroughs that aren't possible in shorter sessions.",
+        "You stay for the duration, allowing the work to unfold without interruption. Includes personalized healing sessions, somatic practices, nature immersion, and integration support.",
+        "Retreats are held in beautiful locations and tailored completely to your needs."
+      ],
+      "whoFor": {
+        "title": "Who This Is For",
+        "items": [
+          "Individuals or couples needing a deep reset",
+          "Those ready for intensive transformational work",
+          "People at major life transitions seeking clarity"
+        ]
+      },
+      "cta": "Inquire About Retreats"
     },
     "cta": {
-      "title": "Ready to transform your relationship?",
-      "subtitle": "This program is for couples who trust their soul path and are ready to do the deep work.",
-      "button": "Book a Discovery Call"
+      "title": "Ready to go deeper?",
+      "subtitle": "All programs start with a free discovery call to ensure we're a good fit.",
+      "button": "Schedule Free Discovery Call"
     }
   },
   "services": {
     "title": "Individual Sessions",
     "hero": {
-      "title": "Individual Sessions",
-      "subtitle": "Single sessions and consultations to support your journey"
+      "title": "Work With Me",
+      "subtitle": "Single sessions and packages for focused support"
     },
-    "intro": "Whether you're curious about working together, need support during a specific transition, or want integration guidance after a transformative experience—these individual sessions offer focused, personalized attention.",
+    "intro": "Whether you're curious about working together, navigating a specific challenge, or need integration support after a transformative experience—these sessions offer focused, personalized attention.",
     "offerings": {
       "discoveryCall": {
         "title": "Discovery Call",
         "duration": "20 min",
         "price": "Free",
-        "description": "A complimentary conversation to explore if we're aligned. We'll discuss what you're seeking, what I offer, and whether this work feels right for you.",
+        "description": "A conversation to see if we're a good fit. We'll discuss what you're seeking, how I work, and whether this approach feels right for you. No pressure, no sales pitch.",
         "coverTitle": "What We'll Cover",
         "cover": [
-          "Your current situation and what you're seeking",
+          "What you're currently navigating",
           "How I work and what to expect",
-          "Whether we're a good fit energetically",
-          "Next steps if you choose to move forward"
+          "Whether we're a good fit for each other",
+          "Next steps if you want to move forward"
         ],
-        "cta": "Schedule Discovery Call"
+        "cta": "Schedule Free Call"
       },
       "singleSession": {
         "title": "Single Session",
         "duration": "90 min",
         "price": "$222",
-        "description": "A deep-dive session for those seeking support with a specific challenge, transition, or integration need. This is transformational work in a focused container.",
+        "whoFor": "You're going through a transition, processing a breakthrough (or breakdown), or need support integrating a recent experience.",
+        "description": "A deep-dive session for specific challenges, transitions, or integration needs.",
+        "whatWeDo": {
+          "title": "What We'll Do",
+          "items": [
+            "Start with where you are right now—no judgment, full presence",
+            "Use breathwork and somatic practices to access what's stuck",
+            "Identify the pattern or block that's keeping you looping",
+            "Create a practice to continue the work on your own"
+          ]
+        },
+        "outcome": "You'll leave with clarity on your next step, a sense of relief in your body, and practical tools to support yourself.",
         "bestForTitle": "Best For",
         "bestFor": [
-          "Integration after a psychedelic or plant medicine experience",
-          "Navigating a specific life transition or challenge",
-          "Somatic processing and energy work",
-          "Exploring what longer-term work might look like"
+          "Integration after psychedelics or plant medicine",
+          "Navigating a specific life transition",
+          "Somatic processing and release",
+          "Trying out our work before committing to ongoing sessions"
         ],
         "cta": "Book Single Session"
       },
@@ -427,21 +370,43 @@
         "title": "Couples Session",
         "duration": "2 hours",
         "price": "$333",
-        "description": "A transformational session for couples seeking deeper intimacy, healing relationship wounds, or navigating a transition together. This is sacred union work.",
+        "whoFor": "You're in a partnership that matters, but something's stuck. You want to break through patterns and reconnect.",
+        "description": "A transformational session for couples seeking deeper intimacy, healing relationship wounds, or navigating a transition together.",
+        "whatWeDo": {
+          "title": "What We'll Do",
+          "items": [
+            "Create a safe space for both partners to be fully seen",
+            "Identify the patterns you're cycling through",
+            "Work somatically with what's held in each of your bodies",
+            "Build new ways of communicating and connecting"
+          ]
+        },
+        "outcome": "You'll leave with new understanding of your dynamic, practical tools for connection, and a felt sense of possibility.",
         "bestForTitle": "Best For",
         "bestFor": [
-          "Couples facing communication or intimacy challenges",
+          "Communication or intimacy challenges",
           "Navigating a major transition together",
           "Healing from betrayal or breach of trust",
-          "Trying out our work before committing to a journey"
+          "Trying couples work before committing to a program"
         ],
         "cta": "Book Couples Session"
       },
       "integrationPackage": {
         "title": "Integration Package",
-        "duration": "3 sessions",
+        "duration": "3 sessions over 6 weeks",
         "price": "$555",
-        "description": "Three 90-minute sessions spaced over 6 weeks to support integration of a profound experience—plant medicine, awakening, life transition, or breakthrough.",
+        "whoFor": "You've had a profound experience—plant medicine, awakening, breakdown, breakthrough—and need support integrating it into your life.",
+        "description": "Three 90-minute sessions spaced over 6 weeks to help you ground and integrate transformative experiences.",
+        "whatWeDo": {
+          "title": "What's Included",
+          "items": [
+            "Pre-session preparation and intention setting",
+            "Three deep 90-minute integration sessions",
+            "Somatic practices tailored to your experience",
+            "Email support between sessions"
+          ]
+        },
+        "outcome": "You'll feel grounded, clear, and able to bring the insights from your experience into daily life.",
         "includedTitle": "What's Included",
         "included": [
           "Pre-session preparation and intention setting",
@@ -453,94 +418,29 @@
       }
     },
     "howItWorks": {
-      "title": "How Sessions Work",
+      "title": "How It Works",
       "steps": [
         {
           "num": "01",
           "title": "Before We Meet",
-          "description": "After booking, you'll receive a brief intake form to help me understand what you're seeking. This ensures we make the most of our time together."
+          "description": "After booking, you'll receive a brief intake form so I understand what you're seeking. This ensures we make the most of our time together."
         },
         {
           "num": "02",
           "title": "During Our Session",
-          "description": "Sessions are conducted via video call. We work with a blend of conversation, somatic practices, breathwork, and energy transmission—tailored to what you need in the moment."
+          "description": "Sessions happen via video call. We work with conversation, somatic practices, breathwork, and energy—tailored to what you need in the moment."
         },
         {
           "num": "03",
           "title": "After We Work Together",
-          "description": "You'll receive practices and integration support to help you embody what emerged. If you'd like to continue working together, we'll explore what that might look like."
-        }
-      ]
-    },
-    "whatToExpect": {
-      "title": "What to Expect",
-      "paragraphs": [
-        {
-          "bold": "This work is embodied.",
-          "text": "We don't just talk about your challenges—we work with them somatically through breath, sensation, movement, and energy. Insight happens, but it's insight that lands in your body."
-        },
-        {
-          "bold": "This work is held with reverence.",
-          "text": "I approach each session as sacred space. What you share is held in complete confidentiality and with deep respect for your journey."
-        },
-        {
-          "bold": "This work meets you where you are.",
-          "text": "I don't have a formula. Each session is responsive to what's alive in you, what's ready to be seen, felt, and integrated."
-        }
-      ],
-      "closing": "You don't need to know exactly what you need. You just need to show up with presence and willingness."
-    },
-    "deeperWork": {
-      "title": "Ready for Deeper Work?",
-      "description": "If you're seeking more sustained support, explore my multi-week programs and immersive retreats designed for profound transformation.",
-      "cta": "View Programs & Retreats"
-    },
-    "payment": {
-      "title": "Payment & Booking",
-      "howToBook": {
-        "title": "How to Book",
-        "description": "All sessions begin with a discovery call to ensure we're a good fit. From there, we'll schedule your session and you'll receive booking confirmation with payment details.",
-        "cta": "View Booking Guide"
-      },
-      "methods": {
-        "title": "Payment Methods",
-        "description": "I accept Venmo, Zelle, bank transfer, and credit card. Payment is required before your session to secure your spot."
-      },
-      "plans": {
-        "title": "Payment Plans",
-        "description": "Payment plans are available for the Integration Package. We can arrange 2 or 3 payments to make your investment more manageable."
-      },
-      "cancellation": {
-        "title": "Cancellation Policy",
-        "description": "Please provide at least 48 hours notice for cancellations. Late cancellations or no-shows will be charged the full session fee. See our",
-        "link": "Terms of Service",
-        "suffix": "for complete policies."
-      }
-    },
-    "testimonials": {
-      "title": "What Clients Say",
-      "items": [
-        {
-          "quote": "Working with Nina has been transformative. Her ability to hold space for deep emotional work while keeping me grounded in my body has been incredible. I've made more progress in a few sessions than years of traditional therapy.",
-          "name": "Sarah M.",
-          "program": "Integration Package Client"
-        },
-        {
-          "quote": "Nina's somatic approach helped me reconnect with parts of myself I had shut down for years. She creates such a safe, compassionate space for exploration and healing. Highly recommend for anyone doing deep inner work.",
-          "name": "James T.",
-          "program": "Single Session Client"
-        },
-        {
-          "quote": "The couples session with Nina completely shifted how my partner and I communicate. She helped us see patterns we couldn't see on our own and gave us practical tools to deepen our connection. Worth every penny.",
-          "name": "Maya & Alex",
-          "program": "Couples Session Clients"
+          "description": "You'll receive specific practices and integration support. If you want to continue working together, we'll explore what that looks like."
         }
       ]
     },
     "finalCta": {
-      "title": "Let's explore if this work is right for you",
-      "subtitle": "Start with a free discovery call—no commitment, just connection.",
-      "button": "Schedule Discovery Call"
+      "title": "Not sure where to start?",
+      "subtitle": "Book a free discovery call. We'll figure it out together.",
+      "button": "Schedule Free Discovery Call"
     }
   },
   "footer": {
@@ -550,9 +450,7 @@
     },
     "links": {
       "email": "Email",
-      "instagram": "Instagram",
-      "support": "Support",
-      "privacy": "Privacy"
+      "instagram": "Instagram"
     },
     "copyright": "© 2025 Nina Moore. All rights reserved."
   }

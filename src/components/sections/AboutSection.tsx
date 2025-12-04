@@ -4,12 +4,16 @@ import enTranslations from '../../translations/en.json';
 export default function AboutSection() {
   const t = enTranslations;
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="about" className="scroll-mt-24">
       {/* Bio Section - Image + Text */}
       <div className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Bio Portrait */}
             <div className="aspect-[3/4] rounded-sm overflow-hidden">
               <OptimizedImage
@@ -24,12 +28,37 @@ export default function AboutSection() {
               <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
                 {t.about.title}
               </h2>
-              <div className="space-y-6 text-xl md:text-2xl text-black/70 leading-relaxed">
+              <div className="space-y-6 text-lg text-black/70 leading-relaxed">
                 {t.about.bio.map((paragraph, index) => (
-                  <p key={index} className={index === 4 ? "text-black font-medium text-3xl md:text-4xl leading-relaxed pt-6" : ""}>
+                  <p key={index}>
                     {paragraph}
                   </p>
                 ))}
+              </div>
+
+              {/* Credentials */}
+              <div className="pt-8 border-t border-black/10">
+                <h3 className="text-xl font-serif text-black mb-6">
+                  {t.about.credentials.title}
+                </h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {t.about.credentials.items.map((item, index) => (
+                    <li key={index} className="flex items-start text-black/60">
+                      <span className="mr-3 mt-2 w-1.5 h-1.5 bg-black/30 rounded-full flex-shrink-0"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-8">
+                <button
+                  onClick={scrollToContact}
+                  className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all"
+                >
+                  {t.about.cta.button}
+                </button>
               </div>
             </div>
           </div>
@@ -44,36 +73,36 @@ export default function AboutSection() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-            {/* Pillar 1: Somatic Embodiment */}
+            {/* Pillar 1: Somatic Work */}
             <div className="space-y-6">
               <div className="text-5xl font-serif text-black/20">01</div>
               <h3 className="text-2xl font-serif text-black">
-                Somatic Embodiment
+                Body-Based Work
               </h3>
               <p className="text-lg text-black/70 leading-relaxed">
-                True transformation happens not just in the mind, but in the body. We work with breath, sensation, movement, and energy to release what's stuck and integrate new ways of being.
+                We work with breath, sensation, and movement—not just conversation. Real change happens when insights land in your body, not just your mind.
               </p>
             </div>
 
-            {/* Pillar 2: Sacred Union Principles */}
+            {/* Pillar 2: Honest Reflection */}
             <div className="space-y-6">
               <div className="text-5xl font-serif text-black/20">02</div>
               <h3 className="text-2xl font-serif text-black">
-                Sacred Union Principles
+                Honest Reflection
               </h3>
               <p className="text-lg text-black/70 leading-relaxed">
-                Whether working with individuals or couples, I bring the wisdom of sacred union—the integration of masculine and feminine, shadow and light, human and divine.
+                I won't just validate you. I'll challenge limiting patterns, ask hard questions, and help you see what you might be avoiding. Growth requires honesty.
               </p>
             </div>
 
-            {/* Pillar 3: Integration & Accountability */}
+            {/* Pillar 3: Practical Tools */}
             <div className="space-y-6">
               <div className="text-5xl font-serif text-black/20">03</div>
               <h3 className="text-2xl font-serif text-black">
-                Integration & Accountability
+                Practical Tools
               </h3>
               <p className="text-lg text-black/70 leading-relaxed">
-                Insight without integration is just entertainment. I provide practical tools, ongoing support, and loving accountability to ensure your transformation becomes real.
+                You leave every session with specific practices and next steps. Insight without action is just entertainment. We focus on real, lasting change.
               </p>
             </div>
           </div>

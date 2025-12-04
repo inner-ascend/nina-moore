@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import './i18n';
 import enTranslations from './translations/en.json';
 
@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const t = enTranslations;
 
   // Smooth scroll to section
@@ -96,26 +97,26 @@ function App() {
         <div className="absolute inset-0">
           <img
             src="/images/DSC01844.JPG"
-            alt="Sacred nature landscape"
+            alt="Nature landscape"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight tracking-tight drop-shadow-lg">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light leading-relaxed max-w-4xl mx-auto mb-12 drop-shadow-lg">
+          <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-4xl mx-auto mb-12 drop-shadow-lg">
             {t.hero.subtitle}
           </p>
           <button onClick={() => scrollToSection('contact')} className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            {t.navigation.bookNow}
+            {t.hero.cta}
           </button>
         </div>
       </section>
 
-      {/* Three Pillars - Spacious Grid */}
+      {/* Three Pillars - Who This Is For */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-16 lg:gap-24">
@@ -138,12 +139,39 @@ function App() {
         </div>
       </section>
 
-      {/* THE INVITATION - Image + Text Split */}
+      {/* Featured Testimonial - Social Proof Early */}
+      <section className="py-24 px-6 bg-stone-50">
+        <div className="container mx-auto max-w-4xl text-center">
+          <blockquote className="space-y-8">
+            <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
+              "{t.testimonials.items[0].text1}"
+            </p>
+            <footer className="space-y-2">
+              <p className="text-sm uppercase tracking-wider text-black/50">{t.testimonials.items[0].outcome}</p>
+              <p className="text-lg font-serif text-black">— {t.testimonials.items[0].name}</p>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      {/* Discovery Call CTA - Primary Action */}
+      <section className="py-24 bg-zinc-800 text-white">
+        <div className="container mx-auto max-w-4xl text-center px-6 space-y-8">
+          <h2 className="text-4xl md:text-5xl font-serif leading-tight">Start with a Free Discovery Call</h2>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">{t.cta.subtitle}</p>
+          <button onClick={() => scrollToSection('contact')} className="inline-block px-16 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all font-medium">
+            Schedule Free Call
+          </button>
+          <p className="text-sm text-white/50">20 minutes • No pressure • No sales pitch</p>
+        </div>
+      </section>
+
+      {/* How I Work - Image + Text Split */}
       <section className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="aspect-[3/4] rounded-sm overflow-hidden">
-              <img src="/images/invitation.JPG" alt="The Invitation" className="w-full h-full object-cover" />
+              <img src="/images/invitation.JPG" alt="How I Work" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-8">
               <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">{t.invitation.title}</h2>
@@ -158,45 +186,11 @@ function App() {
         </div>
       </section>
 
-      {/* Full Width Image Break */}
-      <section className="h-[70vh] relative overflow-hidden">
-        <img src="/images/break.JPG" alt="Sacred moment" className="w-full h-full object-cover" />
-      </section>
-
-      {/* Now is the time - Centered Text Block */}
-      <section className="py-32 px-6">
-        <div className="container mx-auto max-w-4xl text-center space-y-12">
-          <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">{t.transformation.title}</h2>
-          <p className="text-2xl text-black/70 leading-relaxed">{t.transformation.subtitle}</p>
-          <div className="space-y-6 text-lg text-black/60 leading-relaxed">
-            <p>{t.transformation.description}</p>
-          </div>
-          <div className="text-2xl font-serif text-black space-y-3 pt-8">
-            <p>{t.transformation.line1}</p>
-            <p>{t.transformation.line2}</p>
-            <p>{t.transformation.line3}</p>
-          </div>
-          <p className="text-3xl font-serif text-black/70 italic pt-6">{t.transformation.closing}</p>
-        </div>
-      </section>
-
-      {/* Main Offering - Large Centered */}
-      <section className="py-32 bg-zinc-800 text-white">
-        <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
-          <h2 className="text-5xl md:text-6xl font-serif leading-tight">{t.offering.title}</h2>
-          <p className="text-4xl md:text-5xl font-serif tracking-tight">{t.offering.price}</p>
-          <button onClick={() => scrollToSection('contact')} className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            Begin Your Transformation
-          </button>
-          <p className="text-sm text-white/50 pt-4">Limited to 3 new clients per month</p>
-        </div>
-      </section>
-
-      {/* What does a session entail - Grid */}
-      <section className="py-32 px-6 lg:px-12">
+      {/* What Happens in a Session - Grid */}
+      <section className="py-32 px-6 lg:px-12 bg-stone-50">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">{t.sessions.title}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {t.sessions.items.map((item) => (
               <div key={item.num} className="space-y-4">
                 <div className="text-4xl font-serif text-black/20">{item.num}</div>
@@ -208,7 +202,12 @@ function App() {
         </div>
       </section>
 
-      {/* Image + Three Themes Side by Side */}
+      {/* Full Width Image Break */}
+      <section className="h-[60vh] relative overflow-hidden">
+        <img src="/images/break.JPG" alt="Nature" className="w-full h-full object-cover" />
+      </section>
+
+      {/* What Clients Work On */}
       <section className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
@@ -234,26 +233,44 @@ function App() {
         </div>
       </section>
 
-      {/* Discovery Call CTA */}
+      {/* Real Change Section */}
+      <section className="py-32 px-6 bg-stone-50">
+        <div className="container mx-auto max-w-4xl text-center space-y-12">
+          <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">{t.transformation.title}</h2>
+          <p className="text-2xl text-black/70 leading-relaxed">{t.transformation.subtitle}</p>
+          <div className="space-y-6 text-lg text-black/60 leading-relaxed">
+            <p>{t.transformation.description}</p>
+          </div>
+          <div className="text-2xl font-serif text-black space-y-3 pt-8">
+            <p>{t.transformation.line1}</p>
+            <p>{t.transformation.line2}</p>
+            <p>{t.transformation.line3}</p>
+          </div>
+          <p className="text-3xl font-serif text-black/70 italic pt-6">{t.transformation.closing}</p>
+        </div>
+      </section>
+
+      {/* Main Offering */}
       <section className="py-32 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
-          <h2 className="text-4xl md:text-5xl font-serif leading-relaxed">{t.cta.title}</h2>
-          <p className="text-xl text-white/60">Free 20-minute discovery call to explore if we're aligned</p>
+          <h2 className="text-5xl md:text-6xl font-serif leading-tight">{t.offering.title}</h2>
+          <p className="text-4xl md:text-5xl font-serif tracking-tight">{t.offering.price}</p>
           <button onClick={() => scrollToSection('contact')} className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            Schedule Discovery Call
+            {t.offering.cta}
           </button>
+          <p className="text-sm text-white/50 pt-4">Limited availability • Start with free discovery call</p>
         </div>
       </section>
 
       {/* About Section */}
       <AboutSection />
 
-      {/* Testimonials - Large, Spacious */}
+      {/* More Testimonials */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">{t.testimonials.title}</h2>
-          <div className="space-y-32">
-            {t.testimonials.items.map((testimonial, index) => (
+          <div className="space-y-24">
+            {t.testimonials.items.slice(1).map((testimonial, index) => (
               <div key={index} className="max-w-4xl mx-auto">
                 <blockquote className="space-y-8">
                   {'outcome' in testimonial && testimonial.outcome && (
@@ -262,7 +279,7 @@ function App() {
                     </h3>
                   )}
                   <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">{testimonial.text1}</p>
-                  <p className="text-xl md:text-2xl font-serif text-black/80 leading-relaxed">{testimonial.text2}</p>
+                  <p className="text-xl font-serif text-black/70 leading-relaxed">{testimonial.text2}</p>
                   <footer className="text-sm uppercase tracking-wider text-black/60 pt-4">— {testimonial.name}</footer>
                 </blockquote>
               </div>
@@ -271,16 +288,41 @@ function App() {
         </div>
       </section>
 
-      {/* What type of work - Grid */}
+      {/* What We Work On - Grid */}
       <section className="py-32 px-6 lg:px-12 bg-stone-50">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">{t.workTypes.title}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {t.workTypes.items.map((item) => (
               <div key={item.num} className="space-y-4">
                 <div className="text-4xl font-serif text-black/20">{item.num}</div>
                 <h3 className="text-2xl font-serif text-black">{item.title}</h3>
                 <p className="text-lg text-black/60 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-32 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-16">{t.faq.title}</h2>
+          <div className="space-y-4">
+            {t.faq.items.map((item, index) => (
+              <div key={index} className="border-b border-black/10">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full py-6 flex items-center justify-between text-left"
+                >
+                  <span className="text-xl font-serif text-black pr-8">{item.question}</span>
+                  <ChevronDown className={`w-5 h-5 text-black/40 flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === index && (
+                  <div className="pb-6 text-lg text-black/70 leading-relaxed">
+                    {item.answer}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -296,22 +338,22 @@ function App() {
       {/* Contact Section */}
       <ContactSection />
 
-      {/* Final CTA - Centered Large */}
+      {/* Final CTA */}
       <section className="py-32 px-6 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
           <h2 className="text-5xl md:text-6xl font-serif leading-tight">
-            Ready to Remember Who You Really Are?
+            Ready to Make Real Changes?
           </h2>
           <p className="text-2xl text-white/70">{t.finalCta.subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button onClick={() => scrollToSection('contact')} className="inline-block px-12 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-              Schedule Discovery Call
+              Schedule Free Discovery Call
             </button>
             <button onClick={() => scrollToSection('programs')} className="inline-block px-12 py-5 border-2 border-white text-white text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all">
               Explore Programs
             </button>
           </div>
-          <p className="text-sm text-white/40 pt-4">Your privacy is sacred. All sessions confidential.</p>
+          <p className="text-sm text-white/40 pt-4">All sessions confidential. No pressure to commit.</p>
         </div>
       </section>
 
