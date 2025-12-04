@@ -29,14 +29,6 @@ export default function Navigation({ currentPage, translations }: NavigationProp
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-12">
             <Link
-              to="/"
-              className={`text-sm uppercase tracking-wider transition-colors ${
-                isActive('home') ? 'text-black' : 'text-black/60 hover:text-black'
-              }`}
-            >
-              Home
-            </Link>
-            <Link
               to="/about"
               className={`text-sm uppercase tracking-wider transition-colors ${
                 isActive('about') ? 'text-black' : 'text-black/60 hover:text-black'
@@ -85,15 +77,6 @@ export default function Navigation({ currentPage, translations }: NavigationProp
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden py-6 space-y-6 border-t border-black/5">
-            <Link
-              to="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block text-sm uppercase tracking-wider ${
-                isActive('home') ? 'text-black' : 'text-black/60'
-              }`}
-            >
-              Home
-            </Link>
             <Link
               to="/about"
               onClick={() => setMobileMenuOpen(false)}
