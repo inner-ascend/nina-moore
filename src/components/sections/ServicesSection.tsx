@@ -88,37 +88,6 @@ export default function ServicesSection() {
               </button>
             </div>
 
-            {/* Couples Session */}
-            <div className="bg-white p-10 lg:p-12 space-y-8">
-              <div className="space-y-4">
-                <div className="flex items-baseline gap-4">
-                  <h3 className="text-4xl font-serif text-black">{t.services.offerings.couplesSession.title}</h3>
-                  <span className="text-lg text-black/50">{t.services.offerings.couplesSession.duration}</span>
-                </div>
-                <div className="text-3xl font-serif text-black">{t.services.offerings.couplesSession.price}</div>
-              </div>
-
-              <p className="text-lg text-black/70 leading-relaxed">
-                {t.services.offerings.couplesSession.description}
-              </p>
-
-              <div className="space-y-3">
-                <h4 className="text-sm uppercase tracking-wider text-black/60">{t.services.offerings.couplesSession.bestForTitle}</h4>
-                <ul className="space-y-2 text-black/70">
-                  {t.services.offerings.couplesSession.bestFor.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="mr-3 mt-2 w-1.5 h-1.5 bg-black/30 rounded-full flex-shrink-0"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button onClick={scrollToContact} className="block w-full px-8 py-4 bg-black text-white text-center text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                {t.services.offerings.couplesSession.cta}
-              </button>
-            </div>
-
             {/* Integration Package */}
             <div className="bg-white p-10 lg:p-12 space-y-8">
               <div className="space-y-4">

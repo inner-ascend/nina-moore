@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Nina Moore",
-    "subtitle": "Initiatory journeys, healing experiences, and transformative mentorship to awaken your deepest truth and power",
+    "subtitle": "Initiatory journeys for visionary women breaking free from emotional patterns and creative blocks — ready to radically embrace their power",
     "cta": "Schedule Free Discovery Call"
   },
   "navigation": {
@@ -11,16 +11,16 @@
   },
   "pillars": {
     "pillar1": {
-      "title": "You can already feel it",
-      "description": "That quiet pull inside you, that whisper that you can rise above the loops and limitations."
+      "title": "You have spiritual gifts",
+      "description": "You're psychic, creative, visionary — and you know there's more waiting to come through you."
     },
     "pillar2": {
-      "title": "You desire to transmute your story",
-      "description": "You are ready to find the gold in the hardship and develop self mastery as you discover your uniqueness."
+      "title": "You're at a threshold",
+      "description": "Saturn return, your 30s, a crossroads that demands you finally step into the woman you're becoming."
     },
     "pillar3": {
-      "title": "You seek remembrance",
-      "description": "Of your power. Of your truth. Of the self you know you are underneath the layers of conditioning."
+      "title": "You're ready to radically embrace your power",
+      "description": "Not the polished version. Not the safe version. The raw, unfiltered truth of who you are."
     }
   },
   "invitation": {
@@ -32,11 +32,11 @@
   },
   "transformation": {
     "title": "Now is the time for embodied transformation",
-    "subtitle": "I am here to walk with you through the changes you're ready to make.",
+    "subtitle": "I am here to walk with you as you build your living temple.",
     "description": "My work bridges your inner awakening and your outer life — helping you integrate your experiences, activate your potential, and live aligned with who you truly are.",
     "line1": "This is more than coaching.",
     "line2": "This is not just healing.",
-    "line3": "This is deep, lasting change.",
+    "line3": "This is full-spectrum remembrance.",
     "closing": "It's a journey to find the way home to yourself."
   },
   "offering": {
@@ -102,25 +102,25 @@
     "button": "Schedule Free Discovery Call"
   },
   "testimonials": {
-    "title": "Client Results",
+    "title": "What Women Say",
     "items": [
       {
-        "name": "Cecile Gatto",
-        "outcome": "From Considering Separation to Deepest Connection",
-        "text1": "After 3 years feeling disconnected from my partner, Nina's work helped us rediscover intimacy we thought was lost. Within 8 sessions, we moved from considering separation to experiencing deeper connection than our honeymoon phase.",
-        "text2": "Today, I have a clear vision for my projects, a peaceful and loving relationship with my partner, renewed balance with those around me, and the confidence to make empowered choices. We've now worked together for 4 years."
+        "name": "Gaby",
+        "outcome": "Finding the Guide I Had Been Searching For",
+        "text1": "You are the guide I have been praying for years to find. Nina's presence and wisdom helped me navigate one of the most transformative periods of my life with grace and clarity.",
+        "text2": "Through our work together, I discovered parts of myself I had forgotten existed. Her ability to see through to the heart of things and hold space for deep transformation is truly a gift."
       },
       {
-        "name": "Benjamin Barda",
-        "outcome": "2-Year Creative Block Dissolved in 6 Weeks",
-        "text1": "I came to Nina with creative block that had lasted 2 years. Through the work, I unlocked not just my creativity but energy I didn't know existed. Within 6 weeks, I completed my album, launched my business, and felt alive again.",
-        "text2": "The transformation was real and lasting. Nina opened doors of awareness, revealing new spaces of courage, joy, and creative expression. I'm now living as the artist of my inner world."
+        "name": "Sarah",
+        "outcome": "Breaking Through Creative Blocks",
+        "text1": "I came to Nina feeling completely stuck — creatively blocked and disconnected from my power. Within weeks, something shifted. I started creating again, trusting my vision, and finally stepping into who I knew I was meant to be.",
+        "text2": "The transformation was real and lasting. Nina opened doors of awareness, revealing new spaces of courage, joy, and authentic expression. I'm now living as the woman I always knew I could become."
       },
       {
-        "name": "Will Ashurst",
-        "outcome": "Career Transition + Leadership Emergence",
-        "text1": "Working with Nina over the past year has been the most profound investment in myself I've ever made. I've navigated a career transition, healed ancestral wounds, and stepped into leadership I never thought possible.",
-        "text2": "Her ability to hold space while challenging me forward is unmatched. She understands me deeply and interprets what I share with precision, love, and compassion. The healing and value I've gained has been life-changing."
+        "name": "Maya",
+        "outcome": "Saturn Return Awakening",
+        "text1": "Working with Nina through my Saturn return was the most profound investment in myself I've ever made. I've navigated major life transitions, healed wounds I didn't know I was carrying, and stepped into my power in ways I never thought possible.",
+        "text2": "Her ability to see through to the truth while holding me with such compassion is unmatched. She helped me remember who I really am beneath all the conditioning."
       }
     ]
   },
@@ -140,7 +140,7 @@
       {
         "num": "03",
         "title": "Relationship Alchemy",
-        "description": "Couples work, sacred union, healing attachment patterns, deepening intimacy"
+        "description": "Healing attachment patterns, calling in sacred partnership, deepening self-intimacy"
       },
       {
         "num": "04",
@@ -308,44 +308,7 @@
       "title": "Ongoing Programs",
       "subtitle": "For deeper, sustained transformation"
     },
-    "sacredUnion": {
-      "title": "Couples Transformation",
-      "subtitle": "For partners who know something deeper is possible.",
-      "description": [
-        "You're in a relationship that matters—but you're stuck in the same patterns. Maybe disconnection, repetitive conflicts, or wondering if you should stay or go.",
-        "This isn't couples therapy. This is transformational work for partners ready to heal wounds, break patterns, and build genuine intimacy."
-      ],
-      "whatWeWorkOn": {
-        "title": "What We Work On",
-        "items": [
-          "Communication patterns that keep you stuck",
-          "Healing attachment wounds and trust issues",
-          "Intimacy blocks (emotional and physical)",
-          "Navigating transitions together",
-          "Breaking cycles from your families of origin"
-        ]
-      },
-      "structure": {
-        "title": "Structure",
-        "description": "We begin with 4 weekly sessions to establish foundation, then continue bi-weekly or monthly as your relationship evolves. Most couples work with me for 3-6 months."
-      },
-      "investment": {
-        "title": "Investment",
-        "foundation": "4-session foundation: $1,200 ($300/session)",
-        "ongoing": "Ongoing sessions: €250 per 2-hour session"
-      },
-      "whoFor": {
-        "title": "Who This Is For",
-        "items": [
-          "Committed couples ready to do deep work",
-          "Partners healing from betrayal or breach of trust",
-          "Couples at a crossroads wanting to stay together",
-          "Relationships ready to evolve beyond surface-level dynamics"
-        ]
-      },
-      "cta": "Schedule Free Couples Discovery Call"
-    },
-    "kundalini": {
+        "kundalini": {
       "title": "Creative Unblocking",
       "subtitle": "Reconnect with your creative source.",
       "description": [
@@ -368,14 +331,14 @@
       },
       "investment": {
         "title": "Investment",
-        "price": "$1,800 (12 sessions = $150 each, save $864 vs. single sessions)"
+        "price": "€1,500 (12 sessions = €125 each)"
       },
       "whoFor": {
         "title": "Who This Is For",
         "items": [
           "Artists, writers, entrepreneurs feeling blocked",
-          "Creative professionals in burnout",
-          "Anyone who's lost touch with their creative spark",
+          "Creative women in burnout",
+          "Women who've lost touch with their creative spark",
           "Those ready to create from authentic expression vs. external validation"
         ]
       },
@@ -403,25 +366,24 @@
         "title": "Format Options",
         "items": [
           "Individual retreats (solo deep work)",
-          "Couples retreats (intensive relationship healing)",
-          "Small groups (2-4 people you bring)"
+          "Small groups (2-4 women you bring)"
         ]
       },
       "investment": {
         "title": "Duration & Investment",
         "items": [
-          "2-day weekend: $2,000",
-          "3-day midweek: $2,800",
-          "5-day immersion: $4,500"
+          "2-day weekend: €1,800",
+          "3-day midweek: €2,500",
+          "5-day immersion: €4,000"
         ],
         "note": "Limited to 6 retreats per year"
       },
       "whoFor": {
         "title": "Who This Is For",
         "items": [
-          "Individuals or couples needing a deep reset",
+          "Women needing a deep reset",
           "Those ready for intensive transformational work",
-          "People at major life transitions seeking clarity"
+          "Women at major life transitions seeking clarity"
         ]
       },
       "cta": "Inquire About Retreats"
@@ -479,32 +441,7 @@
         ],
         "cta": "Book Single Session"
       },
-      "couplesSession": {
-        "title": "Couples Session",
-        "duration": "2 hours",
-        "price": "€250",
-        "whoFor": "You're in a partnership that matters, but something's stuck. You want to break through patterns and reconnect.",
-        "description": "A transformational session for couples seeking deeper intimacy, healing relationship wounds, or navigating a transition together.",
-        "whatWeDo": {
-          "title": "What We'll Do",
-          "items": [
-            "Create a safe space for both partners to be fully seen",
-            "Identify the patterns you're cycling through",
-            "Work somatically with what's held in each of your bodies",
-            "Build new ways of communicating and connecting"
-          ]
-        },
-        "outcome": "You'll leave with new understanding of your dynamic, practical tools for connection, and a felt sense of possibility.",
-        "bestForTitle": "Best For",
-        "bestFor": [
-          "Communication or intimacy challenges",
-          "Navigating a major transition together",
-          "Healing from betrayal or breach of trust",
-          "Trying couples work before committing to a program"
-        ],
-        "cta": "Book Couples Session"
-      },
-      "integrationPackage": {
+            "integrationPackage": {
         "title": "Integration Package",
         "duration": "3 sessions over 6 weeks",
         "price": "€400",
