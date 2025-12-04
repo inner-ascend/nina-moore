@@ -33,7 +33,7 @@
   "transformation": {
     "title": "Real change happens in the body",
     "subtitle": "I help you bridge insight with embodied transformation.",
-    "description": "My work helps you integrate your experiences, activate your potential, and live aligned with what matters to you. We work with breath, sensation, and energy—not just talking about your problems, but actually moving through them.",
+    "description": "My work helps you integrate your experiences, access what's already within you, and live aligned with what matters to you. We work with breath, sensation, and energy (your nervous system and emotional patterns)—not just talking about your problems, but actually moving through them.",
     "line1": "This isn't traditional coaching.",
     "line2": "This isn't talk therapy.",
     "line3": "This is embodied transformation work.",
@@ -159,6 +159,38 @@
       }
     ]
   },
+  "notRightFor": {
+    "title": "This Work May Not Be Right For You If",
+    "items": [
+      "You're looking for a quick fix or magic solution",
+      "You're in acute mental health crisis (I'll help you find appropriate support)",
+      "You want someone to tell you what to do rather than discover your own truth",
+      "You're not willing to practice between sessions—insight alone doesn't create change",
+      "You're seeking diagnosis or treatment for clinical conditions"
+    ],
+    "closing": "I'm here to guide, not to fix. The transformation comes from you."
+  },
+  "expectations": {
+    "title": "What You Can Expect From Me",
+    "items": [
+      {
+        "title": "Honesty Over Comfort",
+        "description": "I'll reflect what I see, even when it's uncomfortable. Growth requires truth."
+      },
+      {
+        "title": "Full Presence",
+        "description": "When we're in session, you have my complete attention. No distractions, no scripts—just deep listening."
+      },
+      {
+        "title": "Your Pace",
+        "description": "We move at the speed that's right for you. There's no rushing breakthrough. Your nervous system sets the pace."
+      },
+      {
+        "title": "No Guru Dynamic",
+        "description": "I'm a guide, not a guru. You're the authority on your own life. My job is to help you access your own wisdom."
+      }
+    ]
+  },
   "finalCta": {
     "price": "$444",
     "subtitle": "4 sessions + ongoing support",
@@ -167,21 +199,27 @@
   "about": {
     "title": "About Nina",
     "bio": [
-      "I've spent the past 8+ years guiding individuals and couples through transformation—from creative blocks and relationship struggles to psychedelic integration and major life transitions.",
-      "My approach combines somatic therapy techniques, breathwork, energy work, and practical coaching. I'm trained in trauma-informed practices and work with the body, not just the mind.",
-      "Before this work, I walked my own path through burnout, relationship patterns, and finding my authentic expression. I understand the journey because I've lived it.",
-      "I work with clients worldwide via video call, and offer in-person intensives for those seeking deeper immersion.",
-      "I believe everyone carries unique gifts waiting to emerge. My role is to help you access what's already within you."
+      "I came to this work through my own breaking open.",
+      "For years I was a dance artist and cinematographer—creating, performing, moving through the world. But something underneath was calling me deeper.",
+      "Travel became my teacher. Years in Tibet, India, learning from traditions that understood the body as a doorway. I studied movement, energy, the ways we hold and release. Martial arts. Yoga. Practices that were ancient because they worked.",
+      "I trained in what I needed to support the transformation I was living—kundalini yoga, energy healing, somatic work. Not to collect credentials, but because I needed to understand what was happening in my own system.",
+      "Now I guide others through similar territories. Creative blocks. Relationship patterns. The space between who you were and who you're becoming."
     ],
+    "background": {
+      "title": "Background",
+      "text": "I've been guiding this work for 8+ years. My training includes kundalini and Himalayan yoga teacher certifications, energy healing modalities, and extensive study in body-based practices—qi gong, tai chi, martial arts. My creative background means I understand blocks from the inside. The movement practices taught me how to work with what's held in the body. The energy training gave me tools to support what wants to move through.",
+      "languages": "Sessions available in English, Spanish, and French."
+    },
     "credentials": {
-      "title": "Background & Training",
+      "title": "Training & Background",
       "items": [
+        "Kundalini Yoga Teacher (200+ hrs)",
+        "Himalayan Yoga Teacher Training",
+        "Energy Healing (Reiki, Theta, Sound)",
+        "Movement Practices (Qi Gong, Tai Chi, Martial Arts)",
+        "Dance Artist & Cinematographer",
         "8+ years guiding individuals and couples",
-        "Trained in somatic therapy and breathwork",
-        "Trauma-informed practice",
-        "Specialized in psychedelic integration",
-        "100+ clients served worldwide",
-        "Fluent in English, Spanish, and French"
+        "100+ clients worldwide"
       ]
     },
     "cta": {
@@ -194,29 +232,48 @@
     "items": [
       {
         "question": "Is this therapy?",
-        "answer": "No. I'm not a licensed therapist. This is transformational coaching and somatic work. If you're dealing with severe trauma or mental health crises, I'll help you find appropriate clinical support and we can work together alongside that."
+        "answer": "No, I'm not a licensed therapist. This is transformational coaching with somatic and energy work. If you're dealing with severe mental health issues, I'll help you find appropriate therapeutic support. This work complements therapy beautifully—many clients do both."
       },
       {
         "question": "What if I'm skeptical about 'energy work'?",
-        "answer": "That's fine. You don't need to believe anything. We work with what you can feel in your body—breath, sensation, emotion. The rest is just language for describing the experience. Skeptics often become the biggest advocates."
+        "answer": "Good. You don't need to believe anything. We work with what you can feel—breath, sensation, emotion in your body. Whether you call it \"energy\" or \"nervous system regulation\" doesn't matter. The experience speaks for itself. Skeptics often become the biggest advocates."
       },
       {
         "question": "Do I need to have done psychedelics?",
-        "answer": "Not at all. About 60% of my clients have never touched plant medicine. This work stands completely on its own. Integration support is one specialization, not a requirement."
+        "answer": "Not at all. About half my clients have never touched plant medicine. The integration work applies to any breakthrough experience—spiritual awakening, major loss, relationship ending, creative breakthrough. If you have done medicine work, I provide specific integration support."
       },
       {
         "question": "How is this different from traditional therapy?",
-        "answer": "We work with the body, not just the mind. Rather than analyzing your problems, we move through them using breath, somatic awareness, and energy work. Many clients say they've made more progress in a few sessions than years of talk therapy."
+        "answer": "Traditional therapy often works primarily through talking and cognitive understanding. This work engages your body directly—breath, sensation, movement. We don't just talk about patterns, we work with the energy and emotion stored in your system. Many clients find things shift faster because we're working at multiple levels."
       },
       {
         "question": "What happens if we're not a good fit?",
-        "answer": "That's exactly what the discovery call is for. If I don't think I can help you, I'll tell you honestly and point you toward someone who can. No pressure, no sales pitch."
+        "answer": "That's what the free discovery call is for. If I don't think I can help you, I'll tell you honestly and point you toward someone who can. You deserve to work with the right person for your journey. No pressure, no sales pitch."
       },
       {
         "question": "What technology do I need?",
-        "answer": "Just a computer or phone with video capability (Zoom), a quiet private space, and a stable internet connection. Sessions work beautifully online—most of my clients are remote."
+        "answer": "Just a computer or tablet with video capability (Zoom). A quiet, private space where you can speak freely. Headphones help with audio quality but aren't required. Most of my clients are remote and sessions work beautifully online."
       }
     ]
+  },
+  "policies": {
+    "title": "Policies",
+    "cancellation": {
+      "title": "Cancellation",
+      "items": [
+        "Discovery calls: Cancel anytime, no charge",
+        "Single sessions: 48-hour notice for full refund",
+        "Packages/programs: First session non-refundable, remaining sessions can be rescheduled within 6 months"
+      ]
+    },
+    "confidentiality": {
+      "title": "Confidentiality",
+      "description": "All sessions are completely confidential. What you share stays between us, except in cases where there's risk of harm to self or others."
+    },
+    "rescheduling": {
+      "title": "Rescheduling",
+      "description": "Life happens. You can reschedule sessions with 24-hour notice at no charge."
+    }
   },
   "contact": {
     "title": "Contact",
@@ -258,51 +315,113 @@
       "subtitle": "For deeper, sustained transformation"
     },
     "sacredUnion": {
-      "title": "Couples Work",
-      "subtitle": "For partners ready to break through patterns and build genuine intimacy.",
+      "title": "Couples Transformation",
+      "subtitle": "For partners who know something deeper is possible.",
       "description": [
-        "You're in a relationship that matters—but something's not working. Maybe you're stuck in the same arguments, feeling disconnected, or considering whether to stay or go.",
-        "This program provides ongoing support as you navigate the real challenges of partnership: trust, communication, intimacy, and the patterns you each bring from your past.",
-        "We work together over time, starting with a 4-week foundation and continuing as your relationship evolves. This isn't couples therapy—it's transformational work for partners ready to do the deep work."
+        "You're in a relationship that matters—but you're stuck in the same patterns. Maybe disconnection, repetitive conflicts, or wondering if you should stay or go.",
+        "This isn't couples therapy. This is transformational work for partners ready to heal wounds, break patterns, and build genuine intimacy."
       ],
+      "whatWeWorkOn": {
+        "title": "What We Work On",
+        "items": [
+          "Communication patterns that keep you stuck",
+          "Healing attachment wounds and trust issues",
+          "Intimacy blocks (emotional and physical)",
+          "Navigating transitions together",
+          "Breaking cycles from your families of origin"
+        ]
+      },
+      "structure": {
+        "title": "Structure",
+        "description": "We begin with 4 weekly sessions to establish foundation, then continue bi-weekly or monthly as your relationship evolves. Most couples work with me for 3-6 months."
+      },
+      "investment": {
+        "title": "Investment",
+        "foundation": "4-session foundation: $1,200 ($300/session)",
+        "ongoing": "Ongoing sessions: $333 per 2-hour session"
+      },
       "whoFor": {
         "title": "Who This Is For",
         "items": [
-          "Committed couples seeking deeper intimacy and authentic connection",
-          "Partners ready to heal relationship wounds and recurring patterns",
-          "Couples navigating transitions and wanting to grow together"
+          "Committed couples ready to do deep work",
+          "Partners healing from betrayal or breach of trust",
+          "Couples at a crossroads wanting to stay together",
+          "Relationships ready to evolve beyond surface-level dynamics"
         ]
       },
-      "cta": "Start Couples Work"
+      "cta": "Schedule Free Couples Discovery Call"
     },
     "kundalini": {
       "title": "Creative Unblocking",
-      "subtitle": "For artists, entrepreneurs, and creators who've lost their spark.",
+      "subtitle": "Reconnect with your creative source.",
       "description": [
-        "You used to create freely. Now something's stuck. Maybe it's perfectionism, fear of judgment, burnout, or disconnection from what used to inspire you.",
-        "This program helps you reconnect with your creative source—not by forcing output, but by clearing what's blocking the natural flow.",
-        "We work with energy, breath, and embodiment to unlock what's ready to emerge. Many clients complete projects they'd abandoned for years within weeks of starting.",
-        "This is progressive work over time—building your creative capacity and integrating it into every aspect of your life."
+        "You used to create freely. Now something's blocking you—perfectionism, fear of judgment, disconnection from what inspired you.",
+        "This isn't about forcing productivity. We work with what's underneath the block—the energy, emotion, and patterns keeping you stuck."
       ],
+      "whatWeWorkOn": {
+        "title": "What We Work On",
+        "items": [
+          "Releasing perfectionism and fear of judgment",
+          "Reconnecting with your creative source",
+          "Processing blocks related to past experiences",
+          "Building sustainable creative practices",
+          "Embodying your authentic expression"
+        ]
+      },
+      "structure": {
+        "title": "Structure",
+        "description": "3-month container with 12 sessions (weekly or bi-weekly). Many clients complete projects they'd abandoned for years within the first month."
+      },
+      "investment": {
+        "title": "Investment",
+        "price": "$1,800 (12 sessions = $150 each, save $864 vs. single sessions)"
+      },
       "whoFor": {
         "title": "Who This Is For",
         "items": [
-          "Creative professionals feeling blocked or disconnected",
-          "Entrepreneurs who've lost their vision or drive",
-          "Artists ready for a breakthrough in their expression"
+          "Artists, writers, entrepreneurs feeling blocked",
+          "Creative professionals in burnout",
+          "Anyone who's lost touch with their creative spark",
+          "Those ready to create from authentic expression vs. external validation"
         ]
       },
-      "cta": "Unlock Your Creativity"
+      "cta": "Apply for Creative Program"
     },
     "retreats": {
       "title": "Private Retreats",
-      "subtitle": "Multi-day immersions for intensive transformation.",
+      "subtitle": "2-5 day intensive immersions.",
       "description": [
-        "Sometimes you need to step away from daily life to do deep work. These private retreats offer focused time for profound healing, activation, and integration.",
-        "Whether you come alone for 1:1 work, with your partner, or with a small group of friends—retreats create conditions for breakthroughs that aren't possible in shorter sessions.",
-        "You stay for the duration, allowing the work to unfold without interruption. Includes personalized healing sessions, somatic practices, nature immersion, and integration support.",
-        "Retreats are held in beautiful locations and tailored completely to your needs."
+        "Sometimes breakthrough requires stepping completely away from daily life.",
+        "These private retreats offer uninterrupted space for deep work—no rushing back to responsibilities, no dividing your attention. Just you, the work, and the time your process needs."
       ],
+      "whatsIncluded": {
+        "title": "What's Included",
+        "items": [
+          "Multiple daily sessions (2-3 hours total per day)",
+          "Accommodation in beautiful, private setting",
+          "All meals (supporting your process)",
+          "Somatic practices, breathwork, nature immersion",
+          "Integration practices for when you return home",
+          "Post-retreat check-in session"
+        ]
+      },
+      "formats": {
+        "title": "Format Options",
+        "items": [
+          "Individual retreats (solo deep work)",
+          "Couples retreats (intensive relationship healing)",
+          "Small groups (2-4 people you bring)"
+        ]
+      },
+      "investment": {
+        "title": "Duration & Investment",
+        "items": [
+          "2-day weekend: $2,000",
+          "3-day midweek: $2,800",
+          "5-day immersion: $4,500"
+        ],
+        "note": "Limited to 6 retreats per year"
+      },
       "whoFor": {
         "title": "Who This Is For",
         "items": [

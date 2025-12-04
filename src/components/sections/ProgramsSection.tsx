@@ -22,21 +22,21 @@ export default function ProgramsSection() {
         </div>
       </div>
 
-      {/* Sacred Union Program */}
+      {/* Couples Transformation Program */}
       <div className="py-32 bg-stone-50">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            {/* Sacred Union Image */}
+            {/* Image */}
             <div className="aspect-[4/5] rounded-sm overflow-hidden">
               <OptimizedImage
                 src="/images/sacred-union.JPG"
-                alt="Sacred Union"
+                alt="Couples Transformation"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Program Description */}
-            <div className="space-y-10">
+            <div className="space-y-8">
               <h3 className="text-5xl md:text-6xl font-serif text-black leading-tight">
                 {t.programs.sacredUnion.title}
               </h3>
@@ -45,34 +45,54 @@ export default function ProgramsSection() {
                 {t.programs.sacredUnion.subtitle}
               </p>
 
-              <div className="space-y-6 text-lg text-black/60 leading-relaxed">
+              <div className="space-y-4 text-lg text-black/60 leading-relaxed">
                 {t.programs.sacredUnion.description.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
 
-              {/* Who This Is For */}
+              {/* What We Work On */}
               <div className="space-y-4">
-                <h4 className="text-2xl font-serif text-black">Who This Is For</h4>
-                <ul className="space-y-3 text-base text-black/60">
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Committed couples seeking deeper intimacy and authentic connection</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Partners ready to heal relationship wounds and patterns</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Couples navigating transitions and wanting to grow together</span>
-                  </li>
+                <h4 className="text-xl font-serif text-black">{t.programs.sacredUnion.whatWeWorkOn.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.sacredUnion.whatWeWorkOn.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              <div className="pt-8">
+              {/* Structure */}
+              <div className="space-y-2">
+                <h4 className="text-xl font-serif text-black">{t.programs.sacredUnion.structure.title}</h4>
+                <p className="text-base text-black/60">{t.programs.sacredUnion.structure.description}</p>
+              </div>
+
+              {/* Investment */}
+              <div className="space-y-2 p-6 bg-white border border-black/10">
+                <h4 className="text-xl font-serif text-black">{t.programs.sacredUnion.investment.title}</h4>
+                <p className="text-lg text-black">{t.programs.sacredUnion.investment.foundation}</p>
+                <p className="text-base text-black/60">{t.programs.sacredUnion.investment.ongoing}</p>
+              </div>
+
+              {/* Who This Is For */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-serif text-black">{t.programs.sacredUnion.whoFor.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.sacredUnion.whoFor.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-4">
                 <button onClick={scrollToContact} className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                  Start Sacred Union Journey
+                  {t.programs.sacredUnion.cta}
                 </button>
               </div>
             </div>
@@ -80,12 +100,12 @@ export default function ProgramsSection() {
         </div>
       </div>
 
-      {/* Kundalini Transmission Program */}
+      {/* Creative Unblocking Program */}
       <div className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Program Description */}
-            <div className="space-y-10 order-2 lg:order-1">
+            <div className="space-y-8 order-2 lg:order-1">
               <h3 className="text-5xl md:text-6xl font-serif text-black leading-tight">
                 {t.programs.kundalini.title}
               </h3>
@@ -94,43 +114,62 @@ export default function ProgramsSection() {
                 {t.programs.kundalini.subtitle}
               </p>
 
-              <div className="space-y-6 text-lg text-black/60 leading-relaxed">
+              <div className="space-y-4 text-lg text-black/60 leading-relaxed">
                 {t.programs.kundalini.description.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
 
-              {/* Who This Is For */}
+              {/* What We Work On */}
               <div className="space-y-4">
-                <h4 className="text-2xl font-serif text-black">Who This Is For</h4>
-                <ul className="space-y-3 text-base text-black/60">
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Creative professionals feeling blocked or disconnected</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Seekers ready for profound transformation and awakening</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Those drawn to embodied spirituality and energy work</span>
-                  </li>
+                <h4 className="text-xl font-serif text-black">{t.programs.kundalini.whatWeWorkOn.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.kundalini.whatWeWorkOn.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              <div className="pt-8">
+              {/* Structure */}
+              <div className="space-y-2">
+                <h4 className="text-xl font-serif text-black">{t.programs.kundalini.structure.title}</h4>
+                <p className="text-base text-black/60">{t.programs.kundalini.structure.description}</p>
+              </div>
+
+              {/* Investment */}
+              <div className="space-y-2 p-6 bg-stone-50 border border-black/10">
+                <h4 className="text-xl font-serif text-black">{t.programs.kundalini.investment.title}</h4>
+                <p className="text-lg text-black">{t.programs.kundalini.investment.price}</p>
+              </div>
+
+              {/* Who This Is For */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-serif text-black">{t.programs.kundalini.whoFor.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.kundalini.whoFor.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-4">
                 <button onClick={scrollToContact} className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                  Unlock Your Creative Essence
+                  {t.programs.kundalini.cta}
                 </button>
               </div>
             </div>
 
-            {/* Kundalini Image */}
+            {/* Image */}
             <div className="aspect-[4/5] rounded-sm overflow-hidden order-1 lg:order-2">
               <OptimizedImage
                 src="/images/kundalini.JPG"
-                alt="Kundalini Transmission"
+                alt="Creative Unblocking"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -138,21 +177,21 @@ export default function ProgramsSection() {
         </div>
       </div>
 
-      {/* Immersive Retreats */}
+      {/* Private Retreats */}
       <div className="py-32 bg-stone-50">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            {/* Retreats Image */}
+            {/* Image */}
             <div className="aspect-[4/5] rounded-sm overflow-hidden">
               <OptimizedImage
                 src="/images/retreats.JPG"
-                alt="Immersive Retreats"
+                alt="Private Retreats"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Program Description */}
-            <div className="space-y-10">
+            <div className="space-y-8">
               <h3 className="text-5xl md:text-6xl font-serif text-black leading-tight">
                 {t.programs.retreats.title}
               </h3>
@@ -161,34 +200,65 @@ export default function ProgramsSection() {
                 {t.programs.retreats.subtitle}
               </p>
 
-              <div className="space-y-6 text-lg text-black/60 leading-relaxed">
+              <div className="space-y-4 text-lg text-black/60 leading-relaxed">
                 {t.programs.retreats.description.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
 
-              {/* Who This Is For */}
+              {/* What's Included */}
               <div className="space-y-4">
-                <h4 className="text-2xl font-serif text-black">Who This Is For</h4>
-                <ul className="space-y-3 text-base text-black/60">
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Individuals or couples needing a deep reset</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>Those ready for intensive transformational work</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-black/30">•</span>
-                    <span>People at major life transitions seeking clarity</span>
-                  </li>
+                <h4 className="text-xl font-serif text-black">{t.programs.retreats.whatsIncluded.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.retreats.whatsIncluded.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              <div className="pt-8">
+              {/* Format Options */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-serif text-black">{t.programs.retreats.formats.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.retreats.formats.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Investment */}
+              <div className="space-y-3 p-6 bg-white border border-black/10">
+                <h4 className="text-xl font-serif text-black">{t.programs.retreats.investment.title}</h4>
+                <ul className="space-y-1 text-lg text-black">
+                  {t.programs.retreats.investment.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+                <p className="text-sm text-black/50 pt-2">{t.programs.retreats.investment.note}</p>
+              </div>
+
+              {/* Who This Is For */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-serif text-black">{t.programs.retreats.whoFor.title}</h4>
+                <ul className="space-y-2 text-base text-black/60">
+                  {t.programs.retreats.whoFor.items.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-3 text-black/30">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-4">
                 <button onClick={scrollToContact} className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
-                  Inquire About Retreats
+                  {t.programs.retreats.cta}
                 </button>
               </div>
             </div>

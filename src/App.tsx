@@ -304,6 +304,37 @@ function App() {
         </div>
       </section>
 
+      {/* Not Right For You Section */}
+      <section className="py-24 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-serif text-black text-center mb-12">{t.notRightFor.title}</h2>
+          <div className="space-y-4 mb-8">
+            {t.notRightFor.items.map((item, index) => (
+              <div key={index} className="flex items-start text-lg text-black/70">
+                <span className="mr-4 text-black/30 text-xl">✗</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xl text-black font-medium text-center italic">{t.notRightFor.closing}</p>
+        </div>
+      </section>
+
+      {/* What You Can Expect From Me - Trust Section */}
+      <section className="py-32 px-6 bg-stone-50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-16">{t.expectations.title}</h2>
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+            {t.expectations.items.map((item, index) => (
+              <div key={index} className="space-y-4">
+                <h3 className="text-2xl font-serif text-black">{item.title}</h3>
+                <p className="text-lg text-black/70 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-32 px-6">
         <div className="container mx-auto max-w-3xl">

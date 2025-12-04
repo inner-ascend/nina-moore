@@ -24,35 +24,20 @@ export default function AboutSection() {
             </div>
 
             {/* Bio Text */}
-            <div className="space-y-10">
+            <div className="space-y-8">
               <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
                 {t.about.title}
               </h2>
-              <div className="space-y-6 text-lg text-black/70 leading-relaxed">
+              <div className="space-y-6 text-xl text-black/70 leading-relaxed">
                 {t.about.bio.map((paragraph, index) => (
-                  <p key={index}>
+                  <p key={index} className={index === 0 ? "text-2xl text-black font-medium" : ""}>
                     {paragraph}
                   </p>
                 ))}
               </div>
 
-              {/* Credentials */}
-              <div className="pt-8 border-t border-black/10">
-                <h3 className="text-xl font-serif text-black mb-6">
-                  {t.about.credentials.title}
-                </h3>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {t.about.credentials.items.map((item, index) => (
-                    <li key={index} className="flex items-start text-black/60">
-                      <span className="mr-3 mt-2 w-1.5 h-1.5 bg-black/30 rounded-full flex-shrink-0"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               {/* CTA */}
-              <div className="pt-8">
+              <div className="pt-4">
                 <button
                   onClick={scrollToContact}
                   className="inline-block px-12 py-4 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all"
@@ -65,8 +50,21 @@ export default function AboutSection() {
         </div>
       </div>
 
+      {/* Background Section */}
+      <div className="py-24 bg-stone-50">
+        <div className="container mx-auto max-w-4xl px-6 lg:px-12">
+          <h3 className="text-3xl font-serif text-black mb-8">{t.about.background.title}</h3>
+          <p className="text-lg text-black/70 leading-relaxed mb-6">
+            {t.about.background.text}
+          </p>
+          <p className="text-lg text-black/60 italic">
+            {t.about.background.languages}
+          </p>
+        </div>
+      </div>
+
       {/* My Approach - Three Pillars */}
-      <div className="py-32 bg-stone-50">
+      <div className="py-32">
         <div className="container mx-auto max-w-6xl px-6 lg:px-12">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-16 text-center">
             My Approach
