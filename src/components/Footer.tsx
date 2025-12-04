@@ -1,27 +1,32 @@
-import { Link } from 'react-router-dom';
-
 export default function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="border-t border-black/10 py-16 px-6 bg-white">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <Link to="/" className="text-2xl font-serif text-black">
+          <button onClick={() => scrollToSection('hero')} className="text-2xl font-serif text-black">
             Nina Moore
-          </Link>
+          </button>
 
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-sm uppercase tracking-wider text-black/60">
-            <Link to="/about" className="hover:text-black transition-colors">
+            <button onClick={() => scrollToSection('about')} className="hover:text-black transition-colors">
               About
-            </Link>
-            <Link to="/services" className="hover:text-black transition-colors">
+            </button>
+            <button onClick={() => scrollToSection('services')} className="hover:text-black transition-colors">
               Services
-            </Link>
-            <Link to="/programs" className="hover:text-black transition-colors">
+            </button>
+            <button onClick={() => scrollToSection('programs')} className="hover:text-black transition-colors">
               Programs
-            </Link>
-            <Link to="/contact" className="hover:text-black transition-colors">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="hover:text-black transition-colors">
               Contact
-            </Link>
+            </button>
           </div>
 
           <div className="flex items-center gap-6 text-sm uppercase tracking-wider text-black/60">

@@ -1,53 +1,65 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './i18n';
 import enTranslations from './translations/en.json';
-import SupportPage from './components/SupportPage';
-import PrivacyPage from './components/PrivacyPage';
-import AboutPageNew from './components/pages/AboutPageNew';
-import ContactPage from './components/pages/ContactPage';
-import ProgramsPage from './components/pages/ProgramsPage';
-import ServicesPage from './components/pages/ServicesPage';
-import TermsPage from './components/pages/TermsPage';
-import GettingStartedPage from './components/pages/GettingStartedPage';
-import ScrollToTop from './components/ScrollToTop';
+
+// Section Components
+import AboutSection from './components/sections/AboutSection';
+import ServicesSection from './components/sections/ServicesSection';
+import ProgramsSection from './components/sections/ProgramsSection';
+import ContactSection from './components/sections/ContactSection';
 import Footer from './components/Footer';
 
-// Main Landing Page Component - Flodesk/Squarespace Style
-function LandingPage() {
+function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const t = enTranslations;
+
+  // Smooth scroll to section
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Handle hash on page load
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Minimal Navigation */}
+      {/* Navigation - Fixed */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-24">
-            {/* Logo */}
-            <Link to="/" className="text-2xl font-serif text-black tracking-tight">
+            <button onClick={() => scrollToSection('hero')} className="text-2xl font-serif text-black tracking-tight">
               Nina Moore
-            </Link>
+            </button>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-12">
-              <Link to="/about" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+              <button onClick={() => scrollToSection('about')} className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 {t.navigation.about}
-              </Link>
-              <Link to="/services" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+              </button>
+              <button onClick={() => scrollToSection('services')} className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 Services
-              </Link>
-              <Link to="/programs" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
+              </button>
+              <button onClick={() => scrollToSection('programs')} className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
                 Programs
-              </Link>
-              <Link to="/contact" className="text-sm uppercase tracking-wider text-black/60 hover:text-black transition-colors">
-                {t.navigation.contact}
-              </Link>
-              <Link to="/contact" className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="px-8 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-black/90 transition-all">
                 {t.navigation.bookNow}
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -62,29 +74,25 @@ function LandingPage() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden py-6 space-y-6 border-t border-black/5">
-              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+              <button onClick={() => scrollToSection('about')} className="block text-sm uppercase tracking-wider text-black/60">
                 {t.navigation.about}
-              </Link>
-              <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+              </button>
+              <button onClick={() => scrollToSection('services')} className="block text-sm uppercase tracking-wider text-black/60">
                 Services
-              </Link>
-              <Link to="/programs" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
+              </button>
+              <button onClick={() => scrollToSection('programs')} className="block text-sm uppercase tracking-wider text-black/60">
                 Programs
-              </Link>
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider text-black/60">
-                {t.navigation.contact}
-              </Link>
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm uppercase tracking-wider font-semibold">
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="block text-sm uppercase tracking-wider font-semibold">
                 {t.navigation.bookNow}
-              </Link>
+              </button>
             </div>
           )}
         </div>
       </nav>
 
-      {/* Hero Section - Full Height with Image */}
-      <section className="relative h-screen flex items-center justify-center">
-        {/* Background Image */}
+      {/* Hero Section */}
+      <section id="hero" className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <img
             src="/images/DSC01844.JPG"
@@ -94,7 +102,6 @@ function LandingPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
 
-        {/* Hero Text */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight tracking-tight drop-shadow-lg">
             {t.hero.title}
@@ -102,228 +109,73 @@ function LandingPage() {
           <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light leading-relaxed max-w-4xl mx-auto mb-12 drop-shadow-lg">
             {t.hero.subtitle}
           </p>
-          <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
+          <button onClick={() => scrollToSection('contact')} className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
             {t.navigation.bookNow}
-          </Link>
+          </button>
         </div>
       </section>
 
-
-      {/* Three Pillars - Spacious Grid */}
+      {/* Three Pillars */}
       <section className="py-32 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-16 lg:gap-24">
-            {/* Pillar 1 */}
             <div className="space-y-6">
               <div className="text-4xl font-serif text-black/20">01</div>
-              <h3 className="text-3xl font-serif text-black">
-                {t.pillars.pillar1.title}
-              </h3>
-              <p className="text-lg text-black/60 leading-relaxed">
-                {t.pillars.pillar1.description}
-              </p>
+              <h3 className="text-3xl font-serif text-black">{t.pillars.pillar1.title}</h3>
+              <p className="text-lg text-black/60 leading-relaxed">{t.pillars.pillar1.description}</p>
             </div>
-
-            {/* Pillar 2 */}
             <div className="space-y-6">
               <div className="text-4xl font-serif text-black/20">02</div>
-              <h3 className="text-3xl font-serif text-black">
-                {t.pillars.pillar2.title}
-              </h3>
-              <p className="text-lg text-black/60 leading-relaxed">
-                {t.pillars.pillar2.description}
-              </p>
+              <h3 className="text-3xl font-serif text-black">{t.pillars.pillar2.title}</h3>
+              <p className="text-lg text-black/60 leading-relaxed">{t.pillars.pillar2.description}</p>
             </div>
-
-            {/* Pillar 3 */}
             <div className="space-y-6">
               <div className="text-4xl font-serif text-black/20">03</div>
-              <h3 className="text-3xl font-serif text-black">
-                {t.pillars.pillar3.title}
-              </h3>
-              <p className="text-lg text-black/60 leading-relaxed">
-                {t.pillars.pillar3.description}
-              </p>
+              <h3 className="text-3xl font-serif text-black">{t.pillars.pillar3.title}</h3>
+              <p className="text-lg text-black/60 leading-relaxed">{t.pillars.pillar3.description}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* THE INVITATION - Image + Text Split */}
+      {/* About Section */}
+      <AboutSection />
+
+      {/* The Invitation - Image + Text */}
       <section className="py-32">
         <div className="container mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* Image */}
             <div className="aspect-[3/4] rounded-sm overflow-hidden">
-              <img
-                src="/images/invitation.JPG"
-                alt="The Invitation"
-                className="w-full h-full object-cover"
-              />
+              <img src="/images/invitation.JPG" alt="The Invitation" className="w-full h-full object-cover" />
             </div>
-
-            {/* Text */}
             <div className="space-y-8">
-              <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-                {t.invitation.title}
-              </h2>
+              <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">{t.invitation.title}</h2>
               <div className="space-y-6 text-lg text-black/70 leading-relaxed">
-                <p>
-                  {t.invitation.p1}
-                </p>
-                <p>
-                  {t.invitation.p2}
-                </p>
-                <p>
-                  {t.invitation.p3}
-                </p>
-                <p className="text-black font-medium text-xl">
-                  {t.invitation.p4}
-                </p>
+                <p>{t.invitation.p1}</p>
+                <p>{t.invitation.p2}</p>
+                <p>{t.invitation.p3}</p>
+                <p className="text-black font-medium text-xl">{t.invitation.p4}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Full Width Image Break */}
+      {/* Services Section */}
+      <ServicesSection />
+
+      {/* Image Break */}
       <section className="h-[70vh] relative overflow-hidden">
-        <img
-          src="/images/break.JPG"
-          alt="Sacred moment"
-          className="w-full h-full object-cover"
-        />
+        <img src="/images/break.JPG" alt="Sacred moment" className="w-full h-full object-cover" />
       </section>
 
-      {/* Now is the time - Centered Text Block */}
-      <section className="py-32 px-6">
-        <div className="container mx-auto max-w-4xl text-center space-y-12">
-          <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-            {t.transformation.title}
-          </h2>
-          <p className="text-2xl text-black/70 leading-relaxed">
-            {t.transformation.subtitle}
-          </p>
-          <div className="space-y-6 text-lg text-black/60 leading-relaxed">
-            <p>
-              {t.transformation.description}
-            </p>
-          </div>
-          <div className="text-2xl font-serif text-black space-y-3 pt-8">
-            <p>{t.transformation.line1}</p>
-            <p>{t.transformation.line2}</p>
-            <p>{t.transformation.line3}</p>
-          </div>
-          <p className="text-3xl font-serif text-black/70 italic pt-6">
-            {t.transformation.closing}
-          </p>
-        </div>
-      </section>
+      {/* Programs Section */}
+      <ProgramsSection />
 
-      {/* Offering - Large Centered */}
-      <section className="py-32 bg-zinc-800 text-white">
-        <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
-          <h2 className="text-5xl md:text-6xl font-serif leading-tight">
-            {t.offering.title}
-          </h2>
-          <p className="text-4xl md:text-5xl font-serif tracking-tight">
-            {t.offering.price}
-          </p>
-          <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            Begin Your Transformation
-          </Link>
-          <p className="text-sm text-white/50 pt-4">Limited to 3 new clients per month</p>
-        </div>
-      </section>
-
-      {/* What does a session entail - Grid */}
-      <section className="py-32 px-6 lg:px-12">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            {t.sessions.title}
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
-            {t.sessions.items.map((item) => (
-              <div key={item.num} className="space-y-4">
-                <div className="text-4xl font-serif text-black/20">{item.num}</div>
-                <h3 className="text-2xl font-serif text-black">{item.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Image + Three Themes Side by Side */}
-      <section className="py-32">
-        <div className="container mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Text */}
-            <div className="space-y-16">
-              <h2 className="text-5xl md:text-6xl font-serif text-black leading-tight">
-                {t.journey.title}
-              </h2>
-
-              {/* Transformation */}
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-black">{t.journey.themes.transformation.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">
-                  {t.journey.themes.transformation.description}
-                </p>
-              </div>
-
-              {/* Opening */}
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-black">{t.journey.themes.opening.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">
-                  {t.journey.themes.opening.description}
-                </p>
-              </div>
-
-              {/* Integration */}
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-black">{t.journey.themes.integration.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">
-                  {t.journey.themes.integration.description}
-                </p>
-              </div>
-            </div>
-
-            {/* Journey Image */}
-            <div className="aspect-[3/4] rounded-sm overflow-hidden">
-              <img
-                src="/images/journey.JPG"
-                alt="Journey"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Full Width Quote/CTA */}
-      <section className="py-32 bg-zinc-800 text-white">
-        <div className="container mx-auto max-w-4xl text-center px-6 space-y-12">
-          <h2 className="text-4xl md:text-5xl font-serif leading-relaxed">
-            {t.cta.title}
-          </h2>
-          <p className="text-xl text-white/60">
-            Free 20-minute discovery call to explore if we're aligned
-          </p>
-          <Link to="/contact" className="inline-block px-12 py-4 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-            Schedule Discovery Call
-          </Link>
-        </div>
-      </section>
-
-      {/* Testimonials - Large, Spacious */}
-      <section className="py-32 px-6 lg:px-12">
+      {/* Testimonials */}
+      <section className="py-32 px-6 lg:px-12 bg-stone-50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            {t.testimonials.title}
-          </h2>
-
+          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">{t.testimonials.title}</h2>
           <div className="space-y-32">
             {t.testimonials.items.map((testimonial, index) => (
               <div key={index} className="max-w-4xl mx-auto">
@@ -333,12 +185,8 @@ function LandingPage() {
                       {testimonial.outcome}
                     </h3>
                   )}
-                  <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">
-                    {testimonial.text1}
-                  </p>
-                  <p className="text-xl md:text-2xl font-serif text-black/80 leading-relaxed">
-                    {testimonial.text2}
-                  </p>
+                  <p className="text-2xl md:text-3xl font-serif text-black leading-relaxed">{testimonial.text1}</p>
+                  <p className="text-xl md:text-2xl font-serif text-black/80 leading-relaxed">{testimonial.text2}</p>
                   <footer className="text-sm uppercase tracking-wider text-black/60 pt-4">— {testimonial.name}</footer>
                 </blockquote>
               </div>
@@ -347,71 +195,25 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* What type of work - Grid */}
-      <section className="py-32 px-6 lg:px-12 bg-stone-50">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-5xl md:text-6xl font-serif text-black text-center mb-24">
-            {t.workTypes.title}
-          </h2>
+      {/* Contact Section */}
+      <ContactSection />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
-            {t.workTypes.items.map((item) => (
-              <div key={item.num} className="space-y-4">
-                <div className="text-4xl font-serif text-black/20">{item.num}</div>
-                <h3 className="text-2xl font-serif text-black">{item.title}</h3>
-                <p className="text-lg text-black/60 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA - Centered Large */}
+      {/* Final CTA */}
       <section className="py-32 px-6 bg-zinc-800 text-white">
         <div className="container mx-auto max-w-4xl text-center space-y-12">
           <h2 className="text-5xl md:text-6xl font-serif leading-tight">
             Ready to Remember Who You Really Are?
           </h2>
-          <p className="text-2xl text-white/70">
-            {t.finalCta.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/contact" className="inline-block px-12 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
-              Schedule Discovery Call
-            </Link>
-            <Link to="/programs" className="inline-block px-12 py-5 border-2 border-white text-white text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all">
-              Explore Programs
-            </Link>
-          </div>
-          <p className="text-sm text-white/40 pt-4">
-            Your privacy is sacred. All sessions confidential.
-          </p>
+          <p className="text-2xl text-white/70">{t.finalCta.subtitle}</p>
+          <button onClick={() => scrollToSection('contact')} className="inline-block px-12 py-5 bg-white text-black text-sm uppercase tracking-wider hover:bg-white/90 transition-all">
+            Begin Your Journey
+          </button>
+          <p className="text-sm text-white/40 pt-4">Your privacy is sacred. All sessions confidential.</p>
         </div>
       </section>
 
       <Footer />
     </div>
-  );
-}
-
-// Main App with Routing
-function App() {
-  return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<AboutPageNew />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/programs" element={<ProgramsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-        <Route path="/getting-started" element={<GettingStartedPage />} />
-        <Route path="/support" element={<SupportPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="*" element={<LandingPage />} />
-      </Routes>
-    </Router>
   );
 }
 
