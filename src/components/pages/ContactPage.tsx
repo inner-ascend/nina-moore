@@ -57,7 +57,7 @@ export default function ContactPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <OptimizedImage
             src="/images/IMG_0136.jpg"
