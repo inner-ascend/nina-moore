@@ -73,17 +73,17 @@ function App() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-6 space-y-6 border-t border-black/5">
-              <button onClick={() => scrollToSection('about')} className="block text-sm uppercase tracking-wider text-black/60">
+            <div className="md:hidden py-6 space-y-4 border-t border-black/5">
+              <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-sm uppercase tracking-wider text-black/60 hover:text-black">
                 {t.navigation.about}
               </button>
-              <button onClick={() => scrollToSection('services')} className="block text-sm uppercase tracking-wider text-black/60">
+              <button onClick={() => scrollToSection('services')} className="block w-full text-left py-2 text-sm uppercase tracking-wider text-black/60 hover:text-black">
                 Services
               </button>
-              <button onClick={() => scrollToSection('programs')} className="block text-sm uppercase tracking-wider text-black/60">
+              <button onClick={() => scrollToSection('programs')} className="block w-full text-left py-2 text-sm uppercase tracking-wider text-black/60 hover:text-black">
                 Programs
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block text-sm uppercase tracking-wider font-semibold">
+              <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-sm uppercase tracking-wider text-black font-semibold">
                 {t.navigation.bookNow}
               </button>
             </div>
