@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import enTranslations from '../../translations/en.json';
 import Navigation from '../Navigation';
 import Footer from '../Footer';

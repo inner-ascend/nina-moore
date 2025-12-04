@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Link } from 'react-router-dom';
 import enTranslations from '../../translations/en.json';
 import OptimizedImage from '../ui/OptimizedImage';
 import Navigation from '../Navigation';
