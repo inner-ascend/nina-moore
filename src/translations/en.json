@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Nina Moore",
-    "subtitle": "I help women and couples break free from emotional patterns, creative blocks, and relationship cycles through somatic healing and personalized mentorship",
+    "subtitle": "Transformative mentorship for women and couples ready to break through patterns, heal old wounds, and step into who they're becoming",
     "cta": "Schedule Free Discovery Call"
   },
   "navigation": {
@@ -11,33 +11,33 @@
   },
   "pillars": {
     "pillar1": {
-      "title": "You're ready for change",
-      "description": "You've done the self-help books, maybe therapy, but something still feels stuck. You sense there's more available to you."
+      "title": "You can already feel it",
+      "description": "That quiet pull inside you, that whisper that you can rise above the loops and limitations."
     },
     "pillar2": {
-      "title": "You want lasting transformation",
-      "description": "Not just understanding your patterns intellectually—you want to feel different in your body and see real changes in your life."
+      "title": "You desire to transmute your story",
+      "description": "You are ready to find the gold in the hardship and develop self mastery as you discover your uniqueness."
     },
     "pillar3": {
-      "title": "You're seeking a different approach",
-      "description": "Something that works with your body, not just your mind. That honors your experiences and helps you move through them."
+      "title": "You seek remembrance",
+      "description": "Of your power. Of your truth. Of the self you know you are underneath the layers of conditioning."
     }
   },
   "invitation": {
-    "title": "How I Work",
-    "p1": "Every person I work with arrives with their own story, their own challenges, their own readiness for change.",
-    "p2": "There's no script here—just deep presence and practical guidance tailored to what you need.",
-    "p3": "When you step into this space, you're not coming to \"fix yourself.\"",
-    "p4": "You're coming to reconnect with parts of yourself you've lost touch with, clear what's no longer serving you, and step into who you're becoming."
+    "title": "The Invitation",
+    "p1": "Every journey is different — because every soul arrives with its own story, its own wounds, its own readiness.",
+    "p2": "There is no script here, only attuned presence and deep listening.",
+    "p3": "When you step into this space, you are not coming to \"fix yourself.\"",
+    "p4": "You are entering a sacred container for remembering your truth, clearing what no longer serves you, and opening to the self you have not yet dared to fully embody."
   },
   "transformation": {
-    "title": "Real change happens in the body",
-    "subtitle": "I help you bridge insight with embodied transformation.",
-    "description": "My work helps you integrate your experiences, access what's already within you, and live aligned with what matters to you. We work with breath, sensation, and energy (your nervous system and emotional patterns)—not just talking about your problems, but actually moving through them.",
-    "line1": "This isn't traditional coaching.",
-    "line2": "This isn't talk therapy.",
-    "line3": "This is embodied transformation work.",
-    "closing": "It's finding your way back to yourself."
+    "title": "Now is the time for embodied transformation",
+    "subtitle": "I am here to walk with you through the changes you're ready to make.",
+    "description": "My work bridges your inner awakening and your outer life — helping you integrate your experiences, activate your potential, and live aligned with who you truly are.",
+    "line1": "This is more than coaching.",
+    "line2": "This is not just healing.",
+    "line3": "This is deep, lasting change.",
+    "closing": "It's a journey to find the way home to yourself."
   },
   "offering": {
     "title": "Cycle of 4 Sessions",
@@ -45,49 +45,54 @@
     "cta": "Schedule Free Discovery Call"
   },
   "sessions": {
-    "title": "What happens in a session?",
+    "title": "What does a session entail?",
     "items": [
       {
         "num": "01",
-        "title": "Deep exploration",
-        "description": "A safe, personalized space where you can share what's really going on without judgment"
+        "title": "Deep exploration and integration",
+        "description": "A safe, personalized space for self discovery and honest reflection"
       },
       {
         "num": "02",
-        "title": "Somatic release",
-        "description": "Using breath and body awareness to release tension and emotional patterns held in your system"
+        "title": "Energetic clearing and activation",
+        "description": "Release of stuck energies and emotional blockages, activating your potential"
       },
       {
         "num": "03",
-        "title": "Clarity and direction",
-        "description": "Practical guidance that challenges limiting beliefs and offers honest reflection"
+        "title": "Clarity and support",
+        "description": "Intuitive, practical guidance challenging limiting beliefs and offering truth"
       },
       {
         "num": "04",
-        "title": "Parts work",
-        "description": "Meeting different aspects of yourself to create internal balance and self-understanding"
+        "title": "Internal harmony",
+        "description": "Meeting different aspects of yourself to heal and create internal balance"
       },
       {
         "num": "05",
-        "title": "Actionable steps",
-        "description": "You leave with specific practices and next steps—not just insights, but tools you can use"
+        "title": "Practical steps",
+        "description": "Coaching focused strategies for actionable growth and empowerment"
+      },
+      {
+        "num": "06",
+        "title": "Presence and honesty",
+        "description": "Meeting your unique needs to be fully seen and gain new perspectives"
       }
     ]
   },
   "journey": {
-    "title": "What clients work on",
+    "title": "A profound journey towards yourself",
     "themes": {
       "transformation": {
-        "title": "Life Transitions",
-        "description": "Career changes, relationship endings, loss, awakening experiences—any major shift that requires support and integration."
+        "title": "Transformation",
+        "description": "Healing old patterns, stepping into leadership, navigating life transitions, and creating the life you're meant to live."
       },
       "opening": {
-        "title": "Relationship Patterns",
-        "description": "Whether you're single and repeating the same dynamics, or in a partnership that's struggling—we work with what's underneath."
+        "title": "Opening",
+        "description": "Every session is a portal — an invitation to become more of who you are and step into your full expression and purpose."
       },
       "integration": {
-        "title": "Integration Work",
-        "description": "Processing psychedelic experiences, spiritual openings, or any breakthrough that needs grounding into daily life."
+        "title": "Integration",
+        "description": "Whether from psychedelics, spiritual experiences, or life breakthroughs — we ground insights into lasting change."
       }
     }
   },
@@ -125,37 +130,37 @@
       {
         "num": "01",
         "title": "Life Changes",
-        "description": "Breakups, breakthroughs, loss, career shifts, awakenings—times when you need grounded support"
+        "description": "Breakups, breakthroughs, loss, awakenings — times of transition that need grounded support"
       },
       {
         "num": "02",
         "title": "Psychedelic Integration",
-        "description": "Processing plant medicine ceremonies, challenging trips, or self-led journeys that need integration"
+        "description": "Medicine ceremonies, challenging trips, self-led journeys — grounding the experience into your life"
       },
       {
         "num": "03",
-        "title": "Relationship Challenges",
-        "description": "Couples work, healing attachment patterns, navigating conflict, deepening intimacy"
+        "title": "Relationship Alchemy",
+        "description": "Couples work, sacred union, healing attachment patterns, deepening intimacy"
       },
       {
         "num": "04",
-        "title": "Purpose and Direction",
-        "description": "Finding clarity on your path, connecting with your gifts, making aligned decisions"
+        "title": "Purpose and Path",
+        "description": "Finding yourself, dream work, vision, discovering your essence and gifts"
       },
       {
         "num": "05",
-        "title": "Trauma and Healing",
-        "description": "Processing difficult experiences, releasing stored tension, developing new patterns"
+        "title": "Trauma and Heartbreaks",
+        "description": "Rewriting the story, finding meaning, releasing what's been held"
       },
       {
         "num": "06",
-        "title": "Spiritual Integration",
-        "description": "Grounding awakening experiences, developing practices, finding your spiritual path"
+        "title": "Spiritual Quest",
+        "description": "Connection to source, rituals, remembrance, soul and the sacred"
       },
       {
         "num": "07",
-        "title": "Creative Blocks",
-        "description": "Unblocking creative energy, reconnecting with self-expression, finding your authentic voice"
+        "title": "Creative Flow",
+        "description": "Bringing back the spark, finding joy, self expression and trust"
       }
     ]
   },
