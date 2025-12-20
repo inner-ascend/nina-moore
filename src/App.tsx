@@ -122,14 +122,13 @@ function App() {
           <p className="text-base text-black/50 uppercase tracking-wider mb-6">
             {t.invitation.subtitle}
           </p>
-          <ul className="space-y-4 mb-10">
-            {t.invitation.items.map((item, index) => (
-              <li key={index} className="flex items-start text-lg text-black/70">
-                <span className="mr-4 text-black/30">•</span>
-                <span>{item}</span>
-              </li>
+          <div className="space-y-3 mb-10">
+            {t.invitation.lines.map((line, index) => (
+              <p key={index} className="text-lg text-black/70 leading-relaxed">
+                {line}
+              </p>
             ))}
-          </ul>
+          </div>
           <p className="text-xl text-black leading-relaxed text-center italic">
             {t.invitation.closing}
           </p>
@@ -164,9 +163,12 @@ function App() {
       {/* ========== WAYS TO WORK TOGETHER ========== */}
       <section id="programs" className="py-24 md:py-32 px-6 scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-serif text-black text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-black text-center mb-6">
             {t.waysToWork.title}
           </h2>
+          <p className="text-lg text-black/60 text-center mb-16">
+            {t.waysToWork.intro}
+          </p>
 
           {/* Discovery Call */}
           <div className="mb-16 pb-16 border-b border-black/10">
@@ -175,20 +177,30 @@ function App() {
             <p className="text-base text-black/50 italic">{t.waysToWork.discoveryCall.note}</p>
           </div>
 
-          {/* 1:1 Sessions */}
+          {/* Single Session */}
           <div className="mb-16 pb-16 border-b border-black/10">
             <h3 className="text-2xl font-serif text-black mb-4">{t.waysToWork.sessions.title}</h3>
-            <p className="text-base text-black/50 uppercase tracking-wider mb-4">{t.waysToWork.sessions.intro}</p>
+            <p className="text-lg text-black/70 leading-relaxed mb-4">{t.waysToWork.sessions.description}</p>
+            <p className="text-lg text-black/70 mb-4">{t.waysToWork.sessions.format}</p>
+            <p className="text-lg text-black font-medium">{t.waysToWork.sessions.duration} · {t.waysToWork.sessions.price}</p>
+          </div>
+
+          {/* 4-Session Cycle */}
+          <div className="mb-16 pb-16 border-b border-black/10">
+            <h3 className="text-2xl font-serif text-black mb-4">{t.waysToWork.fourSessions.title}</h3>
+            <p className="text-lg text-black/70 leading-relaxed mb-6">{t.waysToWork.fourSessions.description}</p>
+            <p className="text-base text-black/50 uppercase tracking-wider mb-3">{t.waysToWork.fourSessions.supports}</p>
             <ul className="space-y-2 mb-6">
-              {t.waysToWork.sessions.items.map((item, index) => (
+              {t.waysToWork.fourSessions.items.map((item, index) => (
                 <li key={index} className="flex items-start text-lg text-black/70">
                   <span className="mr-4 text-black/30">•</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-lg text-black/70 mb-4">{t.waysToWork.sessions.format}</p>
-            <p className="text-lg text-black font-medium">{t.waysToWork.sessions.duration} · {t.waysToWork.sessions.price}</p>
+            <p className="text-lg text-black/60 italic mb-6">{t.waysToWork.fourSessions.note}</p>
+            <p className="text-lg text-black font-medium mb-2">{t.waysToWork.fourSessions.price}</p>
+            <p className="text-base text-black/50 italic">{t.waysToWork.fourSessions.pacing}</p>
           </div>
 
           {/* Integration Package */}

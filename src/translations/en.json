@@ -17,11 +17,11 @@
     "title": "You're here because something is shifting",
     "intro": "Not because you're broken or lost — but because the way you've been living, creating, or relating no longer holds.",
     "subtitle": "You might recognize yourself here:",
-    "items": [
-      "You're intuitive, sensitive, and creative — and something feels blocked",
-      "You're at a crossroads (Saturn return, life transition, awakening)",
-      "You've outgrown old identities, relationships, or ways of being",
-      "You know there's more trying to come through you — and you're ready to listen"
+    "lines": [
+      "You're intuitive, sensitive, and creative — and something feels blocked.",
+      "You're at a crossroads (Saturn return, life transition, awakening).",
+      "You've outgrown old identities, relationships, or ways of being.",
+      "You sense there's more trying to come through — and you're ready to listen."
     ],
     "closing": "This work is for women who feel the call to step into themselves more fully, without bypassing, forcing, or performing transformation."
   },
@@ -48,27 +48,36 @@
   },
   "waysToWork": {
     "title": "Ways to work together",
+    "intro": "These are the ways women most often choose to work with me.",
     "discoveryCall": {
       "title": "Free Discovery Call",
       "description": "A calm, 20-minute conversation to explore what you're navigating and whether this work feels right for you.",
       "note": "This is always the first step."
     },
     "sessions": {
-      "title": "1:1 Sessions",
-      "intro": "For women navigating:",
-      "items": [
-        "life transitions or identity shifts",
-        "emotional or relational patterns",
-        "creative blocks or loss of direction",
-        "integration after spiritual or psychedelic experiences"
-      ],
+      "title": "Single Session",
+      "description": "For meeting each other, immediate support, or exploring whether this work is right for you.",
       "format": "Sessions are held online and shaped to what you need in the moment.",
       "duration": "90 minutes",
       "price": "€150"
     },
+    "fourSessions": {
+      "title": "The 4-Session Cycle",
+      "description": "Many women choose to work together over four sessions, allowing space for depth, integration, and continuity.",
+      "supports": "This rhythm supports:",
+      "items": [
+        "meeting what's present",
+        "allowing patterns to unfold",
+        "integrating insights between sessions",
+        "grounding change into daily life"
+      ],
+      "note": "There is no pressure to commit beyond what feels right. This cycle is simply a way to give the work room to breathe.",
+      "price": "4 sessions · €420",
+      "pacing": "Sessions are scheduled at a pace that supports your nervous system."
+    },
     "integration": {
       "title": "Integration Package",
-      "description": "A short container for grounding and stabilizing change.",
+      "description": "A short rhythm of working together for grounding profound experiences — plant medicine, awakening, breakdown, breakthrough.",
       "duration": "3 sessions over 6 weeks",
       "price": "€400",
       "includesTitle": "Includes:",
@@ -80,11 +89,11 @@
       ]
     },
     "containers": {
-      "title": "Ongoing Containers & Retreats",
+      "title": "Longer Containers & Retreats",
       "description": "For women ready for deeper, sustained transformation.",
       "includesTitle": "This includes:",
       "includes": [
-        "longer-term 1:1 containers",
+        "longer-term 1:1 work",
         "creative unblocking journeys",
         "private retreats and immersions"
       ],
@@ -99,8 +108,8 @@
       "You're unwilling to practice or integrate between sessions",
       "You're in acute mental health crisis (I'll help you find appropriate support)"
     ],
-    "closing1": "I'm here to guide — not to fix.",
-    "closing2": "The transformation comes from you."
+    "closing1": "The transformation comes from you.",
+    "closing2": "I'm here to guide — not to fix."
   },
   "about": {
     "title": "About Nina",
