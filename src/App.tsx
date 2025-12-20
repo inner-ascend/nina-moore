@@ -160,6 +160,15 @@ function App() {
         </div>
       </section>
 
+      {/* ========== VISUAL BREAK ========== */}
+      <div className="h-48 md:h-64 overflow-hidden">
+        <img
+          src="/images/optimized/break2.webp"
+          alt=""
+          className="w-full h-full object-cover opacity-80"
+        />
+      </div>
+
       {/* ========== WAYS TO WORK TOGETHER ========== */}
       <section id="programs" className="py-24 md:py-32 px-6 bg-linen scroll-mt-24">
         <div className="container mx-auto max-w-2xl">
