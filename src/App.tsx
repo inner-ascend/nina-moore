@@ -223,7 +223,7 @@ function App() {
       <section id="about" className="py-24 md:py-32 px-6 bg-linen scroll-mt-24">
         <div className="container mx-auto max-w-2xl text-center">
           <img
-            src="/images/optimized/Tezza-1851.webp"
+            src="/images/optimized/about-bio-desktop.webp"
             alt="Nina Moore"
             className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-10"
           />
