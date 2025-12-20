@@ -48,57 +48,24 @@
   },
   "waysToWork": {
     "title": "Ways to work together",
-    "intro": "These are the ways women most often choose to work with me.",
+    "intro": "We always begin with a conversation and move at a pace that feels right.",
     "discoveryCall": {
       "title": "Free Discovery Call",
-      "description": "A calm, 20-minute conversation to explore what you're navigating and whether this work feels right for you.",
-      "note": "This is always the first step."
+      "description": "A calm, 20-minute conversation to explore what you're navigating and whether this work feels aligned.",
+      "note": "No pressure. No obligation."
     },
     "sessions": {
       "title": "Single Session",
-      "description": "For meeting each other, immediate support, or exploring whether this work is right for you.",
-      "format": "Sessions are held online and shaped to what you need in the moment.",
-      "duration": "90 minutes",
-      "price": "€150"
+      "description": "A one-off session for clarity, grounding, or support during a specific moment or transition.",
+      "price": "90 minutes · €150"
     },
     "fourSessions": {
       "title": "The 4-Session Cycle",
-      "description": "Many women choose to work together over four sessions, allowing space for depth, integration, and continuity.",
-      "supports": "This rhythm supports:",
-      "items": [
-        "meeting what's present",
-        "allowing patterns to unfold",
-        "integrating insights between sessions",
-        "grounding change into daily life"
-      ],
-      "note": "There is no pressure to commit beyond what feels right. This cycle is simply a way to give the work room to breathe.",
+      "description": "The primary way many women choose to work together. This rhythm allows space for depth, continuity, and integration — without rushing or forcing change.",
       "price": "4 sessions · €420",
-      "pacing": "Sessions are scheduled at a pace that supports your nervous system."
+      "pacing": "Scheduled at a pace that supports your nervous system."
     },
-    "integration": {
-      "title": "Integration Package",
-      "description": "A short rhythm of working together for grounding profound experiences — plant medicine, awakening, breakdown, breakthrough.",
-      "duration": "3 sessions over 6 weeks",
-      "price": "€400",
-      "includesTitle": "Includes:",
-      "includes": [
-        "intention setting",
-        "somatic and integrative work",
-        "personalized practices",
-        "gentle support between sessions"
-      ]
-    },
-    "containers": {
-      "title": "Longer Containers & Retreats",
-      "description": "For women ready for deeper, sustained transformation.",
-      "includesTitle": "This includes:",
-      "includes": [
-        "longer-term 1:1 work",
-        "creative unblocking journeys",
-        "private retreats and immersions"
-      ],
-      "note": "These are offered selectively and discussed during a discovery call."
-    }
+    "closing": "Further work — including integration support, longer containers, or retreats — is explored naturally through conversation."
   },
   "notRightFor": {
     "title": "This work may not be right for you if",
