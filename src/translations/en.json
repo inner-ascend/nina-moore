@@ -68,12 +68,12 @@
     "closing": "Further work — including integration support, longer containers, or retreats — is explored naturally through conversation."
   },
   "notRightFor": {
-    "title": "This work may not be right for you if",
-    "items": [
-      "You're looking for a quick fix or someone to \"heal\" you",
-      "You want direction instead of discovering your own truth",
-      "You're unwilling to practice or integrate between sessions",
-      "You're in acute mental health crisis (I'll help you find appropriate support)"
+    "title": "This work may not be right for you",
+    "lines": [
+      "If you're looking for a quick fix or someone to \"heal\" you.",
+      "If you want direction instead of discovering your own truth.",
+      "If you're unwilling to practice or integrate between sessions.",
+      "Or if you're in acute mental health crisis (I'll help you find appropriate support)."
     ],
     "closing1": "The transformation comes from you.",
     "closing2": "I'm here to guide — not to fix."
