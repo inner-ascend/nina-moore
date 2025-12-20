@@ -77,29 +77,29 @@ function App() {
       </nav>
 
       {/* ========== HERO ========== */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center py-32">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-28 md:pt-48 pb-32">
         <div className="absolute inset-0">
           <img
             src="/images/DSC01844.JPG"
             alt="Nature landscape"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ground/60 via-ground/30 to-ground/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-ground/70 via-ground/40 to-ground/20"></div>
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight tracking-tight">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-8">
+          <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-6">
             {t.hero.subtitle}
           </p>
-          <p className="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
             {t.hero.description}
           </p>
-          <div className="space-y-2 mb-10">
-            <p className="text-lg text-white/90 italic">{t.hero.statement1}</p>
-            <p className="text-lg text-white/90 italic">{t.hero.statement2}</p>
+          <div className="space-y-1 mb-8">
+            <p className="text-base text-white/70 italic">{t.hero.statement1}</p>
+            <p className="text-base text-white/70 italic">{t.hero.statement2}</p>
           </div>
           <div className="space-y-3">
             <button onClick={() => scrollToSection('contact')} className="inline-block px-10 py-4 bg-white text-ground text-sm uppercase tracking-wider hover:bg-white/90 transition-all rounded-full">
