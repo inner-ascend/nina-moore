@@ -3,10 +3,10 @@
     "title": "Nina Moore",
     "subtitle": "Initiatory journeys for visionary women at thresholds of change",
     "description": "I work with women navigating deep transitions — emotional patterns, creative blocks, spiritual awakenings — who are ready to meet themselves honestly and embody what is emerging.",
-    "statement1": "This is not about fixing yourself.",
-    "statement2": "It's about remembering who you are beneath what no longer fits.",
+    "statement1": "It's about remembering who you are.",
+    "statement2": "And stepping into what's ready to emerge.",
     "cta": "Start with a free discovery call",
-    "ctaSubtitle": "20 minutes · No pressure · No obligation"
+    "ctaSubtitle": "20 minutes · A calm conversation"
   },
   "navigation": {
     "about": "About",
@@ -15,7 +15,7 @@
   },
   "invitation": {
     "title": "You're here because something is shifting",
-    "intro": "Not because you're broken or lost — but because the way you've been living, creating, or relating no longer holds.",
+    "intro": "Because you sense that something deeper is calling. A new way of living, creating, or relating is ready to emerge.",
     "subtitle": "You might recognize yourself here:",
     "lines": [
       "You're intuitive, sensitive, and creative — and something feels blocked.",
@@ -52,7 +52,7 @@
     "discoveryCall": {
       "title": "Free Discovery Call",
       "description": "A calm, 20-minute conversation to explore what you're navigating and whether this work feels aligned.",
-      "note": "No pressure. No obligation."
+      "note": "A simple conversation. Then clarity."
     },
     "sessions": {
       "title": "Single Session",
@@ -66,17 +66,6 @@
       "pacing": "Scheduled at a pace that supports your nervous system."
     },
     "closing": "Further work — including integration support, longer containers, or retreats — is explored naturally through conversation."
-  },
-  "notRightFor": {
-    "title": "This work may not be right for you",
-    "lines": [
-      "If you're looking for a quick fix or someone to \"heal\" you.",
-      "If you want direction instead of discovering your own truth.",
-      "If you're unwilling to practice or integrate between sessions.",
-      "Or if you're in acute mental health crisis (I'll help you find appropriate support)."
-    ],
-    "closing1": "The transformation comes from you.",
-    "closing2": "I'm here to guide — not to fix."
   },
   "about": {
     "title": "About Nina",
@@ -92,7 +81,7 @@
       "how I work",
       "whether this feels aligned for both of us"
     ],
-    "note": "No pressure. No sales pitch. Just clarity.",
+    "note": "A simple conversation to find clarity together.",
     "cta": "Schedule a free discovery call",
     "boundary": "Messages are read carefully and replied to when appropriate.",
     "form": {

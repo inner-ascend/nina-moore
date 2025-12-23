@@ -32,8 +32,11 @@ export default {
       },
       fontFamily: {
         serif: ['Cormorant Garamond', 'Georgia', 'Cambria', 'serif'],
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        body: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      letterSpacing: {
+        tighter: '-0.02em',
       },
       animation: {
         'fadeIn': 'fadeIn 0.6s ease-in',

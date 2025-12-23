@@ -160,13 +160,13 @@ function App() {
         </div>
       </section>
 
-      {/* ========== VISUAL BREAK ========== */}
-      <div className="h-48 md:h-64 overflow-hidden">
-        <img
-          src="/images/optimized/break2.webp"
-          alt=""
-          className="w-full h-full object-cover opacity-80"
+      {/* ========== PARALLAX IMAGE BREAK ========== */}
+      <div className="h-64 md:h-96 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+          style={{ backgroundImage: 'url(/images/optimized/break2.webp)' }}
         />
+        <div className="absolute inset-0 bg-ground/20" />
       </div>
 
       {/* ========== WAYS TO WORK TOGETHER ========== */}
@@ -205,26 +205,6 @@ function App() {
           <p className="text-lg text-text-secondary italic text-center">
             {t.waysToWork.closing}
           </p>
-        </div>
-      </section>
-
-      {/* ========== NOT RIGHT FOR YOU ========== */}
-      <section className="py-24 px-6 bg-linen-dark">
-        <div className="container mx-auto max-w-2xl">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary text-center mb-10">
-            {t.notRightFor.title}
-          </h2>
-          <div className="space-y-4 mb-10">
-            {t.notRightFor.lines.map((line, index) => (
-              <p key={index} className="text-lg text-text-secondary leading-relaxed">
-                {line}
-              </p>
-            ))}
-          </div>
-          <div className="text-center space-y-2">
-            <p className="text-xl text-text-primary italic">{t.notRightFor.closing1}</p>
-            <p className="text-xl text-text-primary italic">{t.notRightFor.closing2}</p>
-          </div>
         </div>
       </section>
 
