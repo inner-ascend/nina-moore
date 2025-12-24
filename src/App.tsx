@@ -77,82 +77,45 @@ function App() {
       </nav>
 
       {/* ========== HERO ========== */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-28 md:pt-48 pb-32">
+      <section id="hero" className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24">
         <div className="absolute inset-0">
           <img
             src="/images/DSC01844.JPG"
             alt="Nature landscape"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ground/70 via-ground/40 to-ground/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-ground/80 via-transparent to-transparent"></div>
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto mt-32 md:mt-48">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight tracking-tight">
+        <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight tracking-tight">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-6 italic">
+          <p className="text-lg md:text-xl font-serif text-white/90 leading-relaxed mb-8 italic">
             {t.hero.subtitle}
           </p>
-          <p className="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
-            {t.hero.description}
-          </p>
-          <div className="space-y-3">
-            <button onClick={() => scrollToSection('contact')} className="inline-block px-10 py-4 bg-white text-ground text-sm uppercase tracking-wider hover:bg-white/90 transition-all rounded-full">
-              {t.hero.cta}
-            </button>
-            <p className="text-sm text-white/60">{t.hero.ctaSubtitle}</p>
-          </div>
+          <button onClick={() => scrollToSection('contact')} className="inline-block px-8 py-3 border border-white/80 text-white text-sm uppercase tracking-wider hover:bg-white hover:text-ground transition-all">
+            {t.hero.cta}
+          </button>
         </div>
       </section>
 
       {/* ========== INVITATION ========== */}
       <section className="py-24 md:py-32 px-6 bg-linen">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-8 leading-tight text-center">
+          <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-10 leading-tight text-center">
             {t.invitation.title}
           </h2>
-          <p className="text-lg text-text-secondary leading-relaxed mb-10 text-center">
-            {t.invitation.intro}
-          </p>
-          <p className="text-base text-text-tertiary uppercase tracking-wider mb-6">
-            {t.invitation.subtitle}
-          </p>
-          <div className="space-y-3 mb-10">
+          <div className="space-y-3 mb-10 text-center">
             {t.invitation.lines.map((line, index) => (
               <p key={index} className="text-lg text-text-secondary leading-relaxed">
                 {line}
               </p>
             ))}
           </div>
-          <p className="text-xl text-text-primary leading-relaxed text-center italic">
+          <p className="text-2xl md:text-3xl font-serif text-text-primary leading-relaxed text-center italic">
             {t.invitation.closing}
           </p>
-        </div>
-      </section>
-
-      {/* ========== HOW I WORK ========== */}
-      <section className="py-24 md:py-32 px-6 bg-linen-dark">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-serif text-text-primary text-center mb-10">
-            {t.howIWork.title}
-          </h2>
-          <div className="text-center space-y-4 mb-16">
-            <p className="text-lg text-text-secondary">{t.howIWork.intro1}</p>
-            <p className="text-lg text-text-secondary italic">{t.howIWork.intro2}</p>
-            <p className="text-lg text-text-secondary italic">{t.howIWork.intro3}</p>
-          </div>
-          <p className="text-base text-text-tertiary uppercase tracking-wider mb-10 text-center">
-            {t.howIWork.pillarsIntro}
-          </p>
-          <div className="space-y-12">
-            {t.howIWork.pillars.map((pillar, index) => (
-              <div key={index} className="space-y-3">
-                <h3 className="text-2xl font-serif text-text-primary">{pillar.title}</h3>
-                <p className="text-lg text-text-secondary leading-relaxed">{pillar.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -160,10 +123,42 @@ function App() {
       <div className="h-64 md:h-96 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
-          style={{ backgroundImage: 'url(/images/optimized/break2.webp)' }}
+          style={{ backgroundImage: 'url(/images/optimized/about-break.webp)' }}
         />
         <div className="absolute inset-0 bg-ground/20" />
       </div>
+
+      {/* ========== HOW I WORK ========== */}
+      <section className="py-24 md:py-32 px-6 bg-linen-dark">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="hidden md:block">
+              <img
+                src="/images/optimized/kundalini.webp"
+                alt="How I work"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-6">
+                {t.howIWork.title}
+              </h2>
+              <p className="text-lg text-text-secondary mb-8">{t.howIWork.intro1}</p>
+              <p className="text-base text-text-tertiary uppercase tracking-wider mb-6">
+                {t.howIWork.pillarsIntro}
+              </p>
+              <div className="space-y-6">
+                {t.howIWork.pillars.map((pillar, index) => (
+                  <div key={index} className="border-l-2 border-clay pl-5">
+                    <h3 className="text-xl font-serif italic text-text-primary mb-2">{pillar.title}</h3>
+                    <p className="text-base text-text-secondary leading-relaxed">{pillar.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ========== WHAT A SESSION CAN HOLD ========== */}
       <section className="py-24 md:py-32 px-6 bg-linen">
@@ -182,7 +177,7 @@ function App() {
                   </p>
                 ))}
               </div>
-              <p className="text-lg text-text-secondary italic mt-8">{t.sessionEntails.closing}</p>
+              <p className="text-lg font-serif text-text-secondary italic mt-8">{t.sessionEntails.closing}</p>
             </div>
             <div className="hidden md:block">
               <img
@@ -199,6 +194,13 @@ function App() {
       <section className="py-24 md:py-32 px-6 bg-linen-dark">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+            <div className="hidden md:block pt-16">
+              <img
+                src="/images/optimized/invitation.webp"
+                alt="Work together"
+                className="w-full h-auto object-cover"
+              />
+            </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-10 leading-tight">
                 {t.workTypes.title}
@@ -217,13 +219,6 @@ function App() {
               <button onClick={() => scrollToSection('contact')} className="mt-10 px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all">
                 Book Now
               </button>
-            </div>
-            <div className="hidden md:block">
-              <img
-                src="/images/optimized/invitation.webp"
-                alt="Work together"
-                className="w-full h-auto object-cover"
-              />
             </div>
           </div>
         </div>
@@ -268,13 +263,22 @@ function App() {
         </div>
       </section>
 
+      {/* ========== PARALLAX IMAGE BREAK 2 ========== */}
+      <div className="h-64 md:h-96 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+          style={{ backgroundImage: 'url(/images/optimized/break2.webp)' }}
+        />
+        <div className="absolute inset-0 bg-ground/20" />
+      </div>
+
       {/* ========== THIS WORK IS FOR ========== */}
       <section className="py-24 px-6 bg-linen-dark">
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-serif text-text-primary text-center mb-10">
             {t.thisWorkIsFor.title}
           </h2>
-          <div className="space-y-4 mb-10">
+          <div className="space-y-4 mb-10 text-center">
             {t.thisWorkIsFor.lines.map((line, index) => (
               <p key={index} className="text-lg text-text-secondary leading-relaxed">
                 {line}
@@ -282,8 +286,8 @@ function App() {
             ))}
           </div>
           <div className="text-center space-y-2">
-            <p className="text-xl text-text-primary italic">{t.thisWorkIsFor.closing1}</p>
-            <p className="text-xl text-text-primary italic">{t.thisWorkIsFor.closing2}</p>
+            <p className="text-2xl md:text-3xl font-serif text-text-primary italic">{t.thisWorkIsFor.closing1}</p>
+            <p className="text-2xl md:text-3xl font-serif text-text-primary italic">{t.thisWorkIsFor.closing2}</p>
           </div>
         </div>
       </section>

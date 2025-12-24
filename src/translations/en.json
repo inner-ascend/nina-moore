@@ -12,8 +12,7 @@
     "bookNow": "Free Discovery Call"
   },
   "invitation": {
-    "title": "You may recognize yourself here",
-    "intro": "You may already feel:",
+    "title": "You are already feeling",
     "lines": [
       "A quiet pull toward something more honest and alive.",
       "A desire to meet your story differently and integrate what you've lived.",
@@ -43,7 +42,7 @@
     ]
   },
   "sessionEntails": {
-    "title": "What a session can hold",
+    "title": "What a session entails",
     "intro": "Each session is shaped by what you bring in that moment. Work together may include:",
     "items": [
       {
@@ -85,7 +84,7 @@
     "closing": "Sessions are relational, responsive, and led by what is alive for you."
   },
   "workTypes": {
-    "title": "Areas of work",
+    "title": "I hold you through",
     "intro": "Women come to this work carrying many kinds of thresholds, including:",
     "items": [
       {
