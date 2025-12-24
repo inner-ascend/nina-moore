@@ -87,7 +87,7 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-t from-ground/70 via-ground/40 to-ground/20"></div>
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto mt-32 md:mt-48">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight tracking-tight">
             {t.hero.title}
           </h1>
