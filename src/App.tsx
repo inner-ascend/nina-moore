@@ -91,7 +91,7 @@ function App() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight tracking-tight">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-6">
+          <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-6 italic">
             {t.hero.subtitle}
           </p>
           <p className="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
