@@ -97,10 +97,6 @@ function App() {
           <p className="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
             {t.hero.description}
           </p>
-          <div className="space-y-1 mb-8">
-            <p className="text-base text-white/70 italic">{t.hero.statement1}</p>
-            <p className="text-base text-white/70 italic">{t.hero.statement2}</p>
-          </div>
           <div className="space-y-3">
             <button onClick={() => scrollToSection('contact')} className="inline-block px-10 py-4 bg-white text-ground text-sm uppercase tracking-wider hover:bg-white/90 transition-all rounded-full">
               {t.hero.cta}
