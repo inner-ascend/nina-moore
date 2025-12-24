@@ -61,7 +61,7 @@ export default function ContactSection() {
             </ul>
           </div>
 
-          <p className="text-lg text-text-secondary italic">{t.contact.note}</p>
+          {t.contact.note && <p className="text-lg text-text-secondary italic">{t.contact.note}</p>}
         </div>
 
         {/* CTA Button */}

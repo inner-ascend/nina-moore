@@ -6,7 +6,7 @@ export default function Footer() {
           Nina Moore
         </p>
         <p className="text-sm text-white/50">
-          © {new Date().getFullYear()}
+          © 2025
         </p>
       </div>
     </footer>
