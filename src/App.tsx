@@ -169,28 +169,24 @@ function App() {
         <div className="absolute inset-0 bg-ground/20" />
       </div>
 
-      {/* ========== WHAT DOES A SESSION ENTAIL ========== */}
+      {/* ========== WHAT A SESSION CAN HOLD ========== */}
       <section className="py-24 md:py-32 px-6 bg-linen">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-10 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-serif text-text-primary mb-6 leading-tight">
                 {t.sessionEntails.title}
               </h2>
-              <div className="space-y-6">
+              <p className="text-lg text-text-secondary mb-8">{t.sessionEntails.intro}</p>
+              <div className="space-y-3">
                 {t.sessionEntails.items.map((item, index) => (
-                  <div key={index} className="flex gap-4">
-                    <span className="text-sm text-text-tertiary font-medium">{item.num}</span>
-                    <div>
-                      <h3 className="text-base font-medium text-text-primary mb-1">{item.title}</h3>
-                      <p className="text-base text-text-secondary leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
+                  <p key={index} className="text-lg text-text-secondary leading-relaxed flex items-start">
+                    <span className="mr-3 text-clay">•</span>
+                    {item.title}
+                  </p>
                 ))}
               </div>
-              <button onClick={() => scrollToSection('contact')} className="mt-10 px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all">
-                Book Now
-              </button>
+              <p className="text-lg text-text-secondary italic mt-8">{t.sessionEntails.closing}</p>
             </div>
             <div className="hidden md:block">
               <img

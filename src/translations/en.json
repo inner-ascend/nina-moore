@@ -14,36 +14,33 @@
     "bookNow": "Free Discovery Call"
   },
   "invitation": {
-    "title": "You may find yourself here if…",
-    "intro": "Something is shifting, even if you can't fully name it yet.",
-    "subtitle": "You may recognize yourself in some of these:",
+    "title": "You may recognize yourself here",
+    "intro": "You may already feel:",
     "lines": [
-      "You are intuitive, sensitive, creative — and feel blocked or stuck.",
-      "You are at a crossroads: a life transition, awakening, or deep inner change.",
-      "You've outgrown old roles, relationships, or identities.",
-      "You sense there is more trying to come through, and you're ready to listen.",
-      "You want depth without bypassing, forcing, or performing transformation."
+      "A quiet pull toward something more honest and alive.",
+      "A desire to meet your story differently and integrate what you've lived.",
+      "A sense that something essential has been forgotten — and is ready to be remembered."
     ],
-    "closing": "This work is for women who feel the call to step into themselves more fully — with honesty, presence, and care."
+    "closing": "This work is for women who feel that call and want to meet it with presence, depth, and care."
   },
   "howIWork": {
     "title": "How I work",
     "intro1": "Every woman arrives with her own history, rhythm, and readiness.",
-    "intro2": "There is no formula or script.",
+    "intro2": "There is no script.",
     "intro3": "My role is to offer attuned presence, clear reflection, and a grounded space where what is emerging can be met and integrated.",
-    "pillarsIntro": "The work rests on three core pillars:",
+    "pillarsIntro": "The work rests on three pillars:",
     "pillars": [
       {
         "title": "Embodied presence",
-        "description": "We work with the body — breath, sensation, and the nervous system — not only conversation. Real change happens when insight is felt and lived, not just understood."
+        "description": "We work with the body — breath, sensation, and the nervous system — not only conversation. Insight becomes real when it is felt and lived."
       },
       {
         "title": "Honest reflection",
-        "description": "I offer clear, respectful mirrors. I name patterns, ask precise questions, and support truth-telling without judgment. Growth requires honesty more than comfort."
+        "description": "I offer clear, respectful mirrors. I name patterns, ask precise questions, and support truth-telling without judgment."
       },
       {
         "title": "Integration",
-        "description": "Insights are brought into daily life through practical steps and gentle integration, so change becomes lived and sustained."
+        "description": "What arises in sessions is brought into daily life through practical steps and gentle integration, so change is lived over time."
       }
     ]
   },
@@ -54,39 +51,40 @@
       {
         "num": "01",
         "title": "Deep exploration and integration",
-        "description": "A safe space for meeting what is present"
+        "description": ""
       },
       {
         "num": "02",
         "title": "Emotional and energetic clearing",
-        "description": "Releasing what is stuck or blocked"
+        "description": ""
       },
       {
         "num": "03",
-        "title": "Clarifying inner conflicts or patterns",
-        "description": "Seeing clearly what has been hidden"
+        "title": "Clarifying inner conflicts or recurring patterns",
+        "description": ""
       },
       {
         "num": "04",
-        "title": "Meeting and integrating parts of yourself",
-        "description": "Inner harmony and wholeness"
+        "title": "Meeting and integrating different aspects of yourself",
+        "description": ""
       },
       {
         "num": "05",
         "title": "Grounded guidance and reflection",
-        "description": "Clear mirrors and honest presence"
+        "description": ""
       },
       {
         "num": "06",
         "title": "Practical steps for daily life",
-        "description": "Integration that lasts"
+        "description": ""
       },
       {
         "num": "07",
-        "title": "Nervous-system-aware pacing",
-        "description": "Sessions are relational, responsive, and rooted in what is alive for you"
+        "title": "Nervous-system-aware pacing and presence",
+        "description": ""
       }
-    ]
+    ],
+    "closing": "Sessions are relational, responsive, and led by what is alive for you."
   },
   "workTypes": {
     "title": "Areas of work",
@@ -115,7 +113,7 @@
       {
         "num": "05",
         "title": "Trauma and heartbreak",
-        "description": "Meaning-making, repatterning, gentle repair"
+        "description": "Meaning-making, gentle repair, repatterning"
       },
       {
         "num": "06",
@@ -139,12 +137,12 @@
     },
     "sessions": {
       "title": "Single Session",
-      "description": "A one-off session for grounding, clarity, or support through a specific moment or transition.",
+      "description": "A one-off session for grounding, clarity, or support during a specific moment or transition.",
       "price": "90 minutes · €140"
     },
     "fourSessions": {
       "title": "The 4-Session Cycle",
-      "description": "A deeper rhythm that allows for continuity, integration, and real movement.",
+      "description": "A deeper rhythm allowing space for continuity and integration, without rushing or forcing change.",
       "price": "4 sessions · €420",
       "pacing": "Scheduled at a pace that supports integration."
     },
