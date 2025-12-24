@@ -276,6 +276,26 @@ function App() {
         </div>
       </section>
 
+      {/* ========== NOT RIGHT FOR YOU ========== */}
+      <section className="py-24 px-6 bg-linen-dark">
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-2xl md:text-3xl font-serif text-text-primary text-center mb-10">
+            {t.notRightFor.title}
+          </h2>
+          <div className="space-y-4 mb-10">
+            {t.notRightFor.lines.map((line, index) => (
+              <p key={index} className="text-lg text-text-secondary leading-relaxed">
+                {line}
+              </p>
+            ))}
+          </div>
+          <div className="text-center space-y-2">
+            <p className="text-xl text-text-primary italic">{t.notRightFor.closing1}</p>
+            <p className="text-xl text-text-primary italic">{t.notRightFor.closing2}</p>
+          </div>
+        </div>
+      </section>
+
       {/* ========== ABOUT ========== */}
       <section id="about" className="py-24 md:py-32 px-6 bg-linen scroll-mt-24">
         <div className="container mx-auto max-w-2xl text-center">
