@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Nina Moore",
-    "subtitle": "Initiatory journeys for visionary women at thresholds of change",
-    "description": "I work with women navigating deep transitions — emotional patterns, creative blocks, spiritual awakenings — who are ready to meet themselves honestly and embody what is emerging.",
-    "statement1": "It's about remembering who you are.",
-    "statement2": "And stepping into what's ready to emerge.",
-    "cta": "Start with a free discovery call",
-    "ctaSubtitle": "20 minutes · A calm conversation"
+    "subtitle": "Initiatory work for visionary women at thresholds of change",
+    "description": "I work with women navigating deep inner transitions — moments when old patterns, identities, or ways of living no longer hold, and something new is asking to emerge.",
+    "statement1": "This work is about meeting yourself honestly.",
+    "statement2": "Listening deeply. And integrating what is already moving through you.",
+    "cta": "Begin with a conversation",
+    "ctaSubtitle": "Free Discovery Call · 20 minutes"
   },
   "navigation": {
     "about": "About",
@@ -14,167 +14,170 @@
     "bookNow": "Free Discovery Call"
   },
   "invitation": {
-    "title": "You're here because something is shifting",
-    "intro": "Because you sense that something deeper is calling. A new way of living, creating, or relating is ready to emerge.",
-    "subtitle": "You might recognize yourself here:",
+    "title": "You may find yourself here if…",
+    "intro": "Something is shifting, even if you can't fully name it yet.",
+    "subtitle": "You may recognize yourself in some of these:",
     "lines": [
-      "You're intuitive, sensitive, and creative — and something feels blocked.",
-      "You're at a crossroads (Saturn return, life transition, awakening).",
-      "You've outgrown old identities, relationships, or ways of being.",
-      "You sense there's more trying to come through — and you're ready to listen."
+      "You are intuitive, sensitive, creative — and feel blocked or stuck.",
+      "You are at a crossroads: a life transition, awakening, or deep inner change.",
+      "You've outgrown old roles, relationships, or identities.",
+      "You sense there is more trying to come through, and you're ready to listen.",
+      "You want depth without bypassing, forcing, or performing transformation."
     ],
-    "closing": "This work is for women who feel the call to step into themselves more fully, without bypassing, forcing, or performing transformation."
+    "closing": "This work is for women who feel the call to step into themselves more fully — with honesty, presence, and care."
   },
   "howIWork": {
     "title": "How I work",
-    "intro1": "Every journey is different — because every woman arrives with her own story, wounds, and readiness.",
-    "intro2": "There is no script here.",
-    "intro3": "Only attuned presence, deep listening, and honest reflection.",
-    "pillarsIntro": "My work is grounded in three pillars:",
+    "intro1": "Every woman arrives with her own history, rhythm, and readiness.",
+    "intro2": "There is no formula or script.",
+    "intro3": "My role is to offer attuned presence, clear reflection, and a grounded space where what is emerging can be met and integrated.",
+    "pillarsIntro": "The work rests on three core pillars:",
     "pillars": [
       {
         "title": "Embodied presence",
-        "description": "We work with the body — breath, sensation, and nervous system — not just conversation. Real change happens when insight lands in the body, not only the mind."
+        "description": "We work with the body — breath, sensation, and the nervous system — not only conversation. Real change happens when insight is felt and lived, not just understood."
       },
       {
         "title": "Honest reflection",
-        "description": "I won't simply validate you. I'll reflect what I see, ask clear questions, and name patterns with care and truth. Growth requires honesty, not comfort."
+        "description": "I offer clear, respectful mirrors. I name patterns, ask precise questions, and support truth-telling without judgment. Growth requires honesty more than comfort."
       },
       {
         "title": "Integration",
-        "description": "Insights are grounded into daily life through practical steps and ongoing integration — so change is lived, not just understood."
+        "description": "Insights are brought into daily life through practical steps and gentle integration, so change becomes lived and sustained."
       }
     ]
   },
   "sessionEntails": {
-    "title": "What does a session entail?",
+    "title": "What a session can hold",
+    "intro": "Each session is shaped by what you bring in that moment. Work together may include:",
     "items": [
       {
         "num": "01",
         "title": "Deep exploration and integration",
-        "description": "A safe, personalized space for self discovery"
+        "description": "A safe space for meeting what is present"
       },
       {
         "num": "02",
-        "title": "Energetic clearing and activation",
-        "description": "Release of stuck energies and emotional blockages, activating your potential"
+        "title": "Emotional and energetic clearing",
+        "description": "Releasing what is stuck or blocked"
       },
       {
         "num": "03",
-        "title": "Clarity and support",
-        "description": "Intuitive, practical guidance challenging limiting beliefs and offering truth"
+        "title": "Clarifying inner conflicts or patterns",
+        "description": "Seeing clearly what has been hidden"
       },
       {
         "num": "04",
-        "title": "Internal Harmony",
-        "description": "Meeting different aspects of yourself to heal and create internal balance"
+        "title": "Meeting and integrating parts of yourself",
+        "description": "Inner harmony and wholeness"
       },
       {
         "num": "05",
-        "title": "Practical steps",
-        "description": "Coaching focused strategies for actionable growth and empowerment"
+        "title": "Grounded guidance and reflection",
+        "description": "Clear mirrors and honest presence"
       },
       {
         "num": "06",
-        "title": "Holistic approach",
-        "description": "Encompassing all layers of the self to reach a feeling of wholeness"
+        "title": "Practical steps for daily life",
+        "description": "Integration that lasts"
       },
       {
         "num": "07",
-        "title": "Presence and honesty",
-        "description": "Meeting your unique needs for you to be fully seen and gain new perspectives"
+        "title": "Nervous-system-aware pacing",
+        "description": "Sessions are relational, responsive, and rooted in what is alive for you"
       }
     ]
   },
   "workTypes": {
-    "title": "What type of work are we doing together",
+    "title": "Areas of work",
+    "intro": "Women come to this work carrying many kinds of thresholds, including:",
     "items": [
       {
         "num": "01",
-        "title": "Life Changes",
-        "description": "Break ups, breakthroughs, loss, awakenings"
+        "title": "Life transitions",
+        "description": "Breakups, loss, awakenings, major changes"
       },
       {
         "num": "02",
-        "title": "Psychedelic Integration",
-        "description": "Medicine ceremonies, challenging trips, self led journeys"
+        "title": "Psychedelic integration",
+        "description": "Medicine ceremonies, challenging experiences, self-led journeys"
       },
       {
         "num": "03",
-        "title": "Relationship Challenges",
-        "description": "Sacred union, couples alchemy, shadow work"
+        "title": "Relationships",
+        "description": "Intimacy, boundaries, shadow work, sacred partnership"
       },
       {
         "num": "04",
-        "title": "Purpose and Path",
-        "description": "Finding yourself, dream work, vision, essence & gifts"
+        "title": "Purpose and direction",
+        "description": "Essence, gifts, vision, and path"
       },
       {
         "num": "05",
-        "title": "Trauma and Heartbreaks",
-        "description": "Rewriting the story, finding meaning, repatterning"
+        "title": "Trauma and heartbreak",
+        "description": "Meaning-making, repatterning, gentle repair"
       },
       {
         "num": "06",
-        "title": "Spiritual Quest",
-        "description": "Connection to source, rituals, remembrance, soul and sacred"
+        "title": "Spiritual inquiry",
+        "description": "Connection to source, ritual, remembrance"
       },
       {
         "num": "07",
-        "title": "Creative Flow",
-        "description": "Bringing back the spark, finding joy, self expression and trust"
+        "title": "Creative flow",
+        "description": "Reconnecting with joy, trust, and expression"
       }
     ]
   },
   "waysToWork": {
     "title": "Ways to work together",
-    "intro": "We always begin with a conversation and move at a pace that feels right.",
+    "intro": "We always begin with a conversation and move at a pace that respects your nervous system and readiness.",
     "discoveryCall": {
       "title": "Free Discovery Call",
-      "description": "A calm, 20-minute conversation to explore what you're navigating and whether this work feels aligned.",
+      "description": "A 20-minute conversation to explore what you're navigating and whether this work feels aligned.",
       "note": "A simple conversation. Then clarity."
     },
     "sessions": {
       "title": "Single Session",
-      "description": "A one-off session for clarity, grounding, or support during a specific moment or transition.",
+      "description": "A one-off session for grounding, clarity, or support through a specific moment or transition.",
       "price": "90 minutes · €140"
     },
     "fourSessions": {
       "title": "The 4-Session Cycle",
-      "description": "The primary way many women choose to work together. This rhythm allows space for depth, continuity, and integration — without rushing or forcing change.",
+      "description": "A deeper rhythm that allows for continuity, integration, and real movement.",
       "price": "4 sessions · €420",
-      "pacing": "Scheduled at a pace that supports your nervous system."
+      "pacing": "Scheduled at a pace that supports integration."
     },
-    "closing": "Further work — including integration support, longer containers, or retreats — is explored naturally through conversation."
+    "closing": "Further work — including longer containers, ongoing integration support, or retreats — is explored naturally through conversation."
   },
   "thisWorkIsFor": {
     "title": "This work is for women who",
     "lines": [
-      "Are ready to do the inner work and meet themselves honestly.",
-      "Want to discover their own truth, with guidance and support.",
-      "Are committed to practicing and integrating between sessions.",
-      "Feel stable enough to engage in deep transformative work."
+      "Are ready to meet themselves honestly.",
+      "Want guidance without being told who to be.",
+      "Are willing to practice and integrate between sessions.",
+      "Feel stable enough to engage in deep inner work."
     ],
     "closing1": "The transformation comes from you.",
-    "closing2": "I'm here to guide and support."
+    "closing2": "I'm here to guide and support the process."
   },
   "about": {
     "title": "About Nina",
-    "bio": "I've been guiding this work for over 10 years. I meet people heart to heart — with presence, honesty, and respect for each woman's rhythm and capacity. My approach weaves embodied awareness, intuitive insight, and grounded integration.",
-    "languages": "Sessions are available in English, Spanish, and French."
+    "bio": "I have been guiding this work for over ten years. I meet women heart to heart — with presence, honesty, and respect for each woman's rhythm and capacity. My approach weaves embodied awareness, intuitive insight, and grounded integration.",
+    "languages": "Sessions are offered in English, Spanish, and French."
   },
   "contact": {
     "title": "Begin the conversation",
-    "intro": "If you're feeling the call to work together, start with a free discovery call.",
+    "intro": "If you feel drawn to work together, start with a free discovery call.",
     "exploreTitle": "We'll explore:",
     "exploreItems": [
       "what you're currently navigating",
       "how I work",
       "whether this feels aligned for both of us"
     ],
-    "note": "A simple conversation to find clarity together.",
+    "note": "",
     "cta": "Schedule a free discovery call",
-    "boundary": "Messages are read carefully and replied to when appropriate.",
+    "boundary": "Messages are read with care and replied to thoughtfully.",
     "form": {
       "name": "Your Name",
       "namePlaceholder": "Name",
@@ -205,6 +208,6 @@
       "email": "Email",
       "instagram": "Instagram"
     },
-    "copyright": "© 2025 Nina Moore. All rights reserved."
+    "copyright": "© 2025 Nina Moore"
   }
 }
