@@ -46,6 +46,86 @@
       }
     ]
   },
+  "sessionEntails": {
+    "title": "What does a session entail?",
+    "items": [
+      {
+        "num": "01",
+        "title": "Deep exploration and integration",
+        "description": "A safe, personalized space for self discovery"
+      },
+      {
+        "num": "02",
+        "title": "Energetic clearing and activation",
+        "description": "Release of stuck energies and emotional blockages, activating your potential"
+      },
+      {
+        "num": "03",
+        "title": "Clarity and support",
+        "description": "Intuitive, practical guidance challenging limiting beliefs and offering truth"
+      },
+      {
+        "num": "04",
+        "title": "Internal Harmony",
+        "description": "Meeting different aspects of yourself to heal and create internal balance"
+      },
+      {
+        "num": "05",
+        "title": "Practical steps",
+        "description": "Coaching focused strategies for actionable growth and empowerment"
+      },
+      {
+        "num": "06",
+        "title": "Holistic approach",
+        "description": "Encompassing all layers of the self to reach a feeling of wholeness"
+      },
+      {
+        "num": "07",
+        "title": "Presence and honesty",
+        "description": "Meeting your unique needs for you to be fully seen and gain new perspectives"
+      }
+    ]
+  },
+  "workTypes": {
+    "title": "What type of work are we doing together",
+    "items": [
+      {
+        "num": "01",
+        "title": "Life Changes",
+        "description": "Break ups, breakthroughs, loss, awakenings"
+      },
+      {
+        "num": "02",
+        "title": "Psychedelic Integration",
+        "description": "Medicine ceremonies, challenging trips, self led journeys"
+      },
+      {
+        "num": "03",
+        "title": "Relationship Challenges",
+        "description": "Sacred union, couples alchemy, shadow work"
+      },
+      {
+        "num": "04",
+        "title": "Purpose and Path",
+        "description": "Finding yourself, dream work, vision, essence & gifts"
+      },
+      {
+        "num": "05",
+        "title": "Trauma and Heartbreaks",
+        "description": "Rewriting the story, finding meaning, repatterning"
+      },
+      {
+        "num": "06",
+        "title": "Spiritual Quest",
+        "description": "Connection to source, rituals, remembrance, soul and sacred"
+      },
+      {
+        "num": "07",
+        "title": "Creative Flow",
+        "description": "Bringing back the spark, finding joy, self expression and trust"
+      }
+    ]
+  },
   "waysToWork": {
     "title": "Ways to work together",
     "intro": "We always begin with a conversation and move at a pace that feels right.",
