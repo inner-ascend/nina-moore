@@ -48,9 +48,9 @@ function App() {
               <button onClick={() => scrollToSection('about')} className="text-sm uppercase tracking-wider text-text-secondary hover:text-text-primary transition-colors">
                 {t.navigation.about}
               </button>
-              <button onClick={() => scrollToSection('contact')} className="px-6 py-2.5 bg-ground text-white text-sm uppercase tracking-wider hover:bg-ground/90 transition-all rounded-full">
+              <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 bg-ground text-white text-sm uppercase tracking-wider hover:bg-ground/90 transition-all rounded-full">
                 {t.navigation.bookNow}
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -68,9 +68,9 @@ function App() {
               <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-sm uppercase tracking-wider text-text-secondary hover:text-text-primary">
                 {t.navigation.about}
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-sm uppercase tracking-wider text-text-primary font-semibold">
+              <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener noreferrer" className="block w-full text-left py-2 text-sm uppercase tracking-wider text-text-primary font-semibold" onClick={() => setMobileMenuOpen(false)}>
                 {t.navigation.bookNow}
-              </button>
+              </a>
             </div>
           )}
         </div>
@@ -94,9 +94,9 @@ function App() {
           <p className="text-lg md:text-xl font-serif text-white/90 leading-relaxed mb-8 italic">
             {t.hero.subtitle}
           </p>
-          <button onClick={() => scrollToSection('contact')} className="inline-block px-8 py-3 border border-white/80 text-white text-sm uppercase tracking-wider hover:bg-white hover:text-ground transition-all">
+          <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 border border-white/80 text-white text-sm uppercase tracking-wider hover:bg-white hover:text-ground transition-all">
             {t.hero.cta}
-          </button>
+          </a>
         </div>
       </section>
 
@@ -216,9 +216,14 @@ function App() {
                   </div>
                 ))}
               </div>
-              <button onClick={() => scrollToSection('contact')} className="mt-10 px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all">
+              <a
+                href="https://calendly.com/ninamoorerising/free-discovery"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-10 px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all"
+              >
                 Book Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -238,14 +243,30 @@ function App() {
           <div className="mb-12 pb-12 border-b border-divider">
             <h3 className="text-2xl font-serif text-text-primary mb-3">{t.waysToWork.discoveryCall.title}</h3>
             <p className="text-lg text-text-secondary leading-relaxed mb-3">{t.waysToWork.discoveryCall.description}</p>
-            <p className="text-base text-text-tertiary italic">{t.waysToWork.discoveryCall.note}</p>
+            <p className="text-base text-text-tertiary italic mb-6">{t.waysToWork.discoveryCall.note}</p>
+            <a
+              href="https://calendly.com/ninamoorerising/free-discovery"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-ground text-white text-sm uppercase tracking-wider hover:bg-ground/90 transition-all rounded-full"
+            >
+              Schedule a Free Call
+            </a>
           </div>
 
           {/* Single Session */}
           <div className="mb-12 pb-12 border-b border-divider">
             <h3 className="text-2xl font-serif text-text-primary mb-3">{t.waysToWork.sessions.title}</h3>
             <p className="text-lg text-text-secondary leading-relaxed mb-4">{t.waysToWork.sessions.description}</p>
-            <p className="text-lg text-text-primary font-medium">{t.waysToWork.sessions.price}</p>
+            <p className="text-lg text-text-primary font-medium mb-6">{t.waysToWork.sessions.price}</p>
+            <a
+              href="https://calendly.com/ninamoorerising/1-1-session-with-nina"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all rounded-full"
+            >
+              Book a Session
+            </a>
           </div>
 
           {/* 4-Session Cycle */}
@@ -253,7 +274,15 @@ function App() {
             <h3 className="text-2xl font-serif text-text-primary mb-3">{t.waysToWork.fourSessions.title}</h3>
             <p className="text-lg text-text-secondary leading-relaxed mb-4">{t.waysToWork.fourSessions.description}</p>
             <p className="text-lg text-text-primary font-medium mb-2">{t.waysToWork.fourSessions.price}</p>
-            <p className="text-base text-text-tertiary italic">{t.waysToWork.fourSessions.pacing}</p>
+            <p className="text-base text-text-tertiary italic mb-6">{t.waysToWork.fourSessions.pacing}</p>
+            <a
+              href="https://calendly.com/ninamoorerising/1-1-session-with-nina"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all rounded-full"
+            >
+              Book the Cycle
+            </a>
           </div>
 
           {/* Closing */}

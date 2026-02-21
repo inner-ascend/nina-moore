@@ -67,7 +67,7 @@ export default function ContactSection() {
         {/* CTA Button */}
         <div className="text-center mb-16">
           <a
-            href="https://calendly.com/nina-moore"
+            href="https://calendly.com/ninamoorerising/free-discovery"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-ground text-white text-sm uppercase tracking-wider hover:bg-ground/90 transition-all rounded-full"
