@@ -260,7 +260,7 @@ function App() {
             <p className="text-lg text-text-secondary leading-relaxed mb-4">{t.waysToWork.sessions.description}</p>
             <p className="text-lg text-text-primary font-medium mb-6">{t.waysToWork.sessions.price}</p>
             <a
-              href="https://calendly.com/ninamoorerising/1-1-session-with-nina"
+              href="https://buy.stripe.com/5kQbJ18hs9Ub42Udos43S09"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all rounded-full"
@@ -276,7 +276,7 @@ function App() {
             <p className="text-lg text-text-primary font-medium mb-2">{t.waysToWork.fourSessions.price}</p>
             <p className="text-base text-text-tertiary italic mb-6">{t.waysToWork.fourSessions.pacing}</p>
             <a
-              href="https://calendly.com/ninamoorerising/1-1-session-with-nina"
+              href="https://buy.stripe.com/eVqaEXdBMear42U4RW43S0a"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 border border-text-primary text-text-primary text-sm uppercase tracking-wider hover:bg-text-primary hover:text-white transition-all rounded-full"
