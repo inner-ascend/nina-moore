@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Nina Moore — Writer-priestess of the threshold. The Threshold Year: a six-month initiatory passage for eight women navigating deep change. From Mazunte, Oaxaca." />
-<title>The Threshold Year · Nina Moore</title>
+<meta name="description" content="Nina Moore — Writer-priestess of the threshold. Initiatory work, slow letters, and the Threshold Year. From Mazunte, Oaxaca." />
+<title>Nina Moore · Writer-priestess of the threshold</title>
 
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://nina-moore.com/threshold/" />
-<meta property="og:title" content="The Threshold Year · Nina Moore" />
-<meta property="og:description" content="A six-month initiatory passage for eight women crossing a threshold. By application." />
-<meta property="og:image" content="https://nina-moore.com/images/DSC01844.JPG" />
+<meta property="og:url" content="https://nina-moore.com/preview/" />
+<meta property="og:title" content="Nina Moore — Writer-priestess of the threshold" />
+<meta property="og:description" content="Initiatory work for women at thresholds of change. From Mazunte, Oaxaca." />
+<meta property="og:image" content="https://nina-moore.com/images/about-hero.jpg" />
 <meta property="twitter:card" content="summary_large_image" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,10 +19,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 <style>
-/* ==========================================================================
-   NINA MOORE — "Threshold" (after Mediterranean Sacred)
-   ========================================================================== */
-
 :root {
   --parchment:    #f2ebdd;
   --parchment-2:  #ece2cf;
@@ -45,12 +41,9 @@
   --pad-lg: clamp(48px, 10vw, 160px);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (max-width: 640px) {
-  :root { --pad-lg: 56px; }
-}
+@media (max-width: 640px) { :root { --pad-lg: 56px; } }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -66,11 +59,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
 img, svg { max-width: 100%; display: block; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 a { color: inherit; text-decoration: none; }
-
 :focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 2px; }
 ::selection { background: var(--ink); color: var(--parchment); }
 
@@ -85,7 +76,6 @@ body::before {
   opacity: 0.5;
 }
 
-/* Typography */
 .t-eyebrow { font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: var(--amber); }
 .t-h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(44px, 7.4vw, 116px); line-height: 0.98; letter-spacing: -0.025em; font-variation-settings: "opsz" 144, "SOFT" 50; }
 .t-h1 em { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; color: var(--clay); }
@@ -95,14 +85,17 @@ body::before {
 .t-body { font-family: var(--sans); font-size: 16px; line-height: 1.65; color: var(--ink-soft); }
 .t-small { font-family: var(--sans); font-size: 13px; letter-spacing: 0.02em; line-height: 1.5; }
 
-/* Central axis */
 .axis { position: fixed; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(to bottom, transparent 0%, var(--gold-line) 8%, var(--gold-line) 92%, transparent 100%); opacity: 0.28; z-index: 2; pointer-events: none; }
 .axis-pulse { position: fixed; left: 50%; top: 50vh; width: 7px; height: 7px; border-radius: 50%; background: var(--gold-line); transform: translate(-50%, -50%); box-shadow: 0 0 12px rgba(180, 132, 58, 0.6); z-index: 3; pointer-events: none; transition: top 0.4s var(--ease); }
 @media (max-width: 800px) { .axis, .axis-pulse { display: none; } }
 
+/* Banner */
+.preview-banner { background: var(--ink); color: var(--parchment); text-align: center; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; padding: 10px var(--pad); position: relative; z-index: 25; }
+.preview-banner em { font-style: italic; color: var(--clay); text-transform: none; letter-spacing: 0.04em; font-family: var(--serif); font-size: 13px; }
+
 /* Announce */
 .announce { border-bottom: 1px solid var(--line); background: var(--parchment); font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); position: relative; z-index: 20; overflow: hidden; }
-.announce-inner { display: flex; align-items: center; justify-content: space-between; padding: 10px var(--pad); gap: 16px; max-width: 100%; }
+.announce-inner { display: flex; align-items: center; justify-content: space-between; padding: 10px var(--pad); gap: 16px; }
 .announce-scroll { overflow: hidden; white-space: nowrap; display: flex; align-items: center; gap: 24px; flex: 1; min-width: 0; mask-image: linear-gradient(to right, transparent 0, black 12px, black calc(100% - 24px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, black 12px, black calc(100% - 24px), transparent 100%); }
 .announce-scroll span { display: inline-flex; align-items: center; gap: 10px; }
 .announce-moon { display: inline-flex !important; align-items: center; gap: 8px; color: var(--amber); font-style: italic; font-family: var(--serif); text-transform: none; letter-spacing: 0.02em; font-size: 12px; padding-right: 16px; border-right: 1px solid var(--line); }
@@ -141,32 +134,29 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
   .announce-inner { padding: 8px 16px; gap: 12px; font-size: 10.5px; }
   .announce-scroll { gap: 16px; }
   .announce-moon { padding-right: 12px; border-right: 1px solid var(--line); font-size: 11px; }
-  .announce-moon #moonText { max-width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .wordmark-text { font-size: 13px; letter-spacing: 0.1em; }
   .wordmark-monogram { width: 30px; height: 30px; font-size: 12px; }
   :root { --pad: 18px; }
 }
 
-/* HERO */
-.hero { position: relative; padding: clamp(32px, 5vh, 56px) var(--pad) clamp(48px, 8vh, 96px); overflow: hidden; }
-.hero-grid { display: grid; grid-template-columns: 1.25fr minmax(280px, 440px); gap: clamp(32px, 5vw, 80px); align-items: stretch; max-width: 1600px; margin: 0 auto; min-height: calc(100vh - 180px); }
+/* HERO — home version: centred, quieter, no apply CTA */
+.hero { position: relative; padding: clamp(48px, 8vh, 96px) var(--pad) clamp(64px, 10vh, 120px); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr minmax(280px, 480px); gap: clamp(40px, 6vw, 100px); align-items: center; max-width: 1600px; margin: 0 auto; min-height: calc(100vh - 220px); }
 .hero-left { position: relative; display: flex; flex-direction: column; justify-content: center; }
-.hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
 .hero-meta-line { flex: 1; height: 1px; background: var(--line-strong); max-width: 80px; }
-.hero-headline { margin-bottom: 32px; animation: fadeUp 1.4s var(--ease) both; }
+.hero-headline { margin-bottom: 36px; animation: fadeUp 1.4s var(--ease) both; }
 .hero-headline span { display: block; overflow: hidden; }
 .hero-headline span > span { display: block; animation: reveal 1.2s var(--ease) both; }
 .hero-headline span:nth-child(1) > span { animation-delay: 0.1s; }
 .hero-headline span:nth-child(2) > span { animation-delay: 0.25s; }
 .hero-headline span:nth-child(3) > span { animation-delay: 0.4s; }
-.hero-headline span:nth-child(4) > span { animation-delay: 0.55s; }
-
-.hero-sub { display: flex; align-items: flex-start; gap: 24px; max-width: 580px; margin-bottom: 36px; animation: fadeUp 1.4s var(--ease) 0.7s both; }
+.hero-sub { display: flex; align-items: flex-start; gap: 24px; max-width: 600px; margin-bottom: 40px; animation: fadeUp 1.4s var(--ease) 0.7s both; }
 .hero-sub::before { content: ""; flex: 0 0 40px; height: 1px; background: var(--ink); margin-top: 14px; }
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 1.4s var(--ease) 0.9s both; }
 
-.hero-right { position: relative; max-height: calc(100vh - 180px); align-self: stretch; background: var(--ink); overflow: hidden; animation: fadeIn 2s var(--ease) 0.3s both; }
-.hero-portrait { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,23,18,0.15) 0%, rgba(30,23,18,0.55) 100%), url("/images/DSC01844.JPG") center/cover; }
+.hero-right { position: relative; aspect-ratio: 4/5; max-height: calc(100vh - 220px); background: var(--ink); overflow: hidden; animation: fadeIn 2s var(--ease) 0.3s both; }
+.hero-portrait { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,23,18,0.12) 0%, rgba(30,23,18,0.5) 100%), url("/images/about-hero.jpg") center/cover; }
 .hero-portrait-mask { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(30,23,18,0.3) 100%); }
 .hero-portrait-label { position: absolute; bottom: 24px; left: 24px; right: 24px; color: var(--parchment); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
 .hero-portrait-label .t-small { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.85; }
@@ -177,7 +167,7 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .hero-right { aspect-ratio: 4 / 5; order: -1; max-width: 440px; }
-  .hero-sub { margin-bottom: 40px; }
+  .hero-sub { margin-bottom: 32px; }
 }
 
 /* Buttons */
@@ -191,23 +181,18 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .btn-light { background: var(--parchment); color: var(--ink); }
 .btn-light:hover { background: var(--sand); }
 .btn-arrow { width: 14px; height: 10px; display: inline-block; }
-
-/* Intention */
-.intention { padding: 40px var(--pad); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--parchment); position: relative; }
-.intention-inner { max-width: 1600px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr auto; gap: clamp(24px, 5vw, 80px); align-items: center; }
-.intention-label { font-family: var(--serif); font-style: italic; font-size: 18px; font-weight: 300; color: var(--amber); }
-.intention-count { font-family: var(--serif); font-size: clamp(40px, 7vw, 84px); font-weight: 200; font-variation-settings: "opsz" 144; line-height: 1; letter-spacing: -0.04em; color: var(--ink); text-align: center; white-space: nowrap; }
-.intention-count em { font-style: italic; color: var(--clay); font-weight: 300; }
-.intention-tick { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
-.intention-tick .t-small { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-soft); }
-.intention-tick .t-small strong { color: var(--clay); font-weight: 500; font-variant-numeric: tabular-nums; }
-@media (max-width: 800px) {
-  .intention-inner { grid-template-columns: 1fr; text-align: center; gap: 12px; }
-  .intention-tick { align-items: center; }
-  .intention-count { font-size: clamp(40px, 12vw, 64px); white-space: normal; line-height: 1.05; }
-  .intention-count em { display: block; margin-bottom: 4px; }
-  .intention-label { font-size: 15px; }
+@media (max-width: 540px) {
+  .hero-ctas { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-ctas .btn { justify-content: center; width: 100%; }
+  .btn { padding: 16px 24px; font-size: 11.5px; }
 }
+
+/* Manifesto strip */
+.statement { padding: 48px var(--pad); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--parchment); }
+.statement-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.statement-text { font-family: var(--serif); font-weight: 270; font-size: clamp(22px, 2.8vw, 36px); line-height: 1.35; color: var(--ink); font-variation-settings: "opsz" 144, "SOFT" 80; }
+.statement-text em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.statement-attribution { margin-top: 20px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); }
 
 /* Intro */
 .intro { padding: var(--pad-lg) var(--pad); position: relative; }
@@ -234,85 +219,60 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
   .intro-content { padding-top: 0; }
 }
 
-/* Pathways */
-.pathways { background: var(--ink); color: var(--parchment); padding: var(--pad-lg) var(--pad); position: relative; overflow: hidden; }
-.pathways::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 10%, rgba(180, 132, 58, 0.12), transparent 50%), radial-gradient(ellipse at 80% 90%, rgba(180, 105, 63, 0.10), transparent 50%); pointer-events: none; }
-.pathways-header { max-width: 1400px; margin: 0 auto 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; position: relative; }
-.pathways-header .t-eyebrow { color: var(--sand); }
-.pathways-header .t-h2 { font-weight: 250; }
-.pathways-header .t-h2 em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
-.pathways-intro { max-width: 440px; color: rgba(242, 235, 221, 0.75); font-family: var(--serif); font-weight: 300; font-size: 19px; line-height: 1.5; }
-.pathways-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(242, 235, 221, 0.12); border: 1px solid rgba(242, 235, 221, 0.12); position: relative; }
-.pathway { background: var(--ink); padding: 48px 40px 56px; display: flex; flex-direction: column; gap: 24px; min-height: 560px; transition: background 0.6s var(--ease); position: relative; overflow: hidden; }
-.pathway:hover { background: var(--ink-soft); }
-.pathway.featured { background: linear-gradient(180deg, #2b221a 0%, var(--ink) 100%); }
-.pathway-numeral { font-family: var(--serif); font-style: italic; font-size: 14px; font-weight: 400; color: var(--clay); letter-spacing: 0.18em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
-.pathway-numeral::after { content: ""; flex: 1; height: 1px; background: rgba(242, 235, 221, 0.18); }
-.pathway-icon { width: 52px; height: 52px; display: grid; place-items: center; color: var(--clay); }
-.pathway-title { font-family: var(--serif); font-weight: 300; font-size: 34px; line-height: 1.08; letter-spacing: -0.02em; color: var(--parchment); }
-.pathway-title em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
-.pathway-desc { color: rgba(242, 235, 221, 0.72); font-size: 15px; line-height: 1.6; }
-.pathway-meta { margin-top: auto; padding-top: 32px; border-top: 1px solid rgba(242, 235, 221, 0.14); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
-.pathway-meta-left .t-small { display: block; color: rgba(242, 235, 221, 0.5); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 6px; }
-.pathway-meta-left strong { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--parchment); font-style: italic; }
-.pathway-cta { color: var(--clay); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.4s var(--ease); }
-.pathway-cta:hover { gap: 14px; }
-.pathway-cta svg { width: 18px; }
-.pathway-tag { position: absolute; top: 20px; right: 20px; font-family: var(--serif); font-style: italic; font-size: 11px; letter-spacing: 0.08em; color: var(--clay); padding: 4px 10px; border: 1px solid var(--clay); border-radius: 999px; background: var(--ink); z-index: 2; }
+/* Three doors (ways to meet) */
+.doors { background: var(--ink); color: var(--parchment); padding: var(--pad-lg) var(--pad); position: relative; overflow: hidden; }
+.doors::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 10%, rgba(180, 132, 58, 0.12), transparent 50%), radial-gradient(ellipse at 80% 90%, rgba(180, 105, 63, 0.10), transparent 50%); pointer-events: none; }
+.doors-header { max-width: 1400px; margin: 0 auto 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; position: relative; }
+.doors-header .t-eyebrow { color: var(--sand); }
+.doors-header .t-h2 { font-weight: 250; }
+.doors-header .t-h2 em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.doors-intro { max-width: 440px; color: rgba(242, 235, 221, 0.75); font-family: var(--serif); font-weight: 300; font-size: 19px; line-height: 1.5; }
+.doors-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(242, 235, 221, 0.12); border: 1px solid rgba(242, 235, 221, 0.12); position: relative; }
+.door { background: var(--ink); padding: 48px 40px 56px; display: flex; flex-direction: column; gap: 24px; min-height: 540px; transition: background 0.6s var(--ease); position: relative; overflow: hidden; }
+.door:hover { background: var(--ink-soft); }
+.door.featured { background: linear-gradient(180deg, #2b221a 0%, var(--ink) 100%); }
+.door-numeral { font-family: var(--serif); font-style: italic; font-size: 14px; font-weight: 400; color: var(--clay); letter-spacing: 0.18em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
+.door-numeral::after { content: ""; flex: 1; height: 1px; background: rgba(242, 235, 221, 0.18); }
+.door-icon { width: 52px; height: 52px; display: grid; place-items: center; color: var(--clay); }
+.door-title { font-family: var(--serif); font-weight: 300; font-size: 34px; line-height: 1.08; letter-spacing: -0.02em; color: var(--parchment); }
+.door-title em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.door-desc { color: rgba(242, 235, 221, 0.72); font-size: 15px; line-height: 1.6; }
+.door-meta { margin-top: auto; padding-top: 32px; border-top: 1px solid rgba(242, 235, 221, 0.14); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.door-meta-left .t-small { display: block; color: rgba(242, 235, 221, 0.5); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 6px; }
+.door-meta-left strong { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--parchment); font-style: italic; }
+.door-cta { color: var(--clay); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.4s var(--ease); }
+.door-cta:hover { gap: 14px; }
+.door-cta svg { width: 18px; }
+.door-tag { position: absolute; top: 20px; right: 20px; font-family: var(--serif); font-style: italic; font-size: 11px; letter-spacing: 0.08em; color: var(--clay); padding: 4px 10px; border: 1px solid var(--clay); border-radius: 999px; background: var(--ink); z-index: 2; }
 @media (max-width: 900px) {
-  .pathways-header { grid-template-columns: 1fr; gap: 24px; }
-  .pathways-grid { grid-template-columns: 1fr; }
-  .pathway { min-height: auto; padding: 44px 28px 40px; }
-  .pathway.featured { padding-top: 60px; }
-  .pathway-tag { top: 18px; right: 18px; font-size: 10px; }
-  .pathway-title { font-size: 30px; }
-  .pathway-meta { flex-wrap: wrap; gap: 20px; }
+  .doors-header { grid-template-columns: 1fr; gap: 24px; }
+  .doors-grid { grid-template-columns: 1fr; }
+  .door { min-height: auto; padding: 44px 28px 40px; }
+  .door.featured { padding-top: 60px; }
+  .door-tag { top: 18px; right: 18px; font-size: 10px; }
+  .door-title { font-size: 30px; }
+  .door-meta { flex-wrap: wrap; gap: 20px; }
 }
 
-/* Movement (here: what the threshold year holds) */
-.movement { padding: var(--pad-lg) var(--pad); background: var(--parchment-2); position: relative; overflow: hidden; }
-.movement-inner { max-width: 1400px; margin: 0 auto; position: relative; }
-.movement-top { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: start; margin-bottom: 80px; }
-.movement-manifesto { font-family: var(--serif); font-weight: 250; font-size: clamp(28px, 4.2vw, 54px); line-height: 1.15; letter-spacing: -0.015em; color: var(--ink); font-variation-settings: "opsz" 144, "SOFT" 80; }
-.movement-manifesto em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
-.movement-manifesto .line-a { display: block; }
-.movement-manifesto .line-b { display: block; padding-left: clamp(20px, 8vw, 120px); }
-.movement-manifesto .line-c { display: block; }
-.movement-manifesto .line-d { display: block; padding-left: clamp(20px, 14vw, 200px); }
-.movement-right p { font-family: var(--serif); font-weight: 300; font-size: 20px; line-height: 1.55; color: var(--ink-soft); }
-.movement-right p + p { margin-top: 22px; }
-.movement-included { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 64px); align-items: start; padding-top: 60px; border-top: 1px solid var(--line); }
-.movement-included-label { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 28px; color: var(--clay); font-variation-settings: "WONK" 1; position: sticky; top: 100px; }
-.movement-included-label em { display: block; font-style: normal; font-family: var(--sans); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-top: 8px; font-weight: 500; }
-.included-list { display: flex; flex-direction: column; }
-.included-item { padding: 28px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 40px 1fr auto; gap: 20px; align-items: baseline; }
-.included-item:last-child { border-bottom: 1px solid var(--line); }
-.included-num { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 20px; color: var(--amber); font-variant-numeric: tabular-nums; }
-.included-body { display: flex; flex-direction: column; gap: 6px; }
-.included-title { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; color: var(--ink); }
-.included-desc { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); }
-.included-price { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--clay); letter-spacing: 0.05em; }
-.movement-cta { margin-top: 72px; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px; }
-.movement-cta-label { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--ink-soft); }
-
+/* Writing — selected letters */
+.writing { padding: var(--pad-lg) var(--pad); background: var(--parchment-2); }
+.writing-inner { max-width: 1400px; margin: 0 auto; }
+.writing-top { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; margin-bottom: 64px; }
+.writing-heading em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.writing-intro { font-family: var(--serif); font-weight: 300; font-size: 20px; line-height: 1.5; color: var(--ink-soft); max-width: 460px; }
+.writing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line-strong); border: 1px solid var(--line-strong); }
+.essay { background: var(--parchment-2); padding: 40px 36px; min-height: 320px; display: flex; flex-direction: column; gap: 14px; position: relative; transition: background 0.4s var(--ease); }
+.essay:hover { background: var(--parchment); }
+.essay-meta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); font-weight: 500; }
+.essay-title { font-family: var(--serif); font-weight: 320; font-size: 28px; line-height: 1.12; letter-spacing: -0.015em; color: var(--ink); margin-top: 8px; }
+.essay-title em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.essay-pull { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 16px; line-height: 1.55; color: var(--ink-soft); flex: 1; }
+.essay-foot { margin-top: auto; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); }
+.essay-foot a { color: var(--clay); font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+.writing-archive { margin-top: 48px; display: flex; justify-content: center; }
 @media (max-width: 900px) {
-  .movement-top { grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
-  .movement-included { grid-template-columns: 1fr; gap: 24px; padding-top: 40px; }
-  .movement-included-label { position: static; font-size: 22px; }
-  .included-item { grid-template-columns: 32px 1fr; gap: 10px 12px; padding: 22px 0; }
-  .included-title { font-size: 19px; }
-  .included-desc { font-size: 14px; }
-  .included-price { grid-column: 2; margin-top: 4px; }
-  .movement-manifesto .line-a, .movement-manifesto .line-b, .movement-manifesto .line-c, .movement-manifesto .line-d { padding-left: 0; }
-  .movement-manifesto .line-b { padding-left: 24px; }
-  .movement-manifesto .line-d { padding-left: 48px; }
-  .movement-cta { margin-top: 48px; }
-  .movement-right p { font-size: 17px; }
-}
-@media (max-width: 540px) {
-  .hero-ctas { flex-direction: column; align-items: stretch; gap: 12px; }
-  .hero-ctas .btn { justify-content: center; width: 100%; }
-  .btn { padding: 16px 24px; font-size: 11.5px; }
+  .writing-top { grid-template-columns: 1fr; gap: 24px; }
+  .writing-grid { grid-template-columns: 1fr; }
 }
 
 /* Testimonials */
@@ -359,86 +319,11 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .about-text { padding-top: 20px; max-width: 620px; }
 .about-text p { margin-bottom: 20px; font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
 .about-text p.lead { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 22px; line-height: 1.5; color: var(--ink); margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-.credentials { margin-top: 72px; padding-top: 60px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
-.cred-group-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); margin-bottom: 20px; font-weight: 500; }
-.cred-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px; }
-.cred-list li { font-family: var(--serif); font-weight: 350; font-size: 17px; line-height: 1.4; padding-left: 16px; position: relative; color: var(--ink); }
-.cred-list li::before { content: ""; position: absolute; left: 0; top: 12px; width: 8px; height: 1px; background: var(--clay); }
-.cred-list li em { display: block; font-style: normal; font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 2px; font-weight: 400; }
 @media (max-width: 900px) {
   .about-body { grid-template-columns: 1fr; gap: 40px; }
-  .credentials { grid-template-columns: 1fr; gap: 32px; }
-  .cred-list { grid-template-columns: 1fr; }
   .about-visual-pull { left: 16px; right: 16px; bottom: 16px; padding: 14px 20px; font-size: 14px; }
   .about-header .t-h2 { font-size: clamp(30px, 7vw, 44px); }
   .about-text p.lead { font-size: 19px; }
-}
-
-/* Application */
-.application { padding: var(--pad-lg) var(--pad); background: var(--parchment); position: relative; }
-.application-inner { max-width: 920px; margin: 0 auto; }
-.application-header { margin-bottom: 64px; max-width: 720px; }
-.application-header .t-h2 { margin-top: 18px; font-weight: 250; }
-.application-header .t-h2 em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
-.application-intro { margin-top: 24px; font-family: var(--serif); font-weight: 300; font-size: 19px; line-height: 1.55; color: var(--ink-soft); max-width: 620px; }
-
-.application-gate { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding-top: 8px; }
-.gate-note { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 15px; color: var(--ink-soft); }
-.application-form { display: flex; flex-direction: column; gap: 36px; animation: formReveal 0.7s var(--ease) both; }
-.application-form[hidden] { display: none; }
-@keyframes formReveal {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 720px) {
-  .application-gate { align-items: stretch; }
-  .application-gate .btn { justify-content: center; width: 100%; }
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
-.application-form label { display: flex; flex-direction: column; gap: 8px; }
-.form-block { width: 100%; }
-.form-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); font-weight: 500; }
-.form-hint { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--ink-soft); margin-top: -4px; }
-.application-form input,
-.application-form select,
-.application-form textarea {
-  font-family: var(--serif);
-  font-size: 19px;
-  font-weight: 350;
-  line-height: 1.5;
-  color: var(--ink);
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--line-strong);
-  padding: 8px 0 12px;
-  outline: none;
-  transition: border-color 0.3s var(--ease);
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0;
-}
-.application-form select { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'><path d='M1 1L7 7L13 1' stroke='%231e1712' stroke-width='1.2' stroke-linecap='round'/></svg>"); background-repeat: no-repeat; background-position: right 4px center; padding-right: 28px; }
-.application-form textarea { resize: vertical; min-height: 120px; border: 1px solid var(--line-strong); padding: 14px 16px; border-radius: 4px; background: var(--parchment-2); }
-.application-form input:focus,
-.application-form select:focus,
-.application-form textarea:focus { border-color: var(--clay); }
-.application-form ::placeholder { color: rgba(30,23,18,0.35); }
-
-.form-foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 16px; padding-top: 28px; border-top: 1px solid var(--line); }
-.form-terms { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--ink-soft); max-width: 420px; }
-.form-state { font-family: var(--serif); font-style: italic; font-size: 16px; min-height: 24px; color: var(--clay); }
-.form-state.success { color: var(--mist); }
-.form-state.error { color: var(--rust); }
-#applySubmit[disabled] { opacity: 0.55; cursor: progress; }
-
-@media (max-width: 720px) {
-  .form-row { grid-template-columns: 1fr; gap: 28px; }
-  .application-form { gap: 28px; }
-  .form-foot { flex-direction: column; align-items: stretch; }
-  .form-foot .btn { justify-content: center; width: 100%; }
-  .application-header .t-h2 { font-size: clamp(30px, 7vw, 44px); }
-  .application-intro { font-size: 17px; }
 }
 
 /* Letter */
@@ -492,12 +377,8 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   .footer-bottom .right, .footer-bottom .mid { text-align: center; justify-content: center; }
   .footer-bottom .mid { flex-wrap: wrap; }
 }
-@media (max-width: 480px) {
-  .footer-top { grid-template-columns: 1fr; }
-  footer { padding: 56px var(--pad) 28px; }
-}
+@media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } footer { padding: 56px var(--pad) 28px; } }
 
-/* Animations */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes reveal { from { transform: translateY(100%); } to { transform: translateY(0); } }
@@ -514,6 +395,11 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 <div class="axis" aria-hidden="true"></div>
 <div class="axis-pulse" aria-hidden="true"></div>
 
+<!-- Preview banner — so visitors know this is a draft -->
+<div class="preview-banner">
+  Preview · a new home in progress. <em>Live site lives at</em> <a href="/" style="text-decoration:underline; color:var(--sand);">nina-moore.com</a>
+</div>
+
 <!-- Announce -->
 <div class="announce">
   <div class="announce-inner">
@@ -526,8 +412,8 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
         </svg>
         <span id="moonText">Waxing Gibbous — 86%</span>
       </span>
-      <span><span class="announce-dot"></span> The Threshold Year · 2026 cohort · eight women</span>
-      <span><span class="announce-dot" style="background:var(--amber)"></span> Applications open · written intake · single conversation</span>
+      <span><span class="announce-dot"></span> The Threshold Year · 2026 cohort · applications open</span>
+      <span><span class="announce-dot" style="background:var(--amber)"></span> Letters from Mazunte · monthly · free</span>
     </div>
   </div>
 </div>
@@ -536,18 +422,18 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 <nav class="main">
   <div class="nav-inner">
     <div class="nav-left">
-      <a href="#year">The Year</a>
-      <a href="#shape">How it moves</a>
-      <a href="#about">About Nina</a>
+      <a href="#practice">The Practice</a>
+      <a href="#doors">Work with me</a>
+      <a href="#writing">Writing</a>
     </div>
-    <a href="/" class="wordmark" aria-label="Nina Moore · Home">
+    <a href="#" class="wordmark" aria-label="Nina Moore · Home">
       <span class="wordmark-monogram">Nm</span>
       <span class="wordmark-text">Nina Moore</span>
     </a>
     <div class="nav-right">
-      <a href="#voices">Voices</a>
-      <a href="#letter">Letters</a>
-      <a href="#apply" style="color: var(--clay);">Apply →</a>
+      <a href="#about">About</a>
+      <a href="/threshold/">The Year</a>
+      <a href="#letter" style="color: var(--clay);">Letters →</a>
     </div>
     <button class="nav-mobile-toggle" aria-label="Open menu" id="mobileToggle">
       <span></span><span></span><span></span>
@@ -555,15 +441,14 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   </div>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" id="mobileClose">Close</button>
-  <a href="#year">The <em>Year</em></a>
-  <a href="#shape">How it <em>moves</em></a>
-  <a href="#voices">Voices</a>
+  <a href="#practice">The <em>Practice</em></a>
+  <a href="#doors">Work with <em>me</em></a>
+  <a href="#writing">Writing</a>
   <a href="#about">About <em>Nina</em></a>
-  <a href="#letter">Letters</a>
-  <a href="#apply" style="color: var(--clay); margin-top: 24px;">Apply →</a>
+  <a href="/threshold/">The Threshold Year</a>
+  <a href="#letter" style="color: var(--clay); margin-top: 24px;">Letters →</a>
 </div>
 
 <!-- HERO -->
@@ -572,35 +457,34 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     <div class="hero-left">
       <div class="hero-meta">
         <span class="hero-meta-line"></span>
-        <span class="t-eyebrow">From Mazunte, Oaxaca · For eight women a year</span>
+        <span class="t-eyebrow">Mazunte · Oaxaca · México</span>
       </div>
 
       <h1 class="t-h1 hero-headline">
-        <span><span>For the woman</span></span>
-        <span><span>standing at the</span></span>
-        <span><span><em>threshold —</em></span></span>
-        <span><span>and ready to cross.</span></span>
+        <span><span>Initiatory work for</span></span>
+        <span><span>women at <em>thresholds</em></span></span>
+        <span><span>of change.</span></span>
       </h1>
 
       <div class="hero-sub t-lead">
-        The Threshold Year is a six-month initiatory passage for eight women in deep transition.
-        Slow, literary, embodied. By written application — and one quiet conversation.
+        I am Nina Moore — a writer and guide working with women in deep transition.
+        My practice is slow, literary, embodied. I keep a small door.
       </div>
 
       <div class="hero-ctas">
-        <a href="#apply" class="btn btn-primary">
-          <span>Begin an application</span>
-          <svg class="btn-arrow" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="#doors" class="btn btn-primary">
+          <span>Ways to meet</span>
+          <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
             <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
         </a>
-        <a href="#year" class="btn btn-secondary">Read the shape of the year</a>
+        <a href="#writing" class="btn btn-secondary">Read the letters</a>
       </div>
     </div>
 
     <div class="hero-right">
-      <span class="hero-right-index">fig. 01 — threshold</span>
-      <span class="hero-right-meta">Mazunte, Oaxaca — 2026</span>
+      <span class="hero-right-index">fig. 01 — the practice</span>
+      <span class="hero-right-meta">Mazunte — Oaxacan coast</span>
       <div class="hero-portrait"></div>
       <div class="hero-portrait-mask"></div>
       <div class="hero-portrait-label">
@@ -611,20 +495,19 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   </div>
 </section>
 
-<!-- Intention strip -->
-<section class="intention">
-  <div class="intention-inner">
-    <div class="intention-label">The Container —</div>
-    <div class="intention-count"><em>Eight</em> Women · One Year</div>
-    <div class="intention-tick">
-      <span class="t-small"><strong>2026 cohort</strong> · applications now open</span>
-      <span class="t-small">Begins on the equinox</span>
-    </div>
+<!-- Statement -->
+<section class="statement">
+  <div class="statement-inner">
+    <p class="statement-text">
+      A threshold is not a problem to be solved.<br/>
+      It is a passage to be honoured — slowly, in the body, with someone who has <em>crossed before.</em>
+    </p>
+    <div class="statement-attribution">— from the practice</div>
   </div>
 </section>
 
 <!-- Intro -->
-<section class="intro reveal-section">
+<section class="intro reveal-section" id="practice">
   <div class="intro-inner">
     <div class="intro-visual">
       <img src="/images/about-bio.JPG" alt="Nina Moore" onerror="this.style.display='none'"/>
@@ -644,8 +527,12 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
           identities, or ways of living no longer hold, and something new is asking to emerge.
         </p>
         <p>
-          The threshold is not a problem to be solved. It is a passage to be honoured —
-          slowly, in the body, with someone who has crossed before and will not rush you through.
+          The work rests on three pillars: the body (breath, sensation, the nervous system),
+          honest reflection (clear, respectful mirrors), and integration that lives in daily life —
+          not as ideas, but as practice.
+        </p>
+        <p>
+          I work in English, Spanish, and French. Sessions are online. The year is hybrid.
         </p>
       </div>
 
@@ -653,95 +540,94 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
         <div class="intro-signature-mark">Nm</div>
         <div class="intro-signature-meta">
           <span class="t-small"><strong>Nina Moore</strong></span>
-          <span class="t-small">Mazunte, Oaxaca · English, Spanish, French</span>
+          <span class="t-small">Writer-priestess of the threshold · Mazunte</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Pathways → ways in -->
-<section class="pathways reveal-section" id="year">
-  <div class="pathways-header">
+<!-- Three doors -->
+<section class="doors reveal-section" id="doors">
+  <div class="doors-header">
     <div>
-      <div class="t-eyebrow" style="margin-bottom:16px;">§ Three ways in</div>
+      <div class="t-eyebrow" style="margin-bottom:16px;">§ Three doors</div>
       <h2 class="t-h2">Where would you like to <em>begin?</em></h2>
     </div>
-    <p class="pathways-intro">
-      Three doors into the same work. Start where your body is today — go deeper as you are ready.
+    <p class="doors-intro">
+      Three ways to meet me. Start where your life is today — the work expands as you are ready.
     </p>
   </div>
 
-  <div class="pathways-grid">
+  <div class="doors-grid">
 
-    <div class="pathway">
-      <div class="pathway-numeral"><span>I · Conversation</span></div>
-      <svg class="pathway-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-        <circle cx="26" cy="26" r="18" stroke="currentColor" stroke-width="1"/>
-        <circle cx="26" cy="26" r="2" fill="currentColor"/>
-        <path d="M26 4 L26 14 M26 38 L26 48 M4 26 L14 26 M38 26 L48 26" stroke="currentColor" stroke-width="1"/>
+    <div class="door">
+      <div class="door-numeral"><span>I · Read</span></div>
+      <svg class="door-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+        <path d="M8 12 L26 8 L44 12 L44 42 L26 38 L8 42 Z" stroke="currentColor" stroke-width="1" fill="none"/>
+        <line x1="26" y1="8" x2="26" y2="38" stroke="currentColor" stroke-width="1"/>
       </svg>
-      <h3 class="pathway-title">Free Discovery <em>Call</em></h3>
-      <p class="pathway-desc">
-        A twenty-minute conversation. We meet, you speak what is alive, I listen.
-        You leave with clarity on whether — and how — to begin.
+      <h3 class="door-title">The <em>Letters</em></h3>
+      <p class="door-desc">
+        A monthly letter from Mazunte — short, occasionally long.
+        Writing from the practice and the year as it unfolds. A way to know me before we meet.
       </p>
-      <div class="pathway-meta">
-        <div class="pathway-meta-left">
-          <span class="t-small">Online · 20 minutes</span>
-          <strong>No fee</strong>
+      <div class="door-meta">
+        <div class="door-meta-left">
+          <span class="t-small">Monthly · By email</span>
+          <strong>Free, always</strong>
         </div>
-        <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener" class="pathway-cta">
-          Schedule
+        <a href="#letter" class="door-cta">
+          Subscribe
           <svg viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </a>
       </div>
     </div>
 
-    <div class="pathway featured">
-      <span class="pathway-tag">— this page —</span>
-      <div class="pathway-numeral"><span>II · The Year</span></div>
-      <svg class="pathway-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+    <div class="door featured">
+      <span class="door-tag">— deepest —</span>
+      <div class="door-numeral"><span>II · Cross</span></div>
+      <svg class="door-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
         <path d="M26 6 C16 12, 12 22, 26 46 C40 22, 36 12, 26 6 Z" stroke="currentColor" stroke-width="1" fill="none"/>
         <circle cx="26" cy="26" r="1.8" fill="currentColor"/>
         <path d="M14 28 Q26 20, 38 28" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
       </svg>
-      <h3 class="pathway-title">The Threshold <em>Year</em></h3>
-      <p class="pathway-desc">
-        Six months. Eight women. A held container for women in the middle of a real passage —
-        biweekly one-to-one work, a small circle, written letters, and integration that lives in the body.
+      <h3 class="door-title">The Threshold <em>Year</em></h3>
+      <p class="door-desc">
+        Six months, eight women. A held container for the real passage —
+        biweekly one-to-one work, a small circle, written letters, a closing rite. By application.
       </p>
-      <div class="pathway-meta">
-        <div class="pathway-meta-left">
+      <div class="door-meta">
+        <div class="door-meta-left">
           <span class="t-small">By application · 8 women</span>
           <strong>€3,500</strong>
         </div>
-        <a href="#apply" class="pathway-cta">
-          Apply now
+        <a href="/threshold/" class="door-cta">
+          Read the year
           <svg viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </a>
       </div>
     </div>
 
-    <div class="pathway">
-      <div class="pathway-numeral"><span>III · Single sessions</span></div>
-      <svg class="pathway-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+    <div class="door">
+      <div class="door-numeral"><span>III · Sit</span></div>
+      <svg class="door-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
         <circle cx="18" cy="26" r="10" stroke="currentColor" stroke-width="1"/>
         <circle cx="34" cy="26" r="10" stroke="currentColor" stroke-width="1"/>
         <line x1="18" y1="26" x2="34" y2="26" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
       </svg>
-      <h3 class="pathway-title">Sessions &amp; <em>Cycles</em></h3>
-      <p class="pathway-desc">
-        For grounding through a specific moment, or as a slower beginning before a longer container.
-        Single ninety-minute sessions, or a four-session cycle that allows continuity without commitment.
+      <h3 class="door-title">Sessions &amp; <em>Cycles</em></h3>
+      <p class="door-desc">
+        Single ninety-minute sessions for grounding through a specific moment,
+        or a four-session cycle for continuity without commitment. We begin with a free conversation.
       </p>
-      <div class="pathway-meta">
-        <div class="pathway-meta-left">
-          <span class="t-small">Online · 90 minutes</span>
+      <div class="door-meta">
+        <div class="door-meta-left">
+          <span class="t-small">Online · 90 min</span>
           <strong>From €140</strong>
         </div>
-        <a href="/#programs" class="pathway-cta">
-          Book
+        <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener" class="door-cta">
+          Book a call
           <svg viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </a>
       </div>
@@ -750,187 +636,68 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   </div>
 </section>
 
-<!-- Shape of the year -->
-<section class="movement reveal-section" id="shape">
-  <div class="movement-inner">
-    <div class="movement-top">
-      <h2 class="movement-manifesto">
-        <span class="line-a">Because some</span>
-        <span class="line-b"><em>thresholds</em></span>
-        <span class="line-c">cannot be</span>
-        <span class="line-d"><em>rushed.</em></span>
-      </h2>
-
-      <div class="movement-right">
-        <p>
-          The Threshold Year is a six-month container for eight women in real transition —
-          ending of an identity, of a marriage, of a way of working, of a way of being a daughter or a mother.
-          It is not a course. There is no curriculum. There is a held shape, a steady hand, and time.
-        </p>
-        <p>
-          We begin on the equinox. We close two seasons later. What lives between is yours.
-        </p>
-      </div>
-    </div>
-
-    <div class="movement-included">
-      <div>
-        <div class="movement-included-label">
-          What the year holds
-          <em>— Six months · €3,500 · by written application</em>
-        </div>
-      </div>
-
-      <div class="included-list">
-        <div class="included-item">
-          <span class="included-num">01</span>
-          <div class="included-body">
-            <h4 class="included-title">Twelve private sessions</h4>
-            <p class="included-desc">Biweekly ninety-minute one-to-one work, paced by your nervous system. The spine of the year.</p>
-          </div>
-          <span class="included-price">Biweekly · 90 min</span>
-        </div>
-
-        <div class="included-item">
-          <span class="included-num">02</span>
-          <div class="included-body">
-            <h4 class="included-title">The Circle of Eight</h4>
-            <p class="included-desc">A monthly small group of the eight women crossing alongside you. Witnessed, not performed.</p>
-          </div>
-          <span class="included-price">Monthly · 2 hours</span>
-        </div>
-
-        <div class="included-item">
-          <span class="included-num">03</span>
-          <div class="included-body">
-            <h4 class="included-title">Written letters between us</h4>
-            <p class="included-desc">A practice of writing toward me, and being read by me — between sessions. The page is a threshold too.</p>
-          </div>
-          <span class="included-price">Continuous</span>
-        </div>
-
-        <div class="included-item">
-          <span class="included-num">04</span>
-          <div class="included-body">
-            <h4 class="included-title">Embodied practices, given by hand</h4>
-            <p class="included-desc">Breath, voice, body work, ritual — shaped to where you are. No spreadsheets, no homework. Practice that fits a real life.</p>
-          </div>
-          <span class="included-price">As they arise</span>
-        </div>
-
-        <div class="included-item">
-          <span class="included-num">05</span>
-          <div class="included-body">
-            <h4 class="included-title">A closing rite</h4>
-            <p class="included-desc">In the sixth month, a ceremony of integration — alone, or in Mazunte with the circle if you choose to travel.</p>
-          </div>
-          <span class="included-price">Month six</span>
-        </div>
-
-        <div class="included-item">
-          <span class="included-num">06</span>
-          <div class="included-body">
-            <h4 class="included-title">Lifetime access to the threshold archive</h4>
-            <p class="included-desc">The letters, recordings, and writings of past cohorts — held in confidence, available always.</p>
-          </div>
-          <span class="included-price">Permanent</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="movement-cta">
-      <span class="movement-cta-label">Applications are read by Nina, by hand.</span>
-      <a href="#apply" class="btn btn-primary">
-        Begin your application
-        <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
-          <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Application -->
-<section class="application reveal-section" id="apply">
-  <div class="application-inner">
-    <div class="application-header">
-      <span class="t-eyebrow">§ Apply · The Threshold Year</span>
-      <h2 class="t-h2">Write to me. <em>By hand.</em></h2>
-      <p class="application-intro">
-        There is no form to optimise. There is a page, and your honest words on it.
-        I read every application personally, and reply within a week —
-        either with an invitation to a short conversation, or with care if the timing isn't ours.
+<!-- Writing -->
+<section class="writing reveal-section" id="writing">
+  <div class="writing-inner">
+    <div class="writing-top">
+      <h2 class="t-h2 writing-heading">From the <em>page.</em></h2>
+      <p class="writing-intro">
+        Selected letters and poems. Long-form thinking on threshold, lineage, integration, and the slow shape of becoming.
       </p>
     </div>
 
-    <div class="application-gate" id="applyGate">
-      <button type="button" class="btn btn-primary" id="applyOpen">
-        <span>Begin your application</span>
-        <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
-          <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="gate-note">Eight fields. Ten minutes. Sent by hand to Nina.</p>
+    <div class="writing-grid">
+
+      <article class="essay">
+        <div class="essay-meta">Letter · 2026</div>
+        <h3 class="essay-title">On the year that <em>arrives sideways</em></h3>
+        <p class="essay-pull">
+          The threshold rarely announces itself. It begins as a quiet tiredness with a sentence you have been speaking for years.
+          By the time you notice, you are already halfway through.
+        </p>
+        <div class="essay-foot">
+          <span>5 min read</span>
+          <a href="#letter">Read
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="essay">
+        <div class="essay-meta">Poem · From Portal Poem</div>
+        <h3 class="essay-title">A portal to <em>yourself</em></h3>
+        <p class="essay-pull">
+          Writing is one of the oldest threshold practices — a way of being read by yourself,
+          slowly enough to recognise the woman you are becoming.
+        </p>
+        <div class="essay-foot">
+          <span>Portal Poem</span>
+          <a href="https://portalpoem.com" target="_blank" rel="noopener">Visit
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="essay">
+        <div class="essay-meta">Letter · 2026</div>
+        <h3 class="essay-title">On the <em>small door</em></h3>
+        <p class="essay-pull">
+          Why I keep my practice small by design. Eight women a year is not scarcity —
+          it is the largest container that lets me be the kind of guide this work asks for.
+        </p>
+        <div class="essay-foot">
+          <span>7 min read</span>
+          <a href="#letter">Read
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </article>
+
     </div>
 
-    <form class="application-form" id="applyForm" novalidate hidden>
-      <div class="form-row">
-        <label for="ap-name">
-          <span class="form-label">Your name</span>
-          <input type="text" id="ap-name" name="name" required autocomplete="name" />
-        </label>
-        <label for="ap-email">
-          <span class="form-label">Email</span>
-          <input type="email" id="ap-email" name="email" required autocomplete="email" />
-        </label>
-      </div>
-
-      <div class="form-row">
-        <label for="ap-lang">
-          <span class="form-label">Working language</span>
-          <select id="ap-lang" name="language">
-            <option value="English">English</option>
-            <option value="Español">Español</option>
-            <option value="Français">Français</option>
-            <option value="Other / Open">Other / Open</option>
-          </select>
-        </label>
-        <label for="ap-location">
-          <span class="form-label">Where you live (city, country)</span>
-          <input type="text" id="ap-location" name="location" autocomplete="address-level2" />
-        </label>
-      </div>
-
-      <label for="ap-threshold" class="form-block">
-        <span class="form-label">Which threshold are you standing at?</span>
-        <span class="form-hint">A few honest sentences. Not a story — an account.</span>
-        <textarea id="ap-threshold" name="threshold" rows="5" required></textarea>
-      </label>
-
-      <label for="ap-prior" class="form-block">
-        <span class="form-label">What have you worked with before?</span>
-        <span class="form-hint">Therapies, teachers, ceremonies, containers. Or nothing — that is also an honest answer.</span>
-        <textarea id="ap-prior" name="prior" rows="4"></textarea>
-      </label>
-
-      <label for="ap-why" class="form-block">
-        <span class="form-label">Why this year, and why this container?</span>
-        <span class="form-hint">What you are hoping to meet, and what you would like held.</span>
-        <textarea id="ap-why" name="why" rows="4" required></textarea>
-      </label>
-
-      <div class="form-foot">
-        <p class="form-terms">By sending, you agree to be read with care. Your words are held in confidence.</p>
-        <button type="submit" class="btn btn-primary" id="applySubmit">
-          <span id="applySubmitText">Send application</span>
-          <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
-            <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="form-state" id="formState" aria-live="polite"></div>
-    </form>
+    <div class="writing-archive">
+      <a href="#letter" class="btn btn-secondary">Subscribe to receive new letters</a>
+    </div>
   </div>
 </section>
 
@@ -963,7 +730,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
           <div class="testimonial-avatar">A</div>
           <div class="testimonial-author-meta">
             <strong>A.</strong>
-            <span class="t-small">Threshold Year · 2025 cohort</span>
+            <span class="t-small">Threshold Year · 2025</span>
           </div>
         </div>
       </div>
@@ -971,7 +738,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       <div class="testimonial" data-i="1">
         <p class="testimonial-quote">
           What I valued most was the absence of urgency. Nina does not push you across — she lets you stand
-          on the threshold long enough that the next step becomes obvious. The integration was real because it was earned.
+          on the threshold long enough that the next step becomes obvious.
         </p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">M</div>
@@ -1031,33 +798,8 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
           so the women who arrive are met with full presence and the time their passage requires.
         </p>
         <p>
-          I work in English, Spanish, and French. Most letters are in English.
+          I work in English, Spanish, and French. Letters and the year are primarily in English.
         </p>
-      </div>
-    </div>
-
-    <div class="credentials">
-      <div>
-        <div class="cred-group-label">Formation &amp; practice</div>
-        <ul class="cred-list">
-          <li>Embodied presence <em>Breath · nervous system</em></li>
-          <li>Writing &amp; literary inquiry <em>Letters · journaling</em></li>
-          <li>Integration work <em>Ten+ years</em></li>
-          <li>Psychedelic integration <em>Ceremony · medicine</em></li>
-          <li>Relational practice <em>Intimacy · shadow</em></li>
-          <li>Ritual &amp; rite <em>Threshold ceremony</em></li>
-        </ul>
-      </div>
-      <div>
-        <div class="cred-group-label">Held over the years</div>
-        <ul class="cred-list">
-          <li>Women in transition <em>Life · identity · loss</em></li>
-          <li>Mothers &amp; daughters <em>Lineage work</em></li>
-          <li>Writers &amp; artists <em>Voice · creative flow</em></li>
-          <li>Founders &amp; partners <em>Of public men</em></li>
-          <li>Returnees from ceremony <em>Plant medicine integration</em></li>
-          <li>Women ending a chapter <em>By their own hand</em></li>
-        </ul>
       </div>
     </div>
   </div>
@@ -1071,11 +813,11 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     <h2 class="letter-heading">A letter from me, <em>most months.</em></h2>
     <p class="letter-sub">
       Short, slow, occasionally long. Writing from Mazunte, from the practice, from the year as it unfolds.
-      A quiet way to know me before — or instead of — beginning.
+      A quiet way to know me — before, or instead of, beginning.
     </p>
-    <form class="letter-form" onsubmit="return subscribeSubmit(event)">
+    <form class="letter-form" id="letterForm">
       <input type="email" placeholder="Your email, gently" required aria-label="Email" id="letterEmail"/>
-      <button type="submit">Subscribe →</button>
+      <button type="submit" id="letterSubmit">Subscribe →</button>
     </form>
     <p class="letter-terms">No spam. Unsubscribe in one click. Replies go directly to Nina.</p>
   </div>
@@ -1101,7 +843,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       <div class="footer-col">
         <h4>The Work</h4>
         <ul>
-          <li><a href="#year">The Threshold Year</a></li>
+          <li><a href="/threshold/">The Threshold Year</a></li>
           <li><a href="/#programs">Single sessions</a></li>
           <li><a href="/#programs">The 4-Session Cycle</a></li>
           <li><a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener">Discovery call</a></li>
@@ -1113,7 +855,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
         <ul>
           <li><a href="#letter">Subscribe — free</a></li>
           <li><a href="https://portalpoem.com" target="_blank" rel="noopener">Portal Poem</a></li>
-          <li><a href="#voices">Voices</a></li>
+          <li><a href="#writing">Selected writing</a></li>
           <li><a href="#about">About Nina</a></li>
         </ul>
       </div>
@@ -1162,9 +904,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   if (tItems.length) setInterval(() => showT(tI + 1), 9000);
 
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
   document.querySelectorAll('.reveal-section').forEach(el => io.observe(el));
 
@@ -1201,30 +941,13 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   }
   updateMoon();
 
-  /* Application gate — reveal form on click */
-  (function setupApplyGate() {
-    const gate = document.getElementById('applyGate');
-    const openBtn = document.getElementById('applyOpen');
-    const form = document.getElementById('applyForm');
-    if (!gate || !openBtn || !form) return;
-    function openForm() {
-      gate.style.display = 'none';
-      form.hidden = false;
-      const nameEl = document.getElementById('ap-name');
-      if (nameEl) setTimeout(() => nameEl.focus({ preventScroll: false }), 360);
-    }
-    openBtn.addEventListener('click', openForm);
-    if (location.hash === '#apply-now') openForm();
-  })();
-
-  /* Application form — sends via emailjs (shared with the rest of the site) */
-  (function setupApplyForm() {
-    const form = document.getElementById('applyForm');
+  /* Letter subscribe — same emailjs service as the rest of the site */
+  (function setupLetterForm() {
+    const form = document.getElementById('letterForm');
     if (!form) return;
-    const stateEl = document.getElementById('formState');
-    const submitBtn = document.getElementById('applySubmit');
-    const submitText = document.getElementById('applySubmitText');
-    const ORIG_TEXT = submitText.textContent;
+    const input = document.getElementById('letterEmail');
+    const btn = document.getElementById('letterSubmit');
+    const orig = btn.textContent;
 
     function loadEmailJS() {
       return new Promise((resolve, reject) => {
@@ -1232,10 +955,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
         const s = document.createElement('script');
         s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
         s.async = true;
-        s.onload = () => {
-          window.emailjs.init({ publicKey: 'v57Ta98pwBDWpoe8o' });
-          resolve(window.emailjs);
-        };
+        s.onload = () => { window.emailjs.init({ publicKey: 'v57Ta98pwBDWpoe8o' }); resolve(window.emailjs); };
         s.onerror = () => reject(new Error('emailjs failed to load'));
         document.head.appendChild(s);
       });
@@ -1243,85 +963,29 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      stateEl.className = 'form-state';
-      stateEl.textContent = '';
-
-      const data = new FormData(form);
-      const name = (data.get('name') || '').toString().trim();
-      const email = (data.get('email') || '').toString().trim();
-      const language = (data.get('language') || '').toString().trim();
-      const location = (data.get('location') || '').toString().trim();
-      const threshold = (data.get('threshold') || '').toString().trim();
-      const prior = (data.get('prior') || '').toString().trim();
-      const why = (data.get('why') || '').toString().trim();
-
-      if (!name || !email || !threshold || !why) {
-        stateEl.classList.add('error');
-        stateEl.textContent = 'Please share at least your name, email, the threshold, and why now.';
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitText.textContent = 'Sending…';
-
-      const message = [
-        'THRESHOLD YEAR — APPLICATION',
-        '',
-        'Name: ' + name,
-        'Email: ' + email,
-        'Working language: ' + (language || '—'),
-        'Location: ' + (location || '—'),
-        '',
-        '— Which threshold —',
-        threshold,
-        '',
-        '— Prior work —',
-        prior || '(none shared)',
-        '',
-        '— Why now, why this container —',
-        why,
-        '',
-        '— Sent from nina-moore.com/threshold/ —'
-      ].join('\n');
-
+      const email = input.value.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
       try {
         await loadEmailJS();
-        await window.emailjs.send(
-          'service_pwk84sr',
-          'template_tpdn8r5',
-          {
-            from_name: name,
-            from_email: email,
-            subject: 'Threshold Year application — ' + name,
-            message: message,
-          }
-        );
-        form.reset();
-        stateEl.classList.add('success');
-        stateEl.textContent = 'Received. I will read carefully and write to you within a week. — Nina';
-        submitText.textContent = 'Sent ✓';
-        setTimeout(() => { submitBtn.disabled = false; submitText.textContent = ORIG_TEXT; }, 6000);
+        await window.emailjs.send('service_pwk84sr', 'template_tpdn8r5', {
+          from_name: 'Letter subscriber',
+          from_email: email,
+          subject: 'New letter subscriber — nina-moore.com',
+          message: 'New subscriber to the letters: ' + email + '\n\nFrom nina-moore.com/preview/',
+        });
+        input.value = '';
+        btn.textContent = 'Thank you ✓';
+        btn.style.background = 'var(--clay)';
+        btn.style.color = 'var(--parchment)';
       } catch (err) {
-        stateEl.classList.add('error');
-        stateEl.textContent = "Something didn't land. Please email hello@nina-moore.com directly — your words will reach me.";
-        submitBtn.disabled = false;
-        submitText.textContent = ORIG_TEXT;
+        btn.textContent = 'Try again';
         console.error(err);
       }
+      setTimeout(() => { btn.disabled = false; btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; }, 4500);
     });
   })();
-
-  function subscribeSubmit(e) {
-    e.preventDefault();
-    const input = document.getElementById('letterEmail');
-    const btn = e.target.querySelector('button');
-    btn.textContent = 'Thank you ✓';
-    btn.style.background = 'var(--clay)';
-    btn.style.color = 'var(--parchment)';
-    input.value = '';
-    setTimeout(() => { btn.textContent = 'Subscribe →'; btn.style.background = ''; btn.style.color = ''; }, 3200);
-    return false;
-  }
 </script>
 
 </body>
