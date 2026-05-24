@@ -374,6 +374,62 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
   .about-text p.lead { font-size: 19px; }
 }
 
+/* Application */
+.application { padding: var(--pad-lg) var(--pad); background: var(--parchment); position: relative; }
+.application-inner { max-width: 920px; margin: 0 auto; }
+.application-header { margin-bottom: 64px; max-width: 720px; }
+.application-header .t-h2 { margin-top: 18px; font-weight: 250; }
+.application-header .t-h2 em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.application-intro { margin-top: 24px; font-family: var(--serif); font-weight: 300; font-size: 19px; line-height: 1.55; color: var(--ink-soft); max-width: 620px; }
+
+.application-form { display: flex; flex-direction: column; gap: 36px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.application-form label { display: flex; flex-direction: column; gap: 8px; }
+.form-block { width: 100%; }
+.form-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); font-weight: 500; }
+.form-hint { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--ink-soft); margin-top: -4px; }
+.application-form input,
+.application-form select,
+.application-form textarea {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 350;
+  line-height: 1.5;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding: 8px 0 12px;
+  outline: none;
+  transition: border-color 0.3s var(--ease);
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+.application-form select { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'><path d='M1 1L7 7L13 1' stroke='%231e1712' stroke-width='1.2' stroke-linecap='round'/></svg>"); background-repeat: no-repeat; background-position: right 4px center; padding-right: 28px; }
+.application-form textarea { resize: vertical; min-height: 120px; border: 1px solid var(--line-strong); padding: 14px 16px; border-radius: 4px; background: var(--parchment-2); }
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus { border-color: var(--clay); }
+.application-form ::placeholder { color: rgba(30,23,18,0.35); }
+
+.form-foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 16px; padding-top: 28px; border-top: 1px solid var(--line); }
+.form-terms { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--ink-soft); max-width: 420px; }
+.form-state { font-family: var(--serif); font-style: italic; font-size: 16px; min-height: 24px; color: var(--clay); }
+.form-state.success { color: var(--mist); }
+.form-state.error { color: var(--rust); }
+#applySubmit[disabled] { opacity: 0.55; cursor: progress; }
+
+@media (max-width: 720px) {
+  .form-row { grid-template-columns: 1fr; gap: 28px; }
+  .application-form { gap: 28px; }
+  .form-foot { flex-direction: column; align-items: stretch; }
+  .form-foot .btn { justify-content: center; width: 100%; }
+  .application-header .t-h2 { font-size: clamp(30px, 7vw, 44px); }
+  .application-intro { font-size: 17px; }
+}
+
 /* Letter */
 .letter { padding: var(--pad-lg) var(--pad); background: var(--ink); color: var(--parchment); position: relative; overflow: hidden; }
 .letter::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(180, 132, 58, 0.10), transparent 60%); pointer-events: none; }
@@ -650,7 +706,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
           <strong>€3,500</strong>
         </div>
         <a href="#apply" class="pathway-cta">
-          Apply
+          Apply now
           <svg viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </a>
       </div>
@@ -771,15 +827,89 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       </div>
     </div>
 
-    <div class="movement-cta" id="apply">
+    <div class="movement-cta">
       <span class="movement-cta-label">Applications are read by Nina, by hand.</span>
-      <a href="mailto:hello@nina-moore.com?subject=Threshold%20Year%20application" class="btn btn-primary">
+      <a href="#apply" class="btn btn-primary">
         Begin your application
         <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
           <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- Application -->
+<section class="application reveal-section" id="apply">
+  <div class="application-inner">
+    <div class="application-header">
+      <span class="t-eyebrow">§ Apply · The Threshold Year</span>
+      <h2 class="t-h2">Write to me. <em>By hand.</em></h2>
+      <p class="application-intro">
+        There is no form to optimise. There is a page, and your honest words on it.
+        I read every application personally, and reply within a week —
+        either with an invitation to a short conversation, or with care if the timing isn't ours.
+      </p>
+    </div>
+
+    <form class="application-form" id="applyForm" novalidate>
+      <div class="form-row">
+        <label for="ap-name">
+          <span class="form-label">Your name</span>
+          <input type="text" id="ap-name" name="name" required autocomplete="name" />
+        </label>
+        <label for="ap-email">
+          <span class="form-label">Email</span>
+          <input type="email" id="ap-email" name="email" required autocomplete="email" />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label for="ap-lang">
+          <span class="form-label">Working language</span>
+          <select id="ap-lang" name="language">
+            <option value="English">English</option>
+            <option value="Español">Español</option>
+            <option value="Français">Français</option>
+            <option value="Other / Open">Other / Open</option>
+          </select>
+        </label>
+        <label for="ap-location">
+          <span class="form-label">Where you live (city, country)</span>
+          <input type="text" id="ap-location" name="location" autocomplete="address-level2" />
+        </label>
+      </div>
+
+      <label for="ap-threshold" class="form-block">
+        <span class="form-label">Which threshold are you standing at?</span>
+        <span class="form-hint">A few honest sentences. Not a story — an account.</span>
+        <textarea id="ap-threshold" name="threshold" rows="5" required></textarea>
+      </label>
+
+      <label for="ap-prior" class="form-block">
+        <span class="form-label">What have you worked with before?</span>
+        <span class="form-hint">Therapies, teachers, ceremonies, containers. Or nothing — that is also an honest answer.</span>
+        <textarea id="ap-prior" name="prior" rows="4"></textarea>
+      </label>
+
+      <label for="ap-why" class="form-block">
+        <span class="form-label">Why this year, and why this container?</span>
+        <span class="form-hint">What you are hoping to meet, and what you would like held.</span>
+        <textarea id="ap-why" name="why" rows="4" required></textarea>
+      </label>
+
+      <div class="form-foot">
+        <p class="form-terms">By sending, you agree to be read with care. Your words are held in confidence.</p>
+        <button type="submit" class="btn btn-primary" id="applySubmit">
+          <span id="applySubmitText">Send application</span>
+          <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
+            <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="form-state" id="formState" aria-live="polite"></div>
+    </form>
   </div>
 </section>
 
@@ -1049,6 +1179,100 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     }
   }
   updateMoon();
+
+  /* Application form — sends via emailjs (shared with the rest of the site) */
+  (function setupApplyForm() {
+    const form = document.getElementById('applyForm');
+    if (!form) return;
+    const stateEl = document.getElementById('formState');
+    const submitBtn = document.getElementById('applySubmit');
+    const submitText = document.getElementById('applySubmitText');
+    const ORIG_TEXT = submitText.textContent;
+
+    function loadEmailJS() {
+      return new Promise((resolve, reject) => {
+        if (window.emailjs) return resolve(window.emailjs);
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+        s.async = true;
+        s.onload = () => {
+          window.emailjs.init({ publicKey: 'v57Ta98pwBDWpoe8o' });
+          resolve(window.emailjs);
+        };
+        s.onerror = () => reject(new Error('emailjs failed to load'));
+        document.head.appendChild(s);
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      stateEl.className = 'form-state';
+      stateEl.textContent = '';
+
+      const data = new FormData(form);
+      const name = (data.get('name') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      const language = (data.get('language') || '').toString().trim();
+      const location = (data.get('location') || '').toString().trim();
+      const threshold = (data.get('threshold') || '').toString().trim();
+      const prior = (data.get('prior') || '').toString().trim();
+      const why = (data.get('why') || '').toString().trim();
+
+      if (!name || !email || !threshold || !why) {
+        stateEl.classList.add('error');
+        stateEl.textContent = 'Please share at least your name, email, the threshold, and why now.';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitText.textContent = 'Sending…';
+
+      const message = [
+        'THRESHOLD YEAR — APPLICATION',
+        '',
+        'Name: ' + name,
+        'Email: ' + email,
+        'Working language: ' + (language || '—'),
+        'Location: ' + (location || '—'),
+        '',
+        '— Which threshold —',
+        threshold,
+        '',
+        '— Prior work —',
+        prior || '(none shared)',
+        '',
+        '— Why now, why this container —',
+        why,
+        '',
+        '— Sent from nina-moore.com/threshold/ —'
+      ].join('\n');
+
+      try {
+        await loadEmailJS();
+        await window.emailjs.send(
+          'service_pwk84sr',
+          'template_tpdn8r5',
+          {
+            from_name: name,
+            from_email: email,
+            subject: 'Threshold Year application — ' + name,
+            message: message,
+          }
+        );
+        form.reset();
+        stateEl.classList.add('success');
+        stateEl.textContent = 'Received. I will read carefully and write to you within a week. — Nina';
+        submitText.textContent = 'Sent ✓';
+        setTimeout(() => { submitBtn.disabled = false; submitText.textContent = ORIG_TEXT; }, 6000);
+      } catch (err) {
+        stateEl.classList.add('error');
+        stateEl.textContent = "Something didn't land. Please email hello@nina-moore.com directly — your words will reach me.";
+        submitBtn.disabled = false;
+        submitText.textContent = ORIG_TEXT;
+        console.error(err);
+      }
+    });
+  })();
 
   function subscribeSubmit(e) {
     e.preventDefault();
