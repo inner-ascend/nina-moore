@@ -96,7 +96,6 @@ body::before {
 .announce-inner { display: flex; align-items: center; justify-content: space-between; padding: 10px var(--pad); gap: 16px; }
 .announce-scroll { overflow: hidden; white-space: nowrap; display: flex; align-items: center; gap: 24px; flex: 1; min-width: 0; mask-image: linear-gradient(to right, transparent 0, black 12px, black calc(100% - 24px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, black 12px, black calc(100% - 24px), transparent 100%); }
 .announce-scroll span { display: inline-flex; align-items: center; gap: 10px; }
-.announce-moon { display: inline-flex !important; align-items: center; gap: 8px; color: var(--amber); font-style: italic; font-family: var(--serif); text-transform: none; letter-spacing: 0.02em; font-size: 12px; padding-right: 16px; border-right: 1px solid var(--line); }
 .announce-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--clay); display: inline-block; }
 
 nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221, 0.88); backdrop-filter: blur(14px) saturate(120%); -webkit-backdrop-filter: blur(14px) saturate(120%); border-bottom: 1px solid var(--line); }
@@ -131,7 +130,6 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 @media (max-width: 640px) {
   .announce-inner { padding: 8px 16px; gap: 12px; font-size: 10.5px; }
   .announce-scroll { gap: 16px; }
-  .announce-moon { padding-right: 12px; border-right: 1px solid var(--line); font-size: 11px; }
   .wordmark-text { font-size: 13px; letter-spacing: 0.1em; }
   .wordmark-monogram { width: 30px; height: 30px; font-size: 12px; }
   :root { --pad: 18px; }
@@ -397,14 +395,6 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 <div class="announce">
   <div class="announce-inner">
     <div class="announce-scroll">
-      <span class="announce-moon" title="Current lunar phase">
-        <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
-          <defs><clipPath id="moonClip"><circle cx="10" cy="10" r="8"/></clipPath></defs>
-          <circle cx="10" cy="10" r="8" fill="none" stroke="#8a5a28" stroke-width="0.6"/>
-          <rect id="moonShade" x="10" y="2" width="8" height="16" fill="#1e1712" clip-path="url(#moonClip)"/>
-        </svg>
-        <span id="moonText">Waxing Gibbous — 86%</span>
-      </span>
       <span><span class="announce-dot"></span> She Who Becomes · an 8-week circle · founding cohort open</span>
       <span><span class="announce-dot" style="background:var(--amber)"></span> Letters · monthly · free</span>
     </div>
@@ -910,30 +900,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     }, { passive: true });
   }
 
-  function updateMoon() {
-    const synodic = 29.530588853;
-    const knownNew = new Date('2000-01-06T18:14:00Z').getTime();
-    const now = Date.now();
-    const daysSince = (now - knownNew) / 86400000;
-    const phase = (daysSince % synodic) / synodic;
-    const illum = Math.round((1 - Math.cos(phase * 2 * Math.PI)) / 2 * 100);
-    const phaseNames = [
-      [0.03, 'New Moon'], [0.22, 'Waxing Crescent'], [0.28, 'First Quarter'],
-      [0.47, 'Waxing Gibbous'], [0.53, 'Full Moon'], [0.72, 'Waning Gibbous'],
-      [0.78, 'Last Quarter'], [0.97, 'Waning Crescent'], [1.01, 'New Moon']
-    ];
-    const name = phaseNames.find(p => phase <= p[0])[1];
-    const moonTextEl = document.getElementById('moonText');
-    const moonShadeEl = document.getElementById('moonShade');
-    if (moonTextEl) moonTextEl.textContent = name + ' — ' + illum + '%';
-    if (moonShadeEl) {
-      const offsetX = phase < 0.5 ? (phase * 2) * 16 - 8 : (phase - 0.5) * 2 * -16;
-      moonShadeEl.setAttribute('x', (2 + offsetX).toFixed(1));
-    }
-  }
-  updateMoon();
-
-  /* Letter subscribe — same emailjs service as the rest of the site */
+/* Letter subscribe — same emailjs service as the rest of the site */
   (function setupLetterForm() {
     const form = document.getElementById('letterForm');
     if (!form) return;
