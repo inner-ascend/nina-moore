@@ -202,8 +202,13 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .intro-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--amber); }
 .intro-heading { margin-bottom: 40px; }
 .intro-heading em { font-style: italic; font-variation-settings: "WONK" 1; color: var(--clay); }
-.intro-text { max-width: 620px; margin-bottom: 40px; }
+.intro-text { max-width: 620px; margin-bottom: 24px; }
 .intro-text p + p { margin-top: 18px; }
+.intro-pillars-intro { font-style: italic; color: var(--amber); }
+.intro-pillars { max-width: 620px; margin: 0 0 40px; display: grid; gap: 22px; }
+.intro-pillar { border-left: 1.5px solid var(--clay); padding: 4px 0 4px 20px; }
+.intro-pillar h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(18px, 2vw, 22px); color: var(--ink); margin-bottom: 8px; font-variation-settings: "WONK" 1; }
+.intro-pillar p { font-family: var(--serif); font-weight: 320; font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
 .intro-signature { display: flex; align-items: center; gap: 24px; padding-top: 28px; border-top: 1px solid var(--line); }
 .intro-signature-mark { font-family: var(--serif); font-style: italic; font-size: 38px; font-weight: 300; color: var(--clay); font-variation-settings: "WONK" 1; line-height: 1; }
 .intro-signature-meta .t-small { letter-spacing: 0.15em; text-transform: uppercase; font-size: 11px; color: var(--ink-soft); }
@@ -249,6 +254,30 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
   .door-title { font-size: 30px; }
   .door-meta { flex-wrap: wrap; gap: 20px; }
 }
+
+/* Thresholds — I hold you through */
+.thresholds { padding: var(--pad-lg) var(--pad); background: var(--parchment); border-top: 1px solid var(--line); }
+.thresholds-inner { max-width: 1100px; margin: 0 auto; }
+.thresholds-header { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+.thresholds-header .t-eyebrow { display: inline-block; color: var(--amber); margin-bottom: 18px; }
+.thresholds-header .t-h2 em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
+.thresholds-list { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 56px; row-gap: 32px; max-width: 980px; margin: 0 auto; padding: 0; }
+.thresholds-list li { display: grid; grid-template-columns: 38px 1fr; gap: 18px; align-items: start; }
+.threshold-num { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; color: var(--amber); padding-top: 6px; font-weight: 500; }
+.thresholds-list h3 { font-family: var(--serif); font-weight: 400; font-size: 19px; color: var(--ink); margin-bottom: 6px; }
+.thresholds-list p { font-family: var(--serif); font-weight: 320; font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+@media (max-width: 720px) { .thresholds-list { grid-template-columns: 1fr; row-gap: 26px; } }
+
+/* For whom */
+.forwhom { padding: var(--pad-lg) var(--pad); background: var(--parchment-2); border-top: 1px solid var(--line); }
+.forwhom-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.forwhom .t-eyebrow { display: inline-block; color: var(--amber); margin-bottom: 32px; }
+.forwhom-list { list-style: none; padding: 0; margin: 0 auto 48px; max-width: 580px; display: grid; gap: 14px; }
+.forwhom-list li { font-family: var(--serif); font-weight: 320; font-size: clamp(18px, 2.1vw, 22px); line-height: 1.5; color: var(--ink); position: relative; padding-left: 22px; text-align: left; }
+.forwhom-list li::before { content: "·"; position: absolute; left: 6px; top: -2px; color: var(--clay); font-size: 22px; }
+.forwhom-closing p { font-family: var(--serif); font-weight: 270; font-size: clamp(22px, 3vw, 32px); line-height: 1.3; color: var(--ink); font-variation-settings: "opsz" 144, "SOFT" 80; }
+.forwhom-closing p + p { margin-top: 8px; color: var(--ink-soft); font-size: clamp(18px, 2.4vw, 24px); }
+.forwhom-closing em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
 
 /* Writing — selected letters */
 .writing { padding: var(--pad-lg) var(--pad); background: var(--parchment-2); }
@@ -445,23 +474,23 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
       <h1 class="t-h1 hero-headline">
         <span><span>Initiatory work for</span></span>
-        <span><span>women at <em>thresholds</em></span></span>
+        <span><span>visionary women at <em>thresholds</em></span></span>
         <span><span>of change.</span></span>
       </h1>
 
       <div class="hero-sub t-lead">
-        I am Nina Moore — a guide for women in deep transition.
-        Sessions, circles, and slow letters. I keep a small door, by design.
+        I work with women navigating deep inner transitions — moments when old patterns,
+        identities, or ways of living no longer hold, and something new is asking to emerge.
       </div>
 
       <div class="hero-ctas">
-        <a href="#doors" class="btn btn-primary">
-          <span>Ways to meet</span>
+        <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener" class="btn btn-primary">
+          <span>Begin with a conversation</span>
           <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
             <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
         </a>
-        <a href="#writing" class="btn btn-secondary">Read the letters</a>
+        <a href="#doors" class="btn btn-secondary">Ways to meet</a>
       </div>
     </div>
 
@@ -482,10 +511,11 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 <section class="statement">
   <div class="statement-inner">
     <p class="statement-text">
-      A threshold is not a problem to be solved.<br/>
-      It is a passage to be honoured — slowly, in the body, with someone who has <em>crossed before.</em>
+      A quiet pull toward something more honest and alive.<br/>
+      A desire to meet your story differently and integrate what you've lived.<br/>
+      A sense that something essential has been forgotten — and is ready to be <em>remembered.</em>
     </p>
-    <div class="statement-attribution">— from the practice</div>
+    <div class="statement-attribution">— you are already feeling</div>
   </div>
 </section>
 
@@ -498,25 +528,34 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     </div>
 
     <div class="intro-content">
-      <div class="intro-eyebrow t-eyebrow">A living practice</div>
+      <div class="intro-eyebrow t-eyebrow">How I work</div>
 
       <h2 class="t-h2 intro-heading">
         Embodied presence, honest reflection, lived <em>integration.</em>
       </h2>
 
       <div class="intro-text t-body">
+        <p>Every woman arrives with her own history, rhythm, and readiness. There is no script.</p>
         <p>
-          I work with women navigating deep inner transitions — moments when old patterns,
-          identities, or ways of living no longer hold, and something new is asking to emerge.
+          My role is to offer attuned presence, clear reflection, and a grounded space
+          where what is emerging can be met and integrated.
         </p>
-        <p>
-          The work rests on three pillars: the body (breath, sensation, the nervous system),
-          honest reflection (clear, respectful mirrors), and integration that lives in daily life —
-          not as ideas, but as practice.
-        </p>
-        <p>
-          I work in English, Spanish, and French. Sessions are online. The year is hybrid.
-        </p>
+        <p class="intro-pillars-intro">The work rests on three pillars:</p>
+      </div>
+
+      <div class="intro-pillars">
+        <div class="intro-pillar">
+          <h3>Embodied presence</h3>
+          <p>We work with the body — breath, sensation, and the nervous system — not only conversation. Insight becomes real when it is felt and lived.</p>
+        </div>
+        <div class="intro-pillar">
+          <h3>Honest reflection</h3>
+          <p>I offer clear, respectful mirrors. I name patterns, ask precise questions, and support truth-telling without judgment.</p>
+        </div>
+        <div class="intro-pillar">
+          <h3>Integration</h3>
+          <p>What arises in sessions is brought into daily life through practical steps and gentle integration, so change is lived over time.</p>
+        </div>
       </div>
 
       <div class="intro-signature">
@@ -553,16 +592,17 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       </svg>
       <h3 class="door-title">Sessions &amp; <em>Cycles</em></h3>
       <p class="door-desc">
-        Single ninety-minute sessions for grounding through a specific moment,
-        or a four-session cycle for continuity without commitment. We begin with a free conversation.
+        A single 90-minute session for grounding, clarity, or support during a specific moment or transition —
+        or a 4-Session Cycle for a deeper rhythm of continuity and integration, without rushing or forcing change.
+        We always begin with a free discovery call.
       </p>
       <div class="door-meta">
         <div class="door-meta-left">
-          <span class="t-small">Online · 90 min</span>
-          <strong>From €140</strong>
+          <span class="t-small">90 min · or 4-session cycle</span>
+          <strong>From €140 · cycle €420</strong>
         </div>
         <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener" class="door-cta">
-          Book a call
+          Schedule a free call
           <svg viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </a>
       </div>
@@ -617,6 +657,84 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- Thresholds I hold -->
+<section class="thresholds reveal-section" id="thresholds">
+  <div class="thresholds-inner">
+    <div class="thresholds-header">
+      <span class="t-eyebrow">§ I hold you through</span>
+      <h2 class="t-h2">Women come to this work carrying many kinds of <em>thresholds.</em></h2>
+    </div>
+    <ol class="thresholds-list">
+      <li>
+        <span class="threshold-num">01</span>
+        <div>
+          <h3>Life transitions</h3>
+          <p>Breakups, loss, awakenings, major changes.</p>
+        </div>
+      </li>
+      <li>
+        <span class="threshold-num">02</span>
+        <div>
+          <h3>Psychedelic integration</h3>
+          <p>Medicine ceremonies, challenging experiences, self-led journeys.</p>
+        </div>
+      </li>
+      <li>
+        <span class="threshold-num">03</span>
+        <div>
+          <h3>Relationships</h3>
+          <p>Intimacy, boundaries, shadow work, sacred partnership.</p>
+        </div>
+      </li>
+      <li>
+        <span class="threshold-num">04</span>
+        <div>
+          <h3>Purpose and direction</h3>
+          <p>Essence, gifts, vision, and path.</p>
+        </div>
+      </li>
+      <li>
+        <span class="threshold-num">05</span>
+        <div>
+          <h3>Trauma and heartbreak</h3>
+          <p>Meaning-making, gentle repair, repatterning.</p>
+        </div>
+      </li>
+      <li>
+        <span class="threshold-num">06</span>
+        <div>
+          <h3>Spiritual inquiry</h3>
+          <p>Connection to source, ritual, remembrance.</p>
+        </div>
+      </li>
+      <li>
+        <span class="threshold-num">07</span>
+        <div>
+          <h3>Creative flow</h3>
+          <p>Reconnecting with joy, trust, and expression.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- For whom -->
+<section class="forwhom reveal-section">
+  <div class="forwhom-inner">
+    <span class="t-eyebrow">§ This work is for women who</span>
+    <ul class="forwhom-list">
+      <li>Are ready to meet themselves honestly.</li>
+      <li>Want guidance without being told who to be.</li>
+      <li>Are willing to practice and integrate between sessions.</li>
+      <li>Feel stable enough to engage in deep inner work.</li>
+    </ul>
+    <div class="forwhom-closing">
+      <p>The transformation comes from <em>you.</em></p>
+      <p>I'm here to guide and support the process.</p>
+    </div>
   </div>
 </section>
 
@@ -755,34 +873,28 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   <div class="about-inner">
     <div class="about-header">
       <span class="t-eyebrow">§ About · Nina Moore</span>
-      <h2 class="t-h2">A practice built slowly, in service of women crossing <em>real ground.</em></h2>
+      <h2 class="t-h2">I meet women heart to heart — with presence, honesty, and respect for each woman's <em>rhythm.</em></h2>
     </div>
 
     <div class="about-body">
       <div class="about-visual">
         <img src="/images/about-hero.jpg" alt="Nina Moore" onerror="this.style.display='none'"/>
         <div class="about-visual-pull">
-          <strong>“I do not believe</strong> in rushed transformation. The body keeps a slower clock, and the truth tends to arrive in writing.”
+          <strong>“I have been guiding</strong> this work for over ten years — weaving embodied awareness, intuitive insight, and grounded integration.”
         </div>
       </div>
 
       <div class="about-text">
         <p class="lead">
-          I have guided this work for more than ten years. Women come to me at the
-          point where one life is loosening and the next has not yet shown itself.
-          My practice is slow, embodied, and unhurried by design.
+          I have been guiding this work for over ten years. I meet women heart to heart —
+          with presence, honesty, and respect for each woman's rhythm and capacity.
         </p>
         <p>
-          My approach weaves embodied awareness, intuitive insight, and grounded integration.
-          I work with the body — breath, sensation, the nervous system — alongside honest
-          reflection and the quiet companionship of writing between sessions.
+          My approach weaves embodied awareness, intuitive insight, and grounded integration —
+          working with the body, the breath, and the nervous system alongside honest reflection.
         </p>
         <p>
-          I keep a small practice — by design — so the women who arrive are met with full presence
-          and the time their passage requires.
-        </p>
-        <p>
-          I work in English, Spanish, and French. Letters and the year are primarily in English.
+          Sessions are offered in English, Spanish, and French.
         </p>
       </div>
     </div>
