@@ -225,6 +225,48 @@ footer {
   opacity: 0.85;
 }
 .home-link:hover { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+
+/* instagram grid */
+.ig { width: 100%; margin-top: 40px; }
+.ig-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  text-decoration: none; margin-bottom: 14px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line);
+}
+.ig-handle {
+  font-family: var(--serif); font-size: 16px; color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.ig-follow {
+  font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--amber); opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.ig-head:hover .ig-follow { opacity: 1; }
+.ig-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+}
+.ig-cell {
+  position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden;
+  border-radius: 1px; background: var(--parchment-2);
+}
+.ig-cell img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: saturate(0.96);
+}
+.ig-cell:hover img { transform: scale(1.05); filter: saturate(1.05); }
+.ig-cell::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(30,23,18,0.28));
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.ig-cell:hover::after { opacity: 1; }
+.ig-vid {
+  position: absolute; top: 8px; right: 8px; z-index: 2;
+  color: #fff; font-size: 11px; opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
 </style>
 </head>
 <body>
@@ -293,6 +335,14 @@ footer {
     </a>
   </nav>
 
+  <section class="ig" id="ig" hidden>
+    <a class="ig-head" href="https://www.instagram.com/nina__eterna" target="_blank" rel="noopener">
+      <span class="ig-handle">@nina__eterna</span>
+      <span class="ig-follow">Follow on Instagram →</span>
+    </a>
+    <div class="ig-grid" id="ig-grid"></div>
+  </section>
+
   <footer>
     <div class="socials">
       <a href="https://www.instagram.com/nina__eterna" target="_blank" rel="noopener">Instagram</a>
@@ -301,5 +351,23 @@ footer {
     <a class="home-link" href="/">nina-moore.com</a>
   </footer>
 </main>
+
+<script>
+  (async () => {
+    try {
+      const res = await fetch('/ig/posts.json', { cache: 'no-cache' });
+      if (!res.ok) return;
+      const { posts } = await res.json();
+      if (!posts || !posts.length) return;
+      const grid = document.getElementById('ig-grid');
+      grid.innerHTML = posts.map(p => `
+        <a class="ig-cell" href="${p.permalink}" target="_blank" rel="noopener" aria-label="Instagram post">
+          ${p.isVideo ? '<span class="ig-vid">▶</span>' : ''}
+          <img src="${p.image}" alt="${(p.caption || 'Instagram post').replace(/"/g, '&quot;')}" loading="lazy" />
+        </a>`).join('');
+      document.getElementById('ig').hidden = false;
+    } catch (e) { /* feed optional — fail silent */ }
+  })();
+</script>
 </body>
 </html>
