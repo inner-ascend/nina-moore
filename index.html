@@ -188,7 +188,7 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .statement-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
 .statement-text { font-family: var(--serif); font-weight: 270; font-size: clamp(22px, 2.8vw, 36px); line-height: 1.35; color: var(--ink); font-variation-settings: "opsz" 144, "SOFT" 80; }
 .statement-text em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
-.statement-attribution { margin-top: 20px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); }
+.statement-attribution { margin-bottom: 24px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); }
 
 /* Intro */
 .intro { padding: var(--pad-lg) var(--pad); position: relative; }
@@ -204,11 +204,9 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .intro-heading em { font-style: italic; font-variation-settings: "WONK" 1; color: var(--clay); }
 .intro-text { max-width: 620px; margin-bottom: 24px; }
 .intro-text p + p { margin-top: 18px; }
-.intro-pillars-intro { font-style: italic; color: var(--amber); }
-.intro-pillars { max-width: 620px; margin: 0 0 40px; display: grid; gap: 22px; }
-.intro-pillar { border-left: 1.5px solid var(--clay); padding: 4px 0 4px 20px; }
-.intro-pillar h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(18px, 2vw, 22px); color: var(--ink); margin-bottom: 8px; font-variation-settings: "WONK" 1; }
-.intro-pillar p { font-family: var(--serif); font-weight: 320; font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
+.intro-pillars { list-style: none; padding: 0; max-width: 620px; margin: 0 0 36px; display: grid; gap: 10px; border-left: 1.5px solid var(--clay); padding-left: 18px; }
+.intro-pillars li { font-family: var(--serif); font-weight: 320; font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+.intro-pillars strong { font-style: italic; font-weight: 400; color: var(--ink); font-variation-settings: "WONK" 1; }
 .intro-signature { display: flex; align-items: center; gap: 24px; padding-top: 28px; border-top: 1px solid var(--line); }
 .intro-signature-mark { font-family: var(--serif); font-style: italic; font-size: 38px; font-weight: 300; color: var(--clay); font-variation-settings: "WONK" 1; line-height: 1; }
 .intro-signature-meta .t-small { letter-spacing: 0.15em; text-transform: uppercase; font-size: 11px; color: var(--ink-soft); }
@@ -230,11 +228,12 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .doors-intro { max-width: 440px; color: rgba(242, 235, 221, 0.75); font-family: var(--serif); font-weight: 300; font-size: 19px; line-height: 1.5; }
 .doors-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(242, 235, 221, 0.12); border: 1px solid rgba(242, 235, 221, 0.12); position: relative; }
 .door { background: var(--ink); padding: 48px 40px 56px; display: flex; flex-direction: column; gap: 24px; min-height: 540px; transition: background 0.6s var(--ease); position: relative; overflow: hidden; }
+.door-link { position: absolute; inset: 0; z-index: 3; }
+.door .door-cta, .door .door-numeral, .door .door-tag { position: relative; z-index: 4; }
 .door:hover { background: var(--ink-soft); }
 .door.featured { background: linear-gradient(180deg, #2b221a 0%, var(--ink) 100%); }
 .door-numeral { font-family: var(--serif); font-style: italic; font-size: 14px; font-weight: 400; color: var(--clay); letter-spacing: 0.18em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
 .door-numeral::after { content: ""; flex: 1; height: 1px; background: rgba(242, 235, 221, 0.18); }
-.door-icon { width: 52px; height: 52px; display: grid; place-items: center; color: var(--clay); }
 .door-title { font-family: var(--serif); font-weight: 300; font-size: 34px; line-height: 1.08; letter-spacing: -0.02em; color: var(--parchment); }
 .door-title em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
 .door-desc { color: rgba(242, 235, 221, 0.72); font-size: 15px; line-height: 1.6; }
@@ -272,9 +271,8 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .forwhom { padding: var(--pad-lg) var(--pad); background: var(--parchment-2); border-top: 1px solid var(--line); }
 .forwhom-inner { max-width: 760px; margin: 0 auto; text-align: center; }
 .forwhom .t-eyebrow { display: inline-block; color: var(--amber); margin-bottom: 32px; }
-.forwhom-list { list-style: none; padding: 0; margin: 0 auto 48px; max-width: 580px; display: grid; gap: 14px; }
-.forwhom-list li { font-family: var(--serif); font-weight: 320; font-size: clamp(18px, 2.1vw, 22px); line-height: 1.5; color: var(--ink); position: relative; padding-left: 22px; text-align: left; }
-.forwhom-list li::before { content: "·"; position: absolute; left: 6px; top: -2px; color: var(--clay); font-size: 22px; }
+.forwhom-list { list-style: none; padding: 0; margin: 0 auto 48px; max-width: 620px; display: grid; gap: 16px; }
+.forwhom-list li { font-family: var(--serif); font-weight: 320; font-size: clamp(18px, 2.1vw, 22px); line-height: 1.55; color: var(--ink); text-align: center; }
 .forwhom-closing p { font-family: var(--serif); font-weight: 270; font-size: clamp(22px, 3vw, 32px); line-height: 1.3; color: var(--ink); font-variation-settings: "opsz" 144, "SOFT" 80; }
 .forwhom-closing p + p { margin-top: 8px; color: var(--ink-soft); font-size: clamp(18px, 2.4vw, 24px); }
 .forwhom-closing em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
@@ -285,7 +283,7 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .writing-top { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; margin-bottom: 64px; }
 .writing-heading em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
 .writing-intro { font-family: var(--serif); font-weight: 300; font-size: 20px; line-height: 1.5; color: var(--ink-soft); max-width: 460px; }
-.writing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line-strong); border: 1px solid var(--line-strong); }
+.writing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--line-strong); border: 1px solid var(--line-strong); }
 .essay { background: var(--parchment-2); padding: 40px 36px; min-height: 320px; display: flex; flex-direction: column; gap: 14px; position: relative; transition: background 0.4s var(--ease); }
 .essay:hover { background: var(--parchment); }
 .essay-meta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); font-weight: 500; }
@@ -510,12 +508,12 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 <!-- Statement -->
 <section class="statement">
   <div class="statement-inner">
+    <div class="statement-attribution">§ You are already feeling</div>
     <p class="statement-text">
       A quiet pull toward something more honest and alive.<br/>
       A desire to meet your story differently and integrate what you've lived.<br/>
       A sense that something essential has been forgotten — and is ready to be <em>remembered.</em>
     </p>
-    <div class="statement-attribution">— you are already feeling</div>
   </div>
 </section>
 
@@ -535,28 +533,18 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       </h2>
 
       <div class="intro-text t-body">
-        <p>Every woman arrives with her own history, rhythm, and readiness. There is no script.</p>
         <p>
+          Every woman arrives with her own history, rhythm, and readiness — there is no script.
           My role is to offer attuned presence, clear reflection, and a grounded space
           where what is emerging can be met and integrated.
         </p>
-        <p class="intro-pillars-intro">The work rests on three pillars:</p>
       </div>
 
-      <div class="intro-pillars">
-        <div class="intro-pillar">
-          <h3>Embodied presence</h3>
-          <p>We work with the body — breath, sensation, and the nervous system — not only conversation. Insight becomes real when it is felt and lived.</p>
-        </div>
-        <div class="intro-pillar">
-          <h3>Honest reflection</h3>
-          <p>I offer clear, respectful mirrors. I name patterns, ask precise questions, and support truth-telling without judgment.</p>
-        </div>
-        <div class="intro-pillar">
-          <h3>Integration</h3>
-          <p>What arises in sessions is brought into daily life through practical steps and gentle integration, so change is lived over time.</p>
-        </div>
-      </div>
+      <ul class="intro-pillars">
+        <li><strong>Embodied presence</strong> — body, breath, nervous system. Insight becomes real when it is felt.</li>
+        <li><strong>Honest reflection</strong> — clear, respectful mirrors; patterns named, truth-telling without judgment.</li>
+        <li><strong>Integration</strong> — what arises is brought into daily life through practical steps.</li>
+      </ul>
 
       <div class="intro-signature">
         <div class="intro-signature-mark">Nm</div>
@@ -585,11 +573,6 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
     <div class="door">
       <div class="door-numeral"><span>I · Sit</span></div>
-      <svg class="door-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-        <circle cx="18" cy="26" r="10" stroke="currentColor" stroke-width="1"/>
-        <circle cx="34" cy="26" r="10" stroke="currentColor" stroke-width="1"/>
-        <line x1="18" y1="26" x2="34" y2="26" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
-      </svg>
       <h3 class="door-title">Sessions &amp; <em>Cycles</em></h3>
       <p class="door-desc">
         A single 90-minute session for grounding, clarity, or support during a specific moment or transition —
@@ -609,13 +592,9 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     </div>
 
     <div class="door featured">
+      <a href="/threshold/" class="door-link" aria-label="She Who Becomes — read the eight weeks"></a>
       <span class="door-tag">— deepest —</span>
       <div class="door-numeral"><span>II · Cross</span></div>
-      <svg class="door-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-        <path d="M26 6 C16 12, 12 22, 26 46 C40 22, 36 12, 26 6 Z" stroke="currentColor" stroke-width="1" fill="none"/>
-        <circle cx="26" cy="26" r="1.8" fill="currentColor"/>
-        <path d="M14 28 Q26 20, 38 28" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
-      </svg>
       <h3 class="door-title">She Who <em>Becomes</em></h3>
       <p class="door-desc">
         An 8-week circle of coaching, therapy, and writing. You arrive scattered at the edge
@@ -636,10 +615,6 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
     <div class="door">
       <div class="door-numeral"><span>III · Read</span></div>
-      <svg class="door-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-        <path d="M8 12 L26 8 L44 12 L44 42 L26 38 L8 42 Z" stroke="currentColor" stroke-width="1" fill="none"/>
-        <line x1="26" y1="8" x2="26" y2="38" stroke="currentColor" stroke-width="1"/>
-      </svg>
       <h3 class="door-title">The <em>Letters</em></h3>
       <p class="door-desc">
         A monthly letter — short, occasionally long.
@@ -717,6 +692,13 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
           <p>Reconnecting with joy, trust, and expression.</p>
         </div>
       </li>
+      <li>
+        <span class="threshold-num">08</span>
+        <div>
+          <h3>Motherhood</h3>
+          <p>Pregnancy, postpartum, returning to self, redefining who you are now.</p>
+        </div>
+      </li>
     </ol>
   </div>
 </section>
@@ -744,22 +726,22 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     <div class="writing-top">
       <h2 class="t-h2 writing-heading">From the <em>page.</em></h2>
       <p class="writing-intro">
-        Selected letters and poems. Long-form thinking on threshold, lineage, integration, and the slow shape of becoming.
+        Where my writing lives — letters on Substack, and the slow rhythm of Portal Poem.
       </p>
     </div>
 
     <div class="writing-grid">
 
       <article class="essay">
-        <div class="essay-meta">Letter · 2026</div>
-        <h3 class="essay-title">On the year that <em>arrives sideways</em></h3>
+        <div class="essay-meta">Substack</div>
+        <h3 class="essay-title">An introduction to my <em>Substack</em></h3>
         <p class="essay-pull">
-          The threshold rarely announces itself. It begins as a quiet tiredness with a sentence you have been speaking for years.
-          By the time you notice, you are already halfway through.
+          Where I'm writing now — letters on threshold, integration, and the slow shape of becoming.
+          Long-form, occasionally short, always honest. A way to know me before — or instead of — beginning.
         </p>
         <div class="essay-foot">
-          <span>5 min read</span>
-          <a href="#letter">Read
+          <span>ninamoore.substack.com</span>
+          <a href="https://ninamoore.substack.com/" target="_blank" rel="noopener">Read on Substack
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
           </a>
         </div>
@@ -775,21 +757,6 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
         <div class="essay-foot">
           <span>Portal Poem</span>
           <a href="https://portalpoem.com" target="_blank" rel="noopener">Visit
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="essay">
-        <div class="essay-meta">Letter · 2026</div>
-        <h3 class="essay-title">On the <em>small door</em></h3>
-        <p class="essay-pull">
-          Why I keep my practice small by design. A small circle is not scarcity —
-          it is the largest container that lets me be the kind of guide this work asks for.
-        </p>
-        <div class="essay-foot">
-          <span>7 min read</span>
-          <a href="#letter">Read
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
           </a>
         </div>
@@ -878,10 +845,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
     <div class="about-body">
       <div class="about-visual">
-        <img src="/images/about-hero.jpg" alt="Nina Moore" onerror="this.style.display='none'"/>
-        <div class="about-visual-pull">
-          <strong>“I have been guiding</strong> this work for over ten years — weaving embodied awareness, intuitive insight, and grounded integration.”
-        </div>
+        <img src="/images/about-portrait.jpg" alt="Nina Moore" onerror="this.style.display='none'"/>
       </div>
 
       <div class="about-text">
