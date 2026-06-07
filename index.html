@@ -192,12 +192,12 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 
 /* Intro */
 .intro { padding: var(--pad-lg) var(--pad); position: relative; }
-.intro-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 8vw, 120px); align-items: start; }
+.intro-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 8vw, 120px); align-items: center; }
 .intro-visual { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--sand); }
 .intro-visual img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.82) contrast(1.05); }
 .intro-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(30,23,18,0.25)); pointer-events: none; }
 .intro-visual-caption { position: absolute; bottom: 20px; left: 20px; color: var(--parchment); font-family: var(--serif); font-style: italic; font-size: 15px; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 1px 4px rgba(0,0,0,0.25); }
-.intro-content { padding-top: 32px; }
+.intro-content { padding-top: 0; }
 .intro-eyebrow { margin-bottom: 32px; display: flex; align-items: center; gap: 12px; }
 .intro-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--amber); }
 .intro-heading { margin-bottom: 40px; }
@@ -593,7 +593,6 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
     <div class="door featured">
       <a href="/threshold/" class="door-link" aria-label="She Who Becomes — read the eight weeks"></a>
-      <span class="door-tag">— deepest —</span>
       <div class="door-numeral"><span>II · Cross</span></div>
       <h3 class="door-title">She Who <em>Becomes</em></h3>
       <p class="door-desc">
