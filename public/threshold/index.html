@@ -416,7 +416,6 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .form-state { font-family: var(--serif); font-style: italic; font-size: 16px; min-height: 24px; color: var(--clay); }
 .form-state.success { color: var(--mist); }
 .form-state.error { color: var(--rust); }
-#applySubmit[disabled] { opacity: 0.55; cursor: progress; }
 
 @media (max-width: 720px) {
   .form-row { grid-template-columns: 1fr; gap: 28px; }
@@ -933,73 +932,15 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       </p>
     </div>
 
-    <div class="application-gate" id="applyGate">
-      <button type="button" class="btn btn-primary" id="applyOpen">
+    <div class="application-gate">
+      <a href="https://app.nina-moore.com/threshold" class="btn btn-primary">
         <span>Begin your application</span>
         <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
           <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
-      </button>
-      <p class="gate-note">A handful of honest fields. Ten minutes. Sent by hand to Nina.</p>
+      </a>
+      <p class="gate-note">A handful of honest fields, in her studio. She reads each one herself.</p>
     </div>
-
-    <form class="application-form" id="applyForm" novalidate hidden>
-      <div class="form-row">
-        <label for="ap-name">
-          <span class="form-label">Your name</span>
-          <input type="text" id="ap-name" name="name" required autocomplete="name" />
-        </label>
-        <label for="ap-email">
-          <span class="form-label">Email</span>
-          <input type="email" id="ap-email" name="email" required autocomplete="email" />
-        </label>
-      </div>
-
-      <div class="form-row">
-        <label for="ap-path">
-          <span class="form-label">Which path calls you?</span>
-          <select id="ap-path" name="path">
-            <option value="The Circle">The Circle — €550 founding</option>
-            <option value="The Crossing">The Crossing — 2 seats</option>
-            <option value="Not sure yet">Not sure yet — help me feel it out</option>
-          </select>
-        </label>
-        <label for="ap-location">
-          <span class="form-label">Where you live (city, country)</span>
-          <input type="text" id="ap-location" name="location" autocomplete="address-level2" />
-        </label>
-      </div>
-
-      <label for="ap-threshold" class="form-block">
-        <span class="form-label">Who are you becoming?</span>
-        <span class="form-hint">The threshold you're standing at. A few honest sentences — not a story, an account.</span>
-        <textarea id="ap-threshold" name="threshold" rows="5" required></textarea>
-      </label>
-
-      <label for="ap-voice" class="form-block">
-        <span class="form-label">How is your relationship with writing?</span>
-        <span class="form-hint">Writer, journaler, or someone who hasn't written since school. There is no wrong answer.</span>
-        <textarea id="ap-voice" name="voice" rows="3"></textarea>
-      </label>
-
-      <label for="ap-why" class="form-block">
-        <span class="form-label">Why this circle, and why now?</span>
-        <span class="form-hint">What you are hoping to meet, and what you would like held.</span>
-        <textarea id="ap-why" name="why" rows="4" required></textarea>
-      </label>
-
-      <div class="form-foot">
-        <p class="form-terms">By sending, you agree to be read with care. Your words are held in confidence.</p>
-        <button type="submit" class="btn btn-primary" id="applySubmit">
-          <span id="applySubmitText">Send application</span>
-          <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
-            <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="form-state" id="formState" aria-live="polite"></div>
-    </form>
   </div>
 </section>
 
@@ -1135,115 +1076,8 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     }, { passive: true });
   }
 
-/* Application gate — reveal form on click */
-  (function setupApplyGate() {
-    const gate = document.getElementById('applyGate');
-    const openBtn = document.getElementById('applyOpen');
-    const form = document.getElementById('applyForm');
-    if (!gate || !openBtn || !form) return;
-    function openForm() {
-      gate.style.display = 'none';
-      form.hidden = false;
-      const nameEl = document.getElementById('ap-name');
-      if (nameEl) setTimeout(() => nameEl.focus({ preventScroll: false }), 360);
-    }
-    openBtn.addEventListener('click', openForm);
-    if (location.hash === '#apply-now') openForm();
-  })();
-
-  /* Application form — sends via emailjs (shared with the rest of the site) */
-  (function setupApplyForm() {
-    const form = document.getElementById('applyForm');
-    if (!form) return;
-    const stateEl = document.getElementById('formState');
-    const submitBtn = document.getElementById('applySubmit');
-    const submitText = document.getElementById('applySubmitText');
-    const ORIG_TEXT = submitText.textContent;
-
-    function loadEmailJS() {
-      return new Promise((resolve, reject) => {
-        if (window.emailjs) return resolve(window.emailjs);
-        const s = document.createElement('script');
-        s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-        s.async = true;
-        s.onload = () => {
-          window.emailjs.init({ publicKey: 'v57Ta98pwBDWpoe8o' });
-          resolve(window.emailjs);
-        };
-        s.onerror = () => reject(new Error('emailjs failed to load'));
-        document.head.appendChild(s);
-      });
-    }
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      stateEl.className = 'form-state';
-      stateEl.textContent = '';
-
-      const data = new FormData(form);
-      const name = (data.get('name') || '').toString().trim();
-      const email = (data.get('email') || '').toString().trim();
-      const path = (data.get('path') || '').toString().trim();
-      const location = (data.get('location') || '').toString().trim();
-      const threshold = (data.get('threshold') || '').toString().trim();
-      const voice = (data.get('voice') || '').toString().trim();
-      const why = (data.get('why') || '').toString().trim();
-
-      if (!name || !email || !threshold || !why) {
-        stateEl.classList.add('error');
-        stateEl.textContent = 'Please share at least your name, email, who you are becoming, and why now.';
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitText.textContent = 'Sending…';
-
-      const message = [
-        'SHE WHO BECOMES — APPLICATION',
-        '',
-        'Name: ' + name,
-        'Email: ' + email,
-        'Path: ' + (path || '—'),
-        'Location: ' + (location || '—'),
-        '',
-        '— Who are you becoming / the threshold —',
-        threshold,
-        '',
-        '— Relationship with writing —',
-        voice || '(none shared)',
-        '',
-        '— Why this circle, why now —',
-        why,
-        '',
-        '— Sent from nina-moore.com/threshold/ —'
-      ].join('\n');
-
-      try {
-        await loadEmailJS();
-        await window.emailjs.send(
-          'service_pwk84sr',
-          'template_tpdn8r5',
-          {
-            from_name: name,
-            from_email: email,
-            subject: 'She Who Becomes application — ' + name,
-            message: message,
-          }
-        );
-        form.reset();
-        stateEl.classList.add('success');
-        stateEl.textContent = 'Received. I will read carefully and write to you within a week. — Nina';
-        submitText.textContent = 'Sent ✓';
-        setTimeout(() => { submitBtn.disabled = false; submitText.textContent = ORIG_TEXT; }, 6000);
-      } catch (err) {
-        stateEl.classList.add('error');
-        stateEl.textContent = "Something didn't land. Please email hello@nina-moore.com directly — your words will reach me.";
-        submitBtn.disabled = false;
-        submitText.textContent = ORIG_TEXT;
-        console.error(err);
-      }
-    });
-  })();
+/* Application handoff — the real application now lives in the flagship studio
+     at app.nina-moore.com/threshold; the former in-page EmailJS form was removed. */
 
   function subscribeSubmit(e) {
     e.preventDefault();
