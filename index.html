@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Nina Moore — Initiatory work for women at thresholds of change. Sessions, circles, and slow letters." />
+<meta name="description" content="Nina Moore — Initiatory work for women at thresholds of change. Attuned presence, honest reflection, and integration — sessions, circles, and slow letters." />
 <title>Nina Moore · Initiatory work for women at thresholds</title>
 <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://nina-moore.com/" />
 
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="Nina Moore" />
 <meta property="og:url" content="https://nina-moore.com/" />
 <meta property="og:title" content="Nina Moore — Initiatory work for women at thresholds" />
@@ -22,6 +24,67 @@
 <meta name="twitter:title" content="Nina Moore — Initiatory work for women at thresholds" />
 <meta name="twitter:description" content="Initiatory work for women at thresholds of change. Sessions, circles, and slow letters." />
 <meta name="twitter:image" content="https://nina-moore.com/images/og-card.jpg?v=2" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://nina-moore.com/#nina-moore",
+      "name": "Nina Moore",
+      "jobTitle": "Guide",
+      "description": "Nina Moore guides women navigating deep inner transitions — moments when old patterns, identities, or ways of living no longer hold, and something new is asking to emerge.",
+      "url": "https://nina-moore.com/",
+      "image": "https://nina-moore.com/images/og-card.jpg",
+      "knowsLanguage": ["English", "Español", "Français"],
+      "sameAs": [
+        "https://ninamoore.substack.com/",
+        "https://www.instagram.com/nina__eterna",
+        "https://portalpoem.com"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://nina-moore.com/#practice",
+      "name": "Nina Moore — Initiatory work for women at thresholds of change",
+      "description": "Initiatory work for women at thresholds of change — attuned presence, honest reflection, and grounded integration, offered through sessions, circles, and slow letters.",
+      "url": "https://nina-moore.com/",
+      "image": "https://nina-moore.com/images/og-card.jpg",
+      "provider": { "@id": "https://nina-moore.com/#nina-moore" },
+      "areaServed": "Online",
+      "availableLanguage": ["English", "Español", "Français"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Ways to meet",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Single session",
+            "description": "A single 90-minute session for grounding, clarity, or support during a specific moment or transition.",
+            "priceCurrency": "EUR",
+            "price": "140"
+          },
+          {
+            "@type": "Offer",
+            "name": "The 4-Session Cycle",
+            "description": "A deeper rhythm of continuity and integration across four sessions.",
+            "priceCurrency": "EUR",
+            "price": "420"
+          },
+          {
+            "@type": "Offer",
+            "name": "The Threshold",
+            "description": "An 8-week circle of coaching, therapy, and writing. By application.",
+            "priceCurrency": "EUR",
+            "price": "550"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -235,7 +298,7 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .doors-header .t-h2 { font-weight: 250; }
 .doors-header .t-h2 em { font-style: italic; color: var(--clay); font-variation-settings: "WONK" 1; }
 .doors-intro { max-width: 440px; color: rgba(242, 235, 221, 0.75); font-family: var(--serif); font-weight: 300; font-size: 19px; line-height: 1.5; }
-.doors-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(242, 235, 221, 0.12); border: 1px solid rgba(242, 235, 221, 0.12); position: relative; }
+.doors-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(242, 235, 221, 0.12); border: 1px solid rgba(242, 235, 221, 0.12); position: relative; }
 .door { background: var(--ink); padding: 48px 40px 56px; display: flex; flex-direction: column; gap: 24px; min-height: 540px; transition: background 0.6s var(--ease); position: relative; overflow: hidden; }
 .door-link { position: absolute; inset: 0; z-index: 3; }
 .door .door-cta, .door .door-numeral, .door .door-tag { position: relative; z-index: 4; }
@@ -253,6 +316,9 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .door-cta:hover { gap: 14px; }
 .door-cta svg { width: 18px; }
 .door-tag { position: absolute; top: 20px; right: 20px; font-family: var(--serif); font-style: italic; font-size: 11px; letter-spacing: 0.08em; color: var(--clay); padding: 4px 10px; border: 1px solid var(--clay); border-radius: 999px; background: var(--ink); z-index: 2; }
+@media (max-width: 1200px) {
+  .doors-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
   .doors-header { grid-template-columns: 1fr; gap: 24px; }
   .doors-grid { grid-template-columns: 1fr; }
@@ -431,7 +497,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 <div class="announce">
   <div class="announce-inner">
     <div class="announce-scroll">
-      <span><span class="announce-dot"></span> She Who Becomes · an 8-week circle · founding cohort open</span>
+      <span><span class="announce-dot"></span> The Threshold · an 8-week circle · founding cohort open</span>
       <span><span class="announce-dot" style="background:var(--amber)"></span> Letters · monthly · free</span>
     </div>
   </div>
@@ -451,7 +517,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     </a>
     <div class="nav-right">
       <a href="#about">About</a>
-      <a href="/threshold/">She Who Becomes</a>
+      <a href="/threshold/">The Threshold</a>
       <a href="#letter" style="color: var(--clay);">Letters →</a>
     </div>
     <button class="nav-mobile-toggle" aria-label="Open menu" id="mobileToggle">
@@ -466,7 +532,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   <a href="#doors">Work with <em>me</em></a>
   <a href="#writing">Writing</a>
   <a href="#about">About <em>Nina</em></a>
-  <a href="/threshold/">She Who Becomes</a>
+  <a href="/threshold/">The Threshold</a>
   <a href="#letter" style="color: var(--clay); margin-top: 24px;">Letters →</a>
 </div>
 
@@ -481,7 +547,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
 
       <h1 class="t-h1 hero-headline">
         <span><span>Initiatory work for</span></span>
-        <span><span>visionary women at <em>thresholds</em></span></span>
+        <span><span>women at <em>thresholds</em></span></span>
         <span><span>of change.</span></span>
       </h1>
 
@@ -566,21 +632,42 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   </div>
 </section>
 
-<!-- Three doors -->
+<!-- Four doors -->
 <section class="doors reveal-section" id="doors">
   <div class="doors-header">
     <div>
-      <div class="t-eyebrow" style="margin-bottom:16px;">§ Three doors</div>
+      <div class="t-eyebrow" style="margin-bottom:16px;">§ Four doors</div>
       <h2 class="t-h2">Where would you like to <em>begin?</em></h2>
     </div>
     <p class="doors-intro">
-      Three ways to meet me. Start where your life is today — the work expands as you are ready.
+      Four ways to meet me. Start where your life is today — the work expands as you are ready.
     </p>
   </div>
 
   <div class="doors-grid">
 
     <div class="door">
+      <div class="door-numeral"><span>0 · Begin</span></div>
+      <h3 class="door-title">She Who <em>Becomes</em></h3>
+      <p class="door-desc">
+        A room that stays open — free, always. The monthly letters, the recordings,
+        a calendar of what's coming, and the Portal Poem writing tool for finding your own words.
+        No card, ever.
+      </p>
+      <div class="door-meta">
+        <div class="door-meta-left">
+          <span class="t-small">Community · always open</span>
+          <strong>Free, always</strong>
+        </div>
+        <a href="/she-who-becomes/" class="door-cta">
+          Step inside
+          <svg viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="door">
+      <a href="/sittings/" class="door-link" aria-label="Sessions & Cycles — read more"></a>
       <div class="door-numeral"><span>I · Sit</span></div>
       <h3 class="door-title">Sessions &amp; <em>Cycles</em></h3>
       <p class="door-desc">
@@ -601,9 +688,9 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     </div>
 
     <div class="door featured">
-      <a href="/threshold/" class="door-link" aria-label="She Who Becomes — read the eight weeks"></a>
+      <a href="/threshold/" class="door-link" aria-label="The Threshold — read the eight weeks"></a>
       <div class="door-numeral"><span>II · Cross</span></div>
-      <h3 class="door-title">She Who <em>Becomes</em></h3>
+      <h3 class="door-title">The <em>Threshold</em></h3>
       <p class="door-desc">
         An 8-week circle of coaching, therapy, and writing. You arrive scattered at the edge
         of a big change and leave having crossed — holding a bound book of your own portals.
@@ -909,9 +996,9 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       <div class="footer-col">
         <h4>The Work</h4>
         <ul>
-          <li><a href="/threshold/">She Who Becomes</a></li>
-          <li><a href="#doors">Single sessions</a></li>
-          <li><a href="#doors">The 4-Session Cycle</a></li>
+          <li><a href="/threshold/">The Threshold</a></li>
+          <li><a href="/sittings/">Single sessions</a></li>
+          <li><a href="/sittings/">The 4-Session Cycle</a></li>
           <li><a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener">Discovery call</a></li>
         </ul>
       </div>
@@ -920,7 +1007,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
         <h4>The Letters</h4>
         <ul>
           <li><a href="#letter">Subscribe — free</a></li>
-          <li><a href="https://app.nina-moore.com/enter" target="_blank" rel="noopener">Free community</a></li>
+          <li><a href="/she-who-becomes/">Free community</a></li>
           <li><a href="https://portalpoem.com" target="_blank" rel="noopener">Portal Poem</a></li>
           <li><a href="#writing">Selected writing</a></li>
           <li><a href="#about">About Nina</a></li>
@@ -941,8 +1028,8 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
       <div class="left">© 2026 Nina Moore</div>
       <div class="mid">A practice in service of <strong>women at the threshold.</strong></div>
       <div class="right">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/support.html">Support</a>
+        <a href="https://app.nina-moore.com/privacy" target="_blank" rel="noopener">Privacy</a>
+        <a href="mailto:hello@nina-moore.com">Support</a>
         <a href="/">EN</a>
       </div>
     </div>
