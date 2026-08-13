@@ -15,15 +15,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     
+    # the site is hand-written static HTML — the build only copies files,
+    # so there is nothing to install.
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
+        node-version: '20'
+
     - name: Build
       run: npm run build
     
