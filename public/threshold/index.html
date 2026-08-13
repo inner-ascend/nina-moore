@@ -1128,12 +1128,16 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
   function subscribeSubmit(e) {
     e.preventDefault();
     const input = document.getElementById('letterEmail');
+    const email = (input.value || '').trim();
+    if (!email) return false;
+    // Substack rejects cross-origin POSTs, so hand the address to her own
+    // subscribe page with it prefilled rather than pretend we captured it.
+    const url = 'https://ninamoore.substack.com/subscribe?email=' + encodeURIComponent(email);
+    const w = window.open(url, '_blank', 'noopener');
+    if (!w) { window.location.href = url; return false; }
     const btn = e.target.querySelector('button');
-    btn.textContent = 'Thank you ✓';
-    btn.style.background = 'var(--clay)';
-    btn.style.color = 'var(--parchment)';
-    input.value = '';
-    setTimeout(() => { btn.textContent = 'Subscribe →'; btn.style.background = ''; btn.style.color = ''; }, 3200);
+    btn.textContent = 'Confirm on Substack \u2192';
+    setTimeout(() => { btn.textContent = 'Subscribe \u2192'; input.value = ''; }, 4000);
     return false;
   }
 
