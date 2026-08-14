@@ -44,7 +44,7 @@ body::before{
 }
 img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 42px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,42px)}
 .col{max-width:620px}
 .mono{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
 .disp{font-family:'Boska',serif;font-weight:300;line-height:1.05;letter-spacing:-.012em;margin:0}
@@ -105,6 +105,7 @@ nav .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:30
 .navlinks a.navcta{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.16em;
   text-transform:uppercase;background:var(--ink);color:var(--parch);padding:11px 20px}
 .navlinks a.navcta:hover{background:var(--ultra);border-color:transparent}
+.navlinks a.navcta .cta-short{display:none}
 .navlinks a.on{border-bottom-color:var(--ochre)}
 .navgroup{position:relative;display:inline-flex}
 .navpanel{position:absolute;top:100%;left:-18px;margin-top:14px;min-width:250px;
@@ -125,13 +126,21 @@ nav .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:30
 @media(max-width:900px){
   .navlinks a:not(.navcta),.navgroup{display:none}
   .navlinks{gap:0}
-  .navlinks a.navcta{padding:10px 16px;font-size:11px;letter-spacing:.12em}
+  .navlinks a.navcta{padding:10px 14px;font-size:11px;letter-spacing:.1em;white-space:nowrap}
+  .navlinks a.navcta .cta-long{display:none}
+  .navlinks a.navcta .cta-short{display:inline}
+}
+@media(max-width:560px){
+  nav{padding:16px 0}
+  nav .wrap{gap:12px}
+  .wordmark{font-size:20px}
+  .navlinks a.navcta{padding:9px 14px;font-size:10px;letter-spacing:.1em}
+  h1.disp{font-size:clamp(34px,11vw,44px);line-height:1.08}
 }
 
 .hero{padding:110px 0 150px}
 .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:70px}.hero{padding:70px 0 100px}}
-@media(max-width:560px){h1.disp br{display:none}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero{padding:48px 0 72px}}
 
 
 .spread{padding:110px 0}
@@ -266,13 +275,13 @@ footer .links{display:flex;gap:26px;flex-wrap:wrap;font-size:17px}
     </span>
     <a href="#about" data-spy="about">My story</a>
     <a href="#letters" data-spy="letters">Letters</a>
-    <a class="navcta" href="https://calendly.com/ninamoorerising/free-discovery">Book a call</a>
+    <a class="navcta" href="https://calendly.com/ninamoorerising/free-discovery"><span class="cta-long">Book a call</span><span class="cta-short">Book</span></a>
   </div>
 </div><span class="navprog" id="navprog"></span></nav>
 
 <header class="hero" id="top"><div class="wrap hero-grid">
   <div>
-    <h1 class="disp">Initiatory work<br>for women<br>at&nbsp;<em class="u">thresholds</em><br>of change.</h1>
+    <h1 class="disp">Initiatory work<br> for women<br> at&nbsp;<em class="u">thresholds</em><br> of change.</h1>
     <div class="btns">
       <a class="btn btn-a" href="https://calendly.com/ninamoorerising/free-discovery">Begin with a conversation</a>
       <a class="btn btn-o" href="#meet">Ways we can meet</a>
