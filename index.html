@@ -121,14 +121,39 @@ nav .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:30
   text-transform:uppercase;font-style:normal;color:var(--stone);white-space:nowrap}
 .navprog{position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--ochre);
   transition:width .1s linear}
-/* under 900px the text links go, but the one CTA stays — it is the only
-   persistent way to book from a phone */
+.navtoggle{display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:34px;height:34px;padding:0;border:0;background:transparent;cursor:pointer;flex-shrink:0}
+.navtoggle span{display:block;height:2px;width:100%;background:var(--ink);
+  transition:transform .25s ease,opacity .25s ease}
+nav.open .navtoggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+nav.open .navtoggle span:nth-child(2){opacity:0}
+nav.open .navtoggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.navmobile{display:none}
+/* under 900px the inline text links go, replaced by a hamburger + dropdown
+   panel — the CTA stays visible too, it is the fastest path from a phone */
 @media(max-width:900px){
   .navlinks a:not(.navcta),.navgroup{display:none}
-  .navlinks{gap:0}
+  .navlinks{gap:10px}
   .navlinks a.navcta{padding:10px 14px;font-size:11px;letter-spacing:.1em;white-space:nowrap}
   .navlinks a.navcta .cta-long{display:none}
   .navlinks a.navcta .cta-short{display:inline}
+  .navtoggle{display:inline-flex}
+  .navmobile{display:block;position:absolute;top:100%;left:0;right:0;
+    background:var(--parch);border-bottom:1px solid rgba(29,39,68,.22);
+    box-shadow:0 18px 34px rgba(29,39,68,.13);
+    max-height:calc(100vh - 64px);overflow-y:auto;
+    opacity:0;visibility:hidden;transform:translateY(-8px);
+    transition:opacity .22s ease,transform .22s ease,visibility .22s}
+  nav.open .navmobile{opacity:1;visibility:visible;transform:none}
+  .navmobile a{display:block;padding:16px 20px;font-size:17px;text-decoration:none;
+    border-bottom:1px solid rgba(29,39,68,.14)}
+  .navmobile a.on{color:var(--ochre)}
+  .navmobile a.sub{display:flex;justify-content:space-between;align-items:baseline;
+    gap:16px;padding-left:34px;font-size:15.5px;color:#454b64}
+  .navmobile a.sub em{font-family:'Courier Prime',monospace;font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;font-style:normal;color:var(--stone);white-space:nowrap}
+  .navmobile a.navcta-m{font-family:'Courier Prime',monospace;font-size:12px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ultra);border-bottom:0}
 }
 @media(max-width:560px){
   nav{padding:16px 0}
@@ -276,8 +301,22 @@ footer .links{display:flex;gap:26px;flex-wrap:wrap;font-size:17px}
     <a href="#about" data-spy="about">My story</a>
     <a href="#letters" data-spy="letters">Letters</a>
     <a class="navcta" href="https://calendly.com/ninamoorerising/free-discovery"><span class="cta-long">Book a call</span><span class="cta-short">Book</span></a>
+    <button class="navtoggle" id="navtoggle" type="button" aria-expanded="false" aria-controls="navmobile" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</div><span class="navprog" id="navprog"></span></nav>
+</div>
+<div class="navmobile" id="navmobile">
+  <a href="#work" data-spy="work">I walk with you</a>
+  <a href="#meet" data-spy="meet">Ways we can meet</a>
+  <a href="#offer-one" class="sub">One-to-One<em>from €85</em></a>
+  <a href="#offer-community" class="sub">She Who Becomes<em>€33 / month</em></a>
+  <a href="#offer-poem" class="sub">Portal Poem<em>€44 / month</em></a>
+  <a href="#about" data-spy="about">My story</a>
+  <a href="#letters" data-spy="letters">Letters</a>
+  <a class="navcta-m" href="https://calendly.com/ninamoorerising/free-discovery">Book a call</a>
+</div>
+<span class="navprog" id="navprog"></span></nav>
 
 <header class="hero" id="top"><div class="wrap hero-grid">
   <div>
@@ -522,9 +561,36 @@ footer .links{display:flex;gap:26px;flex-wrap:wrap;font-size:17px}
 
 <script>
 (function(){
+  var nav = document.querySelector('nav');
+  var toggle = document.getElementById('navtoggle');
+  var mobile = document.getElementById('navmobile');
+
+  function closeMenu(){
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+  }
+  function openMenu(){
+    nav.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+  }
+  toggle.addEventListener('click', function(){
+    nav.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  mobile.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') closeMenu();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeMenu();
+  });
+  document.addEventListener('click', function(e){
+    if (nav.classList.contains('open') && !nav.contains(e.target)) closeMenu();
+  });
+
   var prog = document.getElementById('navprog');
-  var links = [].slice.call(document.querySelectorAll('.navlinks a[data-spy]'));
-  var map = {}; links.forEach(function(a){ map[a.dataset.spy] = a; });
+  var links = [].slice.call(document.querySelectorAll('.navlinks a[data-spy], .navmobile a[data-spy]'));
+  var map = {}; links.forEach(function(a){ (map[a.dataset.spy] = map[a.dataset.spy] || []).push(a); });
 
   function onScroll(){
     var h = document.documentElement.scrollHeight - window.innerHeight;
@@ -537,9 +603,9 @@ footer .links{display:flex;gap:26px;flex-wrap:wrap;font-size:17px}
   var spied = ['work','meet','about','letters'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      var a = map[e.target.id];
-      if (!a) return;
-      if (e.isIntersecting) { links.forEach(function(l){ l.classList.remove('on'); }); a.classList.add('on'); }
+      var as = map[e.target.id];
+      if (!as) return;
+      if (e.isIntersecting) { links.forEach(function(l){ l.classList.remove('on'); }); as.forEach(function(a){ a.classList.add('on'); }); }
     });
   }, {rootMargin:'-45% 0px -45% 0px'});
   spied.forEach(function(sec){ io.observe(sec); });
