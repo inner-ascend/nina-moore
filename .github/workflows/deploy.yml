@@ -24,7 +24,13 @@ jobs:
 
     - name: Build
       run: npm run build
-    
+
+    # Fails the deploy on a dead link. Every CTA on this site hands off to
+    # Kajabi or Calendly by hand-written URL, and those paths have gone 404
+    # without anyone noticing — this is the check that notices.
+    - name: Check links
+      run: node scripts/check-links.mjs
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:

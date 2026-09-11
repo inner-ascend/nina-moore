@@ -7,6 +7,7 @@
   "description": "nina-moore.com — a hand-written static one-pager. No framework, no bundler.",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "check-links": "node scripts/build.mjs && node scripts/check-links.mjs",
     "dev": "node scripts/build.mjs && npx --yes serve dist -l 5173",
     "optimize-images": "node scripts/optimize-images.js"
   },
