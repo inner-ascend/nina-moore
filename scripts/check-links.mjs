@@ -61,14 +61,7 @@ function idsIn(html) {
 // Links we know are dead and cannot fix without a product decision. These are
 // reported loudly on every run but do not fail the build, so a pending
 // decision does not block every deploy. Delete the entry when it is fixed.
-const KNOWN_BROKEN = new Map([
-  [
-    'https://shewhobecomes.nina-moore.com/threshold',
-    'The Threshold Year "Begin your application" CTA. No such Kajabi page; the ' +
-      'in-page EmailJS form was removed in favour of it. Needs a real destination ' +
-      '(Kajabi form, calendly, or a restored form) — nobody can apply until then.',
-  ],
-]);
+const KNOWN_BROKEN = new Map();
 
 // URLs we cannot check from CI. Kajabi's checkout pages sit behind Cloudflare
 // bot protection that varies the response by client: 200 in a real browser,
