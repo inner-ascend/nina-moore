@@ -70,6 +70,19 @@ const KNOWN_BROKEN = new Map([
   ],
 ]);
 
+// URLs we cannot check from CI. Kajabi's checkout pages sit behind Cloudflare
+// bot protection that varies the response by client: 200 in a real browser,
+// 403 to curl from a laptop, and 404 to a datacenter IP like a GitHub runner.
+// That 404 is indistinguishable from a genuinely missing page, so fetching
+// them here would fail the build on links that work perfectly for buyers.
+// They are skipped and listed on every run — verify them in a real browser.
+const UNVERIFIABLE = [
+  {
+    pattern: /^https:\/\/shewhobecomes\.nina-moore\.com\/offers\/[^/]+\/checkout\/?$/,
+    why: 'Kajabi checkout behind Cloudflare bot protection — returns 404 to CI, 200 in a browser',
+  },
+];
+
 // rel values that never fetch a document, so a 404 on the bare origin is meaningless
 const NON_FETCHING_REL = /\b(preconnect|dns-prefetch|preload|modulepreload)\b/i;
 
@@ -94,6 +107,7 @@ for (const f of files) {
 const errors = [];
 const warnings = [];
 const known = [];
+const unverifiable = [];
 
 // ---- internal ---------------------------------------------------------
 for (const [href, sources] of internal) {
@@ -159,6 +173,11 @@ async function worker() {
   while (cursor < urls.length) {
     const url = urls[cursor++];
     const where = [...external.get(url)].slice(0, 3).join(', ');
+    const skip = UNVERIFIABLE.find((u) => u.pattern.test(url));
+    if (skip) {
+      unverifiable.push(`${url}  [${where}]  — ${skip.why}`);
+      continue;
+    }
     const r = await probe(url);
     const dead = !r.error && (r.status === 404 || r.status === 410);
     if (dead && KNOWN_BROKEN.has(url)) {
@@ -179,6 +198,7 @@ await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 console.log(
   `checked ${internal.size} internal and ${external.size} external links across ${files.length} pages`
 );
+for (const u of unverifiable) console.log(`  unchecked  ${u}`);
 for (const w of warnings) console.log(`  warn   ${w}`);
 for (const k of known) console.log(`  KNOWN BROKEN (not failing the build)\n           ${k}`);
 if (errors.length) {
