@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /preview/
-Disallow: /original/
-
-Sitemap: https://nina-moore.com/sitemap.xml
