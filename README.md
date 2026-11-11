@@ -1,6 +1,6 @@
 # Nina Moore
 
-Website for Nina Moore's transformational healing practice, featuring mentorship, medicine work, and sacred ceremonies.
+The website at nina-moore.com.
 
 Every URL on the site, and where each button goes: `SITE-MAP.md`.
 

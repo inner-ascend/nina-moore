@@ -6,7 +6,7 @@ const path = require('path');
 const https = require('https');
 const sharp = require('sharp');
 
-const USERNAME = 'nina__eterna';
+const USERNAME = 'byninamoore';
 const COUNT = 9;                 // posts to show (3x3 grid)
 const APP_ID = '936619743392459'; // public web app id used by instagram.com
 

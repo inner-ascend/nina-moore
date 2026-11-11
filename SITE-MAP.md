@@ -19,12 +19,9 @@ Prices and checkout links live in `offers.json` (see README → Offers), not her
 | https://nina-moore.com/topics/shadow-work-for-women | topic page |
 | https://nina-moore.com/topics/embodied-work-for-women | topic page |
 | https://nina-moore.com/topics/spiritual-emergence | topic page |
-| https://nina-moore.com/topics/psychedelic-integration | topic page |
-| https://nina-moore.com/topics/ceremony-integration | topic page |
 | https://nina-moore.com/topics/writing-through-change | topic page |
 
-Hidden from search on purpose (robots.txt): https://nina-moore.com/preview (copy of home),
-https://nina-moore.com/original (frozen old React site), https://nina-moore.com/go/…
+Hidden from search on purpose (robots.txt): https://nina-moore.com/preview (copy of home), https://nina-moore.com/go/…
 
 ## Short links (built from offers.json — Instagram, Stories, DMs, emails)
 | URL | goes to |
