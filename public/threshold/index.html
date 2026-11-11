@@ -172,7 +172,8 @@ nav.main { position: sticky; top: 0; z-index: 30; background: rgba(242, 235, 221
 .mobile-close { position: absolute; top: 24px; right: var(--pad); color: var(--parchment); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; }
 
 @media (max-width: 900px) {
-  .nav-inner { grid-template-columns: auto 1fr auto; padding: 16px var(--pad); }
+  .nav-inner { grid-template-columns: 1fr auto; padding: 16px var(--pad); }
+  .nav-mobile-toggle { justify-self: end; }
   .wordmark { justify-content: flex-start; }
   .nav-left { display: none; }
   .nav-right { display: none; }
@@ -978,7 +979,7 @@ footer { background: var(--parchment); padding: 80px var(--pad) 32px; border-top
     </div>
 
     <div class="application-gate">
-      <a href="https://calendly.com/ninamoorerising/free-discovery" target="_blank" rel="noopener" class="btn btn-primary">
+      <a href="/go/call" target="_blank" rel="noopener" class="btn btn-primary">
         <span>Book a conversation</span>
         <svg class="btn-arrow" viewBox="0 0 14 10" fill="none">
           <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>

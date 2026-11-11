@@ -1,0 +1,33 @@
+{
+  "_readme": "One list of every offer. In any page, link to /go/<id> — the build swaps it for the real URL below, and also publishes nina-moore.com/go/<id> as a short link for Instagram, DMs and emails. Change a checkout here once and every button on the site follows.",
+  "she-who-becomes": {
+    "name": "She Who Becomes",
+    "price": "€33 / month",
+    "url": "https://shewhobecomes.nina-moore.com/offers/JicjMvXT/checkout",
+    "page": "/she-who-becomes/"
+  },
+  "sitting": {
+    "name": "A sitting — 90 minutes, one to one",
+    "price": "€85",
+    "url": "https://shewhobecomes.nina-moore.com/offers/kcUZF3p6/checkout",
+    "page": "/sittings/"
+  },
+  "journey": {
+    "name": "The Journey — four 60-minute sessions",
+    "price": "€420",
+    "url": "https://shewhobecomes.nina-moore.com/offers/TX52BXP2/checkout",
+    "page": "/sittings/"
+  },
+  "call": {
+    "name": "Free 20-minute discovery call",
+    "price": "free",
+    "url": "https://calendly.com/ninamoorerising/free-discovery",
+    "page": "/sittings/"
+  },
+  "portal-poem": {
+    "name": "Portal Poem — 12-week private mentorship",
+    "price": "by application",
+    "url": "https://shewhobecomes.nina-moore.com/portal-poem",
+    "page": null
+  }
+}
