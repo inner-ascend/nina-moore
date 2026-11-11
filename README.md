@@ -2,6 +2,8 @@
 
 Website for Nina Moore's transformational healing practice, featuring mentorship, medicine work, and sacred ceremonies.
 
+Every URL on the site, and where each button goes: `SITE-MAP.md`.
+
 ## Offers — one list, every button
 
 Every offer lives in `offers.json` (name, price, where it goes). Pages never hard-code a
