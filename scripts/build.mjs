@@ -55,15 +55,42 @@ if (unknown.size) {
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+// Each short link carries its own share card (Open Graph), so pasting it in
+// WhatsApp, Instagram DMs or Messages shows a picture and title. Set it per
+// offer with "share": {title, description, image} in offers.json; without it
+// the card falls back to the offer name and the site's default image.
+// The redirect is JavaScript only, on purpose: link-preview robots don't run
+// JS, so they stay and read the card; people are sent on at once.
+const SITE = 'https://nina-moore.com';
 for (const [id, o] of Object.entries(offers)) {
   const dir = path.join(dist, 'go', id);
   fs.mkdirSync(dir, { recursive: true });
+  const s = o.share || {};
+  const title = s.title || `${o.name} · Nina Moore`;
+  const desc = s.description || `${o.name} — ${o.price}`;
+  const imgPath = s.image || '/images/og-card.jpg';
+  if (!fs.existsSync(path.join(dist, imgPath))) {
+    console.error(`share image missing for /go/${id}: ${imgPath}`);
+    process.exit(1);
+  }
+  const img = SITE + imgPath;
   fs.writeFileSync(path.join(dir, 'index.html'), `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(o.name)} · Nina Moore</title>
+<title>${esc(title)}</title>
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0;url=${esc(o.url)}">
+<meta name="description" content="${esc(desc)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nina Moore">
+<meta property="og:url" content="${SITE}/go/${id}/">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:image" content="${esc(img)}">
+<meta property="og:image:secure_url" content="${esc(img)}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <script>location.replace(${JSON.stringify(o.url)} + location.search);</script>
 </head><body><p><a href="${esc(o.url)}">${esc(o.name)} — continue</a></p></body></html>
 `);

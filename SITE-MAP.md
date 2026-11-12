@@ -27,6 +27,7 @@ Hidden from search on purpose (robots.txt): https://nina-moore.com/preview (copy
 | URL | goes to |
 |---|---|
 | https://nina-moore.com/go/she-who-becomes | Kajabi checkout, She Who Becomes, €33/month |
+| https://nina-moore.com/go/free-monday | Kajabi checkout, She Who Becomes with a 7-day free trial (made 12 Nov for the Monday gathering), then €33/month |
 | https://nina-moore.com/go/sitting | Kajabi checkout, a sitting, €85 |
 | https://nina-moore.com/go/journey | Kajabi checkout, The Journey, €420 |
 | https://nina-moore.com/go/call | Calendly, free discovery call |
@@ -34,6 +35,7 @@ Hidden from search on purpose (robots.txt): https://nina-moore.com/preview (copy
 
 ## Where they land
 - https://shewhobecomes.nina-moore.com/offers/JicjMvXT/checkout — She Who Becomes
+- https://shewhobecomes.nina-moore.com/offers/BfVJFP2a/checkout — She Who Becomes, 7 days free
 - https://shewhobecomes.nina-moore.com/offers/kcUZF3p6/checkout — a sitting
 - https://shewhobecomes.nina-moore.com/offers/TX52BXP2/checkout — The Journey
 - https://calendly.com/ninamoorerising/free-discovery — free call
@@ -56,4 +58,5 @@ Hidden from search on purpose (robots.txt): https://nina-moore.com/preview (copy
 - Hosting: GitHub Pages from `inner-ascend/nina-moore`, branch `main` → `gh-pages` by the
   Deploy workflow. DNS at Bluehost (A records → GitHub Pages).
 - Every "buy" button links `/go/<id>`; the build swaps in the real URL from `offers.json`.
+- Each `/go/<id>` page carries a share card (picture + title for WhatsApp, Instagram DMs), set by `share` in `offers.json`. Cards for short links live in `public/go-cards/`.
 - CI fails on a dead link or an unknown offer id.

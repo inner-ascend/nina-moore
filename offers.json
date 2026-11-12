@@ -4,7 +4,23 @@
     "name": "She Who Becomes",
     "price": "€33 / month",
     "url": "https://shewhobecomes.nina-moore.com/offers/JicjMvXT/checkout",
-    "page": "/she-who-becomes/"
+    "page": "/she-who-becomes/",
+    "share": {
+      "title": "She Who Becomes — a community for women at a threshold",
+      "description": "You're not lost. You're in between. A community for women devoted to the lifelong art of becoming. €33 / month.",
+      "image": "/she-who-becomes/og.jpg"
+    }
+  },
+  "free-monday": {
+    "name": "She Who Becomes — 7 days free",
+    "price": "7 days free, then €33 / month",
+    "url": "https://shewhobecomes.nina-moore.com/offers/BfVJFP2a/checkout",
+    "page": "/she-who-becomes/",
+    "share": {
+      "title": "She Who Becomes — 7 days free",
+      "description": "You're not lost. You're in between. A community for women devoted to the lifelong art of becoming. 7 days free, then €33 / month.",
+      "image": "/go-cards/free-monday.jpg"
+    }
   },
   "sitting": {
     "name": "A sitting — 90 minutes, one to one",
