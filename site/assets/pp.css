@@ -1,0 +1,148 @@
+/* nina moore · Portal Poem pages (landing, mentorship, circles) · 17 nov 2026
+   loads after site.css and only reads its tokens; nothing here changes a shared component.
+   the landing is a maker's notebook: a stitched spine, leaves with a red margin rule, taped photos,
+   red-ink notes in the margin. pp.js lays each leaf onto the pile as you scroll (transform + opacity).
+   the offer pages carry a lighter echo: one stitched sheet, tape, ink. */
+
+body.pp{
+  --nb-paper:#F7F1E3;          /* the leaf: lighter than the desk. ink 15.6:1, red 6.7:1, muted 5.6:1 */
+  --nb-edge:#E4D8BF;           /* page edges under the leaf */
+  --nb-thread:#7A6A52;         /* binding stitches, decorative */
+  --nb-spine:clamp(.7rem,.4rem + 1.4vw,1.6rem);
+  --nb-margin:clamp(7rem,5rem + 5vw,11rem);
+  --nb-pad:clamp(1.25rem,.6rem + 3vw,4.5rem);
+  --nb-tuck:clamp(1.25rem,.8rem + 2vw,2.75rem);   /* how far each leaf lies over the one before */
+  --fs-big:clamp(2.3rem,1.2rem + 4.6vw,6rem);  /* big single-sentence statements */
+}
+.pp .ink-2,.pp .way__sub{color:var(--ink-2)}
+
+/* column helpers site.css lacks (same pattern as its .c-* block) */
+@media(min-width:900px){.c-1-12{grid-column:1/13}.c-1-4{grid-column:1/5}}
+
+/* one big sentence of hers, set alone (only lines that are their own paragraph in the brief) */
+.big{font:400 var(--fs-big)/1.02 var(--display);letter-spacing:-.014em;text-wrap:balance;max-width:22ch}
+.big--after{margin-top:.35em;font-style:italic;color:var(--ink-2)}
+
+/* a word with a hand-drawn line under it */
+.inked{position:relative;display:inline-block;white-space:nowrap}
+.ink{position:absolute;overflow:visible;fill:none;stroke:var(--pp-red);stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.ink--under{left:-2%;bottom:-.08em;width:104%;height:.28em;stroke-width:2.2;vector-effect:non-scaling-stroke}
+.ink--oval{stroke-width:1.6;vector-effect:non-scaling-stroke}
+
+/* ---------- the notebook ---------- */
+.nb{position:relative;padding:clamp(1.5rem,1rem + 3vw,4rem) 0 0 var(--nb-spine)}
+/* the spine: a bound edge with stitches, running the whole notebook */
+.nb::before{content:"";position:absolute;left:0;top:clamp(1.5rem,1rem + 3vw,4rem);bottom:0;width:var(--nb-spine);background-color:var(--pp-paper-2);border:1px solid var(--rule);border-right:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='34'%3E%3Cpath d='M10 4v14' stroke='%237A6A52' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:repeat-y;background-position:center top;background-size:100% 34px}
+
+.nb-page{position:relative;isolation:isolate;transform-origin:0 0}
+.nb-page+.nb-page{margin-top:calc(-1 * var(--nb-tuck))}
+/* page edges: two leaves peeking out below and to the right */
+.nb-page::before,.nb-page::after{content:"";position:absolute;inset:0;background:var(--nb-edge);border:1px solid var(--rule)}
+.nb-page::before{transform:translate(5px,5px)}
+.nb-page::after{transform:translate(10px,10px);background:var(--pp-paper-2)}
+.nb-page::after{z-index:-1}
+.nb-sheet{position:relative;z-index:1;display:grid;grid-template-columns:1fr;padding:var(--nb-pad) var(--nb-pad) calc(var(--nb-pad) + var(--nb-tuck)) var(--nb-pad);background-color:var(--nb-paper);border:1px solid var(--rule);border-left:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .18 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* the red margin rule of an exercise book */
+.nb-sheet::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--nb-pad) * .55);width:1px;background:var(--pp-red);opacity:.4}
+.nb-margin{display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-3);padding-left:calc(var(--nb-pad) * .25);margin-bottom:var(--sp-4)}
+.nb-margin .folio{font-style:italic;letter-spacing:.08em;font-family:var(--serif);font-size:1rem;color:var(--pp-red)}
+.nb-note{text-align:right;max-width:16ch}
+.nb-body{min-width:0;padding-left:calc(var(--nb-pad) * .25)}
+@media(min-width:900px){
+  .nb-sheet{grid-template-columns:var(--nb-margin) minmax(0,1fr);padding-left:0}
+  .nb-sheet::before{left:calc(var(--nb-margin) - 1.5rem)}
+  .nb-margin{flex-direction:column;justify-content:flex-start;gap:var(--sp-5);padding:0 2.75rem 0 1.5rem;margin:0}
+  .nb-note{text-align:left;max-width:9rem;padding-top:clamp(6rem,8vw,10rem)}
+  .nb-body{padding-left:0}
+}
+/* the shade a leaf carries while it is lifted (added by pp.js, opacity only) */
+.nb-shade{position:absolute;inset:0;z-index:5;background:#2A2116;opacity:0;pointer-events:none}
+
+.nb-gap{margin-top:clamp(1.5rem,1rem + 2.4vw,3.5rem)}
+.nb .big{margin-block:clamp(2.5rem,1.5rem + 4vw,6rem)}
+.nb-links{margin-top:var(--sp-3)}
+.nb .questions{border-top-color:var(--nb-edge)}
+.nb .questions li{border-bottom-color:var(--nb-edge)}
+
+/* photos taped into the notebook */
+.nb .frag{max-width:100%}
+.nb-fig-sm{width:min(100%,19rem);justify-self:start}
+.nb-fig-md{width:min(100%,24rem);justify-self:end}
+.nb-fig-wide{margin-block:var(--sp-4) var(--sp-2)}
+.nb-fig-wide img{aspect-ratio:3/2}
+.nb-fig-sm img,.nb-fig-md img{aspect-ratio:4/5}
+@media(min-width:900px){
+  .nb-fig-float{grid-row:1/span 3;align-self:start;margin-top:clamp(3rem,6vw,7rem)}
+  .nb-fig-sm{width:100%}
+  .nb-fig-wide{width:calc(100% + var(--nb-pad));margin-right:calc(-1 * var(--nb-pad))}
+}
+@media(max-width:899px){
+  .nb-fig-sm,.nb-fig-md{width:min(78%,22rem)}
+  .nb-fig-md{justify-self:end;margin-top:var(--sp-4)}
+}
+
+/* i · cover: title and a big taped photograph */
+.nb-cover{display:grid;gap:var(--sp-5)}
+.nb-cover__text{position:relative}
+.nb-cover__title{margin-top:var(--sp-4);font-size:clamp(3rem,1.3rem + 6.6vw,8.25rem);line-height:.95;letter-spacing:-.016em;max-width:11ch}
+.nb-cover .ink--oval{left:-1.9rem;top:-1.5rem;width:clamp(11rem,9.5rem + 3vw,13rem);height:clamp(4.2rem,3.6rem + 1.4vw,5.2rem);stroke-width:1.4}
+.nb-cover__fig img{aspect-ratio:2/3}
+@media(min-width:900px){
+  .nb-cover{grid-template-columns:minmax(0,13fr) minmax(0,10fr);align-items:start;column-gap:clamp(2rem,4vw,5rem)}
+  .nb-cover__text{padding-top:clamp(2rem,6vw,7rem)}
+  .nb-cover__fig{margin-right:calc(-.5 * var(--nb-pad))}
+}
+
+/* v · the two ways as a spread: a stitched fold down the middle */
+.nb-ways{margin-top:clamp(2rem,1rem + 4vw,5rem)}
+@media(min-width:820px){
+  .nb-ways>.way+.way{border-left:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='26'%3E%3Cpath d='M3 3v12' stroke='%237A6A52' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:repeat-y;background-position:left top;background-size:6px 26px}
+}
+
+/* vii · the last leaf */
+.nb-enter{display:grid;gap:var(--sp-4);justify-items:start;padding-block:clamp(1rem,4vw,4rem)}
+.nb-enter .lede{max-width:var(--measure)}
+.nb-enter__mark{width:clamp(4rem,3rem + 4vw,7rem);height:auto;aspect-ratio:60/48}
+
+/* ---------- offer pages: the lighter echo ---------- */
+.offer__back{padding-top:var(--sp-3)}
+.sheet{position:relative;margin:var(--sp-3) 0 0 var(--nb-spine);padding:clamp(1.5rem,.8rem + 3.4vw,5rem) clamp(1.25rem,.6rem + 3vw,4.5rem) clamp(2.5rem,1.5rem + 4vw,6rem);background-color:var(--nb-paper);border:1px solid var(--rule);border-left:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .18 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* the stitched spine, same as the notebook's */
+.sheet::before{content:"";position:absolute;top:-1px;bottom:-1px;left:calc(-1 * var(--nb-spine));width:var(--nb-spine);background-color:var(--pp-paper-2);border:1px solid var(--rule);border-right:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='34'%3E%3Cpath d='M10 4v14' stroke='%237A6A52' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:repeat-y;background-size:100% 34px}
+/* the page edges under the sheet */
+.sheet::after{content:"";position:absolute;inset:0;z-index:-1;transform:translate(7px,8px);background:var(--nb-edge);border:1px solid var(--rule)}
+.sheet__head{align-items:start}
+.sheet__title{margin-top:var(--sp-3)}
+.sheet .sheet__sub{margin-top:clamp(2rem,1rem + 3vw,4rem);font-style:italic;max-width:16ch}
+.sheet__fig img{aspect-ratio:2/3}
+.sheet__fig{width:min(100%,30rem);justify-self:end}
+.sheet__fig-sm{width:min(70%,17rem);align-self:start}
+.sheet__fig-sm img{aspect-ratio:4/5}
+.sheet__row{margin-top:clamp(3.5rem,2rem + 6vw,8rem)}
+.sheet__aside{display:grid;gap:var(--sp-3);align-content:start}
+.sheet__aside .note{margin-top:var(--sp-2)}
+.sheet__aside--notes{padding-top:var(--sp-6)}
+.sheet__after{margin-top:var(--sp-4)}
+.sheet__close{margin-top:clamp(2.5rem,1.5rem + 4vw,5rem)}
+.sheet .list{border-top-color:var(--nb-edge)}
+.sheet .list li{border-bottom-color:var(--nb-edge)}
+@media(max-width:899px){
+  .sheet__fig{width:min(88%,24rem);margin-top:var(--sp-3)}
+  .sheet__aside--notes{display:none}
+}
+@media(min-width:900px){.sheet__fig{margin-top:-1rem;margin-right:calc(-.6 * clamp(1.25rem,.6rem + 3vw,4.5rem))}}
+
+.leave{display:grid;gap:clamp(2.5rem,1.5rem + 3vw,4.5rem)}
+.leave__item{display:grid;gap:var(--sp-3);max-width:var(--measure)}
+.leave .big{max-width:none}
+.leave__last{font-style:italic;max-width:var(--measure)}
+
+.offer__details{margin-top:clamp(4rem,2.5rem + 6vw,9rem)}
+.details__sub{padding-bottom:var(--sp-3);font:italic 400 var(--fs-lede)/1.4 var(--serif);color:var(--ink-2)}
+/* the CTA label from the brief, next to her still-empty link placeholder */
+.cta-slot{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.cta-slot__label{font:500 1rem/1.2 var(--sans);letter-spacing:.03em}

@@ -4,24 +4,22 @@ Every address on nina-moore.com and where each button sends people. Updated 11 N
 Keep this file in step with the site: a new page or a changed link updates it in the same commit.
 Prices and checkout links live in `offers.json` (see README → Offers), not here.
 
-## Her pages (nina-moore.com)
+## Her pages (nina-moore.com) — the rebrand (not live until the merge)
 | URL | what it is |
 |---|---|
-| https://nina-moore.com | home: who she is, the three ways to meet |
-| https://nina-moore.com/she-who-becomes | She Who Becomes sales page (the Instagram bio link) |
-| https://nina-moore.com/sittings | one-to-one: a sitting and the 4-session Journey/Cycle, both checkouts + free call |
-| https://nina-moore.com/threshold | The Threshold, 8-week circle, by application (call) |
-| https://nina-moore.com/links | link-in-bio page, with her latest posts |
-| https://nina-moore.com/topics/threshold-work | topic page (search) |
-| https://nina-moore.com/topics/women-in-transition | topic page |
-| https://nina-moore.com/topics/grief-and-loss | topic page |
-| https://nina-moore.com/topics/leaving-a-marriage | topic page |
-| https://nina-moore.com/topics/shadow-work-for-women | topic page |
-| https://nina-moore.com/topics/embodied-work-for-women | topic page |
-| https://nina-moore.com/topics/spiritual-emergence | topic page |
-| https://nina-moore.com/topics/writing-through-change | topic page |
+| https://nina-moore.com | home: two doors, Portal Poem and She Who Becomes |
+| https://nina-moore.com/portal-poem/ | Portal Poem hub |
+| https://nina-moore.com/portal-poem/mentorship/ | 12-week private mentorship (apply) |
+| https://nina-moore.com/portal-poem/circles/ | writing circles (join) |
+| https://nina-moore.com/she-who-becomes/ | She Who Becomes hub (the Instagram bio link) |
+| https://nina-moore.com/she-who-becomes/journey/ | 12-week journey |
+| https://nina-moore.com/she-who-becomes/membership/ | €33/month membership |
+| https://nina-moore.com/about/ | about |
+| https://nina-moore.com/writing/ | writing (Substack posts) |
 
-Hidden from search on purpose (robots.txt): https://nina-moore.com/preview (copy of home), https://nina-moore.com/go/…
+## Old pages that now redirect (stub pages, set in `redirects.json`)
+/preview, /links → home · /sittings, /threshold, /topics/* → She Who Becomes (writing-through-change → Portal Poem).
+The site files live in `site/` (sync with `node scripts/sync-site.mjs`); `public/` holds favicon, robots.txt and share cards.
 
 ## Short links (built from offers.json — Instagram, Stories, DMs, emails)
 | URL | goes to |

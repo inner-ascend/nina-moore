@@ -1,0 +1,52 @@
+/* nina moore · page styles for About, Writing and 404 (17 nov 2026).
+   loads after site.css and only reads its tokens; nothing here overrides a site.css component.
+   direction from Nina's refs: big single-sentence statements, big images, generous space. */
+
+/* ---------- page cover: label, very large title, one big wide image, then the lede ---------- */
+/* after Nina's refs (jenani, marina): the title set huge across the page, the photo as a wide band under it */
+.page-cover{padding-top:clamp(2.5rem,1rem + 6vw,7rem)}
+.page-cover__title{margin-top:var(--sp-3);font:400 clamp(3.1rem,1.2rem + 7.6vw,9.5rem)/.94 var(--display);letter-spacing:-.016em;text-wrap:balance;max-width:16ch}
+.page-cover__title em{font-style:italic}
+.page-cover__fig{margin-top:clamp(2.5rem,1.5rem + 4vw,5rem)}
+.page-cover__fig img{aspect-ratio:4/5;object-position:var(--focus,50% 40%)}
+@media(min-width:700px){.page-cover__fig img{aspect-ratio:16/9}}
+.page-cover__lede{margin-top:clamp(2.5rem,1.5rem + 4vw,5rem);max-width:var(--measure)}
+@media(min-width:900px){.page-cover__lede{margin-left:calc(50% - var(--sp-4))}}
+
+/* ---------- statement: one of her sentences that already stands alone, set very large ---------- */
+.statement{margin-block:clamp(3.5rem,2rem + 7vw,9rem);font:400 clamp(2.3rem,1.3rem + 4.2vw,5.75rem)/1.02 var(--display);letter-spacing:-.01em;text-wrap:balance;max-width:17ch}
+.statement--right{margin-left:auto;text-align:right}
+.statement--xl{max-width:20ch;font-style:italic}
+@media(max-width:899px){.statement--right{text-align:left;margin-left:0}}
+
+/* ---------- about ---------- */
+.about-art__fig{align-self:start;margin-top:var(--sp-2)}
+.about-me{align-items:end}
+.about-me__text{padding-bottom:var(--sp-2)}
+.about-me__ph{display:block;padding:var(--sp-4) var(--sp-3);font-size:1.125rem;line-height:1.55}
+.about-doors{margin-top:0}
+.about-writing{margin-top:var(--sp-4)}
+
+/* ---------- writing: index of essays (rows, whole row clickable) ---------- */
+.essays{border-top:1px solid var(--fg)}
+.essay{position:relative;display:grid;grid-template-columns:1fr auto;gap:.35rem var(--sp-3);padding:clamp(1.4rem,1rem + 1.6vw,2.6rem) 0;border-bottom:1px solid var(--rule)}
+.essay__date{grid-column:1/-1;font:500 var(--fs-label)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.essay__title{font:400 var(--fs-h3)/1.08 var(--display);text-wrap:balance}
+.essay__title a{text-decoration:none}
+.essay__title a::after{content:"";position:absolute;inset:0}   /* stretch the link over the row */
+.essay__title a:focus-visible{outline:0}
+.essay:focus-within{outline:2px solid var(--accent,var(--ink));outline-offset:4px}
+.essay__sub{margin-top:.4rem;font:italic 400 var(--fs-lede)/1.4 var(--serif);color:var(--ink-2);max-width:var(--measure)}
+.essay__arr{align-self:center;font:400 var(--fs-h3)/1 var(--display);transition:transform .35s var(--ease)}
+.essay:hover .essay__title a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+.essay:hover .essay__arr{transform:translateX(.3em)}
+@media(min-width:900px){
+  .essay{grid-template-columns:11rem 1fr auto;align-items:baseline}
+  .essay__date{grid-column:auto}
+}
+.essays-more{margin-top:var(--sp-4)}
+
+/* ---------- 404 ---------- */
+.lost{padding-top:clamp(3rem,1.5rem + 8vw,9rem)}
+.lost .statement{margin-block:var(--sp-3) var(--sp-5)}
+.lost__mark{width:clamp(4rem,3rem + 4vw,7rem);height:auto;color:var(--muted)}

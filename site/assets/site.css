@@ -1,0 +1,287 @@
+/* nina moore · site system · 17 nov 2026
+   one personal editorial publication, two practices with equal weight.
+   parent: warm paper, Instrument Serif display, Newsreader body, Instrument Sans labels.
+   .pp  = Portal Poem: yellower paper, grain, ink, red-ink notes, taped fragments, the portal oval.
+   .swb = She Who Becomes: cooler air, more space, dusk ink, the scroll-drawn coil.
+   theme classes work on <body> (whole page) or on any section (local, e.g. the home spread). */
+
+/* ---------- tokens ---------- */
+:root{
+  /* colour: parent */
+  --paper:#F4EFE6;      /* page */
+  --paper-2:#EAE3D6;    /* deeper panel */
+  --ink:#1E1B16;        /* text, 15:1 on paper */
+  --ink-2:#463F36;      /* secondary text, 9:1 */
+  --muted:#675F53;      /* labels, captions, 5.5:1 (4.6:1 on paper-2) */
+  --rule:#C9BFAE;       /* hairlines, decorative only */
+  --accent:var(--ink);
+  --ph-fg:#6E3510;      /* placeholder text, 7.7:1 on --ph-bg */
+  --ph-bg:#F6E3C6;
+
+  /* colour: Portal Poem */
+  --pp-paper:#F1E9D8;
+  --pp-paper-2:#E7DCC5;
+  --pp-ink:#1C1914;
+  --pp-red:#9A2D1B;     /* red ink, 6.3:1 on pp-paper */
+
+  /* colour: She Who Becomes */
+  --swb-air:#EEECE6;
+  --swb-air-2:#E2E0D9;
+  --swb-ink:#1D2027;
+  --swb-dusk:#38445A;   /* dusk ink, 8.3:1 on swb-air */
+
+  /* type */
+  --display:'Instrument Serif','Iowan Old Style',Georgia,serif;
+  --serif:'Newsreader','Iowan Old Style',Georgia,serif;
+  --sans:'Instrument Sans','Helvetica Neue',Helvetica,sans-serif;
+  --fs-mega:clamp(3rem,1.4rem + 6vw,7.5rem);   /* hero line */
+  --fs-h1:clamp(2.6rem,1.6rem + 4.2vw,5.5rem);    /* page titles */
+  --fs-h2:clamp(2.1rem,1.5rem + 2.6vw,4rem);      /* section titles */
+  --fs-h3:clamp(1.65rem,1.35rem + 1.2vw,2.5rem);  /* card titles */
+  --fs-quote:clamp(1.7rem,1.3rem + 1.8vw,3rem);   /* pull lines, questions */
+  --fs-lede:clamp(1.25rem,1.12rem + .55vw,1.55rem);
+  --fs-body:clamp(1.125rem,1.05rem + .3vw,1.25rem); /* 18 → 20px */
+  --fs-small:.9375rem;
+  --fs-label:.75rem;
+  --lh-body:1.65;
+  --measure:38rem;      /* literary paragraph width (~62ch) */
+  --measure-wide:44rem;
+
+  /* space */
+  --sp-1:.5rem; --sp-2:1rem; --sp-3:1.5rem; --sp-4:2rem; --sp-5:3rem; --sp-6:4.5rem;
+  --sp-section:clamp(5rem,3rem + 8vw,11rem);
+  --gutter:clamp(1.25rem,.6rem + 3.2vw,4rem);     /* 20px at 375, 64px at 1440 */
+  --maxw:82rem;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* theme classes: set the four role tokens, everything else reads them */
+.pp{--bg:var(--pp-paper);--bg-2:var(--pp-paper-2);--fg:var(--pp-ink);--accent:var(--pp-red);--mark:var(--pp-red)}
+.swb{--bg:var(--swb-air);--bg-2:var(--swb-air-2);--fg:var(--swb-ink);--accent:var(--swb-dusk);--mark:var(--swb-dusk)}
+body{--bg:var(--paper);--bg-2:var(--paper-2);--fg:var(--ink);--mark:var(--ink)}
+body.pp{--bg:var(--pp-paper);--bg-2:var(--pp-paper-2);--fg:var(--pp-ink);--accent:var(--pp-red);--mark:var(--pp-red)}
+body.swb{--bg:var(--swb-air);--bg-2:var(--swb-air-2);--fg:var(--swb-ink);--accent:var(--swb-dusk);--mark:var(--swb-dusk)}
+
+/* paper grain for Portal Poem (texture, not a gradient) */
+.pp,body.pp{
+  background-color:var(--bg);color:var(--fg);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.swb,body.swb{background-color:var(--bg);color:var(--fg)}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background-color:var(--bg);color:var(--fg);font:400 var(--fs-body)/var(--lh-body) var(--serif);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,h4,p,figure,blockquote,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent,var(--ink));outline-offset:3px}
+::selection{background:var(--fg);color:var(--bg)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:var(--gutter);top:-4rem;z-index:50;background:var(--ink);color:var(--paper);padding:.75rem 1rem;font:500 var(--fs-small)/1 var(--sans)}
+.skip:focus{top:.75rem}
+
+/* ---------- layout ---------- */
+.wrap{width:min(var(--maxw),100% - 2*var(--gutter));margin-inline:auto}
+.section{padding-block:var(--sp-section) 0}
+.section--tight{padding-block:var(--sp-6) 0}
+.measure{max-width:var(--measure)}
+.measure-wide{max-width:var(--measure-wide)}
+/* 12-col editorial grid; children place themselves with .c-* helpers at ≥900px */
+.grid{display:grid;gap:var(--sp-4) clamp(1rem,2.4vw,2.5rem)}
+@media(min-width:900px){
+  .grid{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .c-1-5{grid-column:1/6}.c-1-6{grid-column:1/7}.c-1-7{grid-column:1/8}.c-1-8{grid-column:1/9}
+  .c-2-6{grid-column:2/7}.c-2-8{grid-column:2/9}.c-2-12{grid-column:2/13}
+  .c-5-12{grid-column:5/13}.c-6-12{grid-column:6/13}.c-7-12{grid-column:7/13}.c-8-12{grid-column:8/13}.c-9-12{grid-column:9/13}
+  .c-6-11{grid-column:6/12}.c-7-11{grid-column:7/12}
+  .row-span{grid-row:span 3}
+}
+
+/* ---------- type ---------- */
+.label{font:500 var(--fs-label)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.pp .label,.swb .label{color:var(--accent)}
+.mega{font:400 var(--fs-mega)/.94 var(--display);letter-spacing:-.012em;text-wrap:balance}
+.h1{font:400 var(--fs-h1)/1 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.h2{font:400 var(--fs-h2)/1.04 var(--display);letter-spacing:-.006em;text-wrap:balance}
+.h3{font:400 var(--fs-h3)/1.1 var(--display);text-wrap:balance}
+.mega em,.h1 em,.h2 em,.h3 em{font-style:italic}
+.lede{font-size:var(--fs-lede);line-height:1.5;color:var(--fg)}
+.prose{display:grid;gap:1.1em;max-width:var(--measure)}
+.prose p{text-wrap:pretty;hanging-punctuation:first}
+.prose--muted p{color:var(--ink-2)}
+.small{font-size:var(--fs-small);line-height:1.6}
+.pull{font:italic 400 var(--fs-quote)/1.16 var(--display);letter-spacing:-.004em;text-wrap:balance;max-width:24ch}
+.folio{font:400 var(--fs-label)/1 var(--sans);letter-spacing:.16em;color:var(--muted);font-variant-numeric:tabular-nums}
+.section-head{display:flex;align-items:baseline;gap:var(--sp-3);padding-top:var(--sp-2);border-top:1px solid var(--rule);margin-bottom:clamp(2rem,1rem + 4vw,4.5rem)}
+.section-head .folio{flex:none;min-width:3ch}
+
+/* ---------- links & buttons ---------- */
+.go{display:inline-block;padding:.6em 0;font:500 1rem/1.3 var(--sans);letter-spacing:.02em;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:.45em;transition:text-decoration-color .25s var(--ease)}
+.go:hover{text-decoration-color:currentColor}
+.go .arr{display:inline-block;margin-left:.45em;transition:transform .3s var(--ease)}
+.go:hover .arr{transform:translateX(.25em)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:3.25rem;padding:.9rem 1.6rem;border:1px solid var(--fg);background:var(--fg);color:var(--bg);font:500 1rem/1.2 var(--sans);letter-spacing:.03em;text-decoration:none;transition:background .25s var(--ease),color .25s var(--ease)}
+.btn:hover{background:transparent;color:var(--fg)}
+.btn--line{background:transparent;color:var(--fg)}
+.btn--line:hover{background:var(--fg);color:var(--bg)}
+.btn--block{display:flex;width:100%}
+.links{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);align-items:center}
+
+/* ---------- header ---------- */
+.site-header{position:relative;z-index:10;border-bottom:1px solid var(--rule)}
+.site-header__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem var(--sp-4);padding-block:.9rem}
+.masthead{font:600 .875rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;text-decoration:none;padding:.75rem 0}
+.nav{display:flex;flex-wrap:wrap;gap:0 clamp(1rem,2.6vw,2.5rem)}
+.nav a{display:inline-block;padding:.75rem 0;font:400 .9375rem/1 var(--sans);letter-spacing:.02em;text-decoration:none;border-bottom:1px solid transparent}
+.nav a:hover{border-bottom-color:currentColor}
+.nav a[aria-current="page"]{border-bottom-color:currentColor}
+@media(max-width:560px){
+  .site-header__in{display:grid;gap:0;padding-block:.5rem .25rem}
+  .nav{gap:0 .8rem}
+  .nav a{font-size:.8125rem;padding:.7rem 0}
+}
+
+/* ---------- hero (home): cover + two doors ---------- */
+.cover{display:grid;grid-template-areas:"title" "text" "doors" "fig";padding-top:clamp(2.5rem,1rem + 6vw,7rem)}
+.cover__title{grid-area:title;max-width:13ch}
+.cover__text{grid-area:text;margin-top:clamp(1.75rem,1rem + 3vw,3.5rem)}
+.cover__fig{grid-area:fig;margin-top:var(--sp-5)}
+.cover .doors{grid-area:doors}
+@media(min-width:900px){
+  .cover{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(1rem,2.4vw,2.5rem);grid-template-areas:"title title title title title title title title fig fig fig fig" "text text text text text text text text fig fig fig fig" "doors doors doors doors doors doors doors doors doors doors doors doors";align-items:start}
+  .cover__text{padding-left:clamp(0rem,8vw,9rem)}
+  .cover__fig{margin-top:.6rem}
+}
+.doors{display:grid;grid-template-columns:1fr;margin-top:clamp(3rem,2rem + 5vw,6.5rem);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+@media(min-width:700px){.doors{grid-template-columns:1fr 1fr}.door+.door{border-left:1px solid var(--rule)}}
+@media(max-width:699px){.door+.door{border-top:1px solid var(--rule)}}
+.door{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--sp-3);padding:clamp(1.5rem,1rem + 2.4vw,3rem) clamp(1.25rem,.5rem + 2.4vw,3rem);text-decoration:none;transition:background-color .35s var(--ease)}
+.door__mark{width:clamp(2.25rem,1.8rem + 1.6vw,3.5rem);height:auto;color:var(--mark)}
+.door__name{font:400 var(--fs-h3)/1.05 var(--display)}
+.door__name small{display:block;margin-bottom:.45rem;font:500 var(--fs-label)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.door__arr{font:400 var(--fs-h3)/1 var(--display);transition:transform .35s var(--ease)}
+.door:hover .door__arr{transform:translateX(.3em)}
+.door:hover .door__name{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+
+/* ---------- figures ---------- */
+.fig img{width:100%;object-fit:cover}
+.fig figcaption{margin-top:.6rem;font:400 .8125rem/1.45 var(--sans);color:var(--muted);letter-spacing:.01em}
+.ar-portrait img{aspect-ratio:4/5}
+.ar-tall img{aspect-ratio:2/3}
+.ar-land img{aspect-ratio:3/2}
+.ar-square img{aspect-ratio:1}
+
+/* Portal Poem fragment: a photo taped into the notebook, slightly askew */
+.frag{position:relative;padding:clamp(.5rem,.3rem + .6vw,.85rem);background:#FBF7EE;transform:rotate(var(--tilt,-1.6deg));box-shadow:0 1px 0 rgba(60,45,25,.18)}
+.frag img{width:100%;object-fit:cover}
+.frag::before,.frag::after{content:"";position:absolute;width:clamp(3.5rem,2.6rem + 3vw,6rem);height:1.35rem;background:rgba(222,207,170,.78);top:-.6rem}
+.frag::before{left:12%;transform:rotate(-4deg)}
+.frag::after{right:10%;transform:rotate(5deg)}
+.frag--r{--tilt:1.4deg}
+.frag figcaption{padding:.55rem .1rem .1rem;font:italic 400 1rem/1.4 var(--serif);color:var(--pp-red)}
+/* margin note in red ink */
+.note{font:italic 400 1.0625rem/1.45 var(--serif);color:var(--pp-red);max-width:22ch}
+
+/* She Who Becomes figure: framed by air, no tape */
+.still{padding:0}
+.still img{width:100%;object-fit:cover}
+
+/* ---------- marks: coil (SWB) and portal (PP) ---------- */
+.coil,.portal{display:block;color:var(--mark,var(--ink));overflow:visible}
+.coil{width:2.5rem;height:3rem}
+.portal{width:3rem;height:2.4rem}
+/* stroke set on the svg so it inherits into <use> shadow trees too */
+.coil,.portal{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.coil{stroke-width:1.15}
+.portal{stroke-width:1.6}
+.coil--lg{width:clamp(5rem,3.5rem + 6vw,9rem);height:auto;aspect-ratio:46/56}
+/* [data-draw]: site.js draws the path as it crosses the viewport. without JS or with reduced motion it is simply drawn. */
+
+/* ---------- two ways in (journey + membership, equal) ---------- */
+.ways{display:grid;grid-template-columns:1fr;gap:var(--sp-5)}
+@media(min-width:820px){.ways{grid-template-columns:1fr 1fr;gap:0}.ways>.way+.way{border-left:1px solid var(--rule)}.way{padding-inline:clamp(1.5rem,3vw,3.5rem)}.way:first-child{padding-left:0}.way:last-child{padding-right:0}}
+@media(max-width:819px){.ways>.way+.way{border-top:1px solid var(--rule);padding-top:var(--sp-5)}}
+.way{display:flex;flex-direction:column;gap:var(--sp-3)}
+.way__kind{font:500 var(--fs-label)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent,var(--muted))}
+.way__title{font:400 var(--fs-h3)/1.08 var(--display)}
+.way__sub{font:italic 400 var(--fs-lede)/1.35 var(--serif);color:var(--ink-2)}
+.way .prose{max-width:none}
+.way__foot{margin-top:auto;padding-top:var(--sp-2)}
+
+/* ---------- home: the two practices as one spread ---------- */
+.spread{display:grid;grid-template-columns:1fr}
+@media(min-width:900px){.spread{grid-template-columns:1fr 1fr}}
+.practice{display:flex;flex-direction:column;gap:var(--sp-4);padding:clamp(2.5rem,1.5rem + 4vw,5.5rem) var(--gutter)}
+@media(min-width:900px){.practice{padding-inline:clamp(2rem,1rem + 3.4vw,5rem)}}
+.practice__name{font:500 .8125rem/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+.practice__for{font:400 var(--fs-h2)/1.02 var(--display);letter-spacing:-.006em;max-width:13ch;text-wrap:balance}
+.practice__fig{width:min(100%,30rem)}
+.practice.pp .practice__fig{margin:var(--sp-3) 0 var(--sp-2) clamp(0rem,3vw,2.5rem)}
+.practice.swb .practice__fig{margin:var(--sp-5) 0 var(--sp-3) auto;width:min(100%,24rem)}
+.practice .prose{max-width:31rem}
+.practice__ways{padding-top:var(--sp-3);border-top:1px solid var(--rule);font:400 1rem/1.6 var(--sans);color:var(--ink-2);max-width:31rem}
+.practice__cta{margin-top:auto;padding-top:var(--sp-2)}
+.practice__head{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--sp-3)}
+
+/* ---------- questions ---------- */
+.questions{border-top:1px solid var(--rule)}
+.questions li{padding:clamp(1.1rem,.8rem + 1.2vw,2rem) 0;border-bottom:1px solid var(--rule);font:400 var(--fs-quote)/1.14 var(--display);letter-spacing:-.004em;text-wrap:balance}
+.questions li:nth-child(even){padding-left:clamp(0rem,6vw,7rem)}
+
+/* ---------- announcement (enrolment notices) ---------- */
+.announce{display:flex;gap:var(--sp-2);align-items:flex-start;padding:var(--sp-3) clamp(1rem,2vw,1.5rem);border:1px solid var(--accent,var(--ink));border-left-width:4px;background:var(--bg-2);font:400 var(--fs-body)/1.55 var(--serif);max-width:var(--measure-wide)}
+.announce__tag{flex:none;padding-top:.3em;font:600 var(--fs-label)/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent,var(--ink))}
+@media(max-width:520px){.announce{flex-direction:column;gap:.35rem}}
+
+/* ---------- price / details block ---------- */
+.details{border-top:1px solid var(--fg);max-width:var(--measure-wide)}
+.details__title{padding:var(--sp-3) 0 var(--sp-2);font:400 var(--fs-h3)/1.1 var(--display)}
+.details dl{display:grid;grid-template-columns:minmax(7.5rem,auto) 1fr;border-top:1px solid var(--rule)}
+.details dt,.details dd{padding:.95rem 0;border-bottom:1px solid var(--rule)}
+.details dt{font:500 var(--fs-label)/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-right:var(--sp-3);padding-top:1.15rem}
+.details dd{font:400 var(--fs-body)/1.5 var(--serif)}
+.details__cta{padding-top:var(--sp-4);display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);align-items:center}
+@media(max-width:480px){.details dl{grid-template-columns:1fr}.details dt{border-bottom:0;padding-bottom:0}}
+/* placeholders from the brief stay visible until Nina fills them: never style them away */
+.ph{display:inline-block;padding:.05em .45em;border:1px dashed var(--ph-fg);background:var(--ph-bg);color:var(--ph-fg);font:500 .82em/1.45 var(--sans);letter-spacing:.04em;text-decoration:none}
+a.ph:hover{border-style:solid}
+
+/* ---------- back link (child offer pages) ---------- */
+.back{display:inline-flex;gap:.5em;padding:.75rem 0;font:500 var(--fs-small)/1.2 var(--sans);letter-spacing:.02em;text-decoration:none}
+.back:hover{text-decoration:underline}
+
+/* ---------- bullet list (offer pages: "How we work", "What the membership includes") ---------- */
+.list{display:grid;border-top:1px solid var(--rule);max-width:var(--measure)}
+.list li{position:relative;padding:.85rem 0 .85rem 1.75rem;border-bottom:1px solid var(--rule)}
+.list li::before{content:"";position:absolute;left:0;top:1.45em;width:.9rem;height:1px;background:var(--accent,var(--ink))}
+
+/* ---------- footer ---------- */
+.site-footer{margin-top:var(--sp-section);border-top:1px solid var(--fg);padding-block:clamp(2.5rem,1.5rem + 4vw,5rem) var(--sp-3)}
+.site-footer__top{display:grid;gap:var(--sp-5)}
+@media(min-width:900px){.site-footer__top{grid-template-columns:5fr 7fr}}
+.site-footer__mark{font:400 clamp(2.4rem,1.6rem + 3.4vw,4.75rem)/.95 var(--display);letter-spacing:-.01em}
+.site-footer__line{margin-top:var(--sp-2);font:italic 400 var(--fs-lede)/1.35 var(--serif);color:var(--ink-2);max-width:22ch}
+.site-footer__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:var(--sp-4)}
+.site-footer__cols h2{margin-bottom:.4rem;font:500 var(--fs-label)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.site-footer__cols a{display:inline-block;padding:.4rem 0;font:400 .9375rem/1.35 var(--sans);text-decoration:none}
+.site-footer__cols a:hover{text-decoration:underline}
+.site-footer__cols .sub a{padding-left:.9rem;color:var(--ink-2)}
+.site-footer__fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem var(--sp-3);margin-top:var(--sp-6);padding-top:var(--sp-2);border-top:1px solid var(--rule);font:400 .8125rem/1.5 var(--sans);color:var(--muted)}
+
+/* ---------- motion (progressive, JS adds .js on <html>) ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .js .rise{opacity:0;transform:translateY(14px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .js .rise.in{opacity:1;transform:none}
+  /* Portal Poem page turn: a leaf swings in from its spine */
+  .js .leaf{transform-origin:0 50%;opacity:0;transform:perspective(1400px) rotateY(-28deg);transition:opacity .8s var(--ease),transform 1.1s var(--ease)}
+  .js .leaf.in{opacity:1;transform:perspective(1400px) rotateY(0) rotate(var(--tilt,0deg))}
+  .js .frag.leaf.in{transform:perspective(1400px) rotateY(0) rotate(var(--tilt,-1.6deg))}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}

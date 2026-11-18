@@ -1,6 +1,5 @@
 // Assembles dist/ for GitHub Pages. No bundler — the site is hand-written static
-// HTML. Everything in public/ ships at the root (satellite pages, favicon,
-// robots, sitemap); assets/ ships under /assets.
+// HTML in site/ (synced from the design folder); public/ adds favicon, robots.txt and share cards.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -10,17 +9,45 @@ const dist = path.join(root, 'dist');
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 
-// public/* -> dist/*   (she-who-becomes/, sittings/, threshold/, topics/,
-//                       links/, favicon.svg, robots.txt, sitemap.xml, images/)
+// site/* -> dist/*   the new site (index, about/, portal-poem/, she-who-becomes/, writing/,
+//                    assets/, img/, sitemap.xml, 404.html). Refresh it with scripts/sync-site.mjs.
+fs.cpSync(path.join(root, 'site'), dist, { recursive: true });
+
+// public/* -> dist/*   things that are not part of the site itself: favicon, robots.txt,
+//                      share cards (go-cards/, she-who-becomes/og.jpg), legacy /images
 fs.cpSync(path.join(root, 'public'), dist, { recursive: true });
 
-// assets/* -> dist/assets/*  (fonts + the one-pager's images)
-fs.cpSync(path.join(root, 'assets'), path.join(dist, 'assets'), { recursive: true });
+// CNAME belongs at the top of the deploy
+fs.copyFileSync(path.join(root, 'CNAME'), path.join(dist, 'CNAME'));
 
-// root files that belong at the top of the deploy
-for (const f of ['index.html', '404.html', 'CNAME']) {
-  fs.copyFileSync(path.join(root, f), path.join(dist, f));
+// ---- redirects: old pages -> new pages ------------------------------------
+// GitHub Pages cannot redirect on the server, so each old path gets a stub page:
+// instant meta refresh, a canonical pointing at the new page (that is what passes the
+// search ranking over), and JS that keeps ?query and #hash. Never overwrites a real page.
+const redirects = JSON.parse(fs.readFileSync(path.join(root, 'redirects.json'), 'utf8'));
+delete redirects._readme;
+const escA = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+const bad = [];
+for (const [from, to] of Object.entries(redirects)) {
+  const file = path.join(dist, from, 'index.html');
+  const target = path.join(dist, to, 'index.html');
+  if (fs.existsSync(file)) bad.push(`${from} is a real page, not a redirect source`);
+  if (!fs.existsSync(target)) bad.push(`${from} -> ${to}: target page does not exist`);
+  if (bad.length) continue;
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nina Moore</title>
+<link rel="canonical" href="https://nina-moore.com${escA(to)}">
+<meta http-equiv="refresh" content="0; url=${escA(to)}">
+<script>location.replace(${JSON.stringify(to)} + location.search + location.hash);</script>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f4efe6;color:#1e1b16;font:18px/1.5 Georgia,serif}a{color:inherit}</style>
+</head><body><p>This page has moved to <a href="${escA(to)}">nina-moore.com${escA(to)}</a>.</p></body></html>
+`);
 }
+if (bad.length) { console.error('redirects.json:\n  ' + bad.join('\n  ')); process.exit(1); }
+console.log(`redirects: ${Object.keys(redirects).length} stub pages`);
 
 // ---- offers: one list, every button ---------------------------------------
 // Pages link to /go/<id>. Here every "/go/<id>" in the built HTML becomes the
@@ -68,7 +95,7 @@ for (const [id, o] of Object.entries(offers)) {
   const s = o.share || {};
   const title = s.title || `${o.name} · Nina Moore`;
   const desc = s.description || `${o.name} — ${o.price}`;
-  const imgPath = s.image || '/images/og-card.jpg';
+  const imgPath = s.image || '/assets/og/home.jpg';
   if (!fs.existsSync(path.join(dist, imgPath))) {
     console.error(`share image missing for /go/${id}: ${imgPath}`);
     process.exit(1);

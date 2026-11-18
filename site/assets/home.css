@@ -1,0 +1,49 @@
+/* nina moore · home only · 17 nov pass after her four refs
+   jenani: big sentences · veritas: title + image enter together · marina: big hero image · alignflow: spacing, plain practice columns.
+   loads after site.css; touches nothing another page uses. */
+
+main{--sp-section:clamp(6.5rem,3rem + 11vw,14rem);--ease-out:cubic-bezier(.22,1,.36,1)}
+.section-head{margin-bottom:clamp(2.75rem,1.5rem + 5vw,6.5rem)}
+main .grid{row-gap:clamp(2rem,1rem + 3vw,4rem)}
+
+/* ---------- hero: jenani-size heading, marina-size image ---------- */
+.hero{padding-top:clamp(2rem,1rem + 4vw,4.5rem)}
+.hero__title{font:400 clamp(3.5rem,1rem + 12.4vw,11.5rem)/.9 var(--display);letter-spacing:-.03em;max-width:none}
+.hero__title em{font-style:italic;letter-spacing:-.02em}
+.hero__fig{margin-top:clamp(1.75rem,1rem + 3vw,3.5rem)}
+.hero__fig img{width:100%;height:clamp(28rem,62vw,58rem);max-height:calc(100svh - 2rem);min-height:min(30rem,120vw);object-fit:cover;object-position:50% 42%}
+@media(max-width:699px){.hero__fig img{height:122vw;max-height:none;min-height:0;object-position:48% 38%}}
+.hero__body{display:grid;padding-top:clamp(3rem,1.5rem + 6vw,8rem)}
+.hero__text{max-width:var(--measure)}
+@media(min-width:900px){.hero__text{margin-left:calc(100% * 5 / 12)}}
+.hero .doors{margin-top:clamp(3.5rem,2rem + 6vw,8rem)}
+
+/* ---------- big sentences (jenani): her own lines, full width ---------- */
+.statement{margin-block:clamp(4.5rem,2rem + 9vw,10rem);font:400 clamp(2.6rem,.9rem + 7.6vw,8.4rem)/1.02 var(--display);letter-spacing:-.03em;text-wrap:balance}
+@media(min-width:900px){.statement{text-align:justify;text-wrap:wrap;hyphens:none}}
+section>.statement:last-child{margin-bottom:0}
+
+/* ---------- two practices (alignflow plan columns): photo, name, title, text, link. no panels ---------- */
+.spread{gap:clamp(5.5rem,4rem + 4vw,8rem) clamp(1.5rem,1rem + 2.6vw,4rem)}
+.spread .practice{background:none;padding:0;gap:var(--sp-3)}
+.spread .practice__fig{width:100%;margin:0 0 var(--sp-3)}
+.spread .practice__fig img{aspect-ratio:7/8;width:100%;object-fit:cover}
+.spread .practice__for{font-size:var(--fs-h3);line-height:1.08;max-width:18ch}
+.spread .practice .prose{gap:.9em}
+.spread .practice__ways{border-top:0;padding-top:0}
+.spread .practice__cta{padding-top:var(--sp-3)}
+@media(max-width:899px){.spread .practice__fig{width:min(100%,26rem)}}
+
+/* ---------- entrance (veritas): lines rise one line-height and fade, image wipes up. 700ms, together, once ---------- */
+.ln{display:block;overflow:hidden;padding-block:.08em .14em;margin-block:-.08em -.14em}
+.statement .ln:not(:last-child){text-align-last:justify}
+@media(max-width:899px){.statement .ln:not(:last-child){text-align-last:auto}}
+@media(prefers-reduced-motion:no-preference){
+  .ln__in{display:block;transform:translateY(100%);opacity:0;transition:transform .7s var(--ease-out),opacity .7s var(--ease-out)}
+  .is-in .ln__in{transform:none;opacity:1}
+  /* hidden only while home.js is about to run; a failsafe shows it after 3s regardless */
+  .js .hero:not(.go) .hero__title,.js .hero:not(.go) .hero__fig img{opacity:0;animation:nm-show 0s 3s forwards}
+  .js .hero.go .hero__fig img{animation:nm-wipe .7s var(--ease-out) both}
+}
+@keyframes nm-show{to{opacity:1}}
+@keyframes nm-wipe{from{clip-path:inset(100% 0 0 0);opacity:0}to{clip-path:inset(0);opacity:1}}
