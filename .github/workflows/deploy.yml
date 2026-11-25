@@ -4,6 +4,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  # once a day, so /writing/ picks up her new Substack letters without anyone pushing
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,6 +25,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
+
+    # refresh the essay list on /writing/ from her Substack feed (keeps the last list if the feed is down)
+    - name: Latest Substack letters
+      run: python3 scripts/build_writing.py || true
 
     - name: Build
       run: npm run build

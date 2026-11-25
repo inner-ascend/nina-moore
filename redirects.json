@@ -1,7 +1,6 @@
 {
   "_readme": "Old path -> new path. GitHub Pages has no server redirects, so the build writes a small stub page at each old path (meta refresh + canonical + JS). Edit here, push. /go/<id> short links are NOT here: they come from offers.json and are unchanged.",
   "/preview/": "/",
-  "/links/": "/",
   "/sittings/": "/she-who-becomes/",
   "/threshold/": "/she-who-becomes/",
   "/topics/threshold-work/": "/she-who-becomes/",
