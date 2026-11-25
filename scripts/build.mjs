@@ -35,10 +35,16 @@ for (const [from, to] of Object.entries(redirects)) {
   if (!fs.existsSync(target)) bad.push(`${from} -> ${to}: target page does not exist`);
   if (bad.length) continue;
   fs.mkdirSync(path.dirname(file), { recursive: true });
+  // the stub borrows the new page's title and share card, so an old link pasted in
+  // WhatsApp, Facebook or X still previews with a picture (those robots don't follow the refresh)
+  const th = fs.readFileSync(target, 'utf8');
+  const tTitle = (th.match(/<title>[^<]*<\/title>/) || ['<title>Nina Moore</title>'])[0];
+  const tShare = (th.match(/<meta (?:property="og:[^"]+"|name="twitter:[^"]+") content="[^"]*">/g) || []).join('\n');
   fs.writeFileSync(file, `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nina Moore</title>
+${tTitle}
+${tShare}
 <link rel="canonical" href="https://nina-moore.com${escA(to)}">
 <meta http-equiv="refresh" content="0; url=${escA(to)}">
 <script>location.replace(${JSON.stringify(to)} + location.search + location.hash);</script>
@@ -118,6 +124,9 @@ for (const [id, o] of Object.entries(offers)) {
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${esc(img)}">
 <script>location.replace(${JSON.stringify(o.url)} + location.search);</script>
 </head><body><p><a href="${esc(o.url)}">${esc(o.name)} — continue</a></p></body></html>
 `);

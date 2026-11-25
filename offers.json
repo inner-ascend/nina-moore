@@ -8,7 +8,7 @@
     "share": {
       "title": "She Who Becomes — a community for women at a threshold",
       "description": "You're not lost. You're in between. A community for women devoted to the lifelong art of becoming. €33 / month.",
-      "image": "/she-who-becomes/og.jpg"
+      "image": "/assets/og/she-who-becomes.jpg"
     }
   },
   "free-monday": {
@@ -44,6 +44,9 @@
     "name": "Portal Poem — 12-week private mentorship",
     "price": "by application",
     "url": "https://shewhobecomes.nina-moore.com/portal-poem",
-    "page": "/portal-poem/mentorship/"
+    "page": "/portal-poem/mentorship/",
+    "share": {
+      "image": "/assets/og/portal-poem.jpg"
+    }
   }
 }
