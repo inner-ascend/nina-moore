@@ -4,6 +4,8 @@ The website at nina-moore.com.
 
 Every URL on the site, and where each button goes: `SITE-MAP.md`.
 
+The site is the static folder `site/` (copied from the design folder with `node scripts/sync-site.mjs`). Old URLs that moved are listed in `redirects.json`; the build writes a redirect stub page for each. `/go/*` short links come from `offers.json`.
+
 ## Offers — one list, every button
 
 Every offer lives in `offers.json` (name, price, where it goes). Pages never hard-code a

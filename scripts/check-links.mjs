@@ -87,7 +87,9 @@ for (const f of files) {
     if (tag.toLowerCase() === 'link' && NON_FETCHING_REL.test(attrs)) continue;
     const href = attrs.match(/\b(?:href|src)=["']([^"']+)["']/i);
     if (!href) continue;
-    const raw = href[1].trim();
+    // our own absolute URLs (canonicals, redirect stubs) are checked against dist/, not the
+    // live site: a page that is not deployed yet would otherwise read as a 404
+    const raw = href[1].trim().replace(/^https:\/\/(www\.)?nina-moore\.com(?=\/|$)/, '') || '/';
     if (!raw || /^(mailto:|tel:|javascript:|data:|#)/i.test(raw)) continue;
     // client-side template placeholders, not links (e.g. `${p.permalink}`)
     if (raw.includes('${') || raw.includes('{{')) continue;

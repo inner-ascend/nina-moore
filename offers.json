@@ -4,7 +4,7 @@
     "name": "She Who Becomes",
     "price": "€33 / month",
     "url": "https://shewhobecomes.nina-moore.com/offers/JicjMvXT/checkout",
-    "page": "/she-who-becomes/",
+    "page": "/she-who-becomes/membership/",
     "share": {
       "title": "She Who Becomes — a community for women at a threshold",
       "description": "You're not lost. You're in between. A community for women devoted to the lifelong art of becoming. €33 / month.",
@@ -15,7 +15,7 @@
     "name": "She Who Becomes — 7 days free",
     "price": "7 days free, then €33 / month",
     "url": "https://shewhobecomes.nina-moore.com/offers/BfVJFP2a/checkout",
-    "page": "/she-who-becomes/",
+    "page": "/she-who-becomes/membership/",
     "share": {
       "title": "She Who Becomes — 7 days free",
       "description": "You're not lost. You're in between. A community for women devoted to the lifelong art of becoming. 7 days free, then €33 / month.",
@@ -26,24 +26,24 @@
     "name": "A sitting — 90 minutes, one to one",
     "price": "€85",
     "url": "https://shewhobecomes.nina-moore.com/offers/kcUZF3p6/checkout",
-    "page": "/sittings/"
+    "page": null
   },
   "journey": {
     "name": "The Journey — four 60-minute sessions",
     "price": "€420",
     "url": "https://shewhobecomes.nina-moore.com/offers/TX52BXP2/checkout",
-    "page": "/sittings/"
+    "page": null
   },
   "call": {
     "name": "Free 20-minute discovery call",
     "price": "free",
     "url": "https://calendly.com/ninamoorerising/free-discovery",
-    "page": "/sittings/"
+    "page": null
   },
   "portal-poem": {
     "name": "Portal Poem — 12-week private mentorship",
     "price": "by application",
     "url": "https://shewhobecomes.nina-moore.com/portal-poem",
-    "page": null
+    "page": "/portal-poem/mentorship/"
   }
 }
