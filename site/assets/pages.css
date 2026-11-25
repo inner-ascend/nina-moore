@@ -21,8 +21,12 @@
 
 /* ---------- about ---------- */
 .about-art__fig{align-self:start;margin-top:var(--sp-2)}
-.about-me{align-items:end}
-.about-me__text{padding-bottom:var(--sp-2)}
+.about-me{align-items:start}
+.about-me__text{padding-bottom:var(--sp-2);display:grid;gap:1.1em;max-width:62ch}
+.about-me__title{margin-bottom:.3em}
+@media(min-width:900px){.about-me>.fig{position:sticky;top:calc(var(--sp-4) + 4rem)}}
+/* training: a quieter paragraph under the bio */
+.about-me__training{margin-top:1.2em;padding-top:1.2em;border-top:1px solid var(--line,rgba(0,0,0,.12));font-size:.9375rem;line-height:1.6;color:var(--muted)}
 .about-me__ph{display:block;padding:var(--sp-4) var(--sp-3);font-size:1.125rem;line-height:1.55}
 .about-doors{margin-top:0}
 .about-writing{margin-top:var(--sp-4)}

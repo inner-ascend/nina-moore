@@ -6,9 +6,10 @@ main{--sp-section:clamp(6.5rem,3rem + 11vw,14rem);--ease-out:cubic-bezier(.22,1,
 .section-head{margin-bottom:clamp(2.75rem,1.5rem + 5vw,6.5rem)}
 main .grid{row-gap:clamp(2rem,1rem + 3vw,4rem)}
 
+
 /* ---------- hero: jenani-size heading, marina-size image ---------- */
 .hero{padding-top:clamp(2rem,1rem + 4vw,4.5rem)}
-.hero__title{font:400 clamp(3.5rem,1rem + 12.4vw,11.5rem)/.9 var(--display);letter-spacing:-.03em;max-width:none}
+.hero__title{font:400 clamp(3.5rem,.9rem + 10.4vw,10.5rem)/.9 var(--display);letter-spacing:-.03em;max-width:none}
 .hero__title em{font-style:italic;letter-spacing:-.02em}
 .hero__fig{margin-top:clamp(1.75rem,1rem + 3vw,3.5rem)}
 .hero__fig img{width:100%;height:clamp(28rem,62vw,58rem);max-height:calc(100svh - 2rem);min-height:min(30rem,120vw);object-fit:cover;object-position:50% 42%}
@@ -19,31 +20,100 @@ main .grid{row-gap:clamp(2rem,1rem + 3vw,4rem)}
 .hero .doors{margin-top:clamp(3.5rem,2rem + 6vw,8rem)}
 
 /* ---------- big sentences (jenani): her own lines, full width ---------- */
-.statement{margin-block:clamp(4.5rem,2rem + 9vw,10rem);font:400 clamp(2.6rem,.9rem + 7.6vw,8.4rem)/1.02 var(--display);letter-spacing:-.03em;text-wrap:balance}
-@media(min-width:900px){.statement{text-align:justify;text-wrap:wrap;hyphens:none}}
+.statement{margin-block:clamp(4.5rem,2rem + 7.5vw,8.5rem);font:400 clamp(2.6rem,.9rem + 7.2vw,8rem)/1.02 var(--display);letter-spacing:-.03em;text-wrap:balance}
 section>.statement:last-child{margin-bottom:0}
 
 /* ---------- two practices (alignflow plan columns): photo, name, title, text, link. no panels ---------- */
 .spread{gap:clamp(5.5rem,4rem + 4vw,8rem) clamp(1.5rem,1rem + 2.6vw,4rem)}
 .spread .practice{background:none;padding:0;gap:var(--sp-3)}
-.spread .practice__fig{width:100%;margin:0 0 var(--sp-3)}
-.spread .practice__fig img{aspect-ratio:7/8;width:100%;object-fit:cover}
+.spread .practice .practice__fig{width:100%;margin:0 0 var(--sp-3)}
+.spread .practice .practice__fig img{aspect-ratio:7/8;width:100%;object-fit:cover}
 .spread .practice__for{font-size:var(--fs-h3);line-height:1.08;max-width:18ch}
 .spread .practice .prose{gap:.9em}
 .spread .practice__ways{border-top:0;padding-top:0}
 .spread .practice__cta{padding-top:var(--sp-3)}
-@media(max-width:899px){.spread .practice__fig{width:min(100%,26rem)}}
+@media(max-width:899px){.spread .practice .practice__fig{width:min(100%,26rem)}}
 
 /* ---------- entrance (veritas): lines rise one line-height and fade, image wipes up. 700ms, together, once ---------- */
-.ln{display:block;overflow:hidden;padding-block:.08em .14em;margin-block:-.08em -.14em}
-.statement .ln:not(:last-child){text-align-last:justify}
-@media(max-width:899px){.statement .ln:not(:last-child){text-align-last:auto}}
+/* flex column: stops the lines' negative margins collapsing, so split text sits exactly where the plain text does */
+.split{display:flex;flex-direction:column}
+.ln{display:block;overflow:hidden;padding-block:.08em .24em;margin-block:-.08em -.24em}
 @media(prefers-reduced-motion:no-preference){
   .ln__in{display:block;transform:translateY(100%);opacity:0;transition:transform .7s var(--ease-out),opacity .7s var(--ease-out)}
   .is-in .ln__in{transform:none;opacity:1}
   /* hidden only while home.js is about to run; a failsafe shows it after 3s regardless */
-  .js .hero:not(.go) .hero__title,.js .hero:not(.go) .hero__fig img{opacity:0;animation:nm-show 0s 3s forwards}
-  .js .hero.go .hero__fig img{animation:nm-wipe .7s var(--ease-out) both}
+  .js .hero:not(.is-on) .hero__title,.js .hero:not(.is-on) .hero__fig img{opacity:0;animation:nm-show 0s 3s forwards}
+  .js .hero.is-on .hero__fig img{animation:nm-wipe .7s var(--ease-out) both}
+}
+/* "The work we make" photo: no tape strips */
+section[aria-labelledby="work"] .frag::before,section[aria-labelledby="work"] .frag::after{display:none}
+/* ---------- hero: "open road" (round of ten heroes, no. 4) ----------
+   ink entrance on the cream, then the forest-road photograph blooms in underneath and the words turn cream. */
+.hero{padding-top:0}
+.ob{position:relative;display:flex;min-height:calc(100svh - 5.6rem);overflow:hidden;color:#F6F1E8}
+@media(max-width:959px){.ob{min-height:calc(100svh - 7.2rem)}}
+.ob__ph{position:absolute;inset:0;margin:0}
+.ob__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.ob__ph::after{content:"";position:absolute;inset:0;opacity:.18;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .24 0 0 0 0 .16 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.ob__shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(18,13,9,.72),rgba(18,13,9,.25) 50%,rgba(18,13,9,.12))}
+.ob__txt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;gap:1.6rem;width:100%;padding:3rem var(--gutter) clamp(2.5rem,6svh,4.5rem)}
+.ob__title{margin:0;font:400 clamp(3rem,1rem + 6.6vw,8rem)/.95 var(--display);letter-spacing:-.026em;max-width:15ch;text-wrap:balance}
+.ob__title em{font-style:italic}
+.ob__side{display:flex;flex-direction:column;align-items:flex-start;gap:1.2rem;max-width:26rem}
+.ob__side p{margin:0;font:400 clamp(1rem,.92rem + .3vw,1.15rem)/1.55 var(--serif);opacity:.92}
+.ob__cta{background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding-inline:2rem}
+.ob__cta:hover{background:#F6F1E8;color:#1C1914;border-color:#F6F1E8}
+@media(min-width:1000px){.ob__txt{flex-direction:row;align-items:flex-end;justify-content:space-between}.ob__side{padding-bottom:.6rem}}
+.ob__title .w{display:inline-block}
+@media(prefers-reduced-motion:no-preference){
+  .js .ob{color:var(--fg)}
+  .js .ob__ph,.js .ob__shade,.js .ob__side{opacity:0}
+  .ob.is-on .ob__title .w{animation:ob-ink 2.2s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.3s + var(--i) * .15s)}
+  .ob.is-on .ob__side{animation:ob-fade 2s cubic-bezier(.22,1,.36,1) 2s both}
+  .ob.is-on .ob__ph{animation:ob-bloom 3.2s cubic-bezier(.33,0,.15,1) 2.4s both}
+  .ob.is-on .ob__shade{animation:ob-fade 3.2s ease 2.4s both}
+  .ob.is-on{animation:ob-cream 2.6s ease 2.7s both}
+}
+@keyframes ob-ink{from{opacity:0;filter:blur(14px);letter-spacing:.12em}to{opacity:1;filter:none;letter-spacing:normal}}
+@keyframes ob-fade{from{opacity:0;filter:blur(8px)}to{opacity:1;filter:none}}
+@keyframes ob-bloom{from{opacity:0;transform:scale(1.08)}to{opacity:1;transform:none}}
+@keyframes ob-cream{from{color:var(--fg)}to{color:#F6F1E8}}
+/* smaller photos placed in the empty columns */
+.small-fig{width:min(100%,19rem);align-self:start}
+.small-fig--land{width:min(100%,24rem)}
+.small-fig + .prose,.prose:has(+ .small-fig){align-self:start}
+@media(min-width:900px){.small-fig--end{justify-self:end}}
+@media(max-width:899px){.small-fig{width:62%}.small-fig--land{width:80%}}
+@media(min-width:900px){.small-fig{margin-top:var(--sp-2)}}
+/* on the nature of my work: a photo in front of the questions */
+.nature__fig{width:min(100%,26rem);align-self:start}
+@media(min-width:900px){
+  .nature-grid .lede{grid-row:1}
+  .nature-grid .nature__fig{grid-row:2/span 2;grid-column:1/6}
+  .nature-grid .questions{grid-row:1/span 2}
+  .nature-grid .questions + .prose{grid-row:3}
 }
 @keyframes nm-show{to{opacity:1}}
 @keyframes nm-wipe{from{clip-path:inset(100% 0 0 0);opacity:0}to{clip-path:inset(0);opacity:1}}
+
+/* ---------- homepage motion, all slow and quiet (home.js adds the classes) ----------
+   statements ink in word by word like the hero heading; section rules draw across; questions surface one by one;
+   photos develop from pale to full colour and drift gently inside their frames; the hero eases away as you leave it. */
+@media(prefers-reduced-motion:no-preference){
+  [data-ink].ink-ready .w{display:inline-block;opacity:0;filter:blur(12px);letter-spacing:.1em;transition:opacity 1.8s cubic-bezier(.22,1,.36,1),filter 1.8s cubic-bezier(.22,1,.36,1),letter-spacing 1.8s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--i) * .09s)}
+  [data-ink].ink-ready.in .w{opacity:1;filter:none;letter-spacing:normal}
+
+  .js main .section-head{position:relative;border-top-color:transparent}
+  .js main .section-head::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--rule);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.8s cubic-bezier(.65,0,.35,1)}
+  .js main .section-head.in::before{transform:none}
+  .js main .section-head.rise{transform:none}
+  .js main .section-head .h2{transition:opacity 1.6s cubic-bezier(.22,1,.36,1) .35s,filter 1.6s cubic-bezier(.22,1,.36,1) .35s}
+  .js main .section-head:not(.in) .h2{opacity:0;filter:blur(10px)}
+
+  .js .questions li.rise{transform:none;filter:blur(8px);transition:opacity 1.6s cubic-bezier(.22,1,.36,1),filter 1.6s cubic-bezier(.22,1,.36,1)}
+  .js .questions li.rise.in{filter:none}
+
+  .js main .dev{overflow:hidden}
+  .js main .dev img{filter:sepia(.55) brightness(1.35) contrast(.8) saturate(.5);transition:filter 2.8s cubic-bezier(.4,0,.2,1) .2s;will-change:transform}
+  .js main .dev.in img{filter:none}
+}

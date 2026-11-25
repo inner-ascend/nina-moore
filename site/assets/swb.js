@@ -71,7 +71,7 @@
     lastW=W;lastH=H;
     var sy=window.scrollY||window.pageYOffset,narrow=W<900,pts=[],prev=null;
     var add=function(a){a.forEach(function(p){pts.push([p[0],p[1],p[2]==null?p[1]:p[2]])})};
-    var r=narrow?4:turns?11:14;
+    var r=narrow?5:turns?15:14;
     stops.forEach(function(el,i){
       var b=el.getBoundingClientRect(),cs=getComputedStyle(el),side=narrow?'l':el.getAttribute('data-side');
       var pl=parseFloat(cs.paddingLeft),pr=parseFloat(cs.paddingRight);
@@ -90,7 +90,7 @@
       add(loops(bez(prev[0],prev[1],co[0][0],co[0][1]),[.5],r));
       pts=pts.concat(co);
     }
-    var P=smooth(smooth(pts)),CUM=[0],VY=[],T=0,mx=-1e9;
+    var P=smooth(smooth(pts)),CUM=[],VY=[],T=0,mx=-1e9;
     for(var q=0;q<P.length;q++){if(q)T+=Math.hypot(P[q][0]-P[q-1][0],P[q][1]-P[q-1][1]);CUM.push(T);mx=Math.max(mx,P[q][2]);VY.push(mx)}
     wrap.style.height=H+'px';
     svg.setAttribute('width',W);svg.setAttribute('height',H);svg.setAttribute('viewBox','0 0 '+W+' '+H);
